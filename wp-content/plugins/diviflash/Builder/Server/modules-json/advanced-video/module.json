@@ -1,0 +1,3260 @@
+{
+  "name": "difl/advanced-video",
+  "title": "Advanced Video",
+  "titles": "Advanced Videos",
+  "category": "module",
+  "moduleIcon": "difl/advanced-video",
+  "customCssFields": {
+    "videoTitle": {
+      "label": "Video Title",
+      "subName": "videoTitle",
+      "selectorSuffix": " .difl-video-title"
+    },
+    "playIcon": {
+      "label": "Play Icon",
+      "subName": "playIcon",
+      "selectorSuffix": " .difl-video-play-icon"
+    },
+    "customPlayPause": {
+      "label": "Custom Play/Pause",
+      "subName": "customPlayPause",
+      "selectorSuffix": " .difl-video-custom-play-pause"
+    },
+    "lightbox": {
+      "label": "Lightbox",
+      "subName": "lightbox",
+      "selectorSuffix": " .difl-video-lightbox"
+    }
+  },
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "video_settings": {
+        "panel": "content",
+        "priority": 0,
+        "groupName": "video_settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Video"
+          }
+        }
+      },
+      "video_option_settings": {
+        "panel": "content",
+        "priority": 0,
+        "groupName": "video_option_settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Video Settings"
+          }
+        }
+      },
+      "playback_options": {
+        "panel": "content",
+        "priority": 1,
+        "groupName": "playback_options",
+        "multiElements": true,
+        "displayCondition": {
+          "show_if_not": {
+            "video_lightbox": "on"
+          }
+        },
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Playback Options"
+          }
+        }
+      },
+      "play_icon_options": {
+        "panel": "content",
+        "priority": 2,
+        "groupName": "play_icon_options",
+        "displayCondition": {
+          "show_if_any": [
+            {
+              "video_lightbox": "on"
+            },
+            {
+              "use_thumbnail": "on",
+              "source": [
+                "youtube",
+                "vimeo",
+                "dailymotion"
+              ],
+              "autoplay": "off"
+            }
+          ]
+        },
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Icon Settings"
+          }
+        }
+      },
+      "custom_play_pause": {
+        "panel": "content",
+        "priority": 4,
+        "groupName": "custom_play_pause",
+        "multiElements": true,
+        "displayCondition": {
+          "show_if": {
+            "source": "selfhosted",
+            "video_lightbox": "off",
+            "use_custom_playpause_controller": "on"
+          }
+        },
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Custom Play/Pause Settings"
+          }
+        }
+      },
+      "thumbnail_settings": {
+        "panel": "content",
+        "priority": 3,
+        "groupName": "thumbnail_settings",
+        "displayCondition": {
+          "show_if": {
+            "autoplay": "off",
+            "use_thumbnail": "on"
+          }
+        },
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Thumbnail Settings"
+          }
+        }
+      },
+      "sticky_video_settings": {
+        "panel": "content",
+        "priority": 6,
+        "groupName": "sticky_video_settings",
+        "displayCondition": {
+          "show_if": {
+            "sticky_video": "on"
+          }
+        },
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Sticky Video Settings"
+          }
+        }
+      },
+      "contentElements": {
+        "panel": "content",
+        "groupName": "contentElements",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Elements"
+          }
+        }
+      },
+      "design_video_title": {
+        "panel": "design",
+        "priority": 1,
+        "groupName": "design_video_title",
+        "displayCondition": {
+          "show_if_not": {
+            "source": "selfhosted",
+            "video_lightbox": "on"
+          }
+        },
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Title"
+          }
+        }
+      },
+      "design_play_icon": {
+        "panel": "design",
+        "priority": 1,
+        "groupName": "design_play_icon",
+        "displayCondition": {
+          "show_if_any": [
+            {
+              "video_lightbox": "on"
+            },
+            {
+              "use_thumbnail": "on",
+              "source": [
+                "youtube",
+                "vimeo",
+                "dailymotion"
+              ]
+            }
+          ]
+        },
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Icon"
+          }
+        }
+      },
+      "design_custom_play_pause": {
+        "panel": "design",
+        "priority": 1,
+        "groupName": "design_custom_play_pause",
+        "multiElements": true,
+        "displayCondition": {
+          "show_if_not": {
+            "video_lightbox": "on"
+          },
+          "show_if": {
+            "source": "selfhosted",
+            "use_custom_playpause_controller": "on"
+          }
+        },
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Play Pause Icon"
+          }
+        }
+      },
+      "design_sticky_video": {
+        "panel": "design",
+        "priority": 2,
+        "groupName": "design_sticky_video",
+        "displayCondition": {
+          "show_if": {
+            "sticky_video": "on"
+          }
+        },
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Sticky Video"
+          }
+        }
+      },
+      "design_lightbox": {
+        "panel": "design",
+        "priority": 1,
+        "groupName": "design_lightbox",
+        "multiElements": true,
+        "displayCondition": {
+          "show_if": {
+            "video_lightbox": "on"
+          }
+        },
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Lightbox"
+          }
+        }
+      }
+    }
+  },
+  "childrenName": [],
+  "allowAllElements": true,
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {
+            "component": {
+              "type": "group",
+              "name": "divi/admin-label"
+            }
+          }
+        },
+        "advanced": {
+          "elements": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentElements",
+              "priority": 5,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/elements",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "layout": {},
+          "attributes": {},
+          "background": {},
+          "border": {},
+          "boxShadow": {},
+          "spacing": {},
+          "sizing": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {},
+          "sticky": {},
+          "scroll": {},
+          "interactions": {},
+          "position": {},
+          "overflow": {},
+          "disabledOn": {},
+          "animation": {},
+          "conditions": {}
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Advanced Video"
+            }
+          }
+        }
+      }
+    },
+    "video_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "source": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "priority": 0,
+              "subName": "source",
+              "label": "Video Source",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "source": "youtube"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "youtube": {
+                      "label": "YouTube"
+                    },
+                    "vimeo": {
+                      "label": "Vimeo"
+                    },
+                    "dailymotion": {
+                      "label": "DailyMotion"
+                    },
+                    "selfhosted": {
+                      "label": "Self Hosted"
+                    }
+                  }
+                }
+              }
+            },
+            "video_link": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "priority": 1,
+              "subName": "video_link",
+              "label": "Video URL",
+              "displayCondition": {
+                "show_if": {
+                  "source": [
+                    "youtube",
+                    "vimeo",
+                    "dailymotion"
+                  ]
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "use_external_link": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "priority": 1,
+              "subName": "use_external_link",
+              "label": "Load from External URL",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_external_link": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted"
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "video_mp4": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "priority": 1,
+              "subName": "video_mp4",
+              "label": "MP4 Source",
+              "description": "Upload or enter URL of MP4 video file",
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted",
+                  "use_external_link": "off"
+                }
+              },
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "dataType": "video"
+                }
+              }
+            },
+            "video_webm": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "priority": 1,
+              "subName": "video_webm",
+              "label": "WebM Source (Optional)",
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted",
+                  "use_external_link": "off"
+                }
+              },
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "dataType": "video"
+                }
+              }
+            },
+            "external_video_link": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "priority": 1,
+              "subName": "external_video_link",
+              "label": "External Video URL",
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted",
+                  "use_external_link": "on"
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "preload": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "subName": "preload",
+              "label": "Preload",
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "preload": "metadata"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "auto": {
+                      "label": "Auto"
+                    },
+                    "metadata": {
+                      "label": "Metadata"
+                    },
+                    "none": {
+                      "label": "None"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content",
+                "responsive": false
+              }
+            },
+            "allow_download": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "subName": "allow_download",
+              "label": "Allow Download",
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content",
+                "responsive": false
+              }
+            },
+            "start_time": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "subName": "start_time",
+              "label": "Start Time (in seconds)",
+              "description": "Set the time when the video should start playing",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "start_time": "0"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "source": [
+                    "selfhosted"
+                  ]
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "end_time": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "displayCondition": {
+                "show_if_not": {
+                  "source": [
+                    "selfhosted"
+                  ]
+                }
+              },
+              "subName": "end_time",
+              "description": "Set the time when the video should stop playing (0 for end)",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "end_time": "0"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "label": "End Time (in seconds)",
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "playback_speed": {
+              "groupSlug": "playback_options",
+              "render": true,
+              "priority": 5,
+              "subName": "playback_speed",
+              "label": "Playback Speed (Advanced)",
+              "description": "Set the default playback speed of the video.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "playback_speed": "1"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "0.25": {
+                      "label": "0.25x"
+                    },
+                    "0.5": {
+                      "label": "0.5x"
+                    },
+                    "1": {
+                      "label": "Normal"
+                    },
+                    "1.5": {
+                      "label": "1.5x"
+                    },
+                    "2": {
+                      "label": "2x"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content",
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              }
+            },
+            "show_caption": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "displayCondition": {
+                "show_if_not": {
+                  "source": "selfhosted"
+                }
+              },
+              "subName": "show_caption",
+              "priority": 4,
+              "label": "Video Captions",
+              "component": {
+                "type": "field",
+                "name": "divi/toggle",
+                "label": "Show Captions"
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "caption_language": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "subName": "caption_language",
+              "label": "Preferred Caption Language",
+              "displayCondition": {
+                "show_if": {
+                  "show_caption": "on"
+                },
+                "show_if_not": {
+                  "source": "selfhosted"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "caption_language": "auto"
+                  }
+                }
+              },
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "auto": {
+                      "label": "Auto"
+                    },
+                    "en": {
+                      "label": "English"
+                    },
+                    "es": {
+                      "label": "Spanish"
+                    },
+                    "fr": {
+                      "label": "French"
+                    }
+                  }
+                }
+              }
+            },
+            "lazy_loading": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "subName": "lazy_loading",
+              "label": "Lazy Loading",
+              "description": "Load video only when it comes into view",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "lazy_loading": "on"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "source": "selfhosted"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content",
+                "responsive": false
+              }
+            },
+            "aspect_ratio": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "subName": "aspect_ratio",
+              "label": "Aspect Ratio",
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-iframe,{{selector}} .difl-video-wrapper-with-thumbnail,{{selector}} .difl-video-wrapper-without-thumbnail"
+                },
+                "css_type": "aspect-ratio"
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "source": "selfhosted"
+                },
+                "show_if": {
+                  "video_lightbox": "off",
+                  "use_thumbnail": "off"
+                }
+              },
+              "description": "If enabled, displays the video title above the player.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "aspect_ratio": "16/9"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "16/9": {
+                      "label": "16/9"
+                    },
+                    "4/3": {
+                      "label": "4/3"
+                    },
+                    "1/1": {
+                      "label": "1/1"
+                    }
+                  }
+                }
+              }
+            },
+            "autoplay": {
+              "groupSlug": "playback_options",
+              "render": true,
+              "subName": "autoplay",
+              "priority": 0,
+              "label": "Autoplay",
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "off"
+                }
+              },
+              "description": "When enabled, the video will start playing automatically when the page loads.Not working with dailymotion source",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "autoplay": "off"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "play_on_viewport": {
+              "groupSlug": "playback_options",
+              "priority": 1,
+              "render": true,
+              "subName": "play_on_viewport",
+              "label": "Play on Viewport",
+              "description": "Video will start playing when it enters the viewport",
+              "displayCondition": {
+                "show_if": {
+                  "autoplay": "on",
+                  "video_lightbox": "off"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "play_on_viewport": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content",
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              }
+            },
+            "viewport_offset": {
+              "groupSlug": "playback_options",
+              "render": true,
+              "priority": 2,
+              "subName": "viewport_offset",
+              "label": "Offset from Top",
+              "description": "Offset distance from top of viewport (px)",
+              "displayCondition": {
+                "show_if": {
+                  "autoplay": "on",
+                  "play_on_viewport": "on",
+                  "video_lightbox": "off"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "viewport_offset": "0"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "min": 0,
+                  "max": 500,
+                  "step": 1
+                }
+              }
+            },
+            "viewport_offset_bottom": {
+              "groupSlug": "playback_options",
+              "render": true,
+              "priority": 3,
+              "subName": "viewport_offset_bottom",
+              "label": "Offset from Bottom",
+              "description": "Offset distance from bottom of viewport (px)",
+              "displayCondition": {
+                "show_if": {
+                  "autoplay": "on",
+                  "play_on_viewport": "on",
+                  "video_lightbox": "off"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "viewport_offset_bottom": "0"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "min": 0,
+                  "max": 500,
+                  "step": 1
+                }
+              }
+            },
+            "show_controls": {
+              "groupSlug": "playback_options",
+              "render": true,
+              "subName": "show_controls",
+              "priority": 6,
+              "label": "Video Player Controls",
+              "displayCondition": {
+                "show_if_any": {
+                  "use_custom_playpause_controller": "off",
+                  "source": [
+                    "youtube",
+                    "vimeo",
+                    "dailymotion"
+                  ]
+                }
+              },
+              "description": "Shows or hides the video player controls.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "show_controls": "on"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "mute": {
+              "groupSlug": "playback_options",
+              "render": true,
+              "subName": "mute",
+              "priority": 5,
+              "label": "Mute Video",
+              "description": "When enabled, the video will be muted by default.",
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "off"
+                },
+                "show_if_not": {
+                  "source": "selfhosted",
+                  "autoplay": "on"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "mute": "off"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "loop": {
+              "groupSlug": "playback_options",
+              "render": true,
+              "subName": "loop",
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "off"
+                }
+              },
+              "label": "Loop Video",
+              "priority": 4,
+              "description": "When enabled, the video will play continuously in a loop.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "loop": "off"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "sticky_video": {
+              "groupSlug": "playback_options",
+              "render": true,
+              "subName": "sticky_video",
+              "priority": 10,
+              "label": "Sticky Video",
+              "description": "When enabled, the video will stick to a corner of the screen when scrolled past.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_video": "off"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "sticky_video_position": {
+              "groupSlug": "sticky_video_settings",
+              "render": true,
+              "subName": "sticky_video_position",
+              "priority": 1,
+              "label": "Sticky Position",
+              "description": "Choose which corner the video sticks to.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_video_position": "bottom_right"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "bottom_right": {
+                      "label": "Bottom Right"
+                    },
+                    "bottom_left": {
+                      "label": "Bottom Left"
+                    },
+                    "top_right": {
+                      "label": "Top Right"
+                    },
+                    "top_left": {
+                      "label": "Top Left"
+                    }
+                  }
+                }
+              }
+            },
+            "sticky_video_width": {
+              "groupSlug": "sticky_video_settings",
+              "render": true,
+              "subName": "sticky_video_width",
+              "priority": 2,
+              "label": "Sticky Width",
+              "description": "Width of the sticky video in pixels.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_video_width": "320"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "min": 160,
+                  "max": 800,
+                  "step": 1
+                }
+              }
+            },
+            "sticky_video_offset_x": {
+              "groupSlug": "sticky_video_settings",
+              "render": true,
+              "subName": "sticky_video_offset_x",
+              "priority": 3,
+              "label": "Horizontal Offset",
+              "description": "Horizontal distance from the screen edge in px/%.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_video_offset_x": "16"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "allowedUnits": [
+                    "px","%"
+                  ],
+                  "min": 0,
+                  "max": 200,
+                  "step": 1
+                }
+              }
+            },
+            "sticky_video_offset_y": {
+              "groupSlug": "sticky_video_settings",
+              "render": true,
+              "subName": "sticky_video_offset_y",
+              "priority": 4,
+              "label": "Vertical Offset",
+              "description": "Vertical distance from the screen edge in px/%.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_video_offset_y": "16"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "allowedUnits": [
+                    "px","%"
+                  ],
+                  "min": 0,
+                  "max": 200,
+                  "step": 1
+                }
+              }
+            },
+            "sticky_video_z_index": {
+              "groupSlug": "sticky_video_settings",
+              "render": true,
+              "subName": "sticky_video_z_index",
+              "priority": 5,
+              "label": "Z-Index",
+              "description": "Stack order of the sticky video.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_video_z_index": "9999"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "",
+                  "allowedUnits": [
+                    ""
+                  ],
+                  "min": 1,
+                  "max": 999999,
+                  "step": 1
+                }
+              }
+            },
+            "sticky_video_close_button": {
+              "groupSlug": "sticky_video_settings",
+              "render": true,
+              "subName": "sticky_video_close_button",
+              "priority": 7,
+              "label": "Close Button",
+              "description": "Show a close button on the sticky video.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_video_close_button": "on"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "sticky_video_on_mobile": {
+              "groupSlug": "sticky_video_settings",
+              "render": true,
+              "subName": "sticky_video_on_mobile",
+              "priority": 8,
+              "label": "Show Sticky on Mobile",
+              "description": "When enabled, sticky video will also be active on mobile devices.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_video_on_mobile": "off"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            }
+          }
+        }
+      }
+    },
+    "video_title_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl-video-title",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "show_title": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "subName": "show_title",
+              "label": "Video Title",
+              "priority": 1,
+              "displayCondition": {
+                "show_if_not": {
+                  "source": "selfhosted",
+                  "video_lightbox": "on"
+                }
+              },
+              "description": "If enabled, displays the video title above the player.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "show_title": "off"
+                  }
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "video_title_position": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "priority": 2,
+              "subName": "video_title_position",
+              "label": "Title Position",
+              "displayCondition": {
+                "show_if": {
+                  "show_title": "on"
+                },
+                "show_if_not": {
+                  "source": "selfhosted",
+                  "video_lightbox": "on"
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "video_title_position": "column-reverse"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-container"
+                },
+                "css_type": "flex-direction"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "column": {
+                      "label": "Top"
+                    },
+                    "column-reverse": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_video_title",
+              "render": true,
+              "priority": 1,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_video_title",
+              "render": true,
+              "priority": 3,
+              "label": " Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              },
+              "attrName": "line_top_wrapper_padding.decoration.spacing"
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_video_title",
+              "attrName": "line_top_txt.decoration.font",
+              "label": null,
+              "render": true,
+              "priority": 2,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_video_title",
+              "attrName": "line_top_box_shadow.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "lightbox_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}_lightbox.difl-video-lightbox",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "video_lightbox": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "subName": "video_lightbox",
+              "label": "Open in Lightbox",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "priority": 0,
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "video_lightbox": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "autoplay": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "video_light_box_trigger_icon": {
+              "groupSlug": "play_icon_options",
+              "render": false,
+              "subName": "video_light_box_trigger_icon",
+              "label": "Icon",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "video_light_box_trigger_icon": {
+                      "unicode": "&#xe0a3;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "on"
+                }
+              },
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "video_light_box_trigger_icon_color": {
+              "groupSlug": "play_icon_options",
+              "render": false,
+              "subName": "video_light_box_trigger_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a color for blurb icon.",
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "on"
+                }
+              },
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                },
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "video_light_box_trigger_icon_color": "#d7d7a3"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-lightbox-trigger-button .et-pb-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "video_light_box_trigger_icon_size": {
+              "groupSlug": "play_icon_options",
+              "render": false,
+              "subName": "video_light_box_trigger_icon_size",
+              "label": "Icon Size",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "video_light_box_trigger_icon_size": "80px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-lightbox-trigger-button .et-pb-icon"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 100,
+                  "minLimit": 1,
+                  "step": 1
+                }
+              }
+            },
+            "video_light_box_close_icon_color": {
+              "groupSlug": "design_lightbox",
+              "render": true,
+              "subName": "video_light_box_close_icon_color",
+              "label": "Close Icon Color",
+              "description": "Here you can define a color for blurb icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "video_light_box_close_icon_color": "#ffffff"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}}_lightbox.difl-video-lightbox .difl-video-lightbox-close"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "video_light_box_close_icon_background": {
+              "groupSlug": "design_lightbox",
+              "render": true,
+              "subName": "video_light_box_close_icon_background",
+              "label": "Close Icon Background",
+              "description": "Here you can define a background for blurb icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}}_lightbox.difl-video-lightbox .difl-video-lightbox-close"
+                },
+                "css_type": "background"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "video_light_box_close_icon_size": {
+              "groupSlug": "design_lightbox",
+              "render": true,
+              "subName": "video_light_box_close_icon_size",
+              "label": "Close Icon size",
+              "description": "Here you can control icon size.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "video_light_box_close_icon_size": "30px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}}_lightbox.difl-video-lightbox .difl-video-lightbox-close"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range"
+              }
+            },
+            "lightbox_trigger_icon_animation_ripple_color": {
+              "groupSlug": "play_icon_options",
+              "render": false,
+              "subName": "lightbox_trigger_icon_animation_ripple_color",
+              "label": "Ripple Color",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "lightbox_trigger_icon_animation_ripple_color": "rgba(0, 0, 0, 0.6)"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "lightbox_trigger_icon_animation_type": "anim-ripple",
+                  "video_lightbox": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-lightbox-trigger-button .anim-ripple:before,{{selector}} .difl-video-lightbox-trigger-button .anim-ripple:after"
+                },
+                "css_type": "background"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "lightbox_open_animation": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "priority": 0,
+              "subName": "lightbox_open_animation",
+              "label": "Lightbox Open Animation",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "lightbox_open_animation": "lightbox-fade-in"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "lightbox-fade-in": {
+                      "label": "Fade In"
+                    },
+                    "lightbox-slide-in": {
+                      "label": "Slide In"
+                    },
+                    "lightbox-zoom-in": {
+                      "label": "Zoom In"
+                    },
+                    "lightbox-flip-in": {
+                      "label": "Flip In"
+                    },
+                    "lightbox-bounce-in": {
+                      "label": "Bounce In"
+                    }
+                  }
+                }
+              }
+            },
+            "lightbox_close_animation": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "priority": 0,
+              "subName": "lightbox_close_animation",
+              "label": "Lightbox Close Animation",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "lightbox_close_animation": "lightbox-fade-out"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "lightbox-fade-out": {
+                      "label": "Fade Out"
+                    },
+                    "lightbox-slide-out": {
+                      "label": "Slide Out"
+                    },
+                    "lightbox-zoom-out": {
+                      "label": "Zoom Out"
+                    },
+                    "lightbox-flip-out": {
+                      "label": "Flip Out"
+                    },
+                    "lightbox-bounce-out": {
+                      "label": "Bounce Out"
+                    }
+                  }
+                }
+              }
+            },
+            "lightbox_reveal_animation_duration": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "priority": 0,
+              "subName": "lightbox_reveal_animation_duration",
+              "label": "Animation Duration (ms)",
+              "description": "Set the duration of the lightbox open/close animation in milliseconds.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "lightbox_reveal_animation_duration": "300"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "video_lightbox": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 100,
+                  "max": 20000,
+                  "step": 50,
+                  "minLimit": 100,
+                  "maxLimit": 2000
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_lightbox",
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "fieldLabel": "Overlay",
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "thumbnail_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "use_thumbnail": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "priority": 3,
+              "subName": "use_thumbnail",
+              "label": "Thumbnail",
+              "description": "Enable to show a thumbnail image.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_thumbnail": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "autoplay": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content",
+                "responsive": false
+              }
+            },
+            "use_custom_thumbnail": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "subName": "use_custom_thumbnail",
+              "label": "Custom Thumbnail",
+              "priority": 3,
+              "description": "Upload a custom thumbnail image instead of the default video thumbnail.",
+              "displayCondition": {
+                "show_if": {
+                  "use_thumbnail": "on",
+                  "autoplay": "off"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_custom_thumbnail": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content",
+                "responsive": false
+              }
+            },
+            "thumbnail_image": {
+              "groupSlug": "video_settings",
+              "render": true,
+              "priority": 3,
+              "subName": "thumbnail_image",
+              "label": "Thumbnail Image",
+              "displayCondition": {
+                "show_if": {
+                  "use_thumbnail": "on",
+                  "use_custom_thumbnail": "on",
+                  "autoplay": "off"
+                }
+              },
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "dataType": "image",
+                  "syncImageData": {
+                    "src": "thumbnail_image",
+                    "id": true,
+                    "alt": true,
+                    "titleText": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "thumbnail_play_media_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl-video-play-button, {{selector}} .difl-video-lightbox-trigger-button",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "use_custom_thumbnail_play_icon": {
+              "groupSlug": "play_icon_options",
+              "render": true,
+              "priority": 1,
+              "subName": "use_custom_thumbnail_play_icon",
+              "label": "Use Custom Play Icon",
+              "description": "Use an icon instead of an uploaded play button image.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_custom_thumbnail_play_icon": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content",
+                "responsive": false
+              }
+            },
+            "thumbnail_play_button_icon_image": {
+              "groupSlug": "play_icon_options",
+              "render": true,
+              "subName": "thumbnail_play_button_icon_image",
+              "label": "Play Button Image",
+              "description": "Upload a custom play button image.",
+              "displayCondition": {
+                "show_if": {
+                  "use_thumbnail": "on",
+                  "use_custom_thumbnail_play_icon": "off",
+                  "video_lightbox": "off"
+                },
+                "show_if_not": {
+                  "source": "selfhosted"
+                }
+              },
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "dataType": "image",
+                  "syncImageData": {
+                    "src": "thumbnail_play_button_icon_image",
+                    "id": true,
+                    "alt": true,
+                    "titleText": true
+                  }
+                }
+              }
+            },
+            "thumbnail_play_image_size": {
+              "groupSlug": "design_play_icon",
+              "render": true,
+              "subName": "thumbnail_play_image_size",
+              "label": "Image Size",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "thumbnail_play_image_size": "80px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-play-button img"
+                },
+                "css_type": "width"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_thumbnail": "on",
+                  "use_custom_thumbnail_play_icon": "off",
+                  "video_lightbox": "off",
+                  "autoplay": "off"
+                },
+                "show_if_not": {
+                  "source": "selfhosted"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 100,
+                  "minLimit": 1,
+                  "step": 1
+                }
+              }
+            },
+            "custom_play_icon": {
+              "groupSlug": "play_icon_options",
+              "priority": 1,
+              "render": true,
+              "subName": "custom_play_icon",
+              "label": "Custom Play Icon",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_play_icon": {
+                      "unicode": "&#xf04b;",
+                      "type": "fa",
+                      "weight": "900"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_thumbnail_play_icon": "on"
+                }
+              },
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "play_icon_color": {
+              "groupSlug": "design_play_icon",
+              "render": true,
+              "subName": "play_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a color for blurb icon.",
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_thumbnail_play_icon": "on"
+                }
+              },
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "play_icon_color": "#ffffff"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-play-button .et-pb-icon,{{selector}} .difl-video-lightbox-trigger-button .et-pb-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "play_icon_size": {
+              "groupSlug": "design_play_icon",
+              "render": true,
+              "subName": "play_icon_size",
+              "label": "Icon Size",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "play_icon_size": "80px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-play-button .et-pb-icon,{{selector}} .difl-video-lightbox-trigger-button .et-pb-icon"
+                },
+                "css_type": "font-size"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_thumbnail_play_icon": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 100,
+                  "minLimit": 1,
+                  "step": 1
+                }
+              }
+            },
+            "ripple_size": {
+              "groupSlug": "design_play_icon",
+              "render": true,
+              "subName": "ripple_size",
+              "label": "Ripple Size",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_thumbnail_play_icon": "on",
+                  "thumbnail_play_button_animation_type": "anim-ripple"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-play-button .anim-ripple,{{selector}} .difl-video-lightbox-trigger-button .anim-ripple"
+                },
+                "css_type": "width"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "ripple_size": "80px"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 20,
+                  "max": 200,
+                  "minLimit": 20,
+                  "step": 1
+                }
+              }
+            },
+            "thumbnail_play_button_animation_type": {
+              "groupSlug": "play_icon_options",
+              "render": true,
+              "subName": "thumbnail_play_button_animation_type",
+              "label": "Animation Type",
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_thumbnail_play_icon": "on"
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "thumbnail_play_button_animation_type": "anim-none"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "anim-none": {
+                      "label": "None"
+                    },
+                    "anim-ripple": {
+                      "label": "Ripple"
+                    }
+                  }
+                }
+              }
+            },
+            "thumbnail_play_button_animation_ripple_color": {
+              "groupSlug": "play_icon_options",
+              "render": true,
+              "subName": "thumbnail_play_button_animation_ripple_color",
+              "label": "Ripple Color",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "thumbnail_play_button_animation_ripple_color": "rgba(0, 0, 0, 0.6)"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_thumbnail_play_icon": "on",
+                  "thumbnail_play_button_animation_type": "anim-ripple"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-play-button .anim-ripple:before,{{selector}} .difl-video-play-button .anim-ripple:after,{{selector}} .difl-video-lightbox-trigger-button .anim-ripple:before,{{selector}} .difl-video-lightbox-trigger-button .anim-ripple:after"
+                },
+                "css_type": "background"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "thumbnail_play_button_animation_ripple_background_color": {
+              "groupSlug": "play_icon_options",
+              "render": true,
+              "subName": "thumbnail_play_button_animation_ripple_background_color",
+              "label": "Ripple Background",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "thumbnail_play_button_animation_ripple_background_color": "rgba(0, 0, 0, 0.6)"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_thumbnail_play_icon": "on",
+                  "thumbnail_play_button_animation_type": "anim-ripple"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-play-button .anim-ripple,{{selector}} .difl-video-lightbox-trigger-button .anim-ripple"
+                },
+                "css_type": "background"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_play_icon",
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_play_icon",
+              "render": true,
+              "label": " Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_play_icon",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_play_icon",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "custom_controller_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl-video-custom-controls",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "use_custom_playpause_controller": {
+              "groupSlug": "video_option_settings",
+              "render": true,
+              "priority": 4,
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted",
+                  "video_lightbox": "off"
+                }
+              },
+              "subName": "use_custom_playpause_controller",
+              "label": "Custom Play/Pause Button",
+              "description": "Enable custom play and pause controls for self-hosted videos.",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_custom_playpause_controller": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content",
+                "responsive": false
+              }
+            },
+            "custom_play_controller_icon": {
+              "groupSlug": "custom_play_pause",
+              "render": true,
+              "subName": "custom_play_controller_icon",
+              "label": "Play Controller Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_play_controller_icon": {
+                      "unicode": "&#xe0a3;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_playpause_controller": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "custom_pause_controller_icon": {
+              "groupSlug": "custom_play_pause",
+              "render": true,
+              "subName": "custom_pause_controller_icon",
+              "label": "Pause Controller Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_pause_controller_icon": {
+                      "unicode": "&#xe0a3;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_playpause_controller": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "custom_controller_icon_color": {
+              "groupSlug": "design_custom_play_pause",
+              "render": true,
+              "priority": 0,
+              "subName": "custom_controller_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a color for blurb icon.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_controller_icon_color": "#c4302b"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-custom-controls .et-pb-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "custom_controller_icon_size": {
+              "groupSlug": "design_custom_play_pause",
+              "render": true,
+              "priority": 1,
+              "subName": "custom_controller_icon_size",
+              "label": "Icon Size",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_controller_icon_size": "24px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-custom-controls .et-pb-icon"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 100,
+                  "minLimit": 1,
+                  "step": 1
+                }
+              }
+            },
+            "custom_controller_ripple_size": {
+              "groupSlug": "design_custom_play_pause",
+              "render": true,
+              "priority": 2,
+              "subName": "custom_controller_ripple_size",
+              "label": "Ripple Size",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "custom_controller_icon_animation_type": "anim-ripple"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-custom-controls .anim-ripple"
+                },
+                "css_type": "width"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_controller_ripple_size": "80px"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 20,
+                  "max": 200,
+                  "minLimit": 20,
+                  "step": 1
+                }
+              }
+            },
+            "custom_controller_icon_animation_type": {
+              "groupSlug": "custom_play_pause",
+              "render": true,
+              "subName": "custom_controller_icon_animation_type",
+              "label": "Animation Type",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content",
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_controller_icon_animation_type": "anim-none"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_custom_playpause_controller": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "anim-none": {
+                      "label": "None"
+                    },
+                    "anim-ripple": {
+                      "label": "Ripple"
+                    }
+                  }
+                }
+              }
+            },
+            "custom_controller_icon_animation_ripple_color": {
+              "groupSlug": "custom_play_pause",
+              "render": true,
+              "subName": "custom_controller_icon_animation_ripple_color",
+              "label": "Ripple Color",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_controller_icon_animation_ripple_color": "rgba(0, 0, 0, 0.6)"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted",
+                  "use_custom_playpause_controller": "on",
+                  "custom_controller_icon_animation_type": "anim-ripple"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-custom-controls .anim-ripple:before,{{selector}} .difl-video-custom-controls .anim-ripple:after"
+                },
+                "css_type": "background"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "custom_controller_icon_animation_ripple_background_color": {
+              "groupSlug": "custom_play_pause",
+              "render": true,
+              "subName": "custom_controller_icon_animation_ripple_background_color",
+              "label": "Ripple Background",
+              "description": "Here you can control icon size.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "custom_controller_icon_animation_ripple_background_color": "rgba(0, 0, 0, 0.6)"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "source": "selfhosted",
+                  "use_custom_playpause_controller": "on",
+                  "custom_controller_icon_animation_type": "anim-ripple"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-video-custom-controls .anim-ripple"
+                },
+                "css_type": "background"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_custom_play_pause",
+              "render": true,
+              "label": "Background",
+              "priority": 2,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": true,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_custom_play_pause",
+              "render": true,
+              "label": " Padding",
+              "priority": 3,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": true,
+                  "fieldLabel": " "
+                }
+              }
+            }
+          },
+          "position": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_custom_play_pause",
+              "label": null,
+              "priority": 4,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/position",
+                "props": {
+                  "grouped": true,
+                  "fieldLabel": "",
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "origin": {
+                          "absolute": "top left"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "transform": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_custom_play_pause",
+              "label": null,
+              "priority": 5,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/transform",
+                "props": {
+                  "grouped": true,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_custom_play_pause",
+              "label": "",
+              "priority": 6,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": true,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_custom_play_pause",
+              "label": null,
+              "priority": 7,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": true,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "sticky_video_design_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df-sticky-video.is-difl-sticky-active",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "sticky_close_btn_bg_color": {
+              "groupSlug": "design_sticky_video",
+              "render": true,
+              "subName": "sticky_close_btn_bg_color",
+              "label": "Close Button Background",
+              "features": {
+                "sticky": false,
+                "hover": true,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_close_btn_bg_color": "rgba(0,0,0,0.55)"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "sticky_video_close_button": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-sticky-video-close"
+                },
+                "css_type": "background"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "sticky_close_btn_icon": {
+              "groupSlug": "design_sticky_video",
+              "render": true,
+              "subName": "sticky_close_btn_icon",
+              "label": "Close Button Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "sticky_video_close_button": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "sticky_close_btn_icon_color": {
+              "groupSlug": "design_sticky_video",
+              "render": true,
+              "subName": "sticky_close_btn_icon_color",
+              "label": "Close Button Icon Color",
+              "features": {
+                "sticky": false,
+                "hover": true,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_close_btn_icon_color": "#ffffff"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "sticky_video_close_button": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl-sticky-video-close"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "sticky_close_btn_icon_size": {
+              "groupSlug": "design_sticky_video",
+              "render": true,
+              "subName": "sticky_close_btn_icon_size",
+              "label": "Close Button Icon Size",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": true
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_close_btn_icon_size": "18px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "sticky_video_close_button": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} "
+                },
+                "css_type": "--close-button-icon-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "min": 8,
+                  "max": 60,
+                  "step": 1
+                }
+              }
+            },
+            "sticky_close_btn_position": {
+              "groupSlug": "design_sticky_video",
+              "render": true,
+              "subName": "sticky_close_btn_position",
+              "label": "Close Button Position",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sticky_close_btn_position": "top_right"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "sticky_video_close_button": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "top_right": {
+                      "label": "Top Right"
+                    },
+                    "top_left": {
+                      "label": "Top Left"
+                    },
+                    "bottom_right": {
+                      "label": "Bottom Right"
+                    },
+                    "bottom_left": {
+                      "label": "Bottom Left"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_sticky_video",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": true,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_sticky_video",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": true,
+                  "fieldLabel": "Sticky Video"
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

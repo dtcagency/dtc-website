@@ -1,0 +1,91 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "disabled_on": "module.decoration.disabledOn",
+    "animation": "module.decoration.animation",
+    "display_conditions": "module.decoration.conditions",
+    "background": "module.decoration.background",
+    "fonts": {
+      "content_text": "content_text.decoration.font"
+    },
+    "borders": {
+      "default": "border",
+      "content_text": "content_text.decoration.border",
+      "content_icon": "content_icon.decoration.border",
+      "content_image": "content_image.decoration.border"
+    },
+    "box_shadow": {
+      "default": "boxShadow",
+      "content_text": "content_text.decoration.boxShadow",
+      "content_icon": "content_icon.decoration.boxShadow",
+      "content_image": "content_image.decoration.boxShadow"
+    },
+    "height": "module.decoration.sizing",
+    "link_options": "module.advanced.link",
+    "margin_padding": "default.decoration.spacing",
+    "max_width": "module.decoration.sizing",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "filters": {
+      "default": "module.decoration.filters"
+    }
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after",
+    "free_form": "css.*.freeForm"
+  },
+  "module": {
+    "main_wrapper_tag": "main_wrapper_tag.innerContent.*",
+    "column_gap": "column_gap.innerContent.*",
+    "row_gap": "row_gap.innerContent.*",
+    "text_bg_color": "text_bg_color.innerContent.*",
+    "icon_color": "icon_color.innerContent.*",
+    "icon_bg_color": "icon_bg_color.innerContent.*",
+    "icon_size": "icon_size.innerContent.*",
+    "media_size": "media_size.innerContent.*",
+    "media_bg_color": "media_bg_color.innerContent.*",
+    "content_alignment": "content_alignment.innerContent.*",
+    "items_position": "items_position.innerContent.*",
+    "icon_container_margin": "icon_container.decoration.spacing.*.margin",
+    "icon_container_padding": "icon_container.decoration.spacing.*.padding",
+    "media_container_margin": "media_container.decoration.spacing.*.margin",
+    "media_container_padding": "media_container.decoration.spacing.*.padding",
+    "text_container_margin": "text_container.decoration.spacing.*.margin",
+    "text_container_padding": "text_container.decoration.spacing.*.padding",
+    "background_bgcolor": "module.decoration.background.*.color",
+    "background_bg_color": "module.decoration.background.*.color",
+    "background_use_gradient": "module.decoration.background.*.gradient.enabled",
+    "background_color_gradient_1": "module.decoration.background.*.gradient.stops[0].color",
+    "background_color_gradient_2": "module.decoration.background.*.gradient.stops[1].color",
+    "background_gradient_type": "module.decoration.background.*.gradient.type",
+    "background_radial_direction": "module.decoration.background.*.gradient.directionRadial",
+    "background_gradient_direction": "module.decoration.background.*.gradient.direction",
+    "background_start_position": "module.decoration.background.*.gradient.stops[0].position",
+    "background_end_position": "module.decoration.background.*.gradient.stops[1].position",
+    "background_above_image": "module.decoration.background.*.gradient.overlaysImage",
+    "background_background_image": "module.decoration.background.*.image.url",
+    "background_background_image_size": "module.decoration.background.*.image.size",
+    "background_size_width": "module.decoration.background.*.image.width",
+    "background_size_height": "module.decoration.background.*.image.height",
+    "background_background_image_position": "module.decoration.background.*.image.position",
+    "background_position_horizontal": "module.decoration.background.*.image.horizontalOffset",
+    "background_position_vertical": "module.decoration.background.*.image.verticalOffset",
+    "background_background_image_repeat": "module.decoration.background.*.image.repeat"
+  },
+  "valueExpansionFunctionMap": {
+    "icon_container_margin": "D4ToD5Spacing",
+    "icon_container_padding": "D4ToD5Spacing",
+    "media_container_margin": "D4ToD5Spacing",
+    "media_container_padding": "D4ToD5Spacing",
+    "text_container_margin": "D4ToD5Spacing",
+    "text_container_padding": "D4ToD5Spacing"
+  }
+}

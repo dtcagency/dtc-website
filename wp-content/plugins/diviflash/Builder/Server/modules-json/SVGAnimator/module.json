@@ -1,0 +1,829 @@
+{
+  "name": "difl/svganimator",
+  "d4Shortcode": "difl_svganimator",
+  "title": "SVG Animator",
+  "category": "module",
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "content": {
+        "panel": "content",
+        "groupName": "content",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Element "
+          }
+        }
+      },
+      "animation": {
+        "panel": "content",
+        "groupName": "animation",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Animation"
+          }
+        }
+      },
+      "contentLink": {
+        "panel": "content",
+        "groupName": "contentLink",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Link"
+          }
+        }
+      },
+      "designSizing": {
+        "panel": "design",
+        "priority": 60,
+        "groupName": "sizing",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Sizing",
+            "clipboardCategory": "style",
+            "presetGroup": "divi/sizing"
+          }
+        }
+      }
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "link": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentLink",
+              "priority": 20,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/link",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "attributes": {},
+          "animation": {},
+          "background": {},
+          "border": {},
+          "boxShadow": {},
+          "conditions": {},
+          "disabledOn": {},
+          "filters": {},
+          "overflow": {},
+          "position": {},
+          "scroll": {},
+          "sizing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "designSizing",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/sizing",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "alignself": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "interactions": {},
+          "spacing": {},
+          "sticky": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "SVG Animator"
+            }
+          }
+        }
+      }
+    },
+    "svg_src": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "svg_src.innerContent",
+            "subName": "src",
+            "label": "Upload SVG",
+            "render": true,
+            "features": {
+              "preset": "content"
+            },
+            "description": "Upload SVG File",
+            "component": {
+              "type": "field",
+              "name": "divi/upload",
+              "props": {
+                "chooseText": "Choose SVG",
+                "uploadButtonText": "Upload SVG",
+                "dataType": "svg",
+                "syncImageData": {
+                  "src": true,
+                  "id": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "notice": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "notice.innerContent",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/json_ex_notice",
+              "props": {
+                "fieldDefinition": {
+                  "message": "Enable SVG file upload option from DiviFlash  ",
+                  "url": "{{urls.homeUrl}}wp-admin/admin.php?page=diviflash&tab=settings"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "svg_alignment": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "svg_alignment.innerContent",
+            "label": "Alignment",
+            "render": true,
+            "description": "Here you can choose the image alignment.",
+            "features": {
+              "responsive": true,
+              "preset": "content"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "flex-start": {
+                    "label": "Left"
+                  },
+                  "center": {
+                    "label": "Center"
+                  },
+                  "flex-end": {
+                    "label": "Right"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "center"
+          }
+        }
+      }
+    },
+    "svg_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "svg_color.innerContent",
+            "label": "Color",
+            "render": true,
+            "description": "Here you can define a custom color for a SVG.",
+            "features": {
+              "responsive": true,
+              "hover": false
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "#000000"
+          }
+        }
+      }
+    },
+    "svg_width": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "svg_width.innerContent",
+            "label": "Width",
+            "render": true,
+            "description": "This defines SVG width. If not set 100%.",
+            "features": {
+              "responsive": true,
+              "preset": [
+                "html"
+              ]
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "1",
+                "max": "200",
+                "step": "1"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "100%"
+          }
+        }
+      }
+    },
+    "svg_height": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "svg_height.innerContent",
+            "label": "Height",
+            "render": true,
+            "description": "This defines SVG height. If not set 100%.",
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "1",
+                "max": "200",
+                "step": "1"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "100%"
+          }
+        }
+      }
+    },
+    "svg_weight": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "svg_weight.innerContent",
+            "label": "Line Width",
+            "render": true,
+            "description": "This defines SVG line width.",
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "1",
+                "max": "20",
+                "step": "1"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "2px"
+          }
+        }
+      }
+    },
+    "animation_type": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "animation_type.innerContent",
+            "label": "Type",
+            "render": true,
+            "description": "Animation type.",
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "delayed": {
+                    "label": "Delayed"
+                  },
+                  "sync": {
+                    "label": "Sync"
+                  },
+                  "oneByOne": {
+                    "label": "One By One"
+                  }
+                }
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "delayed"
+          }
+        }
+      }
+    },
+    "delay_animation": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "delay_animation.innerContent",
+            "label": "Delay",
+            "render": true,
+            "show_if": {
+              "animation_type": "delayed"
+            },
+            "description": "Delay depends on delayed type and must less than Speed",
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "min_limit": "0",
+                "max": "2000",
+                "step": "1"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0ms"
+          }
+        }
+      }
+    },
+    "duration_animation": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "duration_animation.innerContent",
+            "label": "Speed",
+            "render": true,
+            "description": "Animation speed in frames.",
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "allowedUnits": [
+                  "ms"
+                ],
+                "min": "1",
+                "max": "2000",
+                "step": "1"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "100ms"
+          }
+        }
+      }
+    },
+    "animation_timing_func": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "animation_timing_func.innerContent",
+            "label": "Timing Function",
+            "render": true,
+            "description": "Here you can choose animation timing function.",
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "LINEAR": {
+                    "label": "Linear"
+                  },
+                  "EASE": {
+                    "label": "Ease"
+                  },
+                  "EASE_IN": {
+                    "label": "Ease-in"
+                  },
+                  "EASE_OUT": {
+                    "label": "Ease-out"
+                  },
+                  "EASE_OUT_BOUNCE": {
+                    "label": "Ease-out Bounce"
+                  }
+                }
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "LINEAR"
+          }
+        }
+      }
+    },
+    "enable_loop": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "enable_loop.innerContent",
+            "label": "Loop",
+            "render": true,
+            "description": "Enable Loop",
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "loop_infinite": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "loop_infinite.innerContent",
+            "label": "Unlimited",
+            "render": true,
+            "show_if": {
+              "enable_loop": "on"
+            },
+            "description": "Enable This for unlimited animation",
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "loop_time": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "loop_time.innerContent",
+            "label": "Loop Count",
+            "render": true,
+            "show_if": {
+              "enable_loop": "on"
+            },
+            "show_if_not": {
+              "loop_infinite": "on"
+            },
+            "description": "Animation cycle in number",
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "1",
+                "max": "20",
+                "step": "1",
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "path_timing_func": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "path_timing_func.innerContent",
+            "label": "Path Timing Function",
+            "render": true,
+            "description": "Here you can choose animation path timing function.",
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "LINEAR": {
+                    "label": "Linear"
+                  },
+                  "EASE": {
+                    "label": "Ease"
+                  },
+                  "EASE_IN": {
+                    "label": "Ease-in"
+                  },
+                  "EASE_OUT": {
+                    "label": "Ease-out"
+                  },
+                  "EASE_OUT_BOUNCE": {
+                    "label": "Ease-out Bounce"
+                  }
+                }
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "LINEAR"
+          }
+        }
+      }
+    },
+    "animation_start": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "animation_start.innerContent",
+            "label": "Trigger Type",
+            "render": true,
+            "description": "Here you can choose animation start function.",
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "inViewport": {
+                    "label": "In Viewport"
+                  },
+                  "autostart": {
+                    "label": "Auto Start"
+                  }
+                }
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "inViewport"
+          }
+        }
+      }
+    },
+    "enable_replay": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "enable_replay.innerContent",
+            "label": "Replay",
+            "show_if": {
+              "loop_infinite": "off"
+            },
+            "render": true,
+            "description": "Enable Replay",
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "replay_type": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation",
+            "attrName": "replay_type.innerContent",
+            "label": "Replay Type",
+            "render": true,
+            "show_if": {
+              "enable_replay": "on",
+              "loop_infinite": "off"
+            },
+            "description": "Select Replay Type",
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "click": {
+                    "label": "Replay on Click"
+                  },
+                  "mouseenter": {
+                    "label": "Replay on Hover"
+                  }
+                }
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "click"
+          }
+        }
+      }
+    },
+    "default": {
+      "type": "object",
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "attrName": "default.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {}
+}

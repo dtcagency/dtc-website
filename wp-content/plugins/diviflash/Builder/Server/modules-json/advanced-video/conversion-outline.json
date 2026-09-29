@@ -1,0 +1,83 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "animation": "module.decoration.animation",
+    "background": "module.decoration.background",
+    "disabled_on": "module.decoration.disabledOn",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "text": "module.advanced.text",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "margin_padding": "module.decoration.spacing",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "link_options": "module.advanced.link",
+    "borders": {
+      "default": "module.decoration.border"
+    },
+    "box_shadow": {
+      "default": "module.decoration.boxShadow"
+    },
+    "filters": {
+      "default": "module.decoration.filters"
+    }
+  },
+  "module": {
+    "source_type": "source_settings.innerContent.*.source_type",
+    "video_url": "source_settings.innerContent.*.video_url",
+    "video_file": "source_settings.innerContent.*.video_file",
+    "start_time": "source_settings.innerContent.*.start_time",
+    "end_time": "source_settings.innerContent.*.end_time",
+    "poster_image": "source_settings.innerContent.*.poster_image",
+    "autoplay": "playback_settings.innerContent.*.autoplay",
+    "play_on_mobile": "playback_settings.innerContent.*.play_on_mobile",
+    "mute": "playback_settings.innerContent.*.mute",
+    "loop": "playback_settings.innerContent.*.loop",
+    "player_controls": "playback_settings.innerContent.*.player_controls",
+    "lazy_load": "playback_settings.innerContent.*.lazy_load",
+    "privacy_mode": "playback_settings.innerContent.*.privacy_mode",
+    "modest_branding": "playback_settings.innerContent.*.modest_branding",
+    "captions": "playback_settings.innerContent.*.captions",
+    "suggested_videos": "playback_settings.innerContent.*.suggested_videos",
+    "intro_title": "playback_settings.innerContent.*.intro_title",
+    "intro_portrait": "playback_settings.innerContent.*.intro_portrait",
+    "intro_byline": "playback_settings.innerContent.*.intro_byline",
+    "controls_color": "playback_settings.innerContent.*.controls_color",
+    "video_info": "playback_settings.innerContent.*.video_info",
+    "logo": "playback_settings.innerContent.*.logo",
+    "download_button": "playback_settings.innerContent.*.download_button",
+    "preload": "playback_settings.innerContent.*.preload",
+    "use_overlay": "overlay_settings.innerContent.*.use_overlay",
+    "trigger_mode": "overlay_settings.innerContent.*.trigger_mode",
+    "overlay_image": "overlay_settings.innerContent.*.overlay_image",
+    "use_play_icon": "overlay_settings.innerContent.*.use_play_icon",
+    "play_icon_source_type": "overlay_settings.innerContent.*.play_icon_source_type",
+    "play_icon": "overlay_settings.innerContent.*.play_icon",
+    "play_icon_upload": "overlay_settings.innerContent.*.play_icon_upload",
+    "open_in_lightbox": "overlay_settings.innerContent.*.open_in_lightbox",
+    "show_custom_play_pause": "custom_control_settings.innerContent.*.show_custom_play_pause",
+    "control_style": "custom_control_settings.innerContent.*.control_style",
+    "custom_play_icon": "custom_control_settings.innerContent.*.custom_play_icon",
+    "custom_pause_icon": "custom_control_settings.innerContent.*.custom_pause_icon",
+    "custom_play_icon_upload": "custom_control_settings.innerContent.*.custom_play_icon_upload",
+    "custom_pause_icon_upload": "custom_control_settings.innerContent.*.custom_pause_icon_upload",
+    "aspect_ratio": "ratio_settings.innerContent.*.aspect_ratio",
+    "icon_size": "play_icon_design.innerContent.*.icon_size",
+    "icon_color": "play_icon_design.innerContent.*.icon_color",
+    "icon_background": "play_icon_design.innerContent.*.icon_background",
+    "icon_padding": "play_icon_design.innerContent.*.icon_padding",
+    "control_icon_size": "player_controls_design.innerContent.*.control_icon_size",
+    "control_color": "player_controls_design.innerContent.*.control_color",
+    "control_background": "player_controls_design.innerContent.*.control_background",
+    "control_gap": "player_controls_design.innerContent.*.control_gap"
+  },
+  "css": {
+    "after": "css.*.after",
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement"
+  }
+}

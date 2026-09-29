@@ -1,0 +1,396 @@
+{
+  "name": "difl/lottieimage",
+  "d4Shortcode": "difl_lottieimage",
+  "title": "Lottie",
+  "category": "module",
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "source": {
+        "panel": "content",
+        "groupName": "source",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Lottie Source"
+          }
+        }
+      },
+      "settings": {
+        "panel": "content",
+        "groupName": "settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Lottie Settings"
+          }
+        }
+      },
+      "contentLink": {
+        "panel": "content",
+        "groupName": "contentLink",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Link"
+          }
+        }
+      }
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "link": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentLink",
+              "priority": 20,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/link",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "attributes": {},
+          "animation": {},
+          "background": {},
+          "border": {},
+          "boxShadow": {},
+          "conditions": {},
+          "disabledOn": {},
+          "filters": {},
+          "overflow": {},
+          "interactions": {},
+          "position": {},
+          "scroll": {},
+          "sizing": {},
+          "spacing": {},
+          "sticky": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Lottie"
+            }
+          }
+        }
+      }
+    },
+    "lottie_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "lottie_file_options": {
+              "groupSlug": "source",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "lottie_file_options",
+              "label": "Lottion File Location",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "external": {
+                      "label": "External File URL"
+                    },
+                    "media": {
+                      "label": "From Media"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "external_file": {
+              "groupSlug": "source",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "external_file",
+              "label": "URL",
+              "render": true,
+              "show_if_not": {
+                "lottie_file_options": "media"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "upload": {
+              "groupSlug": "source",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "upload",
+              "label": "Upload",
+              "render": true,
+              "show_if": {
+                "lottie_file_options": "media"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "dataType": "json"
+                }
+              }
+            },
+            "animation_trigger": {
+              "groupSlug": "settings",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "animation_trigger",
+              "label": "Animation trigger",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "viewport": {
+                      "label": "Viewport"
+                    },
+                    "on_click": {
+                      "label": "On Click"
+                    },
+                    "on_hover": {
+                      "label": "On Hover"
+                    },
+                    "on_scroll": {
+                      "label": "On Scroll"
+                    },
+                    "none": {
+                      "label": "None"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "scroll_effect": {
+              "groupSlug": "settings",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "scroll_effect",
+              "label": "Track Divi Scroll Effect",
+              "render": true,
+              "show_if": {
+                "animation_trigger": "on_scroll"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "stop_on_mouse_out": {
+              "groupSlug": "settings",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "stop_on_mouse_out",
+              "label": "Pause Animation Mouse Leave",
+              "render": true,
+              "show_if": {
+                "animation_trigger": "on_hover"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "threshold": {
+              "groupSlug": "settings",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "threshold",
+              "label": "Threshold",
+              "render": true,
+              "show_if": {
+                "animation_trigger": "viewport"
+              },
+              "description": "It has a default value of zero, which means that as soon as a user approaches the target element and it becomes visible",
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": "0",
+                  "max": "1",
+                  "step": ".1",
+                  "allowedUnits": [],
+                  "defaultUnit": ""
+                }
+              }
+            },
+            "loop": {
+              "groupSlug": "settings",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "loop",
+              "label": "Loop",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "speed": {
+              "groupSlug": "settings",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "speed",
+              "label": "Animation Speed",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": "1",
+                  "max": "15",
+                  "step": ".5",
+                  "allowedUnits": [],
+                  "defaultUnit": ""
+                }
+              }
+            },
+            "direction_reverse": {
+              "groupSlug": "settings",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "direction_reverse",
+              "label": "Reverse Direction",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "renderer": {
+              "groupSlug": "settings",
+              "attrName": "lottie_settings.innerContent",
+              "subName": "renderer",
+              "label": "Renderer",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "svg": {
+                      "label": "SVG"
+                    },
+                    "canvas": {
+                      "label": "Canvas"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "lottie_file_options": "external",
+              "upload": "",
+              "animation_trigger": "viewport",
+              "scroll_effect": "off",
+              "stop_on_mouse_out": "off",
+              "threshold": "0",
+              "loop": "off",
+              "speed": "1",
+              "direction_reverse": "off",
+              "renderer": "svg"
+            }
+          }
+        }
+      }
+    },
+    "json_ex_notice": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "source",
+            "attrName": "json_ex_notice.innerContent",
+            "render": true,
+            "priority": 67,
+            "show_if": {
+              "lottie_file_options": "media"
+            },
+            "component": {
+              "type": "field",
+              "name": "difl/json_ex_notice",
+              "props": {}
+            }
+          }
+        }
+      }
+    },
+    "default": {
+      "type": "object",
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "attrName": "default.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {}
+}

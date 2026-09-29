@@ -1,0 +1,449 @@
+{
+    "name": "difl/linechartdataset",
+    "d4Shortcode": "difl_linechartdataset",
+    "title": "Line Dataset",
+    "titles": "Line Datasets",
+    "category": "child-module",
+    "parentsName": [
+        "difl/linechart"
+    ],
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label",
+                            "props": { "groupLabel": "Meta" }
+                        }
+                    }
+                },
+                "advanced": {
+                    "htmlAttributes": {}
+                },
+                "decoration": {
+                    "conditions": {},
+                    "disabledOn": {}
+                }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "Line Dataset"
+                        }
+                    }
+                }
+            }
+        },
+        "dataset_settings": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "dataset_name": {
+                            "groupSlug": "line_content",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "dataset_name",
+                            "label": "Dataset Name",
+                            "description": "Name shown in the legend for this line.",
+                            "features": {
+                                "sticky": false,
+                                "hover": false,
+                                "responsive": false,
+                                "dynamicContent": {
+                                    "type": "text"
+                                }
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "Dataset 1"
+                                }
+                            }
+                        },
+                        "line_color": {
+                            "groupSlug": "line_style",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "line_color",
+                            "label": "Line Color",
+                            "description": "Color of the line stroke.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/color-picker",
+                                "props": {}
+                            }
+                        },
+                        "line_width": {
+                            "groupSlug": "line_style",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "line_width",
+                            "label": "Line Width",
+                            "description": "Thickness of the line in pixels.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 1, "max": 10, "step": 1, "unitless": true }
+                            }
+                        },
+                        "tension": {
+                            "groupSlug": "line_style",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "tension",
+                            "label": "Line Tension (Curve)",
+                            "description": "0 = sharp corners, 0.4 = smooth curves.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 0, "max": 0.5, "step": 0.05, "unitless": true }
+                            }
+                        },
+                        "stepped": {
+                            "groupSlug": "line_style",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "stepped",
+                            "label": "Stepped Line",
+                            "description": "Draw the line as a stepped/staircase shape.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "false": { "label": "None" },
+                                        "before": { "label": "Before" },
+                                        "after": { "label": "After" },
+                                        "middle": { "label": "Middle" }
+                                    }
+                                }
+                            }
+                        },
+                        "use_dashed": {
+                            "groupSlug": "line_style",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "use_dashed",
+                            "label": "Dashed Line",
+                            "description": "Draw the line with dashes instead of solid.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "dash_length": {
+                            "groupSlug": "line_style",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "dash_length",
+                            "label": "Dash Length",
+                            "description": "Length of each dash segment in pixels.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if": { "use_dashed": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 1, "max": 30, "step": 1, "unitless": true }
+                            }
+                        },
+                        "dash_gap": {
+                            "groupSlug": "line_style",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "dash_gap",
+                            "label": "Dash Gap",
+                            "description": "Gap between dashes in pixels.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if": { "use_dashed": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 1, "max": 30, "step": 1, "unitless": true }
+                            }
+                        },
+                        "point_style": {
+                            "groupSlug": "point_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "point_style",
+                            "label": "Point Style",
+                            "description": "Shape of the data point markers.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "circle": { "label": "Circle" },
+                                        "rect": { "label": "Rectangle" },
+                                        "rectRounded": { "label": "Rounded Rectangle" },
+                                        "triangle": { "label": "Triangle" },
+                                        "star": { "label": "Star" },
+                                        "cross": { "label": "Cross" },
+                                        "crossRot": { "label": "Cross Rotated" },
+                                        "false": { "label": "None (Hidden)" }
+                                    }
+                                }
+                            }
+                        },
+                        "point_radius": {
+                            "groupSlug": "point_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "point_radius",
+                            "label": "Point Radius",
+                            "description": "Size of data point markers in pixels.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if_not": { "point_style": "false" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 0, "max": 20, "step": 1, "unitless": true }
+                            }
+                        },
+                        "point_hover_radius": {
+                            "groupSlug": "point_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "point_hover_radius",
+                            "label": "Point Hover Radius",
+                            "description": "Size of data points on hover.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if_not": { "point_style": "false" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 0, "max": 20, "step": 1, "unitless": true }
+                            }
+                        },
+                        "point_color": {
+                            "groupSlug": "point_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "point_color",
+                            "label": "Point Color",
+                            "description": "Fill color of data point markers. Defaults to line color.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if_not": { "point_style": "false" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/color-picker",
+                                "props": {}
+                            }
+                        },
+                        "fill_mode": {
+                            "groupSlug": "fill_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "fill_mode",
+                            "label": "Area Fill",
+                            "description": "Fill the area under/above the line.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "false": { "label": "None" },
+                                        "origin": { "label": "To Origin (Zero Line)" },
+                                        "start": { "label": "To Start (Bottom)" },
+                                        "end": { "label": "To End (Top)" }
+                                    }
+                                }
+                            }
+                        },
+                        "fill_color": {
+                            "groupSlug": "fill_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "fill_color",
+                            "label": "Fill Color",
+                            "description": "Color of the filled area.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if_not": { "fill_mode": "false" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/color-picker",
+                                "props": {}
+                            }
+                        },
+                        "use_fill_gradient": {
+                            "groupSlug": "fill_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "use_fill_gradient",
+                            "label": "Use Fill Gradient",
+                            "description": "Apply a vertical gradient to the fill area.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if_not": { "fill_mode": "false" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "fill_gradient_top": {
+                            "groupSlug": "fill_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "fill_gradient_top",
+                            "label": "Fill Gradient Top",
+                            "description": "Color at the top of the fill gradient.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if": { "use_fill_gradient": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/color-picker",
+                                "props": {}
+                            }
+                        },
+                        "fill_gradient_bottom": {
+                            "groupSlug": "fill_settings",
+                            "render": true,
+                            "attrName": "dataset_settings.innerContent",
+                            "subName": "fill_gradient_bottom",
+                            "label": "Fill Gradient Bottom",
+                            "description": "Color at the bottom of the fill gradient.",
+                            "features": { "sticky": false, "hover": false, "responsive": false },
+                            "show_if": { "use_fill_gradient": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/color-picker",
+                                "props": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "dataset_name": "Dataset 1",
+                            "line_color": "",
+                            "line_width": "2",
+                            "tension": "0.1",
+                            "stepped": "false",
+                            "use_dashed": "off",
+                            "dash_length": "5",
+                            "dash_gap": "5",
+                            "point_style": "circle",
+                            "point_radius": "3",
+                            "point_hover_radius": "5",
+                            "point_color": "",
+                            "fill_mode": "false",
+                            "fill_color": "rgba(51,102,204,0.2)",
+                            "use_fill_gradient": "off",
+                            "fill_gradient_top": "rgba(51,102,204,0.4)",
+                            "fill_gradient_bottom": "rgba(51,102,204,0.05)"
+                        }
+                    }
+                }
+            }
+        },
+        "dataset_values": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "line_content",
+                        "attrName": "dataset_values.innerContent",
+                        "label": "Values",
+                        "render": true,
+                        "features": {
+                            "responsive": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/sortable-list"
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": [
+                            {"dragID": "df_ld_1", "value": "25"},
+                            {"dragID": "df_ld_2", "value": "50"},
+                            {"dragID": "df_ld_3", "value": "75"}
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "customCssFields": {},
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "line_content": {
+                "panel": "content",
+                "groupName": "line_content",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Line Content"
+                    }
+                }
+            },
+            "line_style": {
+                "panel": "design",
+                "priority": 5,
+                "groupName": "line_style",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Line Style"
+                    }
+                }
+            },
+            "point_settings": {
+                "panel": "design",
+                "priority": 10,
+                "groupName": "point_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Point Style"
+                    }
+                }
+            },
+            "fill_settings": {
+                "panel": "design",
+                "priority": 15,
+                "groupName": "fill_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Area Fill"
+                    }
+                }
+            }
+        }
+    },
+    "childrenName": [],
+    "allowAllElements": false
+}

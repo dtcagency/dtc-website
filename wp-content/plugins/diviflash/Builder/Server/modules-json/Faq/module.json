@@ -1,0 +1,3292 @@
+{
+  "name": "difl/faq",
+  "d4Shortcode": "difl_faq",
+  "title": "FAQ",
+  "category": "module",
+  "childModuleName": "difl/faqitem",
+  "childModuleTitle": "FAQ Item",
+  "childrenName": [
+    "difl/faqitem"
+  ],
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "setting": {
+        "panel": "content",
+        "groupName": "setting",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "General Settings"
+          }
+        }
+      },
+      "que_setting": {
+        "panel": "content",
+        "groupName": "que_setting",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Question Settings"
+          }
+        }
+      },
+      "animation": {
+        "panel": "content",
+        "groupName": "animation",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Animation"
+          }
+        }
+      },
+      "schema": {
+        "panel": "content",
+        "groupName": "schema",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Schema"
+          }
+        }
+      },
+      "contentLink": {
+        "panel": "content",
+        "groupName": "contentLink",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Link"
+          }
+        }
+      },
+      "design_faq_item": {
+        "panel": "design",
+        "groupName": "design_faq_item",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "FAQ Item"
+          }
+        }
+      },
+      "design_question": {
+        "panel": "design",
+        "groupName": "design_question",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Question Style"
+          }
+        }
+      },
+      "design_question_active": {
+        "panel": "design",
+        "groupName": "design_question_active",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Question Opened Style"
+          }
+        }
+      },
+      "design_question_text": {
+        "panel": "design",
+        "groupName": "design_question_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Question Text"
+          }
+        }
+      },
+      "design_faq_icon": {
+        "panel": "design",
+        "groupName": "design_faq_icon",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Question Icon"
+          }
+        }
+      },
+      "design_que_img": {
+        "panel": "design",
+        "groupName": "design_que_img",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Question Image"
+          }
+        }
+      },
+      "design_answer": {
+        "panel": "design",
+        "groupName": "design_answer",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Answer Style"
+          }
+        }
+      },
+      "design_answer_text": {
+        "panel": "design",
+        "groupName": "design_answer_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Answer Text"
+          }
+        }
+      },
+      "design_answer_heading": {
+        "panel": "design",
+        "groupName": "design_answer_heading",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Answer Heading Text"
+          }
+        }
+      },
+      "design_answer_img": {
+        "panel": "design",
+        "groupName": "design_answer_img",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Answer Image"
+          }
+        }
+      },
+      "design_button": {
+        "panel": "design",
+        "groupName": "design_button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Answer Button"
+          }
+        }
+      },
+      "margin_padding": {
+        "panel": "design",
+        "groupName": "margin_padding",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Custom Spacing"
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {
+    "queWrapperCss": {
+      "label": "Question Wrapper",
+      "subName": "queWrapperCss",
+      "selectorSuffix": " .faq_question_wrapper"
+    },
+    "queTextCss": {
+      "label": "Question Text",
+      "subName": "queTextCss",
+      "selectorSuffix": " .faq_question_wrapper .faq_question_title"
+    },
+    "closeQueIconCss": {
+      "label": "Closed Question Icon",
+      "subName": "closeQueIconCss",
+      "selectorSuffix": " .faq_question_wrapper .close_icon .et-pb-icon"
+    },
+    "openQueIconCss": {
+      "label": "Opened Question Icon",
+      "subName": "openQueIconCss",
+      "selectorSuffix": " .faq_question_wrapper .open_icon .et-pb-icon"
+    },
+    "closeQueImageCss": {
+      "label": "Closed Question Image",
+      "subName": "closeQueImageCss",
+      "selectorSuffix": " .faq_question_wrapper .close_image img"
+    },
+    "openQueImageCss": {
+      "label": "Opened Question Image",
+      "subName": "openQueImageCss",
+      "selectorSuffix": " .faq_question_wrapper .open_image img"
+    },
+    "ansWrapperCss": {
+      "label": "Answer Wrapper",
+      "subName": "ansWrapperCss",
+      "selectorSuffix": " .faq_answer_wrapper"
+    },
+    "ansTextCss": {
+      "label": "Answer Text",
+      "subName": "ansTextCss",
+      "selectorSuffix": " .faq_answer_wrapper .faq_answer"
+    },
+    "ansImgCss": {
+      "label": "Answer Image",
+      "subName": "ansImgCss",
+      "selectorSuffix": " .faq_answer_wrapper .faq_answer_image img"
+    },
+    "ansButtonCss": {
+      "label": "Ans Button",
+      "subName": "ansButtonCss",
+      "selectorSuffix": " .faq_answer_wrapper .faq_button a"
+    },
+    "ansButtonIconCss": {
+      "label": "Answer Button Icon",
+      "subName": "ansButtonIconCss",
+      "selectorSuffix": " .faq_answer_wrapper .faq_button icon"
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "link": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentLink",
+              "priority": 20,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/link",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "attributes": {},
+          "animation": {},
+          "background": {},
+          "interactions": {},
+          "border": {},
+          "boxShadow": {},
+          "conditions": {},
+          "disabledOn": {},
+          "filters": {},
+          "overflow": {},
+          "position": {},
+          "scroll": {},
+          "sizing": {},
+          "sticky": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "FAQ"
+            }
+          }
+        }
+      }
+    },
+    "faq_que_text_tab": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_question_text",
+            "tab_slug": "faq_que_text_tab",
+            "module_slug": "difl/faq",
+            "tabs": {
+              "text": {
+                "label": "Text",
+                "components": []
+              },
+              "openedText": {
+                "label": "Opened Text",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "faq_que_icon_tab": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "tab_slug": "faq_que_icon_tab",
+            "module_slug": "difl/faq",
+            "tabs": {
+              "icon": {
+                "label": "Icon",
+                "components": []
+              },
+              "openedIcon": {
+                "label": "Opened Icon",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "faq_que_image_tab": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_que_img",
+            "tab_slug": "faq_que_image_tab",
+            "module_slug": "difl/faq",
+            "tabs": {
+              "image": {
+                "label": "Image",
+                "components": []
+              },
+              "openedImage": {
+                "label": "Opened Image",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "faq_custom_spacing_tab": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "margin_padding",
+            "tab_slug": "faq_custom_spacing_tab",
+            "module_slug": "difl/faq",
+            "tabs": {
+              "wrapper": {
+                "label": "Wrapper",
+                "components": []
+              },
+              "content": {
+                "label": "Content",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "faq_que_wrapper": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "faq_layout": {
+              "groupSlug": "setting",
+              "attrName": "faq_que_wrapper.innerContent",
+              "subName": "faq_layout",
+              "label": "FAQ Type",
+              "render": true,
+              "priority": 1,
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "accordion": {
+                      "label": "Accordion"
+                    },
+                    "toggle": {
+                      "label": "Toggle"
+                    },
+                    "plain": {
+                      "label": "Plain"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "faq_que_swap": {
+              "groupSlug": "que_setting",
+              "attrName": "faq_que_wrapper.innerContent",
+              "subName": "faq_que_swap",
+              "label": "Question Swap",
+              "render": true,
+              "show_if": {
+                "disable_faq_icon": "off"
+              },
+              "features": {
+                "responsive": true,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "inherit": {
+                      "label": "Right"
+                    },
+                    "row-reverse": {
+                      "label": "Left"
+                    }
+                  }
+                }
+              }
+            },
+            "faq_que_alignment": {
+              "groupSlug": "que_setting",
+              "attrName": "faq_que_wrapper.innerContent",
+              "subName": "faq_que_alignment",
+              "label": "Question Layout Type",
+              "render": true,
+              "features": {
+                "responsive": true,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "space-between": {
+                      "label": "Default"
+                    },
+                    "left": {
+                      "label": "Left"
+                    },
+                    "center": {
+                      "label": "Center"
+                    },
+                    "right": {
+                      "label": "Right"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_question",
+              "attrName": "faq_que_wrapper.decoration.background",
+              "label": "Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_question",
+              "attrName": "faq_que_wrapper.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_question",
+              "attrName": "faq_que_wrapper.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_faqitem .faq_question_wrapper",
+              "hover": "{{selector}} .difl_faqitem .faq_question_wrapper:hover"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_faqitem .faq_question_wrapper",
+              "hover": "{{selector}} .difl_faqitem .faq_question_wrapper:hover"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_faqitem .faq_question_wrapper",
+              "hover": "{{selector}} .difl_faqitem .faq_question_wrapper:hover"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "faq_layout": "accordion",
+              "faq_que_swap": "inherit",
+              "faq_que_alignment": "space-between"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          },
+          "border": {
+            "desktop": {
+              "value": {
+                "radius": {
+                  "topLeft": "0px",
+                  "topRight": "0px",
+                  "bottomLeft": "0px",
+                  "bottomRight": "0px"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "faq_layout_grid": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "setting",
+            "attrName": "faq_layout_grid.innerContent",
+            "label": "Use Grid Layout",
+            "render": true,
+            "priority": 1,
+            "features": {
+              "responsive": false,
+              "preset": "content"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "faq_grid_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "faq_item_per_column": {
+              "groupSlug": "setting",
+              "attrName": "faq_grid_settings.innerContent",
+              "subName": "faq_item_per_column",
+              "label": "Layout Columns",
+              "render": true,
+              "priority": 3,
+              "description": "Here you can choose FAQ item per column.",
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "faq_layout_grid": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 12,
+                  "minLimit": 1,
+                  "maxLimit": 12,
+                  "step": 1,
+                  "defaultUnit": ""
+                }
+              }
+            },
+            "faq_item_gap": {
+              "groupSlug": "setting",
+              "attrName": "faq_grid_settings.innerContent",
+              "subName": "faq_item_gap",
+              "label": "Item Gap",
+              "render": true,
+              "priority": 4,
+              "description": "Here you can choose FAQ item gap.",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 100,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              }
+            },
+            "output_html": {
+              "groupSlug": "schema",
+              "attrName": "faq_grid_settings.innerContent",
+              "subName": "output_html",
+              "label": "Display FAQ",
+              "render": true,
+              "show_if": {
+                "enable_schema": "on"
+              },
+              "description": "Deactivate this option to hide FAQ. But schema data will generate for SEO purpose.",
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content"
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "faq_item_per_column": "2",
+              "faq_item_gap": "20px",
+              "output_html": "on"
+            }
+          },
+          "tablet": {
+            "value": {
+              "faq_item_per_column": "2"
+            }
+          },
+          "phone": {
+            "value": {
+              "faq_item_per_column": "1"
+            }
+          }
+        }
+      }
+    },
+    "faq_item_width_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "faq_item_equal_width": {
+              "groupSlug": "setting",
+              "attrName": "faq_item_width_settings.innerContent",
+              "subName": "faq_item_equal_width",
+              "label": "Apply item equal width",
+              "render": true,
+              "priority": 5,
+              "description": "Here you can choose whether or not item is equal width.",
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "faq_item_width": {
+              "groupSlug": "setting",
+              "attrName": "faq_item_width_settings.innerContent",
+              "subName": "faq_item_width",
+              "label": "Item Width",
+              "render": true,
+              "priority": 6,
+              "show_if": {
+                "faq_item_equal_width": "off"
+              },
+              "description": "Here you can set FAQ item width.",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "step": 1,
+                  "min": 1,
+                  "minLimit": 0,
+                  "max": 100,
+                  "maxLimit": 100
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "faq_item_equal_width": "on",
+              "faq_item_width": "50%"
+            }
+          }
+        }
+      }
+    },
+    "faq_item_horizontal_alignment": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "setting",
+            "attrName": "faq_item_horizontal_alignment.innerContent",
+            "label": "Item Horizontal Alignment",
+            "render": true,
+            "show_if": {
+              "faq_item_equal_width": "off"
+            },
+            "description": "Here you can choose horizontal alignment for FAQ item.",
+            "features": {
+              "responsive": true,
+              "preset": "content"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "flex-start": {
+                    "label": "Left"
+                  },
+                  "center": {
+                    "label": "Center"
+                  },
+                  "flex-end": {
+                    "label": "Right"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "flex-start"
+          }
+        }
+      }
+    },
+    "activate_on_first_time": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "setting",
+            "attrName": "activate_on_first_time.innerContent",
+            "label": "Active Item",
+            "render": true,
+            "show_if_not": {
+              "faq_layout": "plain"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "active_item_order_number": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "setting",
+            "attrName": "active_item_order_number.innerContent",
+            "label": "Active Item Number",
+            "render": true,
+            "show_if": {
+              "activate_on_first_time": "on"
+            },
+            "show_if_not": {
+              "faq_layout": "plain"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": 1,
+                "max": 100,
+                "step": 1,
+                "minLimit": 1,
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "close_faq_icon": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "attrName": "close_faq_icon.innerContent",
+            "label": "Icon",
+            "render": false,
+            "priority": 1,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_icon_tab",
+            "tab_slug": "icon",
+            "features": {
+              "responsive": false,
+              "hover": false
+            },
+            "show_if": {
+              "disable_faq_icon": "off"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/icon-picker"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "unicode": "&#x4c;",
+              "type": "divi",
+              "weight": "400"
+            }
+          }
+        }
+      }
+    },
+    "open_faq_icon": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "attrName": "open_faq_icon.innerContent",
+            "label": "Icon",
+            "render": false,
+            "priority": 1,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_icon_tab",
+            "tab_slug": "openedIcon",
+            "features": {
+              "responsive": false,
+              "hover": false
+            },
+            "show_if": {
+              "disable_faq_icon": "off"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/icon-picker"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "unicode": "&#x4b;",
+              "type": "divi",
+              "weight": "400"
+            }
+          }
+        }
+      }
+    },
+    "faq_close_icon_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "attrName": "faq_close_icon_color.innerContent",
+            "label": "Icon Color",
+            "render": false,
+            "priority": 3,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_icon_tab",
+            "tab_slug": "icon",
+            "features": {
+              "responsive": false
+            },
+            "show_if": {
+              "disable_faq_icon": "off"
+            },
+            "description": "Here you can define a custom color for your icon.",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "#b8b9bb"
+          }
+        }
+      }
+    },
+    "faq_open_icon_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "attrName": "faq_open_icon_color.innerContent",
+            "label": "Icon Color",
+            "render": false,
+            "priority": 3,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_icon_tab",
+            "tab_slug": "openedIcon",
+            "features": {
+              "responsive": false
+            },
+            "show_if": {
+              "disable_faq_icon": "off"
+            },
+            "description": "Here you can define a custom color for your icon.",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "faq_close_icon_size": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "attrName": "faq_close_icon_size.innerContent",
+            "label": "Icon Size",
+            "render": false,
+            "priority": 4,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_icon_tab",
+            "tab_slug": "icon",
+            "show_if": {
+              "disable_faq_icon": "off"
+            },
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": 1,
+                "min_limit": 1,
+                "step": 1
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "24px"
+          }
+        }
+      }
+    },
+    "faq_open_icon_size": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "attrName": "faq_open_icon_size.innerContent",
+            "label": "Icon Size",
+            "render": false,
+            "priority": 4,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_icon_tab",
+            "tab_slug": "openedIcon",
+            "show_if": {
+              "disable_faq_icon": "off"
+            },
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": 1,
+                "min_limit": 1,
+                "step": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "faq_icon_bg": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "attrName": "faq_icon_bg.innerContent",
+            "label": "Icon Background",
+            "priority": 2,
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_icon_tab",
+            "tab_slug": "icon",
+            "features": {
+              "responsive": false
+            },
+            "show_if": {
+              "disable_faq_icon": "off"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "active_faq_icon_bg": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_faq_icon",
+            "attrName": "active_faq_icon_bg.innerContent",
+            "label": "Icon Background",
+            "render": false,
+            "priority": 2,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_icon_tab",
+            "tab_slug": "openedIcon",
+            "features": {
+              "responsive": false
+            },
+            "show_if": {
+              "disable_faq_icon": "off"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "faq_icon_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "disable_faq_icon": {
+              "groupSlug": "que_setting",
+              "attrName": "faq_icon_settings.innerContent",
+              "subName": "disable_faq_icon",
+              "label": "Hide Icon",
+              "render": true,
+              "priority": 1,
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "features": {
+                "preset": "content"
+              }
+            }
+          }
+        },
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_faq_icon",
+              "attrName": "faq_icon_settings.decoration.border",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_icon_tab",
+              "tab_slug": "icon",
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_faq_icon",
+              "attrName": "faq_icon_settings.decoration.boxShadow",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_icon_tab",
+              "tab_slug": "icon",
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "boxShadow": {
+          "selector": "{{selector}} .faq_question_wrapper .faq_icon",
+          "hover": "{{selector}} .faq_question_wrapper:hover .faq_icon"
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_question_wrapper .faq_icon",
+              "hover": "{{selector}} .faq_question_wrapper:hover .faq_icon"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "disable_faq_icon": "off"
+            }
+          }
+        }
+      }
+    },
+    "faq_open_icon_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_faq_icon",
+              "attrName": "faq_open_icon_settings.decoration.border",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_icon_tab",
+              "tab_slug": "openedIcon",
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_faq_icon",
+              "attrName": "faq_open_icon_settings.decoration.boxShadow",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_icon_tab",
+              "tab_slug": "openedIcon",
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "boxShadow": {
+          "selector": "{{selector}} .active .faq_question_wrapper .faq_icon",
+          "hover": "{{selector}} .active .faq_question_wrapper:hover .faq_icon"
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .active .faq_question_wrapper .faq_icon",
+              "hover": "{{selector}} .active .faq_question_wrapper:hover .faq_icon"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "disable_faq_icon": "off"
+            }
+          }
+        }
+      }
+    },
+    "faq_animation_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "faq_animation": {
+              "groupSlug": "animation",
+              "attrName": "faq_animation_settings.innerContent",
+              "subName": "faq_animation",
+              "label": "Animation Type",
+              "render": true,
+              "show_if_not": {
+                "faq_layout": "plain"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "slide": {
+                      "label": "Slide"
+                    },
+                    "fade": {
+                      "label": "Fade"
+                    },
+                    "none": {
+                      "label": "None"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "faq_anime_duration": {
+              "groupSlug": "animation",
+              "attrName": "faq_animation_settings.innerContent",
+              "subName": "faq_anime_duration",
+              "label": "Animation Duration (ms)",
+              "render": true,
+              "show_if_not": {
+                "faq_layout": "plain"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 100,
+                  "minLimit": 1,
+                  "max": 10000,
+                  "step": 10,
+                  "defaultUnit": ""
+                }
+              }
+            },
+            "icon_animation": {
+              "groupSlug": "animation",
+              "attrName": "faq_animation_settings.innerContent",
+              "subName": "icon_animation",
+              "label": "Question Icon Animation",
+              "render": true,
+              "show_if_not": {
+                "faq_layout": "plain"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "fade": {
+                      "label": "Fade"
+                    },
+                    "scale": {
+                      "label": "Scale"
+                    },
+                    "rotate": {
+                      "label": "Rotate"
+                    },
+                    "none": {
+                      "label": "None"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "que_img_animation": {
+              "groupSlug": "animation",
+              "attrName": "faq_animation_settings.innerContent",
+              "subName": "que_img_animation",
+              "label": "Question Image Animation",
+              "render": true,
+              "show_if_not": {
+                "faq_layout": "plain"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "fade": {
+                      "label": "Fade"
+                    },
+                    "scale": {
+                      "label": "Scale"
+                    },
+                    "rotate": {
+                      "label": "Rotate"
+                    },
+                    "none": {
+                      "label": "None"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "content_animation_type": {
+              "groupSlug": "animation",
+              "attrName": "faq_animation_settings.innerContent",
+              "subName": "content_animation_type",
+              "label": "Answer Animation",
+              "render": true,
+              "show_if_not": {
+                "faq_layout": "plain"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "slide_left": {
+                      "label": "Slide Left"
+                    },
+                    "slide_right": {
+                      "label": "Slide Right"
+                    },
+                    "slide_up": {
+                      "label": "Slide Up"
+                    },
+                    "slide_down": {
+                      "label": "Slide Down"
+                    },
+                    "fade_in": {
+                      "label": "Fade"
+                    },
+                    "zoom_left": {
+                      "label": "Zoom Left"
+                    },
+                    "zoom_center": {
+                      "label": "Zoom Center"
+                    },
+                    "zoom_right": {
+                      "label": "Zoom Right"
+                    },
+                    "none": {
+                      "label": "None"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "content_anime_duration": {
+              "groupSlug": "animation",
+              "attrName": "faq_animation_settings.innerContent",
+              "subName": "content_anime_duration",
+              "label": "Answer Animation Duration (ms)",
+              "render": true,
+              "show_if_not": {
+                "content_animation_type": "none",
+                "faq_layout": "plain"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 100,
+                  "minLimit": 1,
+                  "max": 10000,
+                  "step": 10,
+                  "defaultUnit": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "faq_animation": "slide",
+              "faq_anime_duration": "300",
+              "icon_animation": "fade",
+              "que_img_animation": "fade",
+              "content_animation_type": "fade_in",
+              "content_anime_duration": "250"
+            }
+          }
+        }
+      }
+    },
+    "enable_schema": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "schema",
+            "attrName": "enable_schema.innerContent",
+            "label": "Enable Schema",
+            "render": true,
+            "description": "Activate this option to output the schema data for SEO purposes.",
+            "priority": 1,
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "faq_item_design_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_faq_item",
+              "attrName": "faq_item_design_settings.decoration.background",
+              "label": "Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_faq_item",
+              "attrName": "faq_item_design_settings.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_faq_item",
+              "attrName": "faq_item_design_settings.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_faqitem .df_faq_item",
+              "hover": "{{selector}} .difl_faqitem .df_faq_item:hover"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_faqitem .df_faq_item",
+              "hover": "{{selector}} .difl_faqitem .df_faq_item:hover"
+            }
+          },
+          "important": true
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .difl_faqitem .df_faq_item",
+              "hover": "{{selector}} .difl_faqitem .df_faq_item:hover"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "faq_que_active_wrapper": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_question_active",
+              "attrName": "faq_item_design_settings.decoration.background",
+              "label": "Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_question_active",
+              "attrName": "faq_que_active_wrapper.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_question_active",
+              "attrName": "faq_que_active_wrapper.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_faq_item.active .faq_question_wrapper",
+              "hover": "{{selector}} .df_faq_item.active .faq_question_wrapper:hover"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_faq_item.active .faq_question_wrapper",
+              "hover": "{{selector}} .df_faq_item.active .faq_question_wrapper:hover"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_faq_item.active .faq_question_wrapper",
+              "hover": "{{selector}} .df_faq_item.active .faq_question_wrapper:hover"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "faq_ans_wrapper": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_answer",
+              "attrName": "faq_ans_wrapper.decoration.background",
+              "label": "Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_answer",
+              "attrName": "faq_ans_wrapper.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_answer",
+              "attrName": "faq_ans_wrapper.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer_wrapper .faq_answer_area"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer_wrapper .faq_answer_area"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer_wrapper .faq_answer_area"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "faq_ans_button": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "button_text_color": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.innerContent",
+              "subName": "button_text_color",
+              "label": "Text Color",
+              "render": true,
+              "priority": 2,
+              "description": "Here you can define a custom color for button text.",
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "button_icon_color": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.innerContent",
+              "subName": "button_icon_color",
+              "label": "Icon Color",
+              "render": true,
+              "priority": 3,
+              "description": "Here you can define a custom color for your icon.",
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "button_icon_size": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.innerContent",
+              "subName": "button_icon_size",
+              "label": "Icon Size",
+              "render": true,
+              "priority": 4,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "min_limit": 1,
+                  "max": 100,
+                  "step": 1
+                }
+              }
+            },
+            "button_alignment": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.innerContent",
+              "subName": "button_alignment",
+              "label": "Button Alignment",
+              "render": true,
+              "priority": 4,
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/align-left"
+                    },
+                    "center": {
+                      "icon": "divi/align-center"
+                    },
+                    "right": {
+                      "icon": "divi/align-right"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.decoration.background",
+              "label": "Background",
+              "render": true,
+              "priority": 1,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.decoration.spacing",
+              "label": "Button Margin",
+              "render": true,
+              "priority": 6,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Button"
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.decoration.font",
+              "render": true,
+              "priority": 7,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "color": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "attrName": "faq_ans_button.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer .faq_button a"
+            }
+          }
+        },
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer .faq_button a"
+            }
+          }
+        },
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer .faq_button a"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer .faq_button a"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer .faq_button a"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "button_icon_color": "#fff",
+              "button_icon_size": "18px"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          },
+          "font": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "size": "18px",
+                  "lineHeight": "1.5em"
+                }
+              }
+            }
+          },
+          "spacing": {
+            "desktop": {
+              "value": {
+                "margin": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "0px",
+                  "right": "0px"
+                },
+                "padding": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "5px",
+                  "right": "5px"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "que_img_bg": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_que_img",
+            "attrName": "que_img_bg.innerContent",
+            "label": "Background",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_image_tab",
+            "tab_slug": "image",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "active_que_img_bg": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_que_img",
+            "attrName": "active_que_img_bg.innerContent",
+            "label": "Background",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "faq_que_image_tab",
+            "tab_slug": "openedImage",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "faq_que_image_image": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "close_que_img_size": {
+              "groupSlug": "design_que_img",
+              "attrName": "faq_que_image_image.innerContent",
+              "subName": "close_que_img_size",
+              "label": "Image Size",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_image_tab",
+              "tab_slug": "image",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "min_limit": 1,
+                  "step": 1
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_que_img",
+              "attrName": "faq_que_image_image.decoration.border",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_image_tab",
+              "tab_slug": "image",
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_que_img",
+              "attrName": "faq_que_image_image.decoration.boxShadow",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_image_tab",
+              "tab_slug": "image",
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_question_wrapper .faq_question_image",
+              "hover": "{{selector}} .faq_question_wrapper:hover .faq_question_image"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_question_wrapper .faq_question_image",
+              "hover": "{{selector}} .faq_question_wrapper:hover .faq_question_image"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "close_que_img_size": "35px"
+            }
+          }
+        }
+      }
+    },
+    "faq_que_image_opened_image": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "open_que_img_size": {
+              "groupSlug": "design_que_img",
+              "attrName": "faq_que_image_opened_image.innerContent",
+              "subName": "open_que_img_size",
+              "label": "Image Size",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_image_tab",
+              "tab_slug": "openedImage",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "min_limit": 1,
+                  "step": 1
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_que_img",
+              "attrName": "faq_que_image_opened_image.decoration.border",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_image_tab",
+              "tab_slug": "openedImage",
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_que_img",
+              "attrName": "faq_que_image_opened_image.decoration.boxShadow",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_image_tab",
+              "tab_slug": "openedImage",
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_faq_item.active .faq_question_wrapper .faq_question_image",
+              "hover": "{{selector}} .df_faq_item.active .faq_question_wrapper:hover .faq_question_image"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_faq_item.active .faq_question_wrapper .faq_question_image",
+              "hover": "{{selector}} .df_faq_item.active .faq_question_wrapper:hover .faq_question_image"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "open_que_img_size": "35px"
+            }
+          }
+        }
+      }
+    },
+    "faq_ans_image": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_answer_img",
+              "attrName": "faq_ans_image.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_answer_img",
+              "attrName": "faq_ans_image.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer_image"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .faq_answer_image"
+            }
+          }
+        }
+      }
+    },
+    "answer_heading": {
+      "type": "object",
+      "selector": "{{selector}} .faq_answer_wrapper .faq_answer",
+      "settings": {
+        "decoration": {
+          "headingFont": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_answer_heading",
+              "attrName": "answer_heading.decoration.headingFont",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font-header",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "h1": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "30px"
+                          }
+                        }
+                      }
+                    },
+                    "h2": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "26px"
+                          }
+                        }
+                      }
+                    },
+                    "h3": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "22px"
+                          }
+                        }
+                      }
+                    },
+                    "h4": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "18px"
+                          }
+                        }
+                      }
+                    },
+                    "h5": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "16px"
+                          }
+                        }
+                      }
+                    },
+                    "h6": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "14px"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "answer_text": {
+      "type": "object",
+      "selector": "{{selector}} .faq_answer",
+      "settings": {
+        "decoration": {
+          "bodyFont": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_answer_text",
+              "attrName": "answer_text.decoration.bodyFont",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font-body",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "bodyFont": {
+            "body": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "14px",
+                    "lineHeight": "1.7em"
+                  }
+                }
+              }
+            },
+            "link": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "14px",
+                    "lineHeight": "1em"
+                  }
+                }
+              }
+            },
+            "ul": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "14px",
+                    "lineHeight": "1em"
+                  }
+                }
+              }
+            },
+            "ol": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "14px",
+                    "lineHeight": "1em"
+                  }
+                }
+              }
+            },
+            "quote": {
+              "font": {
+                "desktop": {
+                  "value": {
+                    "size": "14px",
+                    "lineHeight": "1em"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "default": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "attrName": "default.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "attrName": "default.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "question_text": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_question_text",
+              "attrName": "question_text.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_text_tab",
+              "tab_slug": "text",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "22px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_faq_item .faq_question_wrapper .faq_question_title",
+              "hover": "{{selector}} .df_faq_item .faq_question_wrapper:hover .faq_question_title"
+            }
+          }
+        }
+      }
+    },
+    "active_design_question_text": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_question_text",
+              "attrName": "active_design_question_text.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_que_text_tab",
+              "tab_slug": "openedText",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "22px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_faq_item.active .faq_question_wrapper .faq_question_title",
+              "hover": "{{selector}} .df_faq_item.active .faq_question_wrapper:hover .faq_question_title"
+            }
+          }
+        }
+      }
+    },
+    "faq_wrapper_spacing": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "faq_wrapper_spacing.decoration.spacing",
+              "label": "FAQ Wrapper Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "wrapper",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "FAQ Wrapper"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      }
+    },
+    "faq_item_wrapper_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .df_faq_item",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "faq_item_wrapper_spacing.decoration.spacing",
+              "label": "FAQ Item Wrapper Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "wrapper",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "FAQ Item Wrapper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "que_wrapper_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .faq_question_wrapper",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "que_wrapper_spacing.decoration.spacing",
+              "label": "Question Wrapper Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "wrapper",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Question Wrapper"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "spacing": {
+            "desktop": {
+              "value": {
+                "padding": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "5px",
+                  "right": "5px"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "que_text_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .faq_question_title",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "que_text_spacing.decoration.spacing",
+              "label": "Question Text Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "content",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Question Text",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "spacing": {
+            "desktop": {
+              "value": {
+                "margin": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "5px",
+                  "right": "5px"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "que_icon_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .faq_icon",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "que_icon_spacing.decoration.spacing",
+              "label": "Question Icon Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "content",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Question Icon"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "spacing": {
+            "desktop": {
+              "value": {
+                "margin": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "5px",
+                  "right": "5px"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "que_img_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .faq_question_image",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "que_img_spacing.decoration.spacing",
+              "label": "Question Image Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "content",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Question Image"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "spacing": {
+            "desktop": {
+              "value": {
+                "margin": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "5px",
+                  "right": "5px"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ans_wrapper_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .faq_answer_area",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "ans_wrapper_spacing.decoration.spacing",
+              "label": "Answer Wrapper Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "wrapper",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Answer Wrapper"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "spacing": {
+            "desktop": {
+              "value": {
+                "padding": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "5px",
+                  "right": "5px"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ans_text_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .faq_answer",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "ans_text_spacing.decoration.spacing",
+              "label": "Answer Text Padding",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "content",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Answer Text",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "spacing": {
+            "desktop": {
+              "value": {
+                "padding": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "5px",
+                  "right": "5px"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ans_img_spacing": {
+      "type": "object",
+      "selector": "{{selector}} .faq_answer_image img",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "ans_img_spacing.decoration.spacing",
+              "label": "Answer Image Padding",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "faq_custom_spacing_tab",
+              "tab_slug": "content",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Answer Image",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "spacing": {
+            "desktop": {
+              "value": {
+                "padding": {
+                  "top": "5px",
+                  "bottom": "5px",
+                  "left": "5px",
+                  "right": "5px"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

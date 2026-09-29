@@ -1,0 +1,61 @@
+{
+  "advanced": {
+    "animation": "module.decoration.animation",
+    "box_shadow": {
+      "default": "module.decoration.boxShadow"
+    },
+    "text_shadow": {
+      "default": "module.advanced.text.textShadow"
+    },
+    "borders": {
+      "default": "module.decoration.border"
+    },
+    "filters": {
+      "default": "module.decoration.filters"
+    },
+    "disabled_on": "module.decoration.disabledOn",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "transition": "module.decoration.transition",
+    "transform": "module.decoration.transform",
+    "z_index": "module.decoration.zIndex",
+    "fonts": {
+      "label": "label.decoration.font",
+      "sub_label": "sub_label.decoration.font",
+      "description": "description.decoration.font",
+      "input_text": "input_text.decoration.font",
+      "radio_text": "radio_text.decoration.font",
+      "dropdown": "dropdown.decoration.font",
+      "submit": "submit.decoration.font"
+    },
+    "background": "module.decoration.background",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "margin_padding": "module.decoration.spacing",
+    "link_options": "module.advanced.link",
+    "admin_label": "module.meta.adminLabel"
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after",
+    "free_form": "css.*.freeForm"
+  },
+  "module": {
+    "lottie_file_options": "lottie_settings.innerContent.*.lottie_file_options",
+    "external_file": "lottie_settings.innerContent.*.external_file",
+    "upload": "lottie_settings.innerContent.*.upload",
+    "json_ex_notice": "lottie_settings.innerContent.*.json_ex_notice",
+    "animation_trigger": "lottie_settings.innerContent.*.animation_trigger",
+    "scroll_effect": "lottie_settings.innerContent.*.scroll_effect",
+    "stop_on_mouse_out": "lottie_settings.innerContent.*.stop_on_mouse_out",
+    "threshold": "lottie_settings.innerContent.*.threshold",
+    "loop": "lottie_settings.innerContent.*.loop",
+    "speed": "lottie_settings.innerContent.*.speed",
+    "direction_reverse": "lottie_settings.innerContent.*.direction_reverse",
+    "renderer": "lottie_settings.innerContent.*.renderer"
+  }
+}

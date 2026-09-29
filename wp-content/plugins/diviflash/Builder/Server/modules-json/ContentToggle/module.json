@@ -1,0 +1,3124 @@
+{
+  "name": "difl/contentswitcher",
+  "d4Shortcode": "difl_contentswitcher",
+  "title": "Content Toggle",
+  "category": "module",
+  "settings": {
+    "groups": {
+      "switcher_content": {
+        "panel": "content",
+        "groupName": "switcher_content",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Toggle Content"
+          }
+        }
+      },
+      "switcher_control": {
+        "panel": "content",
+        "groupName": "switcher_control",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Toggle Control"
+          }
+        }
+      },
+      "badge_settings": {
+        "panel": "content",
+        "groupName": "badge_settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Badges"
+          }
+        }
+      },
+      "animation_settings": {
+        "panel": "content",
+        "groupName": "animation_settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content Animation"
+          }
+        }
+      },
+      "switcher": {
+        "panel": "design",
+        "groupName": "switcher",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Toggle Bar"
+          }
+        }
+      },
+      "primary_label": {
+        "panel": "design",
+        "groupName": "primary_label",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Primary Label"
+          }
+        }
+      },
+      "secondary_label": {
+        "panel": "design",
+        "groupName": "secondary_label",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Secondary Label"
+          }
+        }
+      },
+      "active_label": {
+        "panel": "design",
+        "groupName": "active_label",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Active Label"
+          }
+        }
+      },
+      "primary_control": {
+        "panel": "design",
+        "groupName": "primary_control",
+        "multiElements": true,
+        "show_if_not": {
+          "switcher_type": "button"
+        },
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Primary Toggle Switch"
+          }
+        }
+      },
+      "secondary_control": {
+        "panel": "design",
+        "groupName": "secondary_control",
+        "multiElements": true,
+        "show_if_not": {
+          "switcher_type": "button"
+        },
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Secondary Toggle Switch"
+          }
+        }
+      },
+      "primary_button": {
+        "panel": "design",
+        "groupName": "primary_button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Primary Button"
+          }
+        }
+      },
+      "secondary_button": {
+        "panel": "design",
+        "groupName": "secondary_button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Secondary Button"
+          }
+        }
+      },
+      "active_button": {
+        "panel": "design",
+        "groupName": "active_button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Active Button"
+          }
+        }
+      },
+      "switcher_bar": {
+        "panel": "design",
+        "groupName": "switcher_bar",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Toggle Content"
+          }
+        }
+      },
+      "switcher_content_text": {
+        "panel": "design",
+        "groupName": "switcher_content_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Toggle Content Text"
+          }
+        }
+      },
+      "switcher_content_header": {
+        "panel": "design",
+        "groupName": "switcher_content_header",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Toggle Content Heading"
+          }
+        }
+      },
+      "primary_badge_settings": {
+        "panel": "design",
+        "groupName": "primary_badge_settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Primary Badge"
+          }
+        }
+      },
+      "secondary_badge_settings": {
+        "panel": "design",
+        "groupName": "secondary_badge_settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Secondary Badge"
+          }
+        }
+      },
+      "custom_spacing": {
+        "panel": "design",
+        "groupName": "custom_spacing",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Custom Spacing"
+          }
+        }
+      },
+      "contentLink": {
+        "panel": "content",
+        "groupName": "contentLink",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Link"
+          }
+        }
+      }
+    },
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto"
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "link": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentLink",
+              "priority": 20,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/link",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "attributes": {},
+          "animation": {},
+          "background": {},
+          "interactions": {},
+          "conditions": {},
+          "disabledOn": {},
+          "filters": {},
+          "overflow": {},
+          "position": {},
+          "scroll": {},
+          "sizing": {},
+          "spacing": {},
+          "sticky": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Content Toggle"
+            }
+          }
+        }
+      }
+    },
+    "primary_label": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-switch.primary span.title",
+      "tagName": "span",
+      "attributes": {
+        "class": "title"
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "primary_label.innerContent",
+            "label": "Primary Label",
+            "description": "Primary Label",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/text"
+            },
+            "features": {
+              "sticky": false,
+              "responsive": false,
+              "dynamicContent": {
+                "type": "text"
+              },
+              "preset": "content"
+            }
+          }
+        },
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_label",
+              "attrName": "primary_label.decoration.font",
+              "label": "Primary Label Font",
+              "description": "Primary Label Font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "Primary Label"
+          }
+        }
+      }
+    },
+    "secondary_label": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-switch.secondary span.title",
+      "tagName": "span",
+      "attributes": {
+        "class": "title"
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "secondary_label.innerContent",
+            "label": "Secondary Label",
+            "description": "Secondary Label",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/text"
+            },
+            "features": {
+              "sticky": false,
+              "responsive": false,
+              "dynamicContent": {
+                "type": "text"
+              },
+              "preset": "content"
+            }
+          }
+        },
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_label",
+              "attrName": "secondary_label.decoration.font",
+              "label": "Secondary Label Font",
+              "description": "Secondary Label Font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "Secondary Label"
+          }
+        }
+      }
+    },
+    "active_label_font": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-switch.active span.title",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "active_label",
+              "attrName": "active_label_font.decoration.font",
+              "label": "Active Label Font",
+              "description": "Active Label Font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_switcher_type": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "content_switcher_type.innerContent",
+            "label": "Content Type",
+            "description": "Content Type",
+            "render": true,
+            "defaultAttr": {
+              "desktop": {
+                "value": "content_base"
+              }
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "content_base": {
+                    "label": "Content",
+                    "icon": "divi/content-switcher"
+                  },
+                  "shortcode_base": {
+                    "label": "Shortcode",
+                    "icon": "divi/content-switcher"
+                  },
+                  "library_base": {
+                    "label": "Library",
+                    "icon": "divi/content-switcher"
+                  },
+                  "class_base": {
+                    "label": "Html Class",
+                    "icon": "divi/content-switcher"
+                  }
+                }
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "content_base"
+          }
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-content-section",
+      "elementType": "content",
+      "attributes": {
+        "class": "primary-content"
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "content.innerContent",
+            "label": "Primary Content",
+            "description": "Primary Content",
+            "render": true,
+            "show_if": {
+              "content_switcher_type": "content_base"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/richtext"
+            },
+            "features": {
+              "sticky": false,
+              "responsive": false,
+              "preset": "content",
+              "dynamicContent": {
+                "type": "text"
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "switcher_bar",
+              "attrName": "content.decoration.background",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "switcher_bar",
+              "attrName": "content.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "switcher_bar",
+              "attrName": "content.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "bodyFont": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "switcher_content_text",
+              "attrName": "content.decoration.bodyFont",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font-body",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "headingFont": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "switcher_content_header",
+              "attrName": "content.decoration.headingFont",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font-header",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "h1": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "30px"
+                          }
+                        }
+                      }
+                    },
+                    "h2": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "26px"
+                          }
+                        }
+                      }
+                    },
+                    "h3": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "22px"
+                          }
+                        }
+                      }
+                    },
+                    "h4": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "18px"
+                          }
+                        }
+                      }
+                    },
+                    "h5": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "16px"
+                          }
+                        }
+                      }
+                    },
+                    "h6": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "size": "14px"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "headingFont": {
+          "propertySelectors": {
+            "h1": {
+              "font": {
+                "desktop": {
+                  "value": "{{selector}} .df-cs-content-section h1"
+                }
+              }
+            },
+            "h2": {
+              "font": {
+                "desktop": {
+                  "value": "{{selector}} .df-cs-content-section h2"
+                }
+              }
+            },
+            "h3": {
+              "list": {
+                "desktop": {
+                  "value": "{{selector}} .df-cs-content-section h3"
+                }
+              }
+            },
+            "h4": {
+              "list": {
+                "desktop": {
+                  "value": "{{selector}} .df-cs-content-section h4"
+                }
+              }
+            },
+            "h5": {
+              "list": {
+                "desktop": {
+                  "value": "{{selector}} .df-cs-content-section h5"
+                }
+              }
+            },
+            "h6": {
+              "list": {
+                "desktop": {
+                  "value": "{{selector}} .df-cs-content-section h6"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "secondary_content": {
+      "type": "object",
+      "elementType": "content",
+      "attributes": {
+        "class": "secondary-content"
+      },
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "secondary_content.innerContent",
+            "label": "Secondary Content",
+            "description": "Secondary Content",
+            "render": true,
+            "show_if": {
+              "content_switcher_type": "content_base"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/richtext"
+            },
+            "features": {
+              "sticky": false,
+              "responsive": false,
+              "preset": "content",
+              "dynamicContent": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      }
+    },
+    "shortcode_primary_content": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "shortcode_primary_content.innerContent",
+            "label": "Primary Shortcode",
+            "description": "Primary Shortcode",
+            "render": true,
+            "show_if": {
+              "content_switcher_type": "shortcode_base"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/text"
+            },
+            "features": {
+              "sticky": false,
+              "responsive": false,
+              "preset": "content"
+            }
+          }
+        }
+      }
+    },
+    "shortcode_secondary_content": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "shortcode_secondary_content.innerContent",
+            "label": "Secondary Shortcode",
+            "description": "Secondary Shortcode",
+            "render": true,
+            "show_if": {
+              "content_switcher_type": "shortcode_base"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/text"
+            },
+            "features": {
+              "sticky": false,
+              "responsive": false,
+              "preset": "content"
+            }
+          }
+        }
+      }
+    },
+    "library_id_primary": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "library_id_primary.innerContent",
+            "label": "Primary Content Library",
+            "description": "Primary Content Library",
+            "render": true,
+            "show_if": {
+              "content_switcher_type": "library_base"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {},
+                "searchable": true
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      }
+    },
+    "library_id_secondary": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "library_id_secondary.innerContent",
+            "label": "Secondary Content Library",
+            "description": "Secondary Content Library",
+            "render": true,
+            "show_if": {
+              "content_switcher_type": "library_base"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {},
+                "searchable": true
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      }
+    },
+    "primary_content_selector": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "primary_content_selector.innerContent",
+            "label": "Primary Content Class",
+            "description": "Copy Class Name",
+            "render": true,
+            "show_if": {
+              "content_switcher_type": "class_base"
+            },
+            "component": {
+              "type": "field",
+              "name": "difl/generate_button",
+              "props": {
+                "fieldDefinition": {
+                  "button_text": "Copy",
+                  "prefix_class": "df_cs_primary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "secondary_content_selector": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_content",
+            "attrName": "secondary_content_selector.innerContent",
+            "label": "Secondary Content Class",
+            "description": "Copy Class Name",
+            "render": true,
+            "show_if": {
+              "content_switcher_type": "class_base"
+            },
+            "component": {
+              "type": "field",
+              "name": "difl/generate_button",
+              "props": {
+                "fieldDefinition": {
+                  "button_text": "Copy",
+                  "prefix_class": "df_cs_secondary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "switcher_type": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_control",
+            "attrName": "switcher_type.innerContent",
+            "label": "Toggle Type",
+            "description": "Choose toggle type",
+            "render": true,
+            "component": {
+              "type": "select",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "round": {
+                    "label": "Round"
+                  },
+                  "round-2": {
+                    "label": "Round 2"
+                  },
+                  "square": {
+                    "label": "Square"
+                  },
+                  "square-2": {
+                    "label": "Square 2"
+                  },
+                  "button": {
+                    "label": "Button"
+                  }
+                }
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "round"
+          }
+        }
+      }
+    },
+    "switcher_bar": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-switch-wrapper",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "switcher_alignment": {
+              "groupSlug": "switcher",
+              "attrName": "switcher_bar.innerContent",
+              "subName": "switcher_alignment",
+              "label": "Toggle Alignment",
+              "description": "Choose toggle alignment",
+              "default": "left",
+              "render": true,
+              "features": {
+                "hover": false
+              },
+              "component": {
+                "type": "select",
+                "name": "divi/button-options",
+                "props": {
+                  "options": {
+                    "left": {
+                      "icon": "divi/align-left"
+                    },
+                    "center": {
+                      "icon": "divi/align-center"
+                    },
+                    "right": {
+                      "icon": "divi/align-right"
+                    }
+                  }
+                }
+              }
+            },
+            "switcher_bar_width": {
+              "groupSlug": "switcher",
+              "attrName": "switcher_bar.innerContent",
+              "subName": "switcher_bar_width",
+              "label": "Toggle Bar Width",
+              "description": "Toggle Bar Width",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 100,
+                  "step": 1,
+                  "defaultUnit": "%",
+                  "allowedUnits": [
+                    "%",
+                    "px"
+                  ]
+                }
+              }
+            },
+            "use_custom_spacing": {
+              "groupSlug": "switcher",
+              "attrName": "switcher_bar.innerContent",
+              "subName": "use_custom_spacing",
+              "label": "Label Or Button Distance",
+              "description": "Label Distance",
+              "default": "off",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/toggle",
+                "props": {
+                  "options": {
+                    "off": "Off",
+                    "on": "On"
+                  },
+                  "default": "off"
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "title_spacing": {
+              "groupSlug": "switcher",
+              "attrName": "switcher_bar.innerContent",
+              "subName": "title_spacing",
+              "label": "Distance Between Label Or Button (px)",
+              "description": "Distance Between Label Or Button (px)",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "use_custom_spacing": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 100,
+                  "step": 1,
+                  "defaultUnit": "px",
+                  "allowedUnits": [
+                    "px"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "switcher",
+              "attrName": "switcher_bar.decoration.background",
+              "label": "Toggle Bar",
+              "description": "Toggle Bar",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "switcher",
+              "attrName": "switcher_bar.decoration.border",
+              "label": "Toggle Bar",
+              "description": "Toggle Bar",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "switcher",
+              "attrName": "switcher_bar.decoration.boxShadow",
+              "label": "Toggle Bar",
+              "description": "Toggle Bar",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "switcher_bar_width": "100%",
+              "title_spacing": "20px",
+              "switcher_alignment": "center"
+            }
+          }
+        }
+      }
+    },
+    "switcher_control_size": {
+      "type": "object",
+      "selector": "{{selector}} label.df-cs-switch.df-input-label",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_control",
+            "attrName": "switcher_control_size.innerContent",
+            "label": "Toggle Size (px)",
+            "description": "Toggle Size",
+            "render": true,
+            "features": {
+              "responsive": true
+            },
+            "show_if_not": {
+              "switcher_type": "button"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "1",
+                "max": "120",
+                "step": "1",
+                "default": "18",
+                "default_unit": "px",
+                "rangeSettings": {
+                  "min": "1",
+                  "max": "120",
+                  "step": "1",
+                  "suffix": "px"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "18px"
+          }
+        }
+      }
+    },
+    "reverse_active_state": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_control",
+            "attrName": "reverse_active_state.innerContent",
+            "label": "Reverse Active State",
+            "description": "Enable this option to make the secondary label and its content active by default.",
+            "default": "off",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/toggle",
+              "props": {
+                "options": {
+                  "off": "Off",
+                  "on": "On"
+                },
+                "default": "off"
+              }
+            },
+            "features": {
+              "preset": "content",
+              "responsive": false,
+              "hover": false,
+              "sticky": false
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "primary_title_use_icon": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_control",
+            "attrName": "primary_title_use_icon.innerContent",
+            "label": "Primary Label Icon",
+            "description": "Primary Label Icon",
+            "default": "off",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/toggle",
+              "props": {
+                "options": {
+                  "off": "No",
+                  "on": "Yes"
+                },
+                "default": "off"
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      }
+    },
+    "primary_title_icon": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-icon-wrapper .et-pb-icon.df-primary-label-icon",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "primary_title_font_icon": {
+              "groupSlug": "switcher_control",
+              "attrName": "primary_title_icon.innerContent",
+              "subName": "primary_title_font_icon",
+              "label": "Icon",
+              "description": "Icon",
+              "render": true,
+              "show_if": {
+                "primary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "primary_title_icon_color": {
+              "groupSlug": "switcher_control",
+              "attrName": "primary_title_icon.innerContent",
+              "subName": "primary_title_icon_color",
+              "label": "Icon Color",
+              "description": "Icon Color",
+              "render": true,
+              "features": {
+                "responsive": false,
+                "hover": true
+              },
+              "show_if": {
+                "primary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "primary_title_icon_size": {
+              "groupSlug": "switcher_control",
+              "attrName": "primary_title_icon.innerContent",
+              "subName": "primary_title_icon_size",
+              "label": "Icon Size",
+              "description": "Icon Size",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "primary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "step": 1,
+                  "defaultUnit": "px",
+                  "allowedUnits": [
+                    "px"
+                  ]
+                }
+              }
+            },
+            "primary_icon_align": {
+              "groupSlug": "switcher_control",
+              "attrName": "primary_title_icon.innerContent",
+              "subName": "primary_icon_align",
+              "label": "Primary Icon Alignment",
+              "description": "Here you can choose the icon alignment.",
+              "render": true,
+              "show_if": {
+                "primary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "left": {
+                      "label": "Left"
+                    },
+                    "right": {
+                      "label": "Right"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "primary_icon_hide_on_mobile": {
+              "groupSlug": "switcher_control",
+              "attrName": "primary_title_icon.innerContent",
+              "subName": "primary_icon_hide_on_mobile",
+              "label": "Hide On Mobile",
+              "description": "Hide On Mobile",
+              "default": "off",
+              "render": true,
+              "show_if": {
+                "primary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle",
+                "props": {
+                  "options": {
+                    "off": "No",
+                    "on": "Yes"
+                  },
+                  "default": "off"
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "primary_title_font_icon": {
+                "unicode": "&#x35;",
+                "type": "divi",
+                "weight": "400"
+              },
+              "primary_title_icon_color": "#2ea3f2",
+              "primary_title_icon_size": "16px",
+              "primary_icon_align": "left"
+            }
+          }
+        }
+      }
+    },
+    "secondary_title_use_icon": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "switcher_control",
+            "attrName": "secondary_title_use_icon.innerContent",
+            "label": "Secondary Label Icon",
+            "description": "Secondary Label Icon",
+            "default": "off",
+            "priority": 100,
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/toggle",
+              "props": {
+                "options": {
+                  "off": "No",
+                  "on": "Yes"
+                },
+                "default": "off"
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      }
+    },
+    "secondary_title_icon": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-icon-wrapper .et-pb-icon.df-secondary-label-icon",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "secondary_title_font_icon": {
+              "groupSlug": "switcher_control",
+              "attrName": "secondary_title_icon.innerContent",
+              "subName": "secondary_title_font_icon",
+              "label": "Icon",
+              "description": "Icon",
+              "priority": 100,
+              "render": true,
+              "show_if": {
+                "secondary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "secondary_title_icon_color": {
+              "groupSlug": "switcher_control",
+              "attrName": "secondary_title_icon.innerContent",
+              "subName": "secondary_title_icon_color",
+              "label": "Icon Color",
+              "description": "Icon Color",
+              "priority": 100,
+              "render": true,
+              "features": {
+                "responsive": false,
+                "hover": true
+              },
+              "show_if": {
+                "secondary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "secondary_title_icon_size": {
+              "groupSlug": "switcher_control",
+              "attrName": "secondary_title_icon.innerContent",
+              "subName": "secondary_title_icon_size",
+              "label": "Icon Size",
+              "description": "Icon Size",
+              "priority": 100,
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "secondary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 120,
+                  "step": 1,
+                  "default": 16,
+                  "defaultUnit": "px",
+                  "rangeSettings": {
+                    "min": "1",
+                    "max": "120",
+                    "step": "1",
+                    "suffix": "px"
+                  }
+                }
+              }
+            },
+            "secondary_icon_align": {
+              "groupSlug": "switcher_control",
+              "attrName": "secondary_title_icon.innerContent",
+              "subName": "secondary_icon_align",
+              "label": "Secondary Icon Alignment",
+              "description": "Here you can choose the icon alignment.",
+              "priority": 100,
+              "render": true,
+              "show_if": {
+                "secondary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "left": {
+                      "label": "left"
+                    },
+                    "right": {
+                      "label": "right"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "secondary_icon_hide_on_mobile": {
+              "groupSlug": "switcher_control",
+              "attrName": "secondary_title_icon.innerContent",
+              "subName": "secondary_icon_hide_on_mobile",
+              "label": "Hide On Mobile",
+              "description": "Hide On Mobile",
+              "default": "off",
+              "priority": 100,
+              "render": true,
+              "show_if": {
+                "secondary_title_use_icon": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle",
+                "props": {
+                  "options": {
+                    "off": "No",
+                    "on": "Yes"
+                  },
+                  "default": "off"
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "secondary_title_font_icon": {
+                "unicode": "&#x35;",
+                "type": "divi",
+                "weight": "400"
+              },
+              "secondary_title_icon_color": "#2ea3f2",
+              "secondary_title_icon_size": "16px",
+              "secondary_icon_align": "left"
+            }
+          }
+        }
+      }
+    },
+    "enable_active_icon_color": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "attrName": "enable_active_icon_color.innerContent",
+            "groupSlug": "switcher_control",
+            "label": "Active Icon Color",
+            "priority": 101,
+            "render": true,
+            "default": "off",
+            "component": {
+              "type": "field",
+              "name": "divi/toggle",
+              "props": {
+                "options": {
+                  "off": "No",
+                  "on": "Yes"
+                },
+                "default": "off"
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      }
+    },
+    "active_icon_color": {
+      "type": "object",
+      "selector": "{{selector}} .active .df-cs-icon-wrapper .et-pb-icon",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "attrName": "active_icon_color.innerContent",
+            "groupSlug": "switcher_control",
+            "label": "Active Icon Color",
+            "priority": 102,
+            "render": true,
+            "features": {
+              "responsive": false,
+              "hover": true
+            },
+            "show_if": {
+              "enable_active_icon_color": "on"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker",
+              "props": {
+                "default": "#2b87da"
+              }
+            }
+          }
+        }
+      }
+    },
+    "primary_badge": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-primary-badge",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable_primary_badge": {
+              "groupSlug": "badge_settings",
+              "attrName": "primary_badge.innerContent",
+              "subName": "enable_primary_badge",
+              "label": "Primary Badge",
+              "description": "Primary Badge",
+              "default": "off",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/toggle",
+                "props": {
+                  "options": {
+                    "off": "No",
+                    "on": "Yes"
+                  },
+                  "default": "off"
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "primary_badge_text": {
+              "groupSlug": "badge_settings",
+              "attrName": "primary_badge.innerContent",
+              "subName": "primary_badge_text",
+              "label": "Primary Badge Text",
+              "description": "Primary Badge Text",
+              "render": true,
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              },
+              "features": {
+                "sticky": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              }
+            },
+            "primary_badge_position": {
+              "groupSlug": "badge_settings",
+              "attrName": "primary_badge.innerContent",
+              "subName": "primary_badge_position",
+              "label": "Left/Right Position",
+              "description": "Left/Right Position",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "defaultValue": "-40%",
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": -100,
+                  "max": 100,
+                  "step": 1,
+                  "defaultUnit": "%"
+                }
+              }
+            },
+            "primary_badge_top_position": {
+              "groupSlug": "badge_settings",
+              "attrName": "primary_badge.innerContent",
+              "subName": "primary_badge_top_position",
+              "label": "Top/Bottom Position",
+              "description": "Top/Bottom Position",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": -100,
+                  "max": 100,
+                  "step": 1,
+                  "defaultUnit": "%"
+                }
+              }
+            },
+            "primary_badge_arrow_placement": {
+              "groupSlug": "badge_settings",
+              "attrName": "primary_badge.innerContent",
+              "subName": "primary_badge_arrow_placement",
+              "label": "Arrow Placement",
+              "description": "Arrow Placement",
+              "render": true,
+              "features": {
+                "responsive": false,
+                "hover": false
+              },
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "defaultValue": "arrow-bottom",
+              "component": {
+                "type": "select",
+                "name": "divi/button-options",
+                "props": {
+                  "options": {
+                    "arrow-left": {
+                      "label": "Left"
+                    },
+                    "arrow-right": {
+                      "label": "Right"
+                    },
+                    "arrow-top": {
+                      "label": "Top"
+                    },
+                    "arrow-bottom": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              }
+            },
+            "primary_badge_arrow_size": {
+              "groupSlug": "badge_settings",
+              "attrName": "primary_badge.innerContent",
+              "subName": "primary_badge_arrow_size",
+              "label": "Arrow Size",
+              "description": "Arrow Size",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "defaultValue": "5px",
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 0,
+                  "max": 16,
+                  "step": 0.5,
+                  "defaultUnit": "px"
+                }
+              }
+            },
+            "primary_badge_arrow_position": {
+              "groupSlug": "badge_settings",
+              "attrName": "primary_badge.innerContent",
+              "subName": "primary_badge_arrow_position",
+              "label": "Arrow Position",
+              "description": "Arrow Position",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "defaultValue": "50%",
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 0,
+                  "max": 100,
+                  "step": 1,
+                  "defaultUnit": "%"
+                }
+              }
+            },
+            "primary_badge_arrow_color": {
+              "groupSlug": "primary_badge_settings",
+              "attrName": "primary_badge.innerContent",
+              "subName": "primary_badge_arrow_color",
+              "label": "Arrow Color",
+              "description": "Arrow Color",
+              "render": true,
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "defaultValue": "#333",
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_badge_settings",
+              "attrName": "primary_badge.decoration.background",
+              "label": "Toggle Bar",
+              "description": "Background Color",
+              "render": true,
+              "priority": 10,
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_badge_settings",
+              "attrName": "primary_badge.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_badge_settings",
+              "attrName": "primary_badge.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_badge_settings",
+              "attrName": "primary_badge.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "enable_primary_badge": "off",
+              "primary_badge_text": "",
+              "primary_badge_arrow_placement": "arrow-bottom",
+              "primary_badge_arrow_size": "5px",
+              "primary_badge_arrow_position": "50%",
+              "primary_badge_position": "-40%",
+              "primary_badge_alignment": "left",
+              "primary_badge_top_position": "-100%"
+            }
+          }
+        }
+      }
+    },
+    "secondary_badge": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-secondary-badge",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable_secondary_badge": {
+              "groupSlug": "badge_settings",
+              "attrName": "secondary_badge.innerContent",
+              "subName": "enable_secondary_badge",
+              "label": "Secondary Badge",
+              "description": "Secondary Badge",
+              "default": "off",
+              "priority": 100,
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/toggle",
+                "props": {
+                  "options": {
+                    "off": "No",
+                    "on": "Yes"
+                  },
+                  "default": "off"
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "secondary_badge_text": {
+              "groupSlug": "badge_settings",
+              "attrName": "secondary_badge.innerContent",
+              "subName": "secondary_badge_text",
+              "label": "Secondary Badge Text",
+              "description": "Secondary Badge Text",
+              "priority": 100,
+              "render": true,
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              },
+              "features": {
+                "sticky": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              }
+            },
+            "secondary_badge_position": {
+              "groupSlug": "badge_settings",
+              "attrName": "secondary_badge.innerContent",
+              "subName": "secondary_badge_position",
+              "label": "Left/Right Position",
+              "description": "Left/Right Position",
+              "priority": 100,
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "defaultValue": "-40%",
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": -100,
+                  "max": 100,
+                  "step": 1,
+                  "defaultUnit": "%"
+                }
+              }
+            },
+            "secondary_badge_top_position": {
+              "groupSlug": "badge_settings",
+              "attrName": "secondary_badge.innerContent",
+              "subName": "secondary_badge_top_position",
+              "label": "Top/Bottom Position",
+              "description": "Top/Bottom Position",
+              "priority": 100,
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": -100,
+                  "max": 100,
+                  "step": 1,
+                  "defaultUnit": "%"
+                }
+              }
+            },
+            "secondary_badge_arrow_placement": {
+              "groupSlug": "badge_settings",
+              "attrName": "secondary_badge.innerContent",
+              "subName": "secondary_badge_arrow_placement",
+              "label": "Arrow Placement",
+              "description": "Arrow Placement",
+              "priority": 100,
+              "render": true,
+              "features": {
+                "responsive": false,
+                "hover": false
+              },
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "component": {
+                "type": "select",
+                "name": "divi/button-options",
+                "props": {
+                  "options": {
+                    "arrow-left": {
+                      "label": "Left"
+                    },
+                    "arrow-right": {
+                      "label": "Right"
+                    },
+                    "arrow-top": {
+                      "label": "Top"
+                    },
+                    "arrow-bottom": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              }
+            },
+            "secondary_badge_arrow_size": {
+              "groupSlug": "badge_settings",
+              "attrName": "secondary_badge.innerContent",
+              "subName": "secondary_badge_arrow_size",
+              "label": "Arrow Size",
+              "description": "Arrow Size",
+              "priority": 100,
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "defaultValue": "5px",
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 0,
+                  "max": 16,
+                  "step": 0.5,
+                  "defaultUnit": "px"
+                }
+              }
+            },
+            "secondary_badge_arrow_position": {
+              "groupSlug": "badge_settings",
+              "attrName": "secondary_badge.innerContent",
+              "subName": "secondary_badge_arrow_position",
+              "label": "Arrow Position",
+              "description": "Arrow Position",
+              "priority": 100,
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "defaultValue": "50%",
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 0,
+                  "max": 100,
+                  "step": 1,
+                  "defaultUnit": "%"
+                }
+              }
+            },
+            "secondary_badge_arrow_color": {
+              "groupSlug": "secondary_badge_settings",
+              "attrName": "secondary_badge.innerContent",
+              "subName": "secondary_badge_arrow_color",
+              "label": "Arrow Color",
+              "description": "Arrow Color",
+              "render": true,
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "defaultValue": "#333",
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_badge_settings",
+              "attrName": "secondary_badge.decoration.background",
+              "label": "Toggle Bar",
+              "description": "Background Color",
+              "render": true,
+              "priority": 10,
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_badge_settings",
+              "attrName": "secondary_badge.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_badge_settings",
+              "attrName": "secondary_badge.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_badge_settings",
+              "attrName": "secondary_badge.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "enable_secondary_badge": "off",
+              "secondary_badge_text": "",
+              "secondary_badge_arrow_placement": "arrow-bottom",
+              "secondary_badge_arrow_size": "5px",
+              "secondary_badge_arrow_position": "50%",
+              "secondary_badge_position": "-40%",
+              "secondary_badge_alignment": "left",
+              "secondary_badge_top_position": "-100%"
+            }
+          }
+        }
+      }
+    },
+    "enable_animation": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-content-container",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "animation_settings",
+            "attrName": "enable_animation.innerContent",
+            "label": "Animation",
+            "description": "Animation",
+            "default": "off",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/toggle",
+              "props": {
+                "options": {
+                  "off": "No",
+                  "on": "Yes"
+                }
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "on"
+          }
+        }
+      }
+    },
+    "content_animation": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-content-container",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "content_animation_type": {
+              "groupSlug": "animation_settings",
+              "attrName": "content_animation.innerContent",
+              "subName": "content_animation_type",
+              "label": "Animation Type",
+              "description": "Animation Type",
+              "render": true,
+              "show_if": {
+                "enable_animation": "on"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "slide_left": {
+                      "label": "Slide Left"
+                    },
+                    "slide_right": {
+                      "label": "Slide Right"
+                    },
+                    "slide_up": {
+                      "label": "Slide Up"
+                    },
+                    "slide_down": {
+                      "label": "Slide Down"
+                    },
+                    "fade_in": {
+                      "label": "Fade"
+                    },
+                    "zoom_left": {
+                      "label": "Zoom Left"
+                    },
+                    "zoom_center": {
+                      "label": "Zoom Center"
+                    },
+                    "zoom_right": {
+                      "label": "Zoom Right"
+                    }
+                  }
+                }
+              },
+              "features": {
+                "preset": "content"
+              }
+            },
+            "content_animation_duration": {
+              "groupSlug": "animation_settings",
+              "attrName": "content_animation.innerContent",
+              "subName": "content_animation_duration",
+              "label": "Animation Duration",
+              "description": "Animation Duration",
+              "render": true,
+              "show_if": {
+                "enable_animation": "on"
+              },
+              "features": {
+                "responsive": true
+              },
+              "defaultValue": "200ms",
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "min": 1,
+                  "max": 2000,
+                  "step": 1,
+                  "defaultUnit": "ms"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "content_animation_type": "fade_in",
+              "content_animation_duration": "200ms"
+            }
+          }
+        }
+      }
+    },
+    "primary_toggle_design": {
+      "type": "object",
+      "selector": "{{selector}} .df-input-label .df-cs-slider",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "primary_control",
+            "attrName": "normal_control_color.innerContent",
+            "label": "Toggle Color",
+            "description": "Here you can define a custom color for Normal Control.",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_control",
+              "attrName": "primary_toggle_design.decoration.background",
+              "label": "Toggle Background",
+              "description": "Toggle Background",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "secondary_toggle_design": {
+      "type": "object",
+      "selector": "{{selector}} .df-input-label input:checked+.df-cs-slider",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "secondary_control",
+            "attrName": "active_control_color.innerContent",
+            "label": "Toggle Color",
+            "description": "Here you can define a custom color for Normal Control.",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_control",
+              "attrName": "secondary_toggle_design.decoration.background",
+              "label": "Toggle Background",
+              "description": "Toggle Background",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "primary_button": {
+      "type": "object",
+      "selector": "{{selector}} button.df-cs-button.primary",
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_button",
+              "attrName": "primary_button.decoration.background",
+              "label": "Button Background",
+              "description": "Here you can define a custom background for Primary Button.",
+              "render": true,
+              "show_if": {
+                "switcher_type": "button"
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_button",
+              "attrName": "primary_button.decoration.font",
+              "description": "Here you can define a custom font for Primary Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_button",
+              "attrName": "primary_button.decoration.border",
+              "description": "Here you can define a custom border for Primary Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "primary_button",
+              "attrName": "primary_button.decoration.boxShadow",
+              "description": "Here you can define a custom box shadow for Primary Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selector": "{{selector}} button.df-cs-button.primary span.title"
+        }
+      }
+    },
+    "secondary_button": {
+      "type": "object",
+      "selector": "{{selector}} button.df-cs-button.secondary",
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_button",
+              "attrName": "secondary_button.decoration.background",
+              "label": "Button Background",
+              "description": "Here you can define a custom background for Secondary Button.",
+              "render": true,
+              "show_if": {
+                "switcher_type": "button"
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_button",
+              "attrName": "secondary_button.decoration.font",
+              "description": "Here you can define a custom font for Secondary Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_button",
+              "attrName": "secondary_button.decoration.border",
+              "description": "Here you can define a custom border for Secondary Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "secondary_button",
+              "attrName": "secondary_button.decoration.boxShadow",
+              "description": "Here you can define a custom box shadow for Secondary Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selector": "{{selector}} button.df-cs-button.secondary span.title"
+        }
+      }
+    },
+    "active_button": {
+      "type": "object",
+      "selector": "{{selector}} button.df-cs-button.active",
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "active_button",
+              "attrName": "active_button.decoration.background",
+              "label": "Button Background",
+              "description": "Here you can define a custom background for Active Button.",
+              "render": true,
+              "show_if": {
+                "switcher_type": "button"
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "active_button",
+              "attrName": "active_button.decoration.font",
+              "description": "Here you can define a custom font for Active Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "active_button",
+              "attrName": "active_button.decoration.border",
+              "description": "Here you can define a custom border for Active Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "active_button",
+              "attrName": "active_button.decoration.boxShadow",
+              "description": "Here you can define a custom box shadow for Active Button.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selector": "{{selector}} button.df-cs-button.active span.title"
+        }
+      }
+    },
+    "switcher_bar_margin": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-switch-wrapper",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "switcher_bar_margin.decoration.spacing",
+              "label": "Toggle Bar Margin",
+              "description": "Here you can define custom spacing for toggle bar.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Toggle Bar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "primary_icon_padding": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-icon-wrapper .et-pb-icon.df-primary-label-icon",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "primary_icon_padding.decoration.spacing",
+              "label": "Primary Icon Padding",
+              "description": "Here you can define custom spacing for primary icon.",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Primary Label Icon",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "secondary_icon_padding": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-icon-wrapper .et-pb-icon.df-secondary-label-icon",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "secondary_icon_padding.decoration.spacing",
+              "label": "Secondary Icon Padding",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Secondary Label Icon",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "switcher_toggle_margin": {
+      "type": "object",
+      "selector": "{{selector}} label.df-cs-switch.df-input-label",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "switcher_toggle_margin.decoration.spacing",
+              "label": "Toggle Margin",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Toggle",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "switcher_content_padding": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-content-section",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "switcher_content_padding.decoration.spacing",
+              "label": "Toggle Content Padding",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Toggle Content",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "switcher_button_padding": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-switch-wrapper .df-cs-button",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "switcher_button_padding.decoration.spacing",
+              "label": "Toggle Button Padding",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Toggle Button",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "primary_badge_padding": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-primary-badge",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "primary_badge_padding.decoration.spacing",
+              "label": "Primary Badge Padding",
+              "description": "Here you can define custom spacing for primary badge.",
+              "render": true,
+              "show_if": {
+                "enable_primary_badge": "on"
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Primary Badge",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "secondary_badge_padding": {
+      "type": "object",
+      "selector": "{{selector}} .df-cs-secondary-badge",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "secondary_badge_padding.decoration.spacing",
+              "label": "Secondary Badge Padding",
+              "description": "Here you can define custom spacing for secondary badge.",
+              "render": true,
+              "show_if": {
+                "enable_secondary_badge": "on"
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Secondary Badge",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {}
+}

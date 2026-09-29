@@ -1,0 +1,61 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "animation": "module.decoration.animation",
+    "box_shadow": {
+      "default": "module.decoration.boxShadow",
+      "tooltip_box_shadow": "tooltip_settings.decoration.boxShadow"
+    },
+    "disabled_on": "module.decoration.disabledOn",
+    "display_conditions": "module.decoration.conditions",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "text_shadow": {
+      "default": "text.textShadow"
+    },
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "borders": {
+      "default": "module.decoration.border"
+    },
+    "background": "module.decoration.background",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "margin_padding": "module.decoration.spacing",
+    "filters": {
+      "default": "module.decoration.filters"
+    },
+    "link_options": "module.advanced.link"
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after",
+    "free_form": "css.*.freeForm",
+    "marquee_text_image_css": "css.*.marquee_text_image_css",
+    "marquee_text_icon_css": "css.*.marquee_text_icon_css",
+    "marquee_text_css": "css.*.marquee_text_css"
+  },
+  "module": {
+    "enable_animation": "animation_settings.innerContent.*.enable_animation",
+    "difl_animation_types": "animation_settings.innerContent.*.difl_animation_types",
+    "difl_animation_delay": "animation_settings.innerContent.*.difl_animation_delay",
+    "difl_animation_duration": "animation_settings.innerContent.*.difl_animation_duration",
+    "enable_feature_tooltip": "tooltip_settings.innerContent.*.enable_feature_tooltip",
+    "feature_text_tooltip_placement": "tooltip_settings.innerContent.*.feature_text_tooltip_placement",
+    "feature_text_tooltip_animation": "tooltip_settings.innerContent.*.feature_text_tooltip_animation",
+    "feature_text_tooltip_trigger": "tooltip_settings.innerContent.*.feature_text_tooltip_trigger",
+    "feature_text_tooltip_mouse_style": "tooltip_settings.innerContent.*.feature_text_tooltip_mouse_style",
+    "feature_text_tooltip_duration": "tooltip_settings.innerContent.*.feature_text_tooltip_duration",
+    "feature_text_tooltip_interactive": "tooltip_settings.innerContent.*.feature_text_tooltip_interactive",
+    "feature_text_tooltip_interactive_border": "tooltip_settings.innerContent.*.feature_text_tooltip_interactive_border",
+    "feature_text_tooltip_interactive_debounce": "tooltip_settings.innerContent.*.feature_text_tooltip_interactive_debounce",
+    "feature_text_tooltip_max_width": "tooltip_settings.innerContent.*.feature_text_tooltip_max_width",
+    "feature_text_tooltip_offset_distance_vertical": "tooltip_settings.innerContent.*.feature_text_tooltip_offset_distance_vertical",
+    "feature_text_tooltip_offset_distance": "tooltip_settings.innerContent.*.feature_text_tooltip_offset_distance"
+  }
+}

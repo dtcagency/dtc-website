@@ -1,0 +1,757 @@
+{
+    "name": "difl/counter",
+    "d4Shortcode": "difl_counter",
+    "title": "Animated Counter",
+    "titles": "Animated Counters",
+    "category": "module",
+    "moduleIcon": "difl/counter",
+    "childrenName": [],
+    "allowAllElements": false,
+    "customCssFields": {
+        "counter_wrapper": {
+            "subName": "counter_wrapper",
+            "label": "Counter Wrapper",
+            "selectorSuffix": " .df_counter_wrapper"
+        },
+        "counter_digits": {
+            "subName": "counter_digits",
+            "label": "Counter Digits",
+            "selectorSuffix": " .df_counter_digits"
+        },
+        "counter_digit": {
+            "subName": "counter_digit",
+            "label": "Counter Digit",
+            "selectorSuffix": " .df_counter_digit"
+        },
+        "counter_prefix": {
+            "subName": "counter_prefix",
+            "label": "Counter Prefix",
+            "selectorSuffix": " .df_counter_prefix"
+        },
+        "counter_suffix": {
+            "subName": "counter_suffix",
+            "label": "Counter Suffix",
+            "selectorSuffix": " .df_counter_suffix"
+        }
+    },
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label",
+                            "props": { "groupLabel": "Meta" }
+                        }
+                    }
+                },
+                "advanced": {
+                    "link": {
+                        "item": {
+                            "groupSlug": "contentLink"
+                        }
+                    }
+                },
+                "decoration": {
+                    "attributes": {},
+                    "background": {},
+                    "spacing": {},
+                    "border": {},
+                    "boxShadow": {},
+                    "sizing": {},
+                    "scroll": {},
+                    "overflow": {},
+                    "filters": {},
+                    "transform": {},
+                    "animation": {},
+                    "position": {},
+                    "sticky": {},
+                    "zIndex": {},
+                    "conditions": {},
+                    "disabledOn": {},
+                    "transition": {},
+                    "interactions": {}
+                }
+            },
+            "styleProps": {
+                "spacing": { "important": true }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "Animated Counter"
+                        }
+                    }
+                }
+            }
+        },
+        "counter_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "end_value": {
+                            "groupSlug": "counter_settings",
+                            "attrName": "counter_settings.innerContent",
+                            "subName": "end_value",
+                            "label": "Target Number",
+                            "description": "Target number the counter animates to. Supports integers and decimals. Examples: 1000, 99.5, 1500",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {}
+                            }
+                        },
+                        "start_value": {
+                            "groupSlug": "counter_settings",
+                            "attrName": "counter_settings.innerContent",
+                            "subName": "start_value",
+                            "label": "Starting Number",
+                            "description": "Number the counter starts from. Use a non-zero value to count from a baseline. Examples: 0, 100, -50",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {}
+                            }
+                        },
+                        "thousand_separator": {
+                            "groupSlug": "counter_settings",
+                            "attrName": "counter_settings.innerContent",
+                            "subName": "thousand_separator",
+                            "label": "Thousands Separator",
+                            "description": "Character used to group thousands. Comma = 1,234 (US), Dot = 1.234 (European), Space = 1 234 (FR/SE), None = 1234.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "comma": { "label": "Comma (1,234)" },
+                                        "dot": { "label": "Dot (1.234)" },
+                                        "space": { "label": "Space (1 234)" },
+                                        "none": { "label": "None (1234)" }
+                                    }
+                                }
+                            }
+                        },
+                        "decimal_places": {
+                            "groupSlug": "counter_settings",
+                            "attrName": "counter_settings.innerContent",
+                            "subName": "decimal_places",
+                            "label": "Decimal Places",
+                            "description": "Number of digits shown after the decimal point. Examples: 0 → 99, 1 → 99.5, 2 → 99.50",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 4,
+                                    "step": 1,
+                                    "allowedUnits": [""], "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "decimal_separator": {
+                            "groupSlug": "counter_settings",
+                            "attrName": "counter_settings.innerContent",
+                            "subName": "decimal_separator",
+                            "label": "Decimal Separator",
+                            "description": "Character that separates whole numbers from decimals. Dot = 3.14 (US/UK), Comma = 3,14 (most of Europe).",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "dot": { "label": "Dot (.)" },
+                                        "comma": { "label": "Comma (,)" }
+                                    }
+                                }
+                            }
+                        },
+                        "prefix": {
+                            "groupSlug": "counter_settings",
+                            "attrName": "counter_settings.innerContent",
+                            "subName": "prefix",
+                            "label": "Prefix Text",
+                            "description": "Text displayed before the number. Examples: $ for price, ~ for approximate, # for count, \"Rs. \" for currency word.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "e.g. $"
+                                }
+                            }
+                        },
+                        "suffix": {
+                            "groupSlug": "counter_settings",
+                            "attrName": "counter_settings.innerContent",
+                            "subName": "suffix",
+                            "label": "Suffix Text",
+                            "description": "Text displayed after the number. Examples: % for percentage, + for \"plus\", K for thousands, /5 for ratings, \" users\".",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "e.g. +, %, K"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "end_value": "1234",
+                            "start_value": "0",
+                            "thousand_separator": "comma",
+                            "decimal_places": "0",
+                            "decimal_separator": "dot",
+                            "prefix": "",
+                            "suffix": ""
+                        }
+                    }
+                }
+            }
+        },
+        "number_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "counter_typography",
+                            "priority": 10,
+                            "attrName": "number_font.decoration.font",
+                            "label": "Number Font",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Number Font",
+                                    "fieldLabel": "",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    },
+                                    "defaultGroupAttr": {
+                                        "font": {
+                                            "desktop": {
+                                                "value": {
+                                                    "family": "Open Sans",
+                                                    "size": "26px",
+                                                    "weight": "700"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_counter_digits, {{selector}} .df_counter_odo"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "animation_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "animation_style": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "animation_style",
+                            "label": "Animation Style",
+                            "description": "Visual style for the digit animation. Rolling tumbles digits like a slot machine, Odometer scrolls each digit through every value it traverses (HubSpot Odometer minimal theme), Count Up smoothly increments, Typewriter types each digit, None disables animation.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "rolling": { "label": "Rolling" },
+                                        "odometer": { "label": "Odometer" },
+                                        "count_up": { "label": "Count Up" },
+                                        "typewriter": { "label": "Typewriter" },
+                                        "none": { "label": "None" }
+                                    }
+                                }
+                            }
+                        },
+                        "duration": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "duration",
+                            "label": "Animation Duration (ms)",
+                            "description": "Length of the counting animation in milliseconds (1000 = 1 second). Examples: 2000 for a snappy 2s count, 5000 for slower buildup.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 500,
+                                    "max": 10000,
+                                    "step": 100,
+                                    "allowedUnits": [""], "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "scroll_trigger": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "scroll_trigger",
+                            "label": "Animate On Scroll",
+                            "description": "Start the count animation only when the module scrolls into view. Turn off to run immediately on page load.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle",
+                                "props": {}
+                            }
+                        },
+                        "scroll_threshold": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "scroll_threshold",
+                            "label": "Scroll Threshold",
+                            "description": "How much of the module must be visible (as a fraction, 0.1 to 1.0) before the animation triggers. 0.2 = animate when 20% has scrolled into view; 1.0 = only when fully visible.",
+                            "render": true,
+                            "show_if": { "scroll_trigger": "on" },
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0.1,
+                                    "max": 1.0,
+                                    "step": 0.1,
+                                    "allowedUnits": [""], "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "stagger_delay": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "stagger_delay",
+                            "label": "Stagger Delay (ms)",
+                            "description": "Milliseconds between each element starting its animation. For Rolling, controls the digit-to-digit cascade. For Typewriter, controls the character-by-character reveal speed. 0 starts everything together; 50 gives a subtle wave; 200 produces a pronounced cascade.",
+                            "render": true,
+                            "show_if": { "animation_style": ["rolling", "typewriter"] },
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 300,
+                                    "step": 10,
+                                    "allowedUnits": [""], "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "easing": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "easing",
+                            "label": "Easing",
+                            "description": "Speed curve for the count animation. Ease Out slows toward the end (most natural), Ease In ramps up, Ease In Out blends both, Linear runs at constant speed.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "ease-out": { "label": "Ease Out" },
+                                        "ease-in-out": { "label": "Ease In Out" },
+                                        "linear": { "label": "Linear" },
+                                        "ease-in": { "label": "Ease In" }
+                                    }
+                                }
+                            }
+                        },
+                        "re_trigger": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "re_trigger",
+                            "label": "Re-animate On Scroll Back",
+                            "description": "Replay the animation every time the module re-enters the viewport. Turn off to animate only once on first reveal.",
+                            "render": true,
+                            "show_if": { "scroll_trigger": "on" },
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle",
+                                "props": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "animation_style": "rolling",
+                            "duration": "2000",
+                            "scroll_trigger": "on",
+                            "scroll_threshold": "0.2",
+                            "stagger_delay": "50",
+                            "easing": "ease-out",
+                            "re_trigger": "off"
+                        }
+                    }
+                }
+            }
+        },
+        "style_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "separator_color": {
+                            "groupSlug": "style_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "separator_color",
+                            "label": "Separator Color",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/color-picker",
+                                "props": {}
+                            }
+                        },
+                        "digit_gap": {
+                            "groupSlug": "style_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "digit_gap",
+                            "label": "Digit Gap",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 20,
+                                    "step": 1,
+                                    "allowedUnits": [""], "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "prefix_suffix_gap": {
+                            "groupSlug": "style_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "prefix_suffix_gap",
+                            "label": "Prefix / Suffix Gap",
+                            "description": "Spacing (in px) between the prefix, the digits, and the suffix.",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 50,
+                                    "step": 1,
+                                    "allowedUnits": [""], "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "digit_padding": {
+                            "groupSlug": "style_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "digit_padding",
+                            "label": "Digit Padding",
+                            "render": true,
+                            "show_if": { "animation_style": ["rolling", "odometer", "typewriter"] },
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 30,
+                                    "step": 1,
+                                    "allowedUnits": [""], "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "digit_bg_color": {
+                            "groupSlug": "style_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "digit_bg_color",
+                            "label": "Digit Background",
+                            "render": true,
+                            "show_if": { "animation_style": ["rolling", "odometer", "typewriter"] },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/color-picker",
+                                "props": {}
+                            }
+                        },
+                        "digit_border_radius": {
+                            "groupSlug": "style_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "digit_border_radius",
+                            "label": "Digit Border Radius",
+                            "render": true,
+                            "show_if": { "animation_style": ["rolling", "odometer", "typewriter"] },
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 20,
+                                    "step": 1,
+                                    "allowedUnits": [""], "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "alignment": {
+                            "groupSlug": "style_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "alignment",
+                            "label": "Alignment",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "flex-start": { "label": "Left" },
+                                        "center": { "label": "Center" },
+                                        "flex-end": { "label": "Right" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "separator_color": "",
+                            "digit_gap": "2",
+                            "prefix_suffix_gap": "5",
+                            "digit_padding": "0",
+                            "digit_bg_color": "",
+                            "digit_border_radius": "0",
+                            "alignment": "center"
+                        }
+                    }
+                }
+            }
+        },
+        "prefix_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "counter_typography",
+                            "priority": 20,
+                            "attrName": "prefix_font.decoration.font",
+                            "label": "Prefix Font",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Prefix Font",
+                                    "fieldLabel": "",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "lineHeight": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    },
+                                    "defaultGroupAttr": {
+                                        "font": {
+                                            "desktop": {
+                                                "value": {
+                                                    "family": "Open Sans",
+                                                    "size": "26px",
+                                                    "weight": "700"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_counter_prefix"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "suffix_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "counter_typography",
+                            "priority": 30,
+                            "attrName": "suffix_font.decoration.font",
+                            "label": "Suffix Font",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Suffix Font",
+                                    "fieldLabel": "",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "lineHeight": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    },
+                                    "defaultGroupAttr": {
+                                        "font": {
+                                            "desktop": {
+                                                "value": {
+                                                    "family": "Open Sans",
+                                                    "size": "26px",
+                                                    "weight": "700"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_counter_suffix"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        }
+    },
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "counter_settings": {
+                "panel": "content",
+                "priority": 5,
+                "groupName": "counter_settings",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Counter Settings" } }
+            },
+            "animation_settings": {
+                "panel": "content",
+                "priority": 10,
+                "groupName": "animation_settings",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Animation" } }
+            },
+            "contentLink": {
+                "panel": "content",
+                "priority": 15,
+                "groupName": "link",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Link" } }
+            },
+            "style_settings": {
+                "panel": "design",
+                "priority": 5,
+                "groupName": "style_settings",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Counter Style" } }
+            },
+            "counter_typography": {
+                "panel": "design",
+                "priority": 10,
+                "groupName": "counter_typography",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Typography" } }
+            }
+        }
+    },
+    "mousetrap": {
+        "inner": {
+            "edited": true
+        }
+    }
+}

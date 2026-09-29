@@ -1,0 +1,63 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "animation": "module.decoration.animation",
+    "background": "module.decoration.background",
+    "disabled_on": "module.decoration.disabledOn",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "text": "module.advanced.text",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "margin_padding": "module.decoration.spacing",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "link_options": "module.advanced.link",
+    "fonts": {
+      "text-body": "content_obj_settings.decoration.bodyFont.body",
+      "link": "content_obj_settings.decoration.bodyFont.link",
+      "ul": "content_obj_settings.decoration.bodyFont.ul",
+      "ol": "content_obj_settings.decoration.bodyFont.ol",
+      "quote": "content_obj_settings.decoration.bodyFont.quote",
+      "header": "content_obj_settings.decoration.headingFont.h1",
+      "header_2": "content_obj_settings.decoration.headingFont.h2",
+      "header_3": "content_obj_settings.decoration.headingFont.h3",
+      "header_4": "content_obj_settings.decoration.headingFont.h4",
+      "header_5": "content_obj_settings.decoration.headingFont.h5",
+      "header_6": "content_obj_settings.decoration.headingFont.h6"
+    },
+    "text_shadow": {
+      "default": "module.advanced.text.textShadow"
+    },
+    "box_shadow": {
+      "default": "module.decoration.boxShadow"
+    },
+    "borders": {
+      "default": "module.decoration.border"
+    },
+    "filters": {
+      "default": "module.decoration.filters"
+    }
+  },
+  "css": {
+    "after": "css.*.after",
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement"
+  },
+  "module": {
+    "settings__trigger_type": "reveal_obj_settings.innerContent.*.settings__trigger_type",
+    "settings__split_content": "reveal_obj_settings.innerContent.*.settings__split_content",
+    "settings__reveal_by": "reveal_obj_settings.innerContent.*.settings__reveal_by",
+    "settings__reveal_color": "reveal_obj_settings.innerContent.*.settings__reveal_color",
+    "settings__reveal_duration": "reveal_obj_settings.innerContent.*.settings__reveal_duration",
+    "settings__reveal_delay": "reveal_obj_settings.innerContent.*.settings__reveal_delay",
+    "settings__reveal_initial_opacity": "reveal_obj_settings.innerContent.*.settings__reveal_initial_opacity",
+    "settings__reveal_viewport_offset_value_top": "reveal_obj_settings.innerContent.*.settings__reveal_viewport_offset_value_top",
+    "settings__reveal_viewport_offset_value_bottom": "reveal_obj_settings.innerContent.*.settings__reveal_viewport_offset_value_bottom",
+    "settings__content": "content_obj_settings.innerContent.*.settings__content"
+  }
+}

@@ -1,0 +1,4341 @@
+{
+  "name": "difl/gravity-form",
+  "d4Shortcode": "df_gravity_form",
+  "title": "Gravity Forms Styler",
+  "category": "module",
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "content": {
+        "panel": "content",
+        "groupName": "content",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content"
+          }
+        }
+      },
+      "contentLink": {
+        "panel": "content",
+        "groupName": "contentLink",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Link"
+          }
+        }
+      },
+      "heading": {
+        "panel": "design",
+        "groupName": "heading",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Heading"
+          }
+        }
+      },
+      "label": {
+        "panel": "design",
+        "groupName": "label",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Label"
+          }
+        }
+      },
+      "sub-label": {
+        "panel": "design",
+        "groupName": "sub-label",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Sub Label"
+          }
+        }
+      },
+      "description": {
+        "panel": "design",
+        "groupName": "description",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Description"
+          }
+        }
+      },
+      "warning_text": {
+        "panel": "design",
+        "groupName": "warning_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Warning Text"
+          }
+        }
+      },
+      "input": {
+        "panel": "design",
+        "groupName": "input",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Input"
+          }
+        }
+      },
+      "select": {
+        "panel": "design",
+        "groupName": "select",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Select"
+          }
+        }
+      },
+      "textarea": {
+        "panel": "design",
+        "groupName": "textarea",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Textarea"
+          }
+        }
+      },
+      "checkbox": {
+        "panel": "design",
+        "groupName": "checkbox",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Checkbox"
+          }
+        }
+      },
+      "radio": {
+        "panel": "design",
+        "groupName": "radio",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Radio"
+          }
+        }
+      },
+      "time": {
+        "panel": "design",
+        "groupName": "time",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Time"
+          }
+        }
+      },
+      "consent": {
+        "panel": "design",
+        "groupName": "consent",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Consent"
+          }
+        }
+      },
+      "required_text": {
+        "panel": "design",
+        "groupName": "required_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Required Text"
+          }
+        }
+      },
+      "error_box": {
+        "panel": "design",
+        "groupName": "error_box",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Error Box"
+          }
+        }
+      },
+      "gf_section": {
+        "panel": "design",
+        "groupName": "gf_section",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Section"
+          }
+        }
+      },
+      "progress": {
+        "panel": "design",
+        "groupName": "progress",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Progress"
+          }
+        }
+      },
+      "button": {
+        "panel": "design",
+        "groupName": "button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Button"
+          }
+        }
+      },
+      "confirm": {
+        "panel": "design",
+        "groupName": "confirm",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Confirmation"
+          }
+        }
+      },
+      "focus": {
+        "panel": "design",
+        "groupName": "focus",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Focus Settings"
+          }
+        }
+      }
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "link": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentLink",
+              "priority": 20,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/link",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "attributes": {},
+          "animation": {},
+          "background": {},
+          "interactions": {},
+          "conditions": {},
+          "disabledOn": {},
+          "filters": {},
+          "overflow": {},
+          "position": {},
+          "scroll": {},
+          "sizing": {},
+          "spacing": {},
+          "sticky": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Gravity Forms Styler"
+            }
+          }
+        }
+      }
+    },
+    "gravity_forms": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "gravity_forms.innerContent",
+            "label": "Gravity Forms",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {},
+                "searchable": true
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "none"
+          }
+        }
+      }
+    },
+    "custom_heading_style": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "heading",
+            "tab_slug": "custom_heading_style",
+            "module_slug": "difl/gravity-form",
+            "tabs": {
+              "heading": {
+                "label": "Heading",
+                "components": []
+              },
+              "title": {
+                "label": "Title",
+                "components": []
+              },
+              "descr": {
+                "label": "Descr",
+                "components": []
+              },
+              "notice": {
+                "label": "Notice",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "show_title": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "show_title.innerContent",
+            "label": "Show Title",
+            "render": true,
+            "description": "Whether or not to display the form title.",
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "show_description": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "show_description.innerContent",
+            "label": "Show Description",
+            "render": true,
+            "description": "Whether or not to display the form description.",
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "use_ajax": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "use_ajax.innerContent",
+            "label": "Use Ajax",
+            "render": true,
+            "description": "Specify whether or not to use AJAX to submit the form.",
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "tabindex": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "attrName": "tabindex.innerContent",
+            "label": "Tabindex",
+            "render": true,
+            "description": "Specify the starting tab index for the fields of this form.",
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "min_limit": 0,
+                "allowedUnits": [],
+                "defaultUnit": ""
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "heading_background": {
+      "type": "object",
+      "selector": "{{selector}} .gform_heading",
+      "hover": "{{selector}} .gform_heading:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "heading",
+              "attrName": "heading_background.decoration.background",
+              "label": "Background",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_heading_style",
+              "tab_slug": "heading",
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "pattern",
+                    "mask"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "priority": 10
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "input_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "input",
+            "attrName": "input_background.innerContent",
+            "label": "Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "input_font": {
+      "type": "object",
+      "selector": "{{selector}} .gfield:not(.gfield--type-time) input[type='text']:not(.chosen-search-input), {{selector}} input[type='password'], {{selector}} input[type='url'], {{selector}} input[type='phone'], {{selector}} input[type='number'], {{selector}} input[type='tel'], {{selector}} input[type='email']",
+      "hover": "{{selector}} .gfield:not(.gfield--type-time) input[type='text']:not(.chosen-search-input):hover, {{selector}} input[type='password']:hover, {{selector}} input[type='url']:hover, {{selector}} input[type='phone']:hover, {{selector}} input[type='number']:hover, {{selector}} input[type='tel']:hover, {{selector}} input[type='email']:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "input",
+              "attrName": "input_font.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "letterSpacing": {
+                      "render": false
+                    },
+                    "lineHeight": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "input_placeholder_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "input",
+            "attrName": "input_placeholder_color.innerContent",
+            "label": "Placeholder Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "select_background": {
+      "type": "object",
+      "selector": "{{selector}} .gfield:not(.gfield--type-time) select",
+      "hover": "{{selector}} .gfield:not(.gfield--type-time) select:hover",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "select",
+            "attrName": "select_background.innerContent",
+            "label": "Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        }
+      }
+    },
+    "textarea_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "textarea",
+            "attrName": "textarea_background.innerContent",
+            "label": "Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "textarea_placeholder_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "textarea",
+            "attrName": "textarea_placeholder_color.innerContent",
+            "label": "Placeholder Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "checkbox_gap": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "checkbox",
+            "attrName": "checkbox_gap.innerContent",
+            "label": "Gap",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "min_limit": "0px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0px"
+          }
+        }
+      }
+    },
+    "checkbox_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "checkbox",
+            "attrName": "checkbox_background.innerContent",
+            "label": "Checkbox Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "checkbox_tickcolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "checkbox",
+            "attrName": "checkbox_tickcolor.innerContent",
+            "label": "Checkbox Tick Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "checkbox_bordercolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "checkbox",
+            "attrName": "checkbox_bordercolor.innerContent",
+            "label": "Checkbox Border Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "checkbox_size": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "checkbox",
+            "attrName": "checkbox_size.innerContent",
+            "label": "Size",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "10",
+                "max": "100",
+                "step": "1",
+                "min_limit": "10px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "20px"
+          }
+        }
+      }
+    },
+    "checkbox_bordersize": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "checkbox",
+            "attrName": "checkbox_bordersize.innerContent",
+            "label": "Border Thickness",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "min_limit": "0px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "1px"
+          }
+        }
+      }
+    },
+    "checkbox_font": {
+      "type": "object",
+      "selector": "{{selector}} .gfield_checkbox .gform-field-label",
+      "hover": "{{selector}} .gfield_checkbox .gform-field-label:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "checkbox",
+              "attrName": "checkbox_font.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "15px",
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "letterSpacing": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "radio_gap": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "radio",
+            "attrName": "radio_gap.innerContent",
+            "label": "Gap",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "min_limit": "0px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0px"
+          }
+        }
+      }
+    },
+    "radio_box": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "radio",
+            "attrName": "radio_box.innerContent",
+            "label": "Radio Box Style",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "radio_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "radio",
+            "attrName": "radio_background.innerContent",
+            "label": "Radio Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "radio_dotcolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "radio",
+            "attrName": "radio_dotcolor.innerContent",
+            "label": "Radio Dot Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "radio_bordercolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "radio",
+            "attrName": "radio_bordercolor.innerContent",
+            "label": "Radio Border Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "radio_size": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "radio",
+            "attrName": "radio_size.innerContent",
+            "label": "Size",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "10",
+                "max": "100",
+                "step": "1",
+                "min_limit": "10px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "15px"
+          }
+        }
+      }
+    },
+    "radio_bordersize": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "radio",
+            "attrName": "radio_bordersize.innerContent",
+            "label": "Border Thickness",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "min_limit": "0px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "1px"
+          }
+        }
+      }
+    },
+    "radio_font": {
+      "type": "object",
+      "selector": "{{selector}} .gfield_radio .gform-field-label",
+      "hover": "{{selector}} .gfield_radio .gform-field-label:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "radio",
+              "attrName": "radio_font.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "15px",
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "letterSpacing": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "custom_consent_style": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "consent",
+            "tab_slug": "custom_consent_style",
+            "module_slug": "difl/gravity-form",
+            "tabs": {
+              "label": {
+                "label": "Label",
+                "components": []
+              },
+              "checkbox": {
+                "label": "Checkbox",
+                "components": []
+              },
+              "description": {
+                "label": "Description",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "consent_checkbox_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "consent",
+            "attrName": "consent_checkbox_background.innerContent",
+            "label": "Checkbox Background Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_consent_style",
+            "tab_slug": "checkbox",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "consent_checkbox_tickcolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "consent",
+            "attrName": "consent_checkbox_tickcolor.innerContent",
+            "label": "Checkbox Tick Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_consent_style",
+            "tab_slug": "checkbox",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "consent_checkbox_bordercolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "consent",
+            "attrName": "consent_checkbox_bordercolor.innerContent",
+            "label": "Checkbox Border Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_consent_style",
+            "tab_slug": "checkbox",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "consent_checkbox_size": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "consent",
+            "attrName": "consent_checkbox_size.innerContent",
+            "label": "Size",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_consent_style",
+            "tab_slug": "checkbox",
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "10",
+                "max": "100",
+                "step": "1",
+                "min_limit": "10px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "20px"
+          }
+        }
+      }
+    },
+    "consent_checkbox_bordersize": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "consent",
+            "attrName": "consent_checkbox_bordersize.innerContent",
+            "label": "Border Thickness",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_consent_style",
+            "tab_slug": "checkbox",
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "min_limit": "0px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "1px"
+          }
+        }
+      }
+    },
+    "consent_description_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "consent",
+            "attrName": "consent_description_background.innerContent",
+            "label": "Background Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_consent_style",
+            "tab_slug": "description",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "consent_description_bordercolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "consent",
+            "attrName": "consent_description_bordercolor.innerContent",
+            "label": "Border Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_consent_style",
+            "tab_slug": "description",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "#ddd"
+          }
+        }
+      }
+    },
+    "button_align": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "button",
+            "attrName": "button_align.innerContent",
+            "label": "Alignment",
+            "render": true,
+            "description": "Choose button alignment.",
+            "priority": 9,
+            "show_if": {
+              "button_full_width": "off"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/button-options",
+              "props": {
+                "options": {
+                  "left": {
+                    "icon": "divi/text-align-left"
+                  },
+                  "center": {
+                    "icon": "divi/text-align-center"
+                  },
+                  "right": {
+                    "icon": "divi/text-align-right"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "button_full_width": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "button",
+            "attrName": "button_full_width.innerContent",
+            "label": "Full width button",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/toggle"
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "off"
+          }
+        }
+      }
+    },
+    "button_background": {
+      "type": "object",
+      "selector": "{{selector}} .button",
+      "hover": "{{selector}} .button:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "button",
+              "attrName": "button_background.decoration.background",
+              "label": "Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "priority": 10,
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "pattern",
+                    "mask"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "btn_icon_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "button",
+            "attrName": "btn_icon_color.innerContent",
+            "label": "Icon Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "custom_section_style": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "gf_section",
+            "tab_slug": "custom_section_style",
+            "module_slug": "difl/gravity-form",
+            "tabs": {
+              "section": {
+                "label": "Section",
+                "components": []
+              },
+              "title": {
+                "label": "Title",
+                "components": []
+              },
+              "description": {
+                "label": "Description",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "section_background": {
+      "type": "object",
+      "selector": "{{selector}} .gsection",
+      "hover": "{{selector}} .gsection:hover",
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "gf_section",
+              "attrName": "section_background.decoration.background",
+              "label": "Background",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_section_style",
+              "tab_slug": "section",
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "pattern",
+                    "mask"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "priority": 10
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "custom_progress_style": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "tab_slug": "custom_progress_style",
+            "module_slug": "difl/gravity-form",
+            "tabs": {
+              "bar": {
+                "label": "Bar",
+                "components": []
+              },
+              "step": {
+                "label": "Step",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "progress_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "progress_color.innerContent",
+            "label": "Text Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "bar",
+            "priority": 2,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "progress": {
+      "type": "object",
+      "selector": "{{selector}} .gf_progressbar_wrapper",
+      "hover": "{{selector}} .gf_progressbar_wrapper:hover",
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "progress",
+              "attrName": "progress.decoration.background",
+              "label": "Bar Background",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_progress_style",
+              "tab_slug": "bar",
+              "priority": 1,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Bar",
+                  "hidePanels": [
+                    "video",
+                    "pattern",
+                    "mask"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "progress",
+              "attrName": "progress.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_progress_style",
+              "tab_slug": "bar",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Progress Title",
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "13px",
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "progress",
+              "attrName": "progress.decoration.spacing",
+              "label": "Wrapper Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_progress_style",
+              "tab_slug": "bar",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Wrapper "
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gf_progressbar_title",
+              "hover": "{{selector}} .gf_progressbar_title:hover"
+            }
+          }
+        },
+        "spacing": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gf_progressbar_wrapper",
+              "hover": "{{selector}} .gf_progressbar_wrapper:hover"
+            }
+          }
+        },
+        "background": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gf_progressbar_percentage",
+              "hover": "{{selector}} .gf_progressbar_percentage:hover"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "steps_align": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "steps_align.innerContent",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "label": "Alignment",
+            "component": {
+              "type": "field",
+              "name": "divi/button-options",
+              "props": {
+                "options": {
+                  "left": {
+                    "icon": "divi/text-align-left"
+                  },
+                  "center": {
+                    "icon": "divi/text-align-center"
+                  },
+                  "right": {
+                    "icon": "divi/text-align-right"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "step_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "step_background.innerContent",
+            "label": "Step Number Background",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "step_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "step_color.innerContent",
+            "label": "Step Number Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "step_bordercolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "step_bordercolor.innerContent",
+            "label": "Step Number Border Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "active_step_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "active_step_background.innerContent",
+            "label": "Active Step Number Background",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "active_step_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "active_step_color.innerContent",
+            "label": "Active Step Number Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "active_step_bordercolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "active_step_bordercolor.innerContent",
+            "label": "Active Step Number Border Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "complete_step_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "complete_step_background.innerContent",
+            "label": "Complete Step Number Background",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "complete_step_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "complete_step_color.innerContent",
+            "label": "Complete Step Number Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "step_bottom_bordercolor": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "progress",
+            "attrName": "step_bottom_bordercolor.innerContent",
+            "label": "Bottom Border Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_progress_style",
+            "tab_slug": "step",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "confirm_background": {
+      "type": "object",
+      "selector": "{{selector}} .gform_confirmation_message",
+      "hover": "{{selector}} .gform_confirmation_message:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "confirm",
+              "attrName": "confirm_background.decoration.background",
+              "label": "Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "pattern",
+                    "mask"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "progress_step_name": {
+      "type": "object",
+      "selector": "{{selector}} .gf_page_steps .gf_step_label",
+      "hover": "{{selector}} .gf_page_steps .gf_step_label:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "progress",
+              "attrName": "progress_step_name.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_progress_style",
+              "tab_slug": "step",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Page Name",
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gf_page_steps .gf_step_label",
+              "hover": "{{selector}} .gf_page_steps .gf_step_label:hover"
+            }
+          }
+        }
+      }
+    },
+    "input_focus_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "input_focus_background.innerContent",
+            "label": "Input Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "input_focus_border_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "input_focus_border_color.innerContent",
+            "label": "Input Border Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "input_focus_text_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "input_focus_text_color.innerContent",
+            "label": "Input Text Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "select_focus_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "select_focus_background.innerContent",
+            "label": "Select Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "select_focus_border_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "select_focus_border_color.innerContent",
+            "label": "Select Border Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "select_focus_text_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "select_focus_text_color.innerContent",
+            "label": "Select Text Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "textarea_focus_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "textarea_focus_background.innerContent",
+            "label": "Textarea Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "textarea_focus_border_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "textarea_focus_border_color.innerContent",
+            "label": "Textarea Border Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "textarea_focus_text_color": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "focus",
+            "attrName": "textarea_focus_text_color.innerContent",
+            "label": "Textarea Text Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "custom_error_style": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "error_box",
+            "tab_slug": "custom_error_style",
+            "module_slug": "difl/gravity-form",
+            "tabs": {
+              "global": {
+                "label": "Global",
+                "components": []
+              },
+              "field_error": {
+                "label": "Field Error",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "error_box_global_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "error_box",
+            "attrName": "error_box_global_background.innerContent",
+            "label": "Background Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_error_style",
+            "tab_slug": "global",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "error_box_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "error_box",
+            "attrName": "error_box_background.innerContent",
+            "label": "Background Color",
+            "render": false,
+            "custom_tab": true,
+            "tab_attribute": "custom_error_style",
+            "tab_slug": "field_error",
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "time_background": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "time",
+            "attrName": "time_background.innerContent",
+            "label": "Background Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "time_input_placeholder": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "time",
+            "attrName": "time_input_placeholder.innerContent",
+            "label": "Input Placeholder Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "time_colon": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "time",
+            "attrName": "time_colon.innerContent",
+            "label": "Colon Color",
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "divi/color-picker"
+            }
+          }
+        }
+      }
+    },
+    "default": {
+      "type": "object",
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "attrName": "default.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "heading": {
+      "type": "object",
+      "selector": "{{selector}} .gform_heading",
+      "hover": "{{selector}} .gform_heading:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "heading",
+              "attrName": "heading.decoration.spacing",
+              "label": " Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_heading_style",
+              "tab_slug": "heading",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "heading",
+              "attrName": "heading.decoration.border",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_heading_style",
+              "tab_slug": "heading",
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "heading",
+              "attrName": "heading.decoration.boxShadow",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_heading_style",
+              "tab_slug": "heading",
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "input",
+              "attrName": "input.decoration.spacing",
+              "label": " Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "input",
+              "attrName": "input.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "input",
+              "attrName": "input.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield:not(.gfield--type-time) input[type='text'], {{selector}} input[type='password'], {{selector}} input[type='url'], {{selector}} input[type='phone'], {{selector}} input[type='number'], {{selector}} input[type='tel'], {{selector}} input[type='email']",
+              "hover": "{{selector}} .gfield:not(.gfield--type-time) input[type='text']:hover, {{selector}} input[type='password']:hover, {{selector}} input[type='url']:hover, {{selector}} input[type='phone']:hover, {{selector}} input[type='number']:hover, {{selector}} input[type='tel']:hover, {{selector}} input[type='email']:hover"
+            }
+          }
+        },
+        "border": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield:not(.gfield--type-time) input[type='text']:not(.chosen-search-input), {{selector}} input[type='password'], {{selector}} input[type='url'], {{selector}} input[type='phone'], {{selector}} input[type='number'], {{selector}} input[type='tel'], {{selector}} input[type='email']",
+              "hover": "{{selector}} .gfield:not(.gfield--type-time) input[type='text']:not(.chosen-search-input):hover, {{selector}} input[type='password']:hover, {{selector}} input[type='url']:hover, {{selector}} input[type='phone']:hover, {{selector}} input[type='number']:hover, {{selector}} input[type='tel']:hover, {{selector}} input[type='email']:hover"
+            }
+          }
+        },
+        "boxShadow": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield:not(.gfield--type-time) input[type='text']:not(.chosen-search-input), {{selector}} input[type='password'], {{selector}} input[type='url'], {{selector}} input[type='phone'], {{selector}} input[type='number'], {{selector}} input[type='tel'], {{selector}} input[type='email']",
+              "hover": "{{selector}} .gfield:not(.gfield--type-time) input[type='text']:not(.chosen-search-input):hover, {{selector}} input[type='password']:hover, {{selector}} input[type='url']:hover, {{selector}} input[type='phone']:hover, {{selector}} input[type='number']:hover, {{selector}} input[type='tel']:hover, {{selector}} input[type='email']:hover"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "border": {
+            "desktop": {
+              "value": {
+                "styles": {
+                  "all": {
+                    "width": "1px"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "select": {
+      "type": "object",
+      "selector": "{{selector}} .gfield:not(.gfield--type-time) select",
+      "hover": "{{selector}} .gfield:not(.gfield--type-time) select:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "select",
+              "attrName": "select.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "letterSpacing": {
+                      "render": false
+                    },
+                    "lineHeight": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "select",
+              "attrName": "select.decoration.spacing",
+              "label": " Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "select",
+              "attrName": "select.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "select",
+              "attrName": "select.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        },
+        "spacing": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield:not(.gfield--type-time) select, {{selector}} .chosen-container-single .chosen-single, {{selector}} .chosen-container-multi .chosen-choices",
+              "hover": "{{selector}} .gfield:not(.gfield--type-time) select:hover"
+            }
+          }
+        },
+        "border": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield:not(.gfield--type-time) select, {{selector}} .chosen-container-single .chosen-single, {{selector}} .chosen-container-multi .chosen-choices",
+              "hover": "{{selector}} .gfield:not(.gfield--type-time) select:hover"
+            }
+          }
+        },
+        "boxShadow": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield:not(.gfield--type-time) select, {{selector}} .chosen-container-single .chosen-single, {{selector}} .chosen-container-multi .chosen-choices",
+              "hover": "{{selector}} .gfield:not(.gfield--type-time) select:hover"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "border": {
+            "desktop": {
+              "value": {
+                "styles": {
+                  "all": {
+                    "width": "1px"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "textarea": {
+      "type": "object",
+      "selector": "{{selector}} textarea",
+      "hover": "{{selector}} textarea:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "textarea",
+              "attrName": "textarea.decoration.font",
+              "label": " Font",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "letterSpacing": {
+                      "render": false
+                    },
+                    "lineHeight": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "textarea",
+              "attrName": "textarea.decoration.spacing",
+              "label": " Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "textarea",
+              "attrName": "textarea.decoration.border",
+              "label": " Border",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "textarea",
+              "attrName": "textarea.decoration.boxShadow",
+              "label": " Box Shadow",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        },
+        "spacing": {
+          "important": true
+        },
+        "border": {
+          "important": true
+        },
+        "boxShadow": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "border": {
+            "desktop": {
+              "value": {
+                "styles": {
+                  "all": {
+                    "width": "1px"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "button": {
+      "type": "object",
+      "selector": "{{selector}} .button",
+      "hover": "{{selector}} .button:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "button",
+              "attrName": "button.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "button",
+              "attrName": "button.decoration.spacing",
+              "label": " Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "button",
+              "attrName": "button.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "button",
+              "attrName": "button.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        },
+        "spacing": {
+          "important": true
+        },
+        "border": {
+          "important": true
+        },
+        "boxShadow": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "border": {
+            "desktop": {
+              "value": {
+                "styles": {
+                  "all": {
+                    "width": "2px"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "selector": "{{selector}} .gsection",
+      "hover": "{{selector}} .gsection:hover",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "gf_section",
+              "attrName": "section.decoration.spacing",
+              "label": " Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_section_style",
+              "tab_slug": "section",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "gf_section",
+              "attrName": "section.decoration.border",
+              "label": " Border",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_section_style",
+              "tab_slug": "section",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "gf_section",
+              "attrName": "section.decoration.boxShadow",
+              "label": " Box Shadow",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_section_style",
+              "tab_slug": "section",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        },
+        "border": {
+          "important": true
+        },
+        "boxShadow": {
+          "important": true
+        }
+      }
+    },
+    "confirm": {
+      "type": "object",
+      "selector": "{{selector}} .gform_confirmation_message",
+      "hover": "{{selector}} .gform_confirmation_message:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "confirm",
+              "attrName": "confirm.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "confirm",
+              "attrName": "confirm.decoration.spacing",
+              "label": " Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "confirm",
+              "attrName": "confirm.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "confirm",
+              "attrName": "confirm.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        },
+        "spacing": {
+          "important": true
+        },
+        "border": {
+          "important": true
+        },
+        "boxShadow": {
+          "important": true
+        }
+      }
+    },
+    "time": {
+      "type": "object",
+      "selector": "{{selector}} .gfield.gfield--type-time input[type='text'], {{selector}} .gfield.gfield--type-time select",
+      "hover": "{{selector}} .gfield.gfield--type-time input[type='text']:hover, {{selector}} .gfield.gfield--type-time select:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time",
+              "attrName": "time.decoration.font",
+              "render": true,
+              "priority": 67,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "15px"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "letterSpacing": {
+                      "render": false
+                    },
+                    "lineHeight": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time",
+              "attrName": "time.decoration.border",
+              "render": true,
+              "priority": 69,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time",
+              "attrName": "time.decoration.boxShadow",
+              "render": true,
+              "priority": 69,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield.gfield--type-time input[type='text'], {{selector}} .gfield.gfield--type-time select",
+              "hover": "{{selector}} .gfield.gfield--type-time input[type='text']:hover, {{selector}} .gfield.gfield--type-time select:hover"
+            }
+          },
+          "selector": "{{selector}} .gfield.gfield--type-time input[type='text'], {{selector}} .gfield.gfield--type-time select"
+        },
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield.gfield--type-time input[type='text'], {{selector}} .gfield.gfield--type-time select",
+              "hover": "{{selector}} .gfield.gfield--type-time input[type='text']:hover, {{selector}} .gfield.gfield--type-time select:hover"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield.gfield--type-time input[type='text'], {{selector}} .gfield.gfield--type-time select",
+              "hover": "{{selector}} .gfield.gfield--type-time input[type='text']:hover, {{selector}} .gfield.gfield--type-time select:hover"
+            }
+          },
+          "selector": "{{selector}} .gfield.gfield--type-time input[type='text'], {{selector}} .gfield.gfield--type-time select"
+        }
+      },
+      "default": {
+        "decoration": {
+          "border": {
+            "desktop": {
+              "value": {
+                "styles": {
+                  "all": {
+                    "width": "1px"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "form_title": {
+      "type": "object",
+      "selector": "{{selector}} .gform_title",
+      "hover": "{{selector}} .gform_title:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "heading",
+              "attrName": "form_title.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_heading_style",
+              "tab_slug": "title",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "26px",
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "form_description": {
+      "type": "object",
+      "selector": "{{selector}} .gform_description",
+      "hover": "{{selector}} .gform_description:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "heading",
+              "attrName": "form_description.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_heading_style",
+              "tab_slug": "descr",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "form_heading_notice": {
+      "type": "object",
+      "selector": "{{selector}} .gform_heading .gform_required_legend",
+      "hover": "{{selector}} .gform_heading .gform_required_legend:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "heading",
+              "attrName": "form_heading_notice.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_heading_style",
+              "tab_slug": "notice",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gform_heading .gform_required_legend",
+              "hover": "{{selector}} .gform_heading .gform_required_legend:hover"
+            }
+          }
+        }
+      }
+    },
+    "label": {
+      "type": "object",
+      "selector": "{{selector}} .gfield:not(.gfield--type-consent) .gfield_label.gform-field-label",
+      "hover": "{{selector}} .gfield:not(.gfield--type-consent) .gfield_label.gform-field-label:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "label",
+              "attrName": "label.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px",
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield:not(.gfield--type-consent) .gfield_label.gform-field-label",
+              "hover": "{{selector}} .gfield:not(.gfield--type-consent) .gfield_label.gform-field-label:hover"
+            }
+          }
+        }
+      }
+    },
+    "sub_label": {
+      "type": "object",
+      "selector": "{{selector}} .gform-field-label.gform-field-label--type-sub, {{selector}} .gfield_header_item.gform-grid-col",
+      "hover": "{{selector}} .gform-field-label.gform-field-label--type-sub:hover, {{selector}} .gfield_header_item.gform-grid-col:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "sub-label",
+              "attrName": "sub_label.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gform-field-label.gform-field-label--type-sub, {{selector}} .gfield_header_item.gform-grid-col",
+              "hover": "{{selector}} .gform-field-label.gform-field-label--type-sub:hover, {{selector}} .gfield_header_item.gform-grid-col:hover"
+            }
+          }
+        }
+      }
+    },
+    "description": {
+      "type": "object",
+      "selector": "{{selector}} .gfield_description:not(.warningTextareaInfo):not(.gfield_consent_description):not(.gfield_validation_message)",
+      "hover": "{{selector}} .gfield_description:not(.warningTextareaInfo):not(.gfield_consent_description):not(.gfield_validation_message):hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "description",
+              "attrName": "description.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield_description:not(.warningTextareaInfo):not(.gfield_consent_description):not(.gfield_validation_message)",
+              "hover": "{{selector}} .gfield_description:not(.warningTextareaInfo):not(.gfield_consent_description):not(.gfield_validation_message):hover"
+            }
+          }
+        }
+      }
+    },
+    "warning_text": {
+      "type": "object",
+      "selector": "{{selector}} .gfield_description.warningTextareaInfo",
+      "hover": "{{selector}} .gfield_description.warningTextareaInfo:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "warning_text",
+              "attrName": "warning_text.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield_description.warningTextareaInfo",
+              "hover": "{{selector}} .gfield_description.warningTextareaInfo:hover"
+            }
+          }
+        }
+      }
+    },
+    "section_title": {
+      "type": "object",
+      "selector": "{{selector}} .gsection .gsection_title",
+      "hover": "{{selector}} .gsection .gsection_title:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "gf_section",
+              "attrName": "section_title.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_section_style",
+              "tab_slug": "title",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "22px",
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "gf_section",
+              "attrName": "section_title.decoration.spacing",
+              "label": " Padding",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_section_style",
+              "tab_slug": "title",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        },
+        "spacing": {
+          "important": true
+        }
+      }
+    },
+    "section_description": {
+      "type": "object",
+      "selector": "{{selector}} .gsection .gsection_description",
+      "hover": "{{selector}} .gsection .gsection_description:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "gf_section",
+              "attrName": "section_description.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_section_style",
+              "tab_slug": "description",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "gf_section",
+              "attrName": "section_description.decoration.spacing",
+              "label": " Padding",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_section_style",
+              "tab_slug": "description",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        },
+        "spacing": {
+          "important": true
+        }
+      }
+    },
+    "consent_label": {
+      "type": "object",
+      "selector": "{{selector}} .gfield--type-consent .gfield_label",
+      "hover": "{{selector}} .gfield--type-consent .gfield_label:hover, {{selector}}.et_vb_hover .gfield--type-consent .gfield_label",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "consent",
+              "attrName": "consent_label.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_consent_style",
+              "tab_slug": "label",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield--type-consent .gfield_label",
+              "hover": "{{selector}} .gfield--type-consent .gfield_label:hover, {{selector}}.et_vb_hover .gfield--type-consent .gfield_label"
+            }
+          }
+        }
+      }
+    },
+    "consent_sublabel": {
+      "type": "object",
+      "selector": "{{selector}} .gfield--type-consent .gfield_consent_label",
+      "hover": "{{selector}} .gfield--type-consent .gfield_consent_label:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "consent",
+              "attrName": "consent_sublabel.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_consent_style",
+              "tab_slug": "checkbox",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield--type-consent .gfield_consent_label",
+              "hover": "{{selector}} .gfield--type-consent .gfield_consent_label:hover"
+            }
+          }
+        }
+      }
+    },
+    "consent_description": {
+      "type": "object",
+      "selector": "{{selector}} .gfield--type-consent .gfield_description",
+      "hover": "{{selector}} .gfield--type-consent .gfield_description:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "consent",
+              "attrName": "consent_description.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_consent_style",
+              "tab_slug": "description",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield--type-consent .gfield_description",
+              "hover": "{{selector}} .gfield--type-consent .gfield_description:hover"
+            }
+          }
+        }
+      }
+    },
+    "required_text": {
+      "type": "object",
+      "selector": "{{selector}} .gfield_required",
+      "hover": "{{selector}} .gfield_required:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "required_text",
+              "attrName": "required_text.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textAlign": {
+                      "render": false
+                    },
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gfield_required",
+              "hover": "{{selector}} .gfield_required:hover"
+            }
+          }
+        }
+      }
+    },
+    "error_box_global": {
+      "type": "object",
+      "selector": "{{selector}} .gform_validation_errors",
+      "hover": "{{selector}} .gform_validation_errors:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "error_box",
+              "attrName": "error_box_global.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_error_style",
+              "tab_slug": "global",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "error_box",
+              "attrName": "error_box_global.decoration.spacing",
+              "label": " Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_error_style",
+              "tab_slug": "global",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              },
+              "priority": 10
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "error_box",
+              "attrName": "error_box_global.decoration.border",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_error_style",
+              "tab_slug": "global",
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gform_validation_errors h2, .gform_validation_errors li a",
+              "hover": "{{selector}} .gform_validation_errors h2:hover, .gform_validation_errors li a:hover"
+            }
+          }
+        },
+        "spacing": {
+          "important": true
+        },
+        "border": {
+          "important": true
+        }
+      }
+    },
+    "error_box": {
+      "type": "object",
+      "selector": "{{selector}} .validation_message",
+      "hover": "{{selector}} .validation_message:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "error_box",
+              "attrName": "error_box.decoration.font",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_error_style",
+              "tab_slug": "field_error",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "error_box",
+              "attrName": "error_box.decoration.spacing",
+              "label": " Margin",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_error_style",
+              "tab_slug": "field_error",
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              },
+              "priority": 10
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "error_box",
+              "attrName": "error_box.decoration.border",
+              "render": false,
+              "custom_tab": true,
+              "tab_attribute": "custom_error_style",
+              "tab_slug": "field_error",
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .gform_wrapper .validation_message",
+              "hover": "{{selector}} .gform_wrapper .validation_message:hover"
+            }
+          }
+        },
+        "spacing": {
+          "important": true
+        },
+        "border": {
+          "important": true
+        }
+      }
+    },
+    "time_input": {
+      "type": "object",
+      "selector": "{{selector}} .gfield.gfield--type-time input[type='text']",
+      "hover": "{{selector}} .gfield.gfield--type-time input[type='text']:hover",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time",
+              "attrName": "time_input.decoration.spacing",
+              "label": "Input Margin",
+              "render": true,
+              "priority": 68,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Input"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      }
+    },
+    "time_select": {
+      "type": "object",
+      "selector": "{{selector}} .gfield.gfield--type-time select",
+      "hover": "{{selector}} .gfield.gfield--type-time select:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "time",
+              "attrName": "time_select.decoration.spacing",
+              "label": "Select Margin",
+              "render": true,
+              "priority": 68,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Select"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      }
+    }
+  },
+  "customCssFields": {}
+}

@@ -1,0 +1,3227 @@
+{
+  "name": "difl/flipbox",
+  "d4Shortcode": "difl_flipbox",
+  "title": "Flip Box",
+  "titles": "Flip Boxs",
+  "category": "module",
+  "moduleIcon": "difl/flip",
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "front_end_view": {
+        "panel": "content",
+        "groupName": "front_end_view",
+        "multiElements": true,
+        "priority": 0,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Builder View (Front/Back side)"
+          }
+        }
+      },
+      "fb_content": {
+        "panel": "content",
+        "groupName": "fb_content",
+        "priority": 1,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content"
+          }
+        }
+      },
+      "fb_buttons": {
+        "panel": "content",
+        "groupName": "fb_buttons",
+        "priority": 2,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Button For Back Side"
+          }
+        }
+      },
+      "fb_image": {
+        "panel": "content",
+        "groupName": "fb_image",
+        "priority": 3,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Image and icon settings"
+          }
+        }
+      },
+      "fb_animation": {
+        "panel": "content",
+        "groupName": "fb_animation",
+        "multiElements": true,
+        "priority": 4,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Animation"
+          }
+        }
+      },
+      "settings": {
+        "panel": "content",
+        "groupName": "settings",
+        "multiElements": true,
+        "priority": 5,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Settings"
+          }
+        }
+      },
+      "fb_background": {
+        "panel": "content",
+        "groupName": "fb_background",
+        "priority": 6,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Background Front Side"
+          }
+        }
+      },
+      "fb_back_background": {
+        "panel": "content",
+        "groupName": "fb_back_background",
+        "priority": 7,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Background Back Side"
+          }
+        }
+      },
+      "content_align": {
+        "panel": "design",
+        "groupName": "content_align",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content Vertical Align"
+          }
+        }
+      },
+      "image": {
+        "panel": "design",
+        "groupName": "image",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Image Styles"
+          }
+        }
+      },
+      "image_border": {
+        "panel": "design",
+        "groupName": "image_border",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Image Border"
+          }
+        }
+      },
+      "title": {
+        "panel": "design",
+        "groupName": "title",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Title"
+          }
+        }
+      },
+      "content": {
+        "panel": "design",
+        "groupName": "content",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content"
+          }
+        }
+      },
+      "fb_button": {
+        "panel": "design",
+        "groupName": "fb_button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Button"
+          }
+        }
+      },
+      "border": {
+        "panel": "design",
+        "groupName": "border",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Border"
+          }
+        }
+      },
+      "custom_spacing": {
+        "panel": "design",
+        "groupName": "custom_spacing",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Custom Spacing"
+          }
+        }
+      },
+      "front_box_shadow": {
+        "panel": "design",
+        "groupName": "front_box_shadow",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Front Side Box Shadow"
+          }
+        }
+      },
+      "back_box_shadow": {
+        "panel": "design",
+        "groupName": "back_box_shadow",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Back Side Box Shadow"
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {},
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {
+            "component": {
+              "type": "group",
+              "name": "divi/admin-label"
+            }
+          }
+        },
+        "advanced": {
+          "link": {}
+        },
+        "decoration": {
+          "attributes": {},
+          "background": {},
+          "boxShadow": {},
+          "sizing": {},
+          "spacing": {},
+          "animation": {},
+          "conditions": {},
+          "disabledOn": {},
+          "overflow": {},
+          "position": {},
+          "scroll": {},
+          "interactions": {},
+          "sticky": {},
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 0,
+              "groupSlug": "border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Flip Box"
+            }
+          }
+        }
+      }
+    },
+    "front_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_front .fb_inner",
+      "inlineEditor": true,
+      "elementType": "content",
+      "settings": {
+        "innerContent": {
+          "items": {
+            "title_front": {
+              "groupSlug": "fb_content",
+              "render": false,
+              "tab_slug": "front",
+              "tab_attribute": "fb_content_tab_obj_settings",
+              "attrName": "front_obj_settings.innerContent",
+              "subName": "title_front",
+              "label": "Title",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "content_front": {
+              "groupSlug": "fb_content",
+              "render": false,
+              "attrName": "front_obj_settings.innerContent",
+              "tab_slug": "front",
+              "tab_attribute": "fb_content_tab_obj_settings",
+              "subName": "content_front",
+              "label": "Content",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/richtext"
+              }
+            },
+            "fb_front_align": {
+              "groupSlug": "content_align",
+              "render": true,
+              "subName": "fb_front_align",
+              "label": "Front Side Alignment",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_front_align": "flex-start"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "flex-start": {
+                      "label": "Top"
+                    },
+                    "center": {
+                      "label": "Center"
+                    },
+                    "flex-end": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              }
+            },
+            "front_title_tag": {
+              "groupSlug": "title",
+              "render": false,
+              "attrName": "front_obj_settings.innerContent",
+              "subName": "front_title_tag",
+              "tab_slug": "front",
+              "tab_attribute": "title_tab_obj_settings",
+              "label": "Title Tag",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "front_title_tag": "h4"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "h1": {
+                      "label": "h1 tag"
+                    },
+                    "h2": {
+                      "label": "h2 tag"
+                    },
+                    "h3": {
+                      "label": "h3 tag"
+                    },
+                    "h4": {
+                      "label": "h4 tag"
+                    },
+                    "h5": {
+                      "label": "h5 tag"
+                    },
+                    "h6": {
+                      "label": "h6 tag"
+                    },
+                    "p": {
+                      "label": "p tag"
+                    },
+                    "span": {
+                      "label": "span tag"
+                    }
+                  }
+                }
+              }
+            },
+            "image_front_image": {
+              "groupSlug": "fb_image",
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "front_obj_settings.innerContent",
+              "tab_slug": "front",
+              "render": false,
+              "subName": "image_front_image",
+              "label": "Image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "image"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "syncImageData": {
+                    "src": "image_front_image",
+                    "id": true,
+                    "alt": true,
+                    "titleText": true
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_front_use_icon": "on"
+                }
+              }
+            },
+            "image_front_alt_text": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "front_obj_settings.innerContent",
+              "tab_slug": "front",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_front_alt_text",
+              "label": "Image Alt Text",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_front_use_icon": "on"
+                }
+              }
+            },
+            "image_front_use_icon": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "front_obj_settings.innerContent",
+              "tab_slug": "front",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_front_use_icon",
+              "label": "Use Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "image_front_font_icon": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "tab_slug": "front",
+              "groupSlug": "fb_image",
+              "attrName": "front_obj_settings.innerContent",
+              "render": false,
+              "subName": "image_front_font_icon",
+              "label": "Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_front_font_icon": {
+                      "unicode": "&#x35;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_front_use_icon": "on"
+                }
+              }
+            },
+            "image_front_icon_color": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "tab_slug": "front",
+              "groupSlug": "fb_image",
+              "render": false,
+              "attrName": "front_obj_settings.innerContent",
+              "subName": "image_front_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "sticky": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_front_icon_color": "#2ea3f2"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_front .et-pb-icon",
+                  "hover": "{{selector}} .df_fb_front .et-pb-icon:hover"
+                },
+                "css_type": "color"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_front_use_icon": "on"
+                }
+              }
+            },
+            "image_front_icon_size": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "tab_slug": "front",
+              "attrName": "front_obj_settings.innerContent",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_front_icon_size",
+              "label": "Icon Size",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_front_icon_size": "48px"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_front_use_icon": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_front .et-pb-icon",
+                  "hover": "{{selector}} .df_fb_front .et-pb-icon:hover"
+                },
+                "css_type": "font-size"
+              }
+            },
+            "image_front_icon_align": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "front_obj_settings.innerContent",
+              "tab_slug": "front",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_front_icon_align",
+              "label": "Icon Align",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_front_use_icon": "on"
+                }
+              },
+              "multipleChoices": false,
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_front .df_fb_image_container",
+                  "hover": "{{selector}} .df_fb_front .df_fb_image_container:hover"
+                },
+                "css_type": "text-align"
+              }
+            },
+            "image_front_image_align": {
+              "groupSlug": "image",
+              "render": false,
+              "attrName": "front_obj_settings.innerContent",
+              "subName": "image_front_image_align",
+              "label": "Image Alignment",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "multipleChoices": false,
+              "displayCondition": {
+                "show_if_not": {
+                  "image_front_use_icon": "on",
+                  "image_front_full_width": "on"
+                }
+              },
+              "tab_slug": "front",
+              "tab_attribute": "image_tab_obj_settings",
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_front .df_fb_image_container",
+                  "hover": "{{selector}} .df_fb_front .df_fb_image_container :hover"
+                },
+                "css_type": "text-align"
+              }
+            },
+            "image_front_full_width": {
+              "groupSlug": "image",
+              "render": false,
+              "attrName": "front_obj_settings.innerContent",
+              "subName": "image_front_full_width",
+              "label": "Force Full Width",
+              "tab_slug": "front",
+              "tab_attribute": "image_tab_obj_settings",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_front_full_width": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_front_use_icon": "on"
+                }
+              }
+            },
+            "image_front_max_width": {
+              "groupSlug": "image",
+              "render": false,
+              "tab_slug": "front",
+              "attrName": "front_obj_settings.innerContent",
+              "tab_attribute": "image_tab_obj_settings",
+              "subName": "image_front_max_width",
+              "label": "Max Width",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_front_max_width": "100%"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_front_full_width": "on",
+                  "image_front_use_icon": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "%",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 100,
+                  "maxLimit": 100,
+                  "step": 1
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_front .df_fb_image_container img",
+                  "hover": "{{selector}} .df_fb_front .df_fb_image_container img:hover"
+                },
+                "css_type": "max-width"
+              }
+            },
+            "image_front_icon_bg": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "tab_slug": "front",
+              "attrName": "front_obj_settings.innerContent",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_front_icon_bg",
+              "label": "Icon Background",
+              "features": {
+                "sticky": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_front_use_icon": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_front .et-pb-icon",
+                  "hover": "{{selector}} .df_fb_front .et-pb-icon:hover"
+                },
+                "css_type": "background"
+              }
+            },
+            "image_front_circle_icon": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "front_obj_settings.innerContent",
+              "tab_slug": "front",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_front_circle_icon",
+              "label": "Circle Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_front_use_icon": "on"
+                }
+              }
+            }
+          },
+          "groupType": "group-items"
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "fb_background",
+              "render": true,
+              "label": "Background Front Side",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "front_box_shadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "border",
+              "label": "Front Side",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Front Side"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "back_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .fb_inner",
+      "elementType": "content",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "items": {
+            "title_back": {
+              "groupSlug": "fb_content",
+              "render": false,
+              "tab_slug": "back",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_attribute": "fb_content_tab_obj_settings",
+              "subName": "title_back",
+              "label": "Title",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "content_back": {
+              "groupSlug": "fb_content",
+              "render": false,
+              "tab_slug": "back",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_attribute": "fb_content_tab_obj_settings",
+              "subName": "content_back",
+              "label": "Content",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/richtext"
+              }
+            },
+            "fb_back_align": {
+              "groupSlug": "content_align",
+              "render": true,
+              "subName": "fb_back_align",
+              "label": "Back Side Alignment",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_back_align": "flex-start"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "flex-start": {
+                      "label": "Top"
+                    },
+                    "center": {
+                      "label": "Center"
+                    },
+                    "flex-end": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              }
+            },
+            "back_title_tag": {
+              "groupSlug": "title",
+              "tab_slug": "back",
+              "tab_attribute": "title_tab_obj_settings",
+              "render": false,
+              "attrName": "back_obj_settings.innerContent",
+              "subName": "back_title_tag",
+              "label": "Title Tag",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "back_title_tag": "h4"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "h1": {
+                      "label": "h1 tag"
+                    },
+                    "h2": {
+                      "label": "h2 tag"
+                    },
+                    "h3": {
+                      "label": "h3 tag"
+                    },
+                    "h4": {
+                      "label": "h4 tag"
+                    },
+                    "h5": {
+                      "label": "h5 tag"
+                    },
+                    "h6": {
+                      "label": "h6 tag"
+                    },
+                    "p": {
+                      "label": "p tag"
+                    },
+                    "span": {
+                      "label": "span tag"
+                    }
+                  }
+                }
+              }
+            },
+            "image_back_image": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_image",
+              "label": "Image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content",
+                "dynamicContent": {
+                  "type": "image"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "syncImageData": {
+                    "src": "image_back_image",
+                    "id": true,
+                    "alt": true,
+                    "titleText": true
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_back_use_icon": "on"
+                }
+              }
+            },
+            "image_back_alt_text": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_alt_text",
+              "label": "Image Alt Text",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_back_use_icon": "on"
+                }
+              }
+            },
+            "image_back_use_icon": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_use_icon",
+              "label": "Use Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "image_back_font_icon": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_font_icon",
+              "label": "Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_back_use_icon": "on"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_back_font_icon": {
+                      "unicode": "&#x35;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              }
+            },
+            "image_back_icon_color": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "sticky": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_back_icon_color": "#2ea3f2"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_back_use_icon": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_back .et-pb-icon",
+                  "hover": "{{selector}} .df_fb_back .et-pb-icon:hover"
+                },
+                "css_type": "color"
+              }
+            },
+            "image_back_icon_size": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_icon_size",
+              "label": "Icon Size",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_back_icon_size": "48px"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_back_use_icon": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_back .et-pb-icon",
+                  "hover": "{{selector}} .df_fb_back .et-pb-icon:hover"
+                },
+                "css_type": "font-size"
+              }
+            },
+            "image_back_icon_align": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_icon_align",
+              "label": "Icon Align",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_back_use_icon": "on"
+                }
+              },
+              "multipleChoices": false,
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_back .df_fb_image_container",
+                  "hover": "{{selector}} .df_fb_back .df_fb_image_container:hover"
+                },
+                "css_type": "text-align"
+              }
+            },
+            "image_back_image_align": {
+              "groupSlug": "image",
+              "render": false,
+              "tab_slug": "back",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_attribute": "image_tab_obj_settings",
+              "subName": "image_back_image_align",
+              "label": "Image Alignment",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_back_use_icon": "on",
+                  "image_back_full_width": "on"
+                }
+              },
+              "multipleChoices": false,
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_back .df_fb_image_container",
+                  "hover": "{{selector}} .df_fb_back .df_fb_image_container:hover"
+                },
+                "css_type": "text-align"
+              }
+            },
+            "image_back_full_width": {
+              "groupSlug": "image",
+              "tab_slug": "back",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_attribute": "image_tab_obj_settings",
+              "render": false,
+              "subName": "image_back_full_width",
+              "label": "Force Full Width",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_back_full_width": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_back_use_icon": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "image_back_max_width": {
+              "groupSlug": "image",
+              "render": false,
+              "tab_slug": "back",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_attribute": "image_tab_obj_settings",
+              "subName": "image_back_max_width",
+              "label": "Max Width",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "image_back_max_width": "100%"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "image_back_full_width": "on",
+                  "image_back_use_icon": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "%",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 100,
+                  "maxLimit": 100,
+                  "step": 1
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_back .df_fb_image_container img",
+                  "hover": "{{selector}} .df_fb_back .df_fb_image_container img:hover"
+                },
+                "css_type": "max-width"
+              }
+            },
+            "image_back_icon_bg": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_icon_bg",
+              "label": "Icon Background",
+              "features": {
+                "sticky": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_back_use_icon": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_back .df_fb_image_container .et-pb-icon",
+                  "hover": "{{selector}} .df_fb_back .df_fb_image_container:hover .et-pb-icon"
+                },
+                "css_type": "background"
+              }
+            },
+            "image_back_circle_icon": {
+              "tab_attribute": "fb_image_tab_obj_settings",
+              "attrName": "back_obj_settings.innerContent",
+              "tab_slug": "back",
+              "groupSlug": "fb_image",
+              "render": false,
+              "subName": "image_back_circle_icon",
+              "label": "Circle Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "image_back_use_icon": "on"
+                }
+              }
+            }
+          },
+          "groupType": "group-items"
+        },
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "back_box_shadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "fb_back_background",
+              "render": true,
+              "label": "Background Back Side",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "border",
+              "label": "Back Side",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Back Side"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "change_view_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "change_view": {
+              "groupSlug": "front_end_view",
+              "render": true,
+              "subName": "change_view",
+              "label": "Change Builder View Mode",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "change_view": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            }
+          }
+        }
+      }
+    },
+    "height_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "use_height": {
+              "groupSlug": "settings",
+              "render": true,
+              "subName": "use_height",
+              "label": "Use Custom Height",
+              "priority": "0",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_height": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "fb_height": {
+              "groupSlug": "settings",
+              "render": true,
+              "subName": "fb_height",
+              "label": "Height",
+              "priority": "1",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_height": "500px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_height": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_flipbox_container "
+                },
+                "css_type": "height"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 1000,
+                  "maxLimit": 1000,
+                  "step": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_front_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_front .fb-text",
+      "elementType": "content",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "tab_attribute": "content_tab_obj_settings",
+              "tab_slug": "front",
+              "attrName": "content_front_obj_settings.decoration.font",
+              "groupSlug": "content",
+              "label": "Content",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Content",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "14px",
+                          "lineHeight": "1.7em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "image_front_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "image_border",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Front Image"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_fb_front .df_fb_image_container img",
+              "hover": "{{selector}} .df_fb_front:hover .df_fb_image_container img"
+            }
+          }
+        }
+      }
+    },
+    "image_back_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "image_border",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Back Image"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_fb_back .df_fb_image_container img",
+              "hover": "{{selector}} .df_fb_back:hover .df_fb_image_container img"
+            }
+          }
+        }
+      }
+    },
+    "container_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_flipbox_container",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "tab_slug": "wrapper",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "attrName": "container_obj_settings.decoration.spacing",
+              "label": "Container",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Container "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "front_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_front .fb_inner",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "front_wrapper_obj_settings.decoration.spacing",
+              "tab_slug": "wrapper",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Front Wrapper",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Front Wrapper ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "back_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .fb_inner",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "back_wrapper_obj_settings.decoration.spacing",
+              "tab_slug": "wrapper",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Back Wrapper Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Back Wrapper ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "img_container_front_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_front .df_fb_image_container",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "img_container_front_obj_settings.decoration.spacing",
+              "tab_slug": "front",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Image & Icon Container Front",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Image & Icon Container Front "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "icon_front_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_front .df_fb_image_container .et-pb-icon",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "icon_front_obj_settings.decoration.spacing",
+              "tab_slug": "front",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Icon Margin",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "img_container_back_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .df_fb_image_container",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "img_container_back_obj_settings.decoration.spacing",
+              "tab_slug": "back",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Image & Icon Container Back Margin",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Image & Icon Container Back "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "icon_back_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .df_fb_image_container .et-pb-icon",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "icon_back_obj_settings.decoration.spacing",
+              "tab_slug": "back",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Icon",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "title_front_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_front .title",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "tab_slug": "front",
+              "tab_attribute": "title_tab_obj_settings",
+              "groupSlug": "title",
+              "attrName": "title_front_obj_settings.decoration.font",
+              "label": "Title",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Title",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px",
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "title_front_obj_settings.decoration.spacing",
+              "tab_slug": "front",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Front Title",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Front Title "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "title_back_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .title",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "tab_slug": "back",
+              "tab_attribute": "title_tab_obj_settings",
+              "groupSlug": "title",
+              "attrName": "title_back_obj_settings.decoration.font",
+              "label": "Title",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Title",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px",
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "title_back_obj_settings.decoration.spacing",
+              "tab_slug": "back",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Back Title",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Back Title "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_back_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .fb-text",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "attrName": "content_back_obj_settings.decoration.font",
+              "tab_attribute": "content_tab_obj_settings",
+              "tab_slug": "back",
+              "groupSlug": "content",
+              "label": "Content",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Content",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "14px",
+                          "lineHeight": "1.7em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "text_front_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_front .fb-text",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "text_front_obj_settings.decoration.spacing",
+              "tab_slug": "front",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Front Text",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Front Text "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "text_back_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .fb-text",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "text_back_obj_settings.decoration.spacing",
+              "tab_slug": "back",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Back Text",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Back Text "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "button_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .df_fb_button_wrapper",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "attrName": "button_wrapper_obj_settings.decoration.spacing",
+              "tab_slug": "back",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "label": "Button Wrapper",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Button Wrapper "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "button_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_fb_back .df_fb_button",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "items": {
+            "fb_btn_button_text": {
+              "groupSlug": "fb_buttons",
+              "render": true,
+              "subName": "fb_btn_button_text",
+              "label": "Button Text",
+              "description": "Input your desired button text, or leave blank for no button.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "fb_btn_button_url": {
+              "groupSlug": "fb_buttons",
+              "render": true,
+              "subName": "fb_btn_button_url",
+              "label": "Button URL",
+              "description": "Input URL for your button.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "url"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "fb_btn_button_url_new_window": {
+              "groupSlug": "fb_buttons",
+              "render": true,
+              "subName": "fb_btn_button_url_new_window",
+              "label": "Url Opens",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_btn_button_url_new_window": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "off": {
+                      "label": "In The Same Window"
+                    },
+                    "on": {
+                      "label": "In The New Tab"
+                    }
+                  }
+                }
+              }
+            },
+            "fb_btn_button_align": {
+              "groupSlug": "fb_button",
+              "render": true,
+              "subName": "fb_btn_button_align",
+              "label": "Alignment",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "multipleChoices": false,
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_back .df_fb_button_wrapper",
+                  "hover": "{{selector}} .df_fb_back .df_fb_button_wrapper:hover"
+                },
+                "css_type": "text-align"
+              }
+            }
+          },
+          "groupType": "group-items"
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "fb_button",
+              "render": true,
+              "label": "Button Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "fb_button",
+              "label": "Content",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Button",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px",
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "fb_button",
+              "label": "Button",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Button"
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "fb_button",
+              "attrName": "button_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_spacing",
+              "tab_slug": "back",
+              "tab_attribute": "custom_spacing_tab_obj_settings",
+              "render": false,
+              "attrName": "button_obj_settings.decoration.spacing",
+              "label": "Button",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Button "
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "fb_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "items": {
+            "fb_front_align": {
+              "groupSlug": "content_align",
+              "render": true,
+              "subName": "fb_front_align",
+              "label": "Front Side Alignment",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_front_align": "flex-start"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "flex-start": {
+                      "label": "Top"
+                    },
+                    "center": {
+                      "label": "Center"
+                    },
+                    "flex-end": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_front .fb_inner",
+                  "hover": "{{selector}} .df_fb_front .fb_inner:hover"
+                },
+                "css_type": "align-items"
+              }
+            },
+            "fb_back_align": {
+              "groupSlug": "content_align",
+              "render": true,
+              "subName": "fb_back_align",
+              "label": "Back Side Alignment",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_back_align": "flex-start"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "flex-start": {
+                      "label": "Top"
+                    },
+                    "center": {
+                      "label": "Center"
+                    },
+                    "flex-end": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_fb_back .fb_inner",
+                  "hover": "{{selector}} .df_fb_back .fb_inner:hover"
+                },
+                "css_type": "align-items"
+              }
+            },
+            "fb_animation": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_animation",
+              "label": "Animation Type",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_animation": "rotate"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "rotate": {
+                      "label": "Rotate"
+                    },
+                    "zoom": {
+                      "label": "Zoom"
+                    },
+                    "slide": {
+                      "label": "Slide"
+                    },
+                    "fade": {
+                      "label": "Fade"
+                    }
+                  }
+                }
+              }
+            },
+            "fb_flip_direction": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_flip_direction",
+              "label": "Rotate Direction",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_flip_direction": "rotate_left"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "fb_animation": "rotate"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "rotate_left": {
+                      "label": "Rotate Left"
+                    },
+                    "rotate_right": {
+                      "label": "Rotate Right"
+                    },
+                    "rotate_up": {
+                      "label": "Rotate Up"
+                    },
+                    "rotate_down": {
+                      "label": "Rotate Down"
+                    }
+                  }
+                }
+              }
+            },
+            "fb_slide_direction": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_slide_direction",
+              "label": "Slide Direction",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_slide_direction": "slide_left"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "fb_animation": "slide"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "slide_left": {
+                      "label": "Slide Left"
+                    },
+                    "slide_right": {
+                      "label": "Slide Right"
+                    },
+                    "slide_up": {
+                      "label": "Slide Up"
+                    },
+                    "slide_down": {
+                      "label": "Slide Down"
+                    }
+                  }
+                }
+              }
+            },
+            "fb_zoom_direction": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_zoom_direction",
+              "label": "Zoom Direction",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_zoom_direction": "zoom_center"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "fb_animation": "zoom"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "zoom_center": {
+                      "label": "Center"
+                    },
+                    "zoom_left": {
+                      "label": "Left"
+                    },
+                    "zoom_right": {
+                      "label": "Right"
+                    },
+                    "zoom_up": {
+                      "label": "Up"
+                    },
+                    "zoom_down": {
+                      "label": "Down"
+                    }
+                  }
+                }
+              }
+            },
+            "fb_content_float": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_content_float",
+              "label": "Content Floating Effect",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "fb_animation": "rotate"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "fb_cf_translate": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_cf_translate",
+              "label": "Translate Z",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_cf_translate": "50px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "fb_animation": "rotate",
+                  "fb_content_float": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 100,
+                  "maxLimit": 100,
+                  "step": 1
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_flipbox_container.rotate.fb_floating_content .df_fb_front .fb_inner_content"
+                },
+                "css_type": "transform",
+                "css_function_name": "translateZ"
+              }
+            },
+            "fb_cf_scale": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_cf_scale",
+              "label": "Scale",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_cf_scale": ".9"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "fb_animation": "rotate",
+                  "fb_content_float": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "minLimit": 0,
+                  "max": 2,
+                  "maxLimit": 2,
+                  "step": 0
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_flipbox_container.rotate.fb_floating_content .df_fb_front .fb_inner_content"
+                },
+                "css_type": "scale"
+              }
+            },
+            "fb_transition_duration": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_transition_duration",
+              "label": "Transition Duration",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_transition_duration": "600ms"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "ms"
+                  ],
+                  "defaultUnit": "ms",
+                  "min": 0,
+                  "minLimit": 0,
+                  "max": 2000,
+                  "step": 50
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_flipbox_body, {{selector}} .df_fb_front, {{selector}} .df_fb_back"
+                },
+                "css_type": "transition-duration"
+              }
+            },
+            "fb_transition_delay": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_transition_delay",
+              "label": "Transition Delay",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_transition_delay": "0ms"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "ms"
+                  ],
+                  "defaultUnit": "ms",
+                  "min": 0,
+                  "minLimit": 0,
+                  "max": 300,
+                  "step": 50
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_flipbox_body, {{selector}} .df_fb_front, {{selector}} .df_fb_back"
+                },
+                "css_type": "transition-delay"
+              }
+            },
+            "fb_transition_curve": {
+              "groupSlug": "fb_animation",
+              "render": true,
+              "subName": "fb_transition_curve",
+              "label": "Transition Speed Curve",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "fb_transition_curve": "ease_in_out"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "ease": {
+                      "label": "Ease"
+                    },
+                    "ease_in": {
+                      "label": "Ease In"
+                    },
+                    "ease_in_out": {
+                      "label": "Ease In Out"
+                    },
+                    "ease_out": {
+                      "label": "Ease Out"
+                    },
+                    "linear": {
+                      "label": "Linear"
+                    },
+                    "cubic-bezier(.2,.85,.4,1.275)": {
+                      "label": "Bounce"
+                    }
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_flipbox_body, {{selector}} .df_fb_front, {{selector}} .df_fb_back"
+                },
+                "css_type": "transition-timing-function"
+              }
+            }
+          },
+          "groupType": "group-items"
+        }
+      }
+    },
+    "title_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "title",
+            "tab_slug": "title_tab_obj_settings",
+            "module_slug": "difl/flipbox",
+            "tabs": {
+              "front": {
+                "label": "Front",
+                "components": []
+              },
+              "back": {
+                "label": "Back",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "content_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content",
+            "tab_slug": "content_tab_obj_settings",
+            "module_slug": "difl/flipbox",
+            "tabs": {
+              "front": {
+                "label": "Front",
+                "components": []
+              },
+              "back": {
+                "label": "Back",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "fb_image_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "fb_image",
+            "tab_slug": "fb_image_tab_obj_settings",
+            "module_slug": "difl/flipbox",
+            "tabs": {
+              "front": {
+                "label": "Front",
+                "components": []
+              },
+              "back": {
+                "label": "Back",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "image_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "image",
+            "module_slug": "difl/flipbox",
+            "tab_slug": "image_tab_obj_settings",
+            "tabs": {
+              "front": {
+                "label": "Front",
+                "components": []
+              },
+              "back": {
+                "label": "Back",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "custom_spacing_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "custom_spacing",
+            "tab_slug": "custom_spacing_tab_obj_settings",
+            "module_slug": "difl/flipbox",
+            "tabs": {
+              "wrapper": {
+                "label": "Wrapper",
+                "components": []
+              },
+              "front": {
+                "label": "Front",
+                "components": []
+              },
+              "back": {
+                "label": "Back",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "fb_content_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "fb_content",
+            "tab_slug": "fb_content_tab_obj_settings",
+            "module_slug": "difl/flipbox",
+            "tabs": {
+              "front": {
+                "label": "Front",
+                "components": []
+              },
+              "back": {
+                "label": "Back",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    }
+  }
+}

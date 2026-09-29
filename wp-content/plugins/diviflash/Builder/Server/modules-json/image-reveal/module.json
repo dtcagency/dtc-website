@@ -1,0 +1,2253 @@
+{
+  "name": "difl/imagereveal",
+  "d4Shortcode": "difl_imagereveal",
+  "title": "Image Reveal",
+  "titles": "Image Reveals",
+  "category": "module",
+  "moduleIcon": "difl/image-reveal",
+  "customCssFields": {},
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "content_image": {
+        "panel": "content",
+        "groupName": "content_image",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Image"
+          }
+        },
+        "priority": 0
+      },
+      "content_reveal_animation": {
+        "panel": "content",
+        "groupName": "content_reveal_animation",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Reveal Amination"
+          }
+        },
+        "priority": 1
+      },
+      "content_placeholder": {
+        "panel": "content",
+        "groupName": "content_placeholder",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Placeholder"
+          }
+        },
+        "priority": 2
+      },
+      "content_overlay": {
+        "panel": "content",
+        "groupName": "content_overlay",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Overlay"
+          }
+        },
+        "priority": 3
+      },
+      "content_hover_overlay": {
+        "panel": "content",
+        "groupName": "content_hover_overlay",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Hover"
+          }
+        },
+        "priority": 4
+      },
+      "content_caption": {
+        "panel": "content",
+        "groupName": "content_caption",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Caption"
+          }
+        },
+        "priority": 5
+      },
+      "content_link": {
+        "panel": "content",
+        "groupName": "content_link",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Link"
+          }
+        },
+        "priority": 6
+      },
+      "design_hover_overlay": {
+        "panel": "design",
+        "groupName": "design_hover_overlay",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Hover Overlay Content Styles"
+          }
+        },
+        "priority": 9,
+        "displayCondition": {
+          "show_if": {
+            "field_hover_overlay_content_enable": "on"
+          }
+        }
+      },
+      "design_caption": {
+        "panel": "design",
+        "groupName": "design_caption",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Caption Styles"
+          }
+        },
+        "priority": 10,
+        "displayCondition": {
+          "show_if": {
+            "field_caption_enable": "on"
+          }
+        }
+      },
+      "alignment": {
+        "panel": "design",
+        "groupName": "alignment",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Alignment"
+          }
+        },
+        "priority": 11
+      }
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {
+            "component": {
+              "type": "group",
+              "name": "divi/admin-label"
+            }
+          }
+        },
+        "advanced": {},
+        "decoration": {
+          "attributes": {},
+          "background": {},
+          "border": {},
+          "boxShadow": {},
+          "filters": [],
+          "spacing": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {},
+          "sticky": {},
+          "scroll": {},
+          "interactions": {},
+          "conditions": {},
+          "position": {},
+          "sizing": {},
+          "overflow": {},
+          "disabledOn": {},
+          "animation": {}
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Image Reveal"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      }
+    },
+    "overlay_description_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl__image_reveal_wrapper .difl__image_reveal_hover_overlay .difl__image_reveal_hover_overlay_content .description",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_hover_overlay",
+              "label": "",
+              "tab_attribute": "design_hover_overlay_tab_obj_settings",
+              "tab_slug": "description",
+              "attrName": "overlay_description_obj_settings.decoration.font",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "14px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "overlay_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl__image_reveal_wrapper .difl__image_reveal_hover_overlay .difl__image_reveal_hover_overlay_content",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_overlay_enable": {
+              "groupSlug": "content_overlay",
+              "render": true,
+              "subName": "field_overlay_enable",
+              "label": "Enable",
+              "description": "If enabled, user can set an overlay over the Image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_overlay_enable": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "field_overlay_color": {
+              "groupSlug": "content_overlay",
+              "render": true,
+              "subName": "field_overlay_color",
+              "label": "Color on Default",
+              "description": "Set an overlay color, it will be visible over the Image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_overlay_color": "#ffffff"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_overlay_enable": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "field_overlay_opacity": {
+              "groupSlug": "content_overlay",
+              "render": true,
+              "subName": "field_overlay_opacity",
+              "label": "Opacity",
+              "description": "Set an overlay color opacity, it will be visible over the Image",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_overlay_opacity": "0.15"
+                  }
+                }
+              },
+              "features": {
+                "responsive": false,
+                "hover": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_overlay_enable": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 1,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_hover_overlay_enable": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "priority": 0,
+              "subName": "field_hover_overlay_enable",
+              "label": "Enable Overlay",
+              "description": "If enabled, an overlay color will be displayed over the image when the mouse hovers.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_enable": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "field_hover_overlay_color": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "priority": 1,
+              "subName": "field_hover_overlay_color",
+              "label": "Color",
+              "description": "Set a color. This color will be visible when the mouse hovers over the image.",
+              "features": {
+                "responsive": false,
+                "hover": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_color": "#FFFFFF"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "field_hover_overlay_opacity": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "priority": 2,
+              "subName": "field_hover_overlay_opacity",
+              "label": "Opacity",
+              "description": "Define how transparent or opaque hover overlay color should be.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_opacity": "0.3"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 1,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_hover_overlay_arrive_from": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "priority": 3,
+              "subName": "field_hover_overlay_arrive_from",
+              "label": "Styles",
+              "description": "You can control the overlay style when the mouse hovers.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_arrive_from": "right"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "top": {
+                      "label": "Top to Bottom"
+                    },
+                    "right": {
+                      "label": "Right to Left"
+                    },
+                    "bottom": {
+                      "label": "Bottom to Top"
+                    },
+                    "left": {
+                      "label": "Left to Right"
+                    },
+                    "linear": {
+                      "label": "Linear"
+                    },
+                    "ease_in_out": {
+                      "label": "Ease In Out"
+                    },
+                    "ease": {
+                      "label": "Ease"
+                    },
+                    "ease_in": {
+                      "label": "Ease In"
+                    },
+                    "ease_out": {
+                      "label": "Ease Out"
+                    }
+                  }
+                }
+              }
+            },
+            "field_hover_overlay_content_arrive_from": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "priority": 4,
+              "subName": "field_hover_overlay_content_arrive_from",
+              "label": "Text Content Reveal",
+              "description": "You can control the Content when the mouse hovers.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_content_arrive_from": "right"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "top": {
+                      "label": "Top"
+                    },
+                    "right": {
+                      "label": "Right"
+                    },
+                    "bottom": {
+                      "label": "Bottom"
+                    },
+                    "left": {
+                      "label": "Left"
+                    }
+                  }
+                }
+              }
+            },
+            "field_hover_overlay_transition_delay": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "priority": 5,
+              "subName": "field_hover_overlay_transition_delay",
+              "label": "Animation Delay",
+              "description": "If you would like to add a delay before your animation runs you can designate that delay here in seconds. This can be useful when using multiple animated modules together.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    "s"
+                  ],
+                  "defaultUnit": "s",
+                  "min": 0,
+                  "max": 3,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_hover_overlay_transition_time": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_hover_overlay_transition_time",
+              "label": "Animation Time",
+              "priority": 6,
+              "description": "You can control the arrival animation time of the hover overlay",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_transition_time": "0.6"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "s",
+                  "min": 0,
+                  "max": 3,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_hover_overlay_content_enable": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_hover_overlay_content_enable",
+              "label": "Content",
+              "priority": 7,
+              "description": "If enabled, you can set content on the hover overlay, it will be displayed with hover overlay when the mouse hovers.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_content_enable": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "field_hover_content_title_text": {
+              "groupSlug": "content_hover_overlay",
+              "render": false,
+              "subName": "field_hover_content_title_text",
+              "label": "Title Text",
+              "attrName": "overlay_obj_settings.innerContent",
+              "tab_attribute": "content_hover_overlay_tab_obj_settings",
+              "tab_slug": "title",
+              "description": "Add caption for the image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_content_enable": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "field_hover_content_desc_text": {
+              "groupSlug": "content_hover_overlay",
+              "render": false,
+              "subName": "field_hover_content_desc_text",
+              "label": "Description Text",
+              "attrName": "overlay_obj_settings.innerContent",
+              "tab_attribute": "content_hover_overlay_tab_obj_settings",
+              "tab_slug": "description",
+              "description": "Add caption for the image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_content_enable": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/richtext"
+              }
+            },
+            "field_hover_overlay_content_placement": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_hover_overlay_content_placement",
+              "label": "Content Placement",
+              "description": "You can control the placement of the hover overlay content",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_content_placement": "center"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_content_enable": "on",
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl__image_reveal_wrapper .difl__image_reveal_hover_overlay .difl__image_reveal_hover_overlay_content"
+                },
+                "css_type": "justify-content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "start": {
+                      "label": "Top"
+                    },
+                    "center": {
+                      "label": "Center"
+                    },
+                    "end": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              }
+            },
+            "field_hover_overlay_content_alignment": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_hover_overlay_content_alignment",
+              "label": "Content Alignment",
+              "description": "You can control the hover overlay content alignment",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_overlay_content_alignment": "center"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_content_enable": "on",
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "options": {
+                    "start": {
+                      "title": "divi/Left",
+                      "icon": "divi/align-left"
+                    },
+                    "center": {
+                      "title": "divi/Center",
+                      "icon": "divi/align-center"
+                    },
+                    "end": {
+                      "title": "divi/Right",
+                      "icon": "divi/align-right"
+                    }
+                  },
+                  "showLabel": true
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl__image_reveal_wrapper .difl__image_reveal_hover_overlay .difl__image_reveal_hover_overlay_content"
+                },
+                "css_type": "align-items"
+              },
+              "multipleChoices": false
+            }
+          }
+        },
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "label": "Padding around content",
+              "description": "You can set the padding around the hover overlay content",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_content_enable": "on",
+                  "field_hover_overlay_enable": "on",
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Content",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "overlay_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "font": {
+            "selectors": {
+              "desktop": {
+                "value": "{{selector}} .difl__image_reveal_hover_overlay .difl__image_reveal_hover_overlay_content .description"
+              }
+            }
+          }
+        }
+      }
+    },
+    "overlay_title_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl__image_reveal_hover_overlay .difl__image_reveal_hover_overlay_content .title",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_hover_overlay",
+              "label": "",
+              "tab_attribute": "design_hover_overlay_tab_obj_settings",
+              "tab_slug": "title",
+              "attrName": "overlay_title_obj_settings.decoration.font",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "caption_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl__image_reveal_wrapper .difl__image_wrap .difl_caption",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_caption_enable": {
+              "groupSlug": "content_caption",
+              "render": true,
+              "subName": "field_caption_enable",
+              "label": "Enable",
+              "description": "If enabled, user can set a caption for the image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "field_caption_title": {
+              "groupSlug": "content_caption",
+              "render": true,
+              "subName": "field_caption_title",
+              "label": "Text",
+              "description": "Add caption for the image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_caption_enable": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "field_caption_placement": {
+              "groupSlug": "content_caption",
+              "render": true,
+              "subName": "field_caption_placement",
+              "label": "Placement",
+              "description": "You can control the placement of the caption",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_caption_placement": "bottom"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_caption_enable": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "top": {
+                      "label": "Top"
+                    },
+                    "bottom": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              }
+            },
+            "field_caption_background": {
+              "groupSlug": "content_caption",
+              "render": true,
+              "subName": "field_caption_background",
+              "label": "Background Color",
+              "description": "Set background for the caption section",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_caption_enable": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl__image_reveal_wrapper .difl__image_wrap .difl_caption"
+                },
+                "css_type": "background"
+              }
+            }
+          }
+        },
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_caption",
+              "attrName": "caption_obj_settings.decoration.font",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "content_caption",
+              "render": true,
+              "label": "Padding",
+              "description": "Set padding around the caption",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_caption_enable": "on"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "caption_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      }
+    },
+    "placeholder_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl__image_reveal_wrapper .difl__image_wrap",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "content_placeholder",
+              "render": true,
+              "label": "Color",
+              "features": {
+                "sticky": false,
+                "responsive": false,
+                "hover": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "placeholder_obj_settings.decoration.background"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "content_placeholder",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null,
+                  "fields": {
+                    "stylesTabNav": {
+                      "render": false
+                    },
+                    "styles": {
+                      "render": false
+                    },
+                    "stylesTabbedWidth": {
+                      "render": false
+                    },
+                    "stylesTabbedColor": {
+                      "render": false
+                    },
+                    "stylesTabbedStyle": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "content_placeholder",
+              "attrName": "placeholder_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "reveal_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .difl__image_reveal_wrapper .difl__image_reveal_element",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_reveal_directions": {
+              "groupSlug": "content_reveal_animation",
+              "render": true,
+              "priority": 1,
+              "subName": "field_reveal_directions",
+              "label": "Direction",
+              "description": "You can control the direction of Reveal Animation",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_reveal_directions": "reveal_ltr"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "reveal_ltr": {
+                      "label": "Left to Right"
+                    },
+                    "reveal_rtl": {
+                      "label": "Right to Left"
+                    },
+                    "reveal_ttb": {
+                      "label": "Top to Bottom"
+                    },
+                    "reveal_btt": {
+                      "label": "Bottom to Top"
+                    }
+                  }
+                }
+              }
+            },
+            "field_reveal_delay": {
+              "groupSlug": "content_reveal_animation",
+              "render": true,
+              "subName": "field_reveal_delay",
+              "label": "Delay (Sec)",
+              "priority": 3,
+              "description": "You can control the delay of the Reveal Image Animation",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 5,
+                  "step": 0.1
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}}.df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li[class*='current'] > .df_vertical_menu_item_elements_wrapper",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li[class*='current'] > .df_vertical_menu_item_elements_wrapper:hover"
+                },
+                "css_type": "color"
+              }
+            },
+            "field_reveal_animation_time": {
+              "groupSlug": "content_reveal_animation",
+              "render": true,
+              "subName": "field_reveal_animation_time",
+              "label": "Animation Time (Sec)",
+              "priority": 4,
+              "description": "You can control the time of Animation to Reveal the Image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_reveal_animation_time": "1"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 5,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_reveal_view_port": {
+              "groupSlug": "content_reveal_animation",
+              "render": true,
+              "subName": "field_reveal_view_port",
+              "label": "Animate in Viewport (%)",
+              "priority": 5,
+              "description": "You can set the position of the Viewport(Display position) when Image will Reveal",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_reveal_view_port": "25"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "%",
+                  "min": 1,
+                  "max": 100,
+                  "step": 5
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "content_reveal_animation",
+              "render": true,
+              "priority": 2,
+              "label": "Reveal",
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern",
+                    "image"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  },
+                  "fieldLabel": "Reveal",
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "color": "#fff"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "effect_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_hover_image_effect_enable": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_hover_image_effect_enable",
+              "label": "Enable Image Effect",
+              "description": "If enabled, you can set few effects on image,this effect will be display when mouse hover",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_hover_image_effect_enable": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "field_effect_style": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_effect_style",
+              "label": "Effects",
+              "description": "Choose an effect, its action will be visible when mouse hovers",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_effect_style": "none"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off",
+                  "field_hover_image_effect_enable": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "none": {
+                      "label": "None"
+                    },
+                    "zoom_in": {
+                      "label": "Zoom In"
+                    },
+                    "zoom_n_rotate": {
+                      "label": "Zoom &amp; Rotate"
+                    },
+                    "blur_out_with_zooming_in": {
+                      "label": "Blur Out with Zooming Out"
+                    },
+                    "colorize_with_zooming_in": {
+                      "label": "Colorize with Zooming In"
+                    }
+                  }
+                }
+              }
+            },
+            "field_reveal_effects": {
+              "groupSlug": "content_reveal_animation",
+              "render": true,
+              "subName": "field_reveal_effects",
+              "label": "Effect",
+              "priority": 7,
+              "description": "Set effect when Image Reveal",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_reveal_effects": "none"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "none": {
+                      "label": "None"
+                    },
+                    "difl_bounce": {
+                      "label": "Bounce"
+                    },
+                    "difl_flash": {
+                      "label": "Flash"
+                    },
+                    "difl_pulse": {
+                      "label": "Pulse"
+                    },
+                    "difl_rubberBand": {
+                      "label": "Rubber Band"
+                    },
+                    "difl_headShake": {
+                      "label": "Head Shake"
+                    },
+                    "difl_swing": {
+                      "label": "Swing"
+                    },
+                    "difl_tada": {
+                      "label": "Tada"
+                    },
+                    "difl_wobble": {
+                      "label": "Wobble"
+                    },
+                    "difl_jello": {
+                      "label": "Jello"
+                    },
+                    "difl_heartBeat": {
+                      "label": "Heart Beat"
+                    }
+                  }
+                }
+              }
+            },
+            "field_reveal_effect_delay": {
+              "groupSlug": "content_reveal_animation",
+              "render": true,
+              "subName": "field_reveal_effect_delay",
+              "label": "Effect Delay (Sec)",
+              "priority": 7,
+              "description": "If you would like to add a delay before your animation runs you can designate that delay here in seconds. This can be useful when using multiple animated modules together.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "field_reveal_effects": "none"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 5,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_reveal_effect_animation_time": {
+              "groupSlug": "content_reveal_animation",
+              "render": true,
+              "subName": "field_reveal_effect_animation_time",
+              "label": "Effect Time (Sec)",
+              "description": "If you would like to add a time of your animation runs you can designate that time here in seconds. This can be useful when using multiple animated modules together.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_reveal_effect_animation_time": "1"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "field_reveal_effects": "none"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 5,
+                  "step": 0.1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "image_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "elementType": "imageLink",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "src": {
+              "groupSlug": "content_image",
+              "render": true,
+              "subName": "src",
+              "label": "Image",
+              "description": "Upload your desired image, or type in the URL to the image you would like to display.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content",
+                "dynamicContent": {
+                  "type": "image"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "syncImageData": true
+                }
+              }
+            },
+            "alt": {
+              "groupSlug": "content_image",
+              "render": true,
+              "subName": "alt",
+              "label": "Alternative Text",
+              "description": "This defines the HTML ALT text. A short description of your image can be placed here.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "titleText": {
+              "groupSlug": "content_image",
+              "render": true,
+              "subName": "titleText",
+              "label": "Title Text",
+              "description": "This defines the HTML Title text.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            }
+          }
+        }
+      }
+    },
+    "lightbox_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_lightbox_enable": {
+              "groupSlug": "content_link",
+              "render": true,
+              "subName": "field_lightbox_enable",
+              "label": "Open in Lightbox",
+              "description": "Here you can choose whether or not the image should open in Lightbox. Note: if you select to open the image in Lightbox, url options below will be ignored.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_lightbox_enable": "off"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "link_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_link_url": {
+              "groupSlug": "content_link",
+              "render": true,
+              "subName": "field_link_url",
+              "label": "Image Link URL",
+              "description": "If you would like your image to be a link, input your destination URL here. No link will be created if this field is left blank.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_lightbox_enable": "off"
+                }
+              }
+            },
+            "field_link_target": {
+              "groupSlug": "content_link",
+              "render": true,
+              "subName": "field_link_target",
+              "label": "Image Link Target",
+              "description": "Here you can choose whether or not your link opens in a new window",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_link_target": "same_window"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "same_window": {
+                      "label": "In The Same Window"
+                    },
+                    "new_window": {
+                      "label": "In The New Tab"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_lightbox_enable": "off"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "zoom_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_zoom_scale": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_zoom_scale",
+              "label": "Zooming Range",
+              "description": "You can control the transition time of the Effects",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_zoom_scale": "1.5"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off",
+                  "field_hover_image_effect_enable": "on",
+                  "field_effect_style": [
+                    "zoom_in",
+                    "zoom_n_rotate",
+                    "blur_out_with_zooming_in",
+                    "colorize_with_zooming_in"
+                  ]
+                },
+                "show_if_not": {
+                  "field_hover_image_effect_enable": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 5,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_zooming_time": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_zooming_time",
+              "label": "Animation Duration (Sec)",
+              "description": "You can control the Animation time of the Effect",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_zooming_time": "0.25"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off",
+                  "field_hover_image_effect_enable": "on",
+                  "field_effect_style": [
+                    "zoom_in",
+                    "zoom_n_rotate",
+                    "blur_out_with_zooming_in",
+                    "colorize_with_zooming_in"
+                  ]
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 5,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_zooming_blur_out_time": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_zooming_blur_out_time",
+              "label": "Blur Out Animation Duration (Sec)",
+              "description": "You can control the Animation Blur Out time of the Effect",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_zooming_blur_out_time": "0.25"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off",
+                  "field_hover_image_effect_enable": "on",
+                  "field_effect_style": [
+                    "blur_out_with_zooming_in"
+                  ]
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 5,
+                  "step": 0.1
+                }
+              }
+            },
+            "field_zooming_blur_level": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_zooming_blur_level",
+              "label": "Blur Level (px)",
+              "description": "Blur by this amount.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_zooming_blur_level": "2"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off",
+                  "field_hover_image_effect_enable": "on",
+                  "field_effect_style": [
+                    "blur_out_with_zooming_in"
+                  ]
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 15,
+                  "step": 1
+                }
+              }
+            },
+            "field_zoom_rotate": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_zoom_rotate",
+              "label": "Rotate Range (Degree)",
+              "description": "Here you can adjust the rotation of your image.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_zoom_rotate": "25"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off",
+                  "field_hover_image_effect_enable": "on",
+                  "field_effect_style": "zoom_n_rotate"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 90,
+                  "step": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "grayscale_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_grayscale": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_grayscale",
+              "label": "Gray Scale Level (%)",
+              "description": "You can control the Gray Scale of the Effect",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_grayscale": "100"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off",
+                  "field_hover_image_effect_enable": "on",
+                  "field_effect_style": [
+                    "colorize_with_zooming_in"
+                  ]
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnit": [
+                    ""
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 100,
+                  "step": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Speed_curve_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "field_Speed_curve": {
+              "groupSlug": "content_hover_overlay",
+              "render": true,
+              "subName": "field_Speed_curve",
+              "label": "Animation Speed Curve",
+              "description": "Here you can adjust the easing method of your animation. Easing your animation in and out will create a smoother effect when compared to a linear speed curve.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "field_Speed_curve": "ease-in"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "field_hover_overlay_enable": "off",
+                  "field_hover_image_effect_enable": "on",
+                  "field_effect_style": [
+                    "zoom_in",
+                    "zoom_n_rotate",
+                    "blur_out_with_zooming_in",
+                    "colorize_with_zooming_in"
+                  ]
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "ease-in-out": {
+                      "label": "Ease-In-Out"
+                    },
+                    "ease-in": {
+                      "label": "Ease-In"
+                    },
+                    "ease-out": {
+                      "label": "Ease-Out"
+                    },
+                    "linear": {
+                      "label": "Linear"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "align_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "align": {
+              "groupSlug": "alignment",
+              "render": true,
+              "subName": "align",
+              "label": "Image Alignment",
+              "description": "Here you can choose the image alignment.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}}"
+                },
+                "css_type": "text-align"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "align": "left"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "multipleChoices": false
+            }
+          }
+        }
+      }
+    },
+    "content_hover_overlay_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "content_hover_overlay",
+            "tab_slug": "content_hover_overlay_tab_obj_settings",
+            "module_slug": "difl/imagereveal",
+            "displayCondition": {
+              "show_if": {
+                "field_hover_overlay_enable": "on",
+                "field_hover_overlay_content_enable": "on"
+              }
+            },
+            "tabs": {
+              "title": {
+                "label": "Title",
+                "components": []
+              },
+              "description": {
+                "label": "Description",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "design_hover_overlay_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_hover_overlay",
+            "tab_slug": "design_hover_overlay_tab_obj_settings",
+            "module_slug": "difl/imagereveal",
+            "displayCondition": {
+              "show_if": {
+                "field_hover_overlay_enable": "on",
+                "field_hover_overlay_content_enable": "on"
+              }
+            },
+            "tabs": {
+              "title": {
+                "label": "Title",
+                "components": []
+              },
+              "description": {
+                "label": "Description",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5438 @@
+{
+  "name": "difl/timeline",
+  "d4Shortcode": "difl_timeline",
+  "title": "Timeline",
+  "titles": "Timelines",
+  "category": "module",
+  "moduleIcon": "difl/timeline",
+  "childModuleName": "difl/timelineitem",
+  "childModuleTitle": "Item",
+  "childrenName": [
+    "difl/timelineitem"
+  ],
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "general_setting": {
+        "panel": "content",
+        "groupName": "general_setting",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "General Settings"
+          }
+        },
+        "priority": 0
+      },
+      "line_setting": {
+        "panel": "content",
+        "groupName": "line_setting",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Line Settings"
+          }
+        },
+        "priority": 1
+      },
+      "arrow_setting": {
+        "panel": "content",
+        "groupName": "arrow_setting",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Arrow Settings"
+          }
+        },
+        "priority": 2
+      },
+      "animation": {
+        "panel": "content",
+        "groupName": "animation",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Animation"
+          }
+        },
+        "priority": 3
+      },
+      "item_order": {
+        "panel": "content",
+        "groupName": "item_order",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Blurb Items Order"
+          }
+        },
+        "priority": 4
+      },
+      "design_item_style": {
+        "panel": "design",
+        "groupName": "design_item_style",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Blurb Style"
+          }
+        },
+        "priority": 5
+      },
+      "design_title": {
+        "panel": "design",
+        "groupName": "design_title",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Title"
+          }
+        },
+        "priority": 6
+      },
+      "design_subtitle": {
+        "panel": "design",
+        "groupName": "design_subtitle",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Subtitle"
+          }
+        },
+        "priority": 7
+      },
+      "design_media": {
+        "panel": "design",
+        "groupName": "design_media",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Media"
+          }
+        },
+        "priority": 8
+      },
+      "design_content": {
+        "panel": "design",
+        "groupName": "design_content",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content Style"
+          }
+        },
+        "priority": 9
+      },
+      "design_content_text": {
+        "panel": "design",
+        "groupName": "design_content_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content Text"
+          }
+        },
+        "priority": 10
+      },
+      "design_button": {
+        "panel": "design",
+        "groupName": "design_button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Button"
+          }
+        },
+        "priority": 11
+      },
+      "design_date_wrapper": {
+        "panel": "design",
+        "groupName": "design_date_wrapper",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Date Style"
+          }
+        },
+        "priority": 12
+      },
+      "design_date_text": {
+        "panel": "design",
+        "groupName": "design_date_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Date Text"
+          }
+        },
+        "priority": 13
+      },
+      "design_line_top_marker": {
+        "panel": "design",
+        "groupName": "design_line_top_marker",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Line Top Marker"
+          }
+        },
+        "priority": 14,
+        "displayCondition": {
+          "show_if": {
+            "enable_line_top_marker": "on",
+            "line_start_from": "custom"
+          }
+        }
+      },
+      "design_line_bottom_marker": {
+        "panel": "design",
+        "groupName": "design_line_bottom_marker",
+        "multiElements": true,
+        "displayCondition": {
+          "show_if": {
+            "enable_line_bottom_marker": "on",
+            "line_start_from": "custom"
+          }
+        },
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Line Bottom Marker"
+          }
+        },
+        "priority": 15
+      },
+      "design_marker": {
+        "panel": "design",
+        "groupName": "design_marker",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Marker"
+          }
+        },
+        "priority": 16
+      }
+    }
+  },
+  "customCssFields": {
+    "item_wrapper_css": {
+      "subName": "item_wrapper_css",
+      "label": "Item Wrapper",
+      "selectorSuffix": " .df_timeline_content_area"
+    },
+    "title_text_css": {
+      "subName": "title_text_css",
+      "label": "Title",
+      "selectorSuffix": " .df_timeline_content_area .df_timeline_title"
+    },
+    "subtitle_text_css": {
+      "subName": "subtitle_text_css",
+      "label": "Subtitle",
+      "selectorSuffix": " .df_timeline_content_area .df_timeline_subtitle"
+    },
+    "content_text_css": {
+      "subName": "content_text_css",
+      "label": "Content",
+      "selectorSuffix": " .df_timeline_content_area .df_timeline_desc, .df_timeline_content_area .df_timeline_desc p"
+    },
+    "content_media_wrapper_css": {
+      "subName": "content_media_wrapper_css",
+      "label": "Media Wrapper",
+      "selectorSuffix": " .df_timeline_content_area .df_timeline_media"
+    },
+    "content_arrow_css": {
+      "subName": "content_arrow_css",
+      "label": "Content Arrow",
+      "selectorSuffix": " .df_timeline_content_area .timeline_arrow>*"
+    },
+    "marker_wrapper_css": {
+      "subName": "marker_wrapper_css",
+      "label": "Marker Wrapper",
+      "selectorSuffix": " .df_timeline_item .df_timeline_marker"
+    },
+    "marker_css": {
+      "subName": "marker_css",
+      "label": "Marker",
+      "selectorSuffix": " .df_timeline_item .df_timeline_marker>*"
+    },
+    "date_wrapper_css": {
+      "subName": "date_wrapper_css",
+      "label": "Date Wrapper",
+      "selectorSuffix": " .df_timeline_date_area .df_timeline_date_content"
+    },
+    "date_title_css": {
+      "subName": "date_title_css",
+      "label": "Date Title",
+      "selectorSuffix": " .df_timeline_date_area .df_timeline_date_content .df_timeline_date_title"
+    },
+    "date_subtitle_css": {
+      "subName": "date_subtitle_css",
+      "label": "Date Subtitle",
+      "selectorSuffix": " .df_timeline_date_area .df_timeline_date_content .df_timeline_date_subtitle"
+    },
+    "date_arrow_css": {
+      "subName": "date_arrow_css",
+      "label": "Date Arrow",
+      "selectorSuffix": " .df_timeline_date_area .df_timeline_date_content .timeline_arrow>*"
+    },
+    "content_button_css": {
+      "subName": "content_button_css",
+      "label": "Button",
+      "selectorSuffix": " .df_timeline_button a"
+    },
+    "content_button_icon_css": {
+      "subName": "content_button_icon_css",
+      "label": "Button Icon",
+      "selectorSuffix": " .df_timeline_button a .df_timeline_btn_icon"
+    },
+    "line_css": {
+      "subName": "line_css",
+      "label": "Line",
+      "selectorSuffix": " .df_timeline_line"
+    },
+    "scroll_line_css": {
+      "subName": "scroll_line_css",
+      "label": "Scroll Line",
+      "selectorSuffix": " .df_line_inner"
+    },
+    "line_top_marker_css": {
+      "subName": "line_top_marker_css",
+      "label": "Line Top Marker",
+      "selectorSuffix": " .df_timeline_top .df_line_marker, .df_timeline_top .df_line_marker>*"
+    },
+    "line_bottom_marker_css": {
+      "subName": "line_bottom_marker_css",
+      "label": "Line Bottom Marker",
+      "selectorSuffix": " .df_timeline_bottom .df_line_marker, .df_timeline_bottom .df_line_marker>*"
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {
+            "component": {
+              "type": "group",
+              "name": "divi/admin-label"
+            }
+          }
+        },
+        "advanced": {
+          "link": {}
+        },
+        "decoration": {
+          "attributes": {},
+          "background": {},
+          "border": {},
+          "boxShadow": {},
+          "filters": {},
+          "spacing": {},
+          "sizing": {},
+          "transform": {},
+          "transition": {},
+          "z_index": {},
+          "sticky": {},
+          "scroll": {},
+          "interactions": {},
+          "position": {},
+          "conditions": {},
+          "overflow": {},
+          "disabledOn": {},
+          "animation": {}
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Timeline"
+            }
+          }
+        }
+      }
+    },
+    "order_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "order_enable": {
+              "groupSlug": "item_order",
+              "render": true,
+              "subName": "order_enable",
+              "label": "Enable Order",
+              "description": "Enabling this option will give you the control to set the each item&#039;s order.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "order_enable": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "date_order": {
+              "groupSlug": "item_order",
+              "render": true,
+              "subName": "date_order",
+              "label": "Date",
+              "description": "Increase or decrease the order number to position the date tile and subtitle.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_content_area .df_timeline_date_area"
+                },
+                "css_type": "order"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_order": "-1"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_date_in_blurb": "on",
+                  "order_enable": "on"
+                },
+                "show_if_not": {
+                  "disable_date_mobile": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 15,
+                  "step": 1
+                }
+              }
+            },
+            "title_order": {
+              "groupSlug": "item_order",
+              "render": true,
+              "subName": "title_order",
+              "label": "Title",
+              "description": "Increase or decrease the order number to position the item.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "title_order": "9"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "order_enable": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_content_area .df_timeline_title"
+                },
+                "css_type": "order"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 15,
+                  "step": 1
+                }
+              }
+            },
+            "sub_title_order": {
+              "groupSlug": "item_order",
+              "render": true,
+              "subName": "sub_title_order",
+              "label": "Subtitle",
+              "description": "Increase or decrease the order number to position the item.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "sub_title_order": "9"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "order_enable": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_content_area .df_timeline_subtitle"
+                },
+                "css_type": "order"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 15,
+                  "step": 1
+                }
+              }
+            },
+            "media_order": {
+              "groupSlug": "item_order",
+              "render": true,
+              "subName": "media_order",
+              "label": "Image/Icon",
+              "description": "Increase or decrease the order number to position the item.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "media_order": "9"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "order_enable": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_content_area .df_timeline_media"
+                },
+                "css_type": "order"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 15,
+                  "step": 1
+                }
+              }
+            },
+            "content_order": {
+              "groupSlug": "item_order",
+              "render": true,
+              "subName": "content_order",
+              "label": "Content",
+              "description": "Increase or decrease the order number to position the item.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "content_order": "9"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "order_enable": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_content_area .df_timeline_desc"
+                },
+                "css_type": "order"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 15,
+                  "step": 1
+                }
+              }
+            },
+            "button_order": {
+              "groupSlug": "item_order",
+              "render": true,
+              "subName": "button_order",
+              "label": "Button",
+              "description": "Increase or decrease the order number to position the item.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "button_order": "9"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "order_enable": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_content_area .df_timeline_button"
+                },
+                "css_type": "order"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 15,
+                  "step": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "line_top_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_top .df_line_marker",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_top_marker",
+              "render": true,
+              "priority": 0,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_line_top_marker": "on"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_top_marker",
+              "render": true,
+              "label": " Padding",
+              "features": {
+                "sticky": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_line_top_marker": "on"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "padding": {
+                          "top": "5px",
+                          "right": "5px",
+                          "bottom": "5px",
+                          "left": "5px",
+                          "syncHorizontal": "",
+                          "syncVertical": ""
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "line_top_obj_settings.decoration.spacing"
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_top_marker",
+              "attrName": "line_top_obj_settings.decoration.font",
+              "label": null,
+              "render": true,
+              "displayCondition": {
+                "show_if": {
+                  "line_top_marker_type": "text"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_top_marker",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_line_top_marker": "on"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              },
+              "attrName": "line_top_obj_settings.decoration.border"
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_top_marker",
+              "attrName": "line_top_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        },
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable_line_top_marker": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "enable_line_top_marker",
+              "label": "Top Marker",
+              "description": "Activate this option to enable line&#039;s top marker.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "enable_line_top_marker": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "line_top_marker_type": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_top_marker_type",
+              "label": "Type",
+              "description": "Here you can set marker type.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_top_marker_type": "icon"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_line_top_marker": "on",
+                  "line_start_from": "custom"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "image": {
+                      "label": "Image"
+                    },
+                    "icon": {
+                      "label": "Icon"
+                    },
+                    "text": {
+                      "label": "Text"
+                    }
+                  }
+                }
+              }
+            },
+            "line_top_icon": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_top_icon",
+              "label": "Icon",
+              "description": "Choose an icon for the marker.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_top_icon": {
+                      "unicode": "&#xe00a;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_top_marker": "on",
+                  "line_top_marker_type": "icon"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "line_top_icon_color": {
+              "groupSlug": "design_line_top_marker",
+              "render": true,
+              "priority": 1,
+              "subName": "line_top_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_top_icon_color": "#333"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_top_marker": "on",
+                  "line_top_marker_type": "icon"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_top .df_timeline_top_icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "line_top_icon_size": {
+              "groupSlug": "design_line_top_marker",
+              "render": true,
+              "priority": 2,
+              "subName": "line_top_icon_size",
+              "label": "Icon Size",
+              "description": "Here you can define a custom size for your icon.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_top_icon_size": "24px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_top_marker": "on",
+                  "line_top_marker_type": "icon"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_top .df_timeline_top_icon"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 100,
+                  "minLimit": 1,
+                  "step": 1
+                }
+              }
+            },
+            "line_top_image": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_top_image",
+              "label": "Image",
+              "description": "Choose an image for marker.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_top_marker": "on",
+                  "line_top_marker_type": "image"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "syncImageData": {
+                    "src": "line_top_image",
+                    "id": true,
+                    "alt": true,
+                    "titleText": true
+                  }
+                }
+              }
+            },
+            "line_top_img_alt_txt": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_top_img_alt_txt",
+              "label": "Image Alt Text",
+              "description": "Set an alternative text for the image.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_top_marker": "on",
+                  "line_top_marker_type": "image"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "line_top_img_width": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_top_img_width",
+              "label": "Image Width",
+              "description": "Control the image width.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_top_img_width": "30px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_top_marker": "on",
+                  "line_top_marker_type": "image"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_top img"
+                },
+                "css_type": "width"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "max": 100,
+                  "step": 1
+                }
+              }
+            },
+            "line_top_txt": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_top_txt",
+              "label": "Text",
+              "description": "Set the a text in marker.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_top_marker": "on",
+                  "line_top_marker_type": "text"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "line_top_marker_vertical_position": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_top_marker_vertical_position",
+              "label": "Top Marker Height",
+              "description": "Control the top marker height.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_top_marker_vertical_position": "0px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_top_marker": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_top>*"
+                },
+                "css_type": "bottom"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "step": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "line_bottom_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_bottom .df_line_marker",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable_line_bottom_marker": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "enable_line_bottom_marker",
+              "label": "Bottom Marker",
+              "description": "Activate this option to enable scroll line bottom media.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "enable_line_bottom_marker": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "line_bottom_marker_type": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_bottom_marker_type",
+              "label": "Type",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_bottom_marker_type": "icon"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "image": {
+                      "label": "Image"
+                    },
+                    "icon": {
+                      "label": "Icon"
+                    },
+                    "text": {
+                      "label": "Text"
+                    }
+                  }
+                }
+              }
+            },
+            "line_bottom_icon": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_bottom_icon",
+              "label": "Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_bottom_icon": {
+                      "unicode": "&#xe00a;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on",
+                  "line_bottom_marker_type": "icon"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "line_bottom_icon_color": {
+              "groupSlug": "design_line_bottom_marker",
+              "priority": 1,
+              "render": true,
+              "subName": "line_bottom_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_bottom_icon_color": "#333"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on",
+                  "line_bottom_marker_type": "icon"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_bottom .df_timeline_bottom_icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "line_bottom_icon_size": {
+              "groupSlug": "design_line_bottom_marker",
+              "render": true,
+              "priority": 2,
+              "subName": "line_bottom_icon_size",
+              "label": "Icon Size",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_bottom_icon_size": "24px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on",
+                  "line_bottom_marker_type": "icon"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_bottom .df_timeline_bottom_icon"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 100,
+                  "minLimit": 1,
+                  "step": 1
+                }
+              }
+            },
+            "line_bottom_image": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_bottom_image",
+              "label": "Image",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on",
+                  "line_bottom_marker_type": "image"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "syncImageData": {
+                    "src": "line_bottom_image",
+                    "id": true,
+                    "alt": true,
+                    "titleText": true
+                  }
+                }
+              }
+            },
+            "line_bottom_img_alt_txt": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_bottom_img_alt_txt",
+              "label": "Image Alt Text",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on",
+                  "line_bottom_marker_type": "image"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "line_bottom_img_width": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_bottom_img_width",
+              "label": "Image Width",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_bottom_img_width": "30px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on",
+                  "line_bottom_marker_type": "image"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_bottom img"
+                },
+                "css_type": "width"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "max": 100,
+                  "step": 1
+                }
+              }
+            },
+            "line_bottom_txt": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_bottom_txt",
+              "label": "Text",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on",
+                  "line_bottom_marker_type": "text"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "line_bottom_marker_vertical_position": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_bottom_marker_vertical_position",
+              "label": "Bottom Marker Height",
+              "description": "Control the bottom marker height.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_bottom_marker_vertical_position": "0px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "line_start_from": "custom",
+                  "enable_line_bottom_marker": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_bottom>*"
+                },
+                "css_type": "top"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "step": 1
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_bottom_marker",
+              "render": true,
+              "priority": 0,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_line_top_marker": "on"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_bottom_marker",
+              "render": true,
+              "label": " Padding",
+              "features": {
+                "sticky": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_line_top_marker": "on"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "padding": {
+                          "top": "5px",
+                          "right": "5px",
+                          "bottom": "5px",
+                          "left": "5px",
+                          "syncHorizontal": "",
+                          "syncVertical": ""
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_bottom_marker",
+              "label": null,
+              "render": true,
+              "displayCondition": {
+                "show_if": {
+                  "line_bottom_marker_type": "text"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_bottom_marker",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_line_top_marker": "on"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              },
+              "attrName": "line_top_obj_settings.decoration.border"
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line_bottom_marker",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "date_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_date_content",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_date_wrapper",
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "date_wrapper_obj_settings.decoration.background"
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_date_wrapper",
+              "render": true,
+              "label": "Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "padding": {
+                          "top": "10px",
+                          "right": "10px",
+                          "bottom": "10px",
+                          "left": "10px",
+                          "syncHorizontal": "",
+                          "syncVertical": ""
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_date_wrapper",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_date_wrapper",
+              "attrName": "date_wrapper_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "subtitle_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_subtitle",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_subtitle",
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "subtitle_obj_settings.decoration.background"
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_subtitle",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_subtitle",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px",
+                          "color": "#333"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_subtitle",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_subtitle",
+              "attrName": "subtitle_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "date_title_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}  .df_timeline_date_title",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_date_text",
+              "attrName": "date_title_obj_settings.decoration.font",
+              "label": null,
+              "tab_attribute": "design_date_text_tab_obj_settings",
+              "tab_slug": "title",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "24px",
+                          "color": "#333"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_date_text",
+              "render": false,
+              "label": " Margin",
+              "tab_attribute": "design_date_text_tab_obj_settings",
+              "tab_slug": "title",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "date_title_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      }
+    },
+    "date_sub_title_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}  .df_timeline_date_subtitle",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_date_text",
+              "attrName": "date_sub_title_obj_settings.decoration.font",
+              "label": null,
+              "tab_attribute": "design_date_text_tab_obj_settings",
+              "tab_slug": "subtitle",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "24px",
+                          "color": "#333"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_date_text",
+              "render": false,
+              "label": " Margin",
+              "tab_attribute": "design_date_text_tab_obj_settings",
+              "tab_slug": "subtitle",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "date_sub_title_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      }
+    },
+    "title_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_title",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_title",
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "title_obj_settings.decoration.background"
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_title",
+              "render": true,
+              "label": " Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              },
+              "attrName": "title_obj_settings.decoration.spacing"
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_title",
+              "attrName": "title_obj_settings.decoration.font",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "24px",
+                          "color": "#333"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_title",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_title",
+              "attrName": "title_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_text_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}  .df_timeline_desc",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "bodyFont": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_content_text",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font-body",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "body": {
+                      "font": {
+                        "desktop": {
+                          "value": {
+                            "color": "#333333"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "button_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_button a",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "button_icon_color": {
+              "groupSlug": "design_button",
+              "render": true,
+              "subName": "button_icon_color",
+              "priority": 1,
+              "label": "Icon Color",
+              "description": "Here you can define a color for button icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "button_icon_color": "#333"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_button .df_timeline_btn_icon",
+                  "hover": "{{selector}} .df_timeline_button a:hover .df_timeline_btn_icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "button_icon_size": {
+              "groupSlug": "design_button",
+              "priority": 2,
+              "render": true,
+              "subName": "button_icon_size",
+              "label": "Icon Size",
+              "description": "Here you can set size for button icon.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "button_icon_size": "18px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_button a .df_timeline_btn_icon",
+                  "hover": "{{selector}} .df_timeline_button a:hover .df_timeline_btn_icon"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "",
+                  "min": 1,
+                  "max": 100,
+                  "minLimit": 1,
+                  "step": 1
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "priority": 0,
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "button_obj_settings.decoration.background"
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "render": true,
+              "label": " Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "padding": {
+                          "top": "5px",
+                          "right": "5px",
+                          "bottom": "5px",
+                          "left": "5px",
+                          "syncHorizontal": "",
+                          "syncVertical": ""
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "attrName": "button_obj_settings.decoration.font",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px",
+                          "color": "#2ea3f2"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_button",
+              "attrName": "button_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "date_arrow_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable_date_arrow": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "enable_date_arrow",
+              "label": "Arrow",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Activate this option to enable date arrow.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "enable_date_arrow": "on"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_type": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_type",
+              "label": "Type",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Chose date arrow type.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_type": "arrow_caret"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_date_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "arrow_caret": {
+                      "label": "Caret"
+                    },
+                    "arrow_icon": {
+                      "label": "Icon"
+                    },
+                    "arrow_line": {
+                      "label": "Line"
+                    }
+                  }
+                }
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_icon": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_icon",
+              "label": "Icon",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Select date arrow icon.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_icon": "&#x24;"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_date_arrow": "on",
+                  "date_arrow_type": "arrow_icon"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "&#x24;": {
+                      "label": "Arrow"
+                    },
+                    "&#xe03c;": {
+                      "label": "Arrow 2"
+                    },
+                    "&#x3d;": {
+                      "label": "Caret"
+                    },
+                    "&#x49;": {
+                      "label": "Caret 2"
+                    },
+                    "&#xe046;": {
+                      "label": "Caret 3"
+                    },
+                    "&#x35;": {
+                      "label": "Caret 4"
+                    },
+                    "&#x39;": {
+                      "label": "Double Caret"
+                    },
+                    "&#x41;": {
+                      "label": "Double Caret 2"
+                    },
+                    "&#xe04a;": {
+                      "label": "Double Caret 3"
+                    }
+                  }
+                }
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_line_type": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_line_type",
+              "label": "Line Type",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Set date arrow line type.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_line_type": "solid"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_date_arrow": "on",
+                  "date_arrow_type": "arrow_line"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_date_content .timeline_arrow_line"
+                },
+                "css_type": "border-style",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "solid": {
+                      "label": "Solid"
+                    },
+                    "dashed": {
+                      "label": "Dashed"
+                    },
+                    "dotted": {
+                      "label": "Dotted"
+                    },
+                    "double": {
+                      "label": "Double"
+                    },
+                    "groove": {
+                      "label": "Groove"
+                    },
+                    "ridge": {
+                      "label": "Ridge"
+                    }
+                  }
+                }
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_thick": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_thick",
+              "label": "Thickness",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Control date arrow line thickness.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_thick": "2px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_date_arrow": "on",
+                  "date_arrow_type": "arrow_line"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_date_content .timeline_arrow_line"
+                },
+                "css_type": "border-top-width"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_size": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_size",
+              "label": "Size",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Control date arrow size.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_size": "10px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_date_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_color": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_color",
+              "label": "Color",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Here you can define a color for date arrow.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_color": "#ddd"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_date_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_vertical_align": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_vertical_align",
+              "label": "Vertical Alignment",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Select date arrow vertical alignment.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_vertical_align": "middle"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_date_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "top": {
+                      "label": "Top"
+                    },
+                    "middle": {
+                      "label": "Middle"
+                    },
+                    "bottom": {
+                      "label": "Bottom"
+                    },
+                    "custom": {
+                      "label": "Custom"
+                    }
+                  }
+                }
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_vertical_position": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_vertical_position",
+              "label": "Vertical Position",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Control date arrow vertical position for desktop & tablet.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_vertical_position": "50%"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_arrow": "on",
+                  "date_arrow_vertical_align": "custom"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "%",
+                    "px"
+                  ],
+                  "defaultUnit": "%",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "date_arrow_horizontal_position": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "date_arrow_horizontal_position",
+              "label": "Horizontal Position",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Control date arrow horizontal position.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_arrow_horizontal_position": "0px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_date_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "step": 1
+                }
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "reverse_date_arrow": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "reverse_date_arrow",
+              "label": "Reverse",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Activate this option to reverse date arrow.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "reverse_date_arrow": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_date_arrow": "on"
+                },
+                "show_if_not": {
+                  "disable_date": "on",
+                  "date_arrow_type": "arrow_line"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            },
+            "disable_date_arrow_mobile": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "disable_date_arrow_mobile",
+              "label": "Disable On Mobile",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "date",
+              "description": "Activate this option to daisable date arrow on mobile.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "disable_date_arrow_mobile": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off",
+                  "enable_date_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "date_arrow_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "item_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}  .df_timeline_content",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_item_style",
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "default": {
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                      },
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "item_wrapper_obj_settings.decoration.background"
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_item_style",
+              "render": true,
+              "label": " Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "padding": {
+                          "top": "10px",
+                          "right": "10px",
+                          "bottom": "10px",
+                          "left": "10px",
+                          "syncHorizontal": "",
+                          "syncVertical": ""
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_item_style",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_item_style",
+              "attrName": "item_wrapper_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_media_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_content_area  .df_timeline_media",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_media",
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_media",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_media",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_media",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true,
+          "propertySelectors": {
+            "desktop": {
+              "value": {
+                "padding": "{{selector}} .df_timeline_content_area  .df_timeline_media>*"
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_content_area  .df_timeline_desc",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_content",
+              "render": true,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_content",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " "
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_content",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "18px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_content",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "layout_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "layout_type": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "layout_type",
+              "label": "Layout",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "Select a layout type for desktop.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "layout_type": "middle"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "middle": {
+                      "label": "Layout 1"
+                    },
+                    "left": {
+                      "label": "Layout 2"
+                    },
+                    "right": {
+                      "label": "Layout 3"
+                    }
+                  }
+                }
+              },
+              "attrName": "layout_obj_settings.innerContent"
+            },
+            "layout_type_mobile": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "layout_type_mobile",
+              "label": "Layout",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "small",
+              "description": "Select a layout type for mobile.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "layout_type_mobile": "left"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "middle": {
+                      "label": "Line Middle"
+                    },
+                    "left": {
+                      "label": "Line Left"
+                    },
+                    "right": {
+                      "label": "Line Right"
+                    }
+                  }
+                }
+              },
+              "attrName": "layout_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "module_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "module_area_width": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "module_area_width",
+              "label": "Module Width",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "Control the module area width.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "module_area_width": "80%"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "layout_type": "middle"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "%",
+                    "px"
+                  ],
+                  "defaultUnit": "%",
+                  "min": 0,
+                  "max": 100,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "module_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "blurb_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "blurb_area_width": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "blurb_area_width",
+              "label": "Blurb Width",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "Control the blurb area width.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "blurb_area_width": "50%"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_content_area"
+                },
+                "css_type": "flex-basis"
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "layout_type": "middle"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "%",
+                    "px"
+                  ],
+                  "defaultUnit": "%",
+                  "min": 0,
+                  "max": 50,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "blurb_obj_settings.innerContent"
+            },
+            "enable_date_in_blurb": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "enable_date_in_blurb",
+              "label": "Date In Blurb",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "small",
+              "description": "Activate this option to set date area in blurb",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "enable_date_in_blurb": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "disable_date_mobile": "on",
+                  "disable_date": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "blurb_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "date_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "date_area_width": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "date_area_width",
+              "label": "Date Width",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "Control the date area width.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_area_width": "40%"
+                  }
+                },
+                "phone": {
+                  "value": {
+                    "date_area_width": "100%"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "disable_date": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "%",
+                    "px"
+                  ],
+                  "defaultUnit": "%",
+                  "min": 0,
+                  "max": 100,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "date_obj_settings.innerContent"
+            },
+            "disable_date": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "disable_date",
+              "label": "Disable Date",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "Activate this option to disable date area.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "disable_date": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "date_obj_settings.innerContent"
+            },
+            "date_horizontal_alignment": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "date_horizontal_alignment",
+              "label": "Date Alignment",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "small",
+              "description": "Control date horizontal alignment for mobile. If date take full space this align will not work.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "date_horizontal_alignment": "left"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_date_in_blurb": "on"
+                },
+                "show_if_not": {
+                  "disable_date_mobile": "on",
+                  "disable_date": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "multipleChoices": false,
+              "attrName": "date_obj_settings.innerContent"
+            },
+            "disable_date_mobile": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "disable_date_mobile",
+              "label": "Disable Date",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "small",
+              "description": "Activate this option to disable date area on mobile.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "disable_date_mobile": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "disable_date": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "date_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "item_horizontal_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "item_horizontal_alignment": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "item_horizontal_alignment",
+              "label": "Horizontal Alignment",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "Control horizontal alignment for desktop. If blurb and date take full space this align will not work.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "item_horizontal_alignment": "center"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item"
+                },
+                "css_type": "justify-content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "multipleChoices": false,
+              "attrName": "item_horizontal_obj_settings.innerContent"
+            },
+            "item_horizontal_gap": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "item_horizontal_gap",
+              "label": "Horizontal Gap",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "You can control the horizontal gap for timeline items on desktop and tablet devices.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "item_horizontal_gap": "50px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item"
+                },
+                "css_type": "column-gap"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "item_horizontal_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "item_vertical_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "item_vertical_alignment": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "item_vertical_alignment",
+              "label": "Vertical Alignment",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "Control vertical alignment for desktop.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "item_vertical_alignment": "center"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item"
+                },
+                "css_type": "align-items",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "start": {
+                      "label": "Top"
+                    },
+                    "center": {
+                      "label": "Middle"
+                    },
+                    "end": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              },
+              "attrName": "item_vertical_obj_settings.innerContent"
+            },
+            "item_vertical_gap": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "item_vertical_gap",
+              "label": "Vertical Gap",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "all",
+              "description": "Control timeline item vertical gap.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "item_vertical_gap": "50px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .difl_timelineitem:not(:first-child)"
+                },
+                "css_type": "margin-top"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "item_vertical_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "active_marker_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_marker.active,{{selector}} .df_timeline_top .active.df_line_marker,{{selector}} .df_timeline_bottom .active.df_line_marker",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "animation",
+              "render": true,
+              "priority": 7,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_marker_animation": "on"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern",
+                    "image"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "active_marker_obj_settings.decoration.background"
+            }
+          }
+        },
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "active_marker_color": {
+              "groupSlug": "animation",
+              "render": true,
+              "subName": "active_marker_color",
+              "label": "Marker Color",
+              "priority": 8,
+              "description": "Here you can define a color for marker scroll effect.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "active_marker_color": "#ddd"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_marker_animation": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_marker.active, {{selector}} .difl_timelineitem .df_timeline_marker.active .df_timeline_marker_icon, {{selector}} .df_timeline_top .active.df_line_marker, {{selector}} .df_timeline_top .active.df_line_marker .df_timeline_top_icon, {{selector}} .df_timeline_bottom .active.df_line_marker, {{selector}} .df_timeline_bottom .active.df_line_marker .df_timeline_bottom_icon",
+                  "hover": "{{selector}} .df_timeline_item.hover .df_timeline_marker.active, {{selector}} .difl_timelineitem:hover .df_timeline_marker.active .df_timeline_marker_icon {{selector}} .df_timeline_top.hover .active.df_line_marker, {{selector}} .df_timeline_top.hover .active.df_line_marker .df_timeline_top_icon, {{selector}} .df_timeline_bottom.hover .active.df_line_marker, {{selector}} .df_timeline_bottom.hover .active.df_line_marker .df_timeline_bottom_icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            }
+          }
+        }
+      }
+    },
+    "marker_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_marker",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "arrow_marker_vertical_align": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "arrow_marker_vertical_align",
+              "label": "Marker & Arrow Position",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "small",
+              "description": "Control arrow & marker vertical alignment or position for mobile.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_marker_vertical_align": "middle"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "layout_type_mobile": "middle"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "top": {
+                      "label": "Top"
+                    },
+                    "middle": {
+                      "label": "Middle"
+                    },
+                    "bottom": {
+                      "label": "Bottom"
+                    }
+                  }
+                }
+              },
+              "attrName": "marker_obj_settings.innerContent"
+            },
+            "marker_postion_mobile": {
+              "groupSlug": "general_setting",
+              "render": false,
+              "subName": "marker_postion_mobile",
+              "label": "Marker From Blurb",
+              "tab_attribute": "general_setting_tab_obj_settings",
+              "tab_slug": "small",
+              "description": "Here you can set the marker postion on mobile. If there no arrow or container available marker will start from top.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "marker_postion_mobile": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if_not": {
+                  "layout_type_mobile": "middle",
+                  "disable_date_mobile": "on",
+                  "enable_date_in_blurb": "on",
+                  "disable_date": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "marker_obj_settings.innerContent"
+            },
+            "enable_marker_animation": {
+              "groupSlug": "animation",
+              "render": true,
+              "subName": "enable_marker_animation",
+              "label": "Marker Effect On Scroll",
+              "priority": 6,
+              "description": "Activate this option to enable marker scroll effect.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "enable_marker_animation": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "marker_width": {
+              "groupSlug": "design_marker",
+              "priority": 1,
+              "render": true,
+              "subName": "marker_width",
+              "label": "Marker Width",
+              "description": "Set the width of marker.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "marker_width": "50px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_marker",
+                  "hover": "{{selector}} .df_timeline_item .df_timeline_marker:hover"
+                },
+                "css_type": "width"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 100,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              }
+            },
+            "marker_height": {
+              "groupSlug": "design_marker",
+              "render": true,
+              "priority": 2,
+              "subName": "marker_height",
+              "label": "Marker Height",
+              "description": "Set the height of marker.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "marker_height": "50px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_marker",
+                  "hover": "{{selector}} .df_timeline_item .df_timeline_marker:hover"
+                },
+                "css_type": "height"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 100,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              }
+            },
+            "marker_icon_color": {
+              "groupSlug": "design_marker",
+              "render": true,
+              "priority": 3,
+              "subName": "marker_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a color for marker icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_marker_icon",
+                  "hover": "{{selector}} .df_timeline_item:hover .df_timeline_marker_icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "marker_icon_size": {
+              "groupSlug": "design_marker",
+              "render": true,
+              "priority": 4,
+              "subName": "marker_icon_size",
+              "label": "Icon Size",
+              "description": "Here you can set size for marker icon.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "marker_icon_size": "24px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_marker .df_timeline_marker_icon",
+                  "hover": "{{selector}} .df_timeline_item:hover .df_timeline_marker .df_timeline_marker_icon"
+                },
+                "css_type": "font-size",
+                "important": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_marker",
+              "render": true,
+              "priority": 0,
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "marker_obj_settings.decoration.background"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_marker",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_marker",
+              "attrName": "marker_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "line_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_timeline_line",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "line_color": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "priority": 0,
+              "subName": "line_color",
+              "label": "Color",
+              "description": "Here you can define a custom color for line.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_color": "#ccc"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_line",
+                  "hover": "{{selector}} .df_timeline_line:hover"
+                },
+                "css_type": "background-color",
+                "important": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "line_width": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "priority": 1,
+              "subName": "line_width",
+              "label": "Width",
+              "description": "Here you can define a custom width for line.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_width": "3px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}}  .df_timeline_line"
+                },
+                "css_type": "width"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              }
+            },
+            "line_start_from": {
+              "groupSlug": "line_setting",
+              "render": true,
+              "subName": "line_start_from",
+              "priority": 3,
+              "label": "Height Start From",
+              "description": "Here you can set custom line position.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "line_start_from": "first_marker"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "first_marker": {
+                      "label": "Content Marker"
+                    },
+                    "custom": {
+                      "label": "Content Top To Bottom"
+                    }
+                  }
+                }
+              }
+            },
+            "enable_scroll_line": {
+              "groupSlug": "animation",
+              "render": true,
+              "priority": 2,
+              "subName": "enable_scroll_line",
+              "label": "Scroll Line Animation",
+              "description": "Activate this option to enable scroll line effect.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "enable_scroll_line": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "scroll_line_color": {
+              "groupSlug": "animation",
+              "render": true,
+              "subName": "scroll_line_color",
+              "priority": 4,
+              "label": "Scroll Line Color",
+              "description": "Here you can define a custom color for scroll line.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "scroll_line_color": "#333"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_scroll_line": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_line_inner",
+                  "hover": "{{selector}} .df_timeline_item:hover .df_line_inner"
+                },
+                "css_type": "background-color",
+                "important": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            }
+          }
+        },
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "design_line",
+              "render": true,
+              "label": " Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "line_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      }
+    },
+    "arrow_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable_arrow": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "enable_arrow",
+              "label": "Arrow",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Activate this option to enable blurb arrow.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "enable_arrow": "on"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_type": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_type",
+              "label": "Type",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Chose blurb arrow type.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_type": "arrow_caret"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "arrow_caret": {
+                      "label": "Caret"
+                    },
+                    "arrow_icon": {
+                      "label": "Icon"
+                    },
+                    "arrow_line": {
+                      "label": "Line"
+                    }
+                  }
+                }
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_line_type": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_line_type",
+              "label": "Line Type",
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_content_area .timeline_arrow_line"
+                },
+                "css_type": "border-style"
+              },
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Set blurb arrow line type.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_line_type": "solid"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on",
+                  "arrow_type": "arrow_line"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "solid": {
+                      "label": "Solid"
+                    },
+                    "dashed": {
+                      "label": "Dashed"
+                    },
+                    "dotted": {
+                      "label": "Dotted"
+                    },
+                    "double": {
+                      "label": "Double"
+                    },
+                    "groove": {
+                      "label": "Groove"
+                    },
+                    "ridge": {
+                      "label": "Ridge"
+                    }
+                  }
+                }
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_icon": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_icon",
+              "label": "Icon",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Select blurb arrow icon.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_icon": "&#x24;"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on",
+                  "arrow_type": "arrow_icon"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "&#x24;": {
+                      "label": "Arrow"
+                    },
+                    "&#xe03c;": {
+                      "label": "Arrow 2"
+                    },
+                    "&#x3d;": {
+                      "label": "Caret"
+                    },
+                    "&#x49;": {
+                      "label": "Caret 2"
+                    },
+                    "&#xe046;": {
+                      "label": "Caret 3"
+                    },
+                    "&#x35;": {
+                      "label": "Caret 4"
+                    },
+                    "&#x39;": {
+                      "label": "Double Caret"
+                    },
+                    "&#x41;": {
+                      "label": "Double Caret 2"
+                    },
+                    "&#xe04a;": {
+                      "label": "Double Caret 3"
+                    }
+                  }
+                }
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_thick": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_thick",
+              "label": "Thickness",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Control blurb arrow line thickness.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_thick": "2px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on",
+                  "arrow_type": "arrow_line"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_timeline_item .df_timeline_content_area [class^=\"timeline_arrow_\"]"
+                },
+                "css_type": "border-top-width"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_size": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_size",
+              "label": "Size",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Control blurb arrow size.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_size": "20px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_color": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_color",
+              "label": "Color",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Here you can define a custom color for arrow.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_color": "#ddd"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_vertical_alignment": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_vertical_alignment",
+              "label": "Vertical Alignment",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Select blurb arrow vertical alignment.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_vertical_alignment": "middle"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "top": {
+                      "label": "Top"
+                    },
+                    "middle": {
+                      "label": "Middle"
+                    },
+                    "bottom": {
+                      "label": "Bottom"
+                    },
+                    "custom": {
+                      "label": "Custom"
+                    }
+                  }
+                }
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_vertical_position": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_vertical_position",
+              "label": "Vertical Position",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Control blurb arrow vertical position for desktop & tablet.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_vertical_position": "50%"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on",
+                  "arrow_vertical_alignment": "custom"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "%",
+                    "px"
+                  ],
+                  "defaultUnit": "%",
+                  "min": 0,
+                  "minLimit": 0,
+                  "step": 1
+                }
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "arrow_horizontal_position": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "arrow_horizontal_position",
+              "label": "Horizontal Position",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Control blurb arrow horizontal position.",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "arrow_horizontal_position": "0px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "step": 1
+                }
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "reverse_arrow": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "reverse_arrow",
+              "label": "Reverse",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Activate this option to reverse blurb arrow.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "reverse_arrow": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on"
+                },
+                "show_if_not": {
+                  "arrow_type": "arrow_line"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            },
+            "disable_arrow_mobile": {
+              "groupSlug": "arrow_setting",
+              "render": false,
+              "subName": "disable_arrow_mobile",
+              "label": "Disable On Mobile",
+              "tab_attribute": "arrow_setting_tab_obj_settings",
+              "tab_slug": "content",
+              "description": "Activate this option to daisable blurb arrow on mobile.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "disable_arrow_mobile": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_arrow": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "arrow_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "animation_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable_item_animation": {
+              "groupSlug": "animation",
+              "render": true,
+              "priority": 0,
+              "subName": "enable_item_animation",
+              "label": "Item Animation On Scroll",
+              "description": "Activate this option to enable item animation.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "enable_item_animation": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "tmln_animation": {
+              "groupSlug": "animation",
+              "render": true,
+              "priority": 1,
+              "subName": "tmln_animation",
+              "label": "Timeline Animation",
+              "description": "Enable timeline animation.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "tmln_animation": "fade_in"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "enable_item_animation": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "slide_left": {
+                      "label": "Slide Left"
+                    },
+                    "slide_right": {
+                      "label": "Slide Right"
+                    },
+                    "slide_up": {
+                      "label": "Slide Up"
+                    },
+                    "slide_down": {
+                      "label": "Slide Down"
+                    },
+                    "fade_in": {
+                      "label": "Fade"
+                    },
+                    "zoom_left": {
+                      "label": "Zoom Left"
+                    },
+                    "zoom_center": {
+                      "label": "Zoom Center"
+                    },
+                    "zoom_right": {
+                      "label": "Zoom Right"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "general_setting_tab_obj_settings_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "general_setting_tab_obj_settings": {
+              "groupSlug": "general_setting",
+              "tab_slug": "general_setting_tab_obj_settings",
+              "module_slug": "difl/timeline",
+              "tabs": {
+                "all": {
+                  "label": "All",
+                  "components": []
+                },
+                "small": {
+                  "label": "Small",
+                  "components": []
+                }
+              },
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "difl/custom-tab"
+              }
+            }
+          }
+        }
+      }
+    },
+    "arrow_setting_tab_obj_settings_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "arrow_setting_tab_obj_settings": {
+              "groupSlug": "arrow_setting",
+              "tab_slug": "arrow_setting_tab_obj_settings",
+              "module_slug": "difl/timeline",
+              "tabs": {
+                "content": {
+                  "label": "Blurb",
+                  "components": []
+                },
+                "date": {
+                  "label": "Date",
+                  "components": []
+                }
+              },
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "difl/custom-tab"
+              }
+            }
+          }
+        }
+      }
+    },
+    "design_date_text_tab_obj_settings_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "design_date_text_tab_obj_settings": {
+              "groupSlug": "design_date_text",
+              "tab_slug": "design_date_text_tab_obj_settings",
+              "module_slug": "difl/timeline",
+              "tabs": {
+                "title": {
+                  "label": "Title",
+                  "components": []
+                },
+                "subtitle": {
+                  "label": "Subtitle",
+                  "components": []
+                }
+              },
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "difl/custom-tab"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

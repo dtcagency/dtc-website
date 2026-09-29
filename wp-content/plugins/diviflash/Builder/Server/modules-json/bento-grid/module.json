@@ -1,0 +1,87 @@
+{
+  "name": "difl/bento-grid",
+  "d4Shortcode": "difl_bento_grid",
+  "title": "Bento Grid",
+  "titles": "Bento Grid",
+  "moduleIcon": "difl/bento-grid",
+  "moduleClassName": "difl_bento_grid",
+  "moduleOrderClassName": "difl_bento_grid",
+  "category": "module",
+
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Bento Grid by Divi Flash"
+            }
+          }
+        }
+      }
+    },
+    "images" : {
+      "type": "object",
+      "selector": "{{selector}} .bento_grid_image img",
+      "elementType": "element",
+      "features": {
+        "responsive": false,
+        "hover": false,
+        "sticky": false,
+        "preset": "content"
+      },
+      "render": true,
+      "priority": 10,
+      "component": {
+        "type": "field",
+        "name": "divi/upload-gallery"
+      }
+    },
+    "profile": {
+      "type": "object",
+      "selector": "{{selector}} .difl_bento_grid__inner .difl_bento_grid__inner__image .__image",
+      "innerContent": {},
+      "default" : {
+        "decoration": {
+          "size": {
+            "desktop": {
+              "value": "90px"
+            }
+          }
+        }
+      }
+    },
+    "gridLayout": {
+      "type": "object",
+      "innerContent": {},
+      "default" : {
+        "decoration": {
+          "desktop": {
+            "value": {
+              "rowCount": "4",
+              "columnCount": "4",
+              "gridGap": "16px"
+            }
+          }
+        }
+      }
+    },
+    "gridLayoutField": {
+      "type": "object",
+      "innerContent": {},
+      "default" : {
+        "decoration": {
+          "desktop": {
+            "value": {
+              "row": "16",
+              "column": "16",
+              "gridGap": "16px"
+            }
+          }
+        }
+      }
+    }
+  }
+}

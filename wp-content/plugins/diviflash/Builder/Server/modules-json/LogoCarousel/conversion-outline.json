@@ -1,0 +1,83 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "animation": "module.decoration.animation",
+    "background": "module.decoration.background",
+    "borders": {
+      "default": "module.decoration.border"
+    },
+    "box_shadow": {
+      "default": "module.decoration.boxShadow"
+    },
+    "disabled_on": "module.decoration.disabledOn",
+    "display_conditions": "module.decoration.conditions",
+    "filters": {
+      "default": "module.decoration.filters",
+      "child": "image_settings.decoration.filters"
+    },
+    "height": "module.decoration.sizing",
+    "link_options": "module.advanced.link",
+    "margin_padding": "module.decoration.spacing",
+    "max_width": "module.decoration.sizing",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex"
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after",
+    "free_form": "css.*.freeForm"
+  },
+  "module": {
+    "item_desktop": "carousel_settings.innerContent.*.item_desktop",
+    "item_tablet": "carousel_settings.innerContent.*.item_tablet",
+    "item_mobile": "carousel_settings.innerContent.*.item_mobile",
+    "item_width": "carousel_settings.innerContent.*.item_width",
+    "item_spacing": "carousel_settings.innerContent.*.item_spacing",
+    "speed": "carousel_settings.innerContent.*.speed",
+    "loop": "carousel_settings.innerContent.*.loop",
+    "autoplay": "carousel_settings.innerContent.*.autoplay",
+    "autospeed": "carousel_settings.innerContent.*.autospeed",
+    "pause_hover": "carousel_settings.innerContent.*.pause_hover",
+    "arrow": "carousel_settings.innerContent.*.arrow",
+    "dots": "carousel_settings.innerContent.*.dots",
+    "ticker": "carousel_settings.innerContent.*.ticker",
+    "ticker_hover": "carousel_settings.innerContent.*.ticker_hover",
+    "ticker_speed": "carousel_settings.innerContent.*.ticker_speed",
+    "lc_max_width": "image_settings.innerContent.*.lc_max_width",
+    "lc_vertical": "image_settings.innerContent.*.lc_vertical",
+    "equal_height": "image_settings.innerContent.*.equal_height",
+    "arrow_icon_color": "arrow_design.innerContent.*.arrow_icon_color",
+    "arrow_bg_color": "arrow_design.innerContent.*.arrow_bg_color",
+    "arrow_opacity_disable": "arrow_design.innerContent.*.arrow_opacity_disable",
+    "active_dot_color": "dots_design.innerContent.*.active_dot_color",
+    "dots_color": "dots_design.innerContent.*.dots_color",
+    "wrapper_margin": "wrapper.decoration.spacing.*.margin",
+    "wrapper_padding": "wrapper.decoration.spacing.*.padding",
+    "arrow_prev_margin": "arrow_prev.decoration.spacing.*.margin",
+    "arrow_next_margin": "arrow_next.decoration.spacing.*.margin"
+  },
+  "nonResponsiveAttributes": [
+    "item_tablet",
+    "item_mobile"
+  ],
+  "valueExpansionFunctionMap": {
+    "arrow_start_position": "D4ToD5HandleGradientColorPosition",
+    "arrow_end_position": "D4ToD5HandleGradientColorPosition",
+    "arrow_gradient_type": "D4ToD5HandleGradientType",
+    "arrow_start_position__hover": "D4ToD5HandleGradientColorPosition",
+    "arrow_end_position__hover": "D4ToD5HandleGradientColorPosition",
+    "arrow_gradient_type__hover": "D4ToD5HandleGradientType",
+    "_background_image_position": "D4ToD5HandleBGImagePosition",
+    "wrapper_margin": "D4ToD5Spacing",
+    "wrapper_padding": "D4ToD5Spacing",
+    "arrow_prev_margin": "D4ToD5Spacing",
+    "arrow_next_margin": "D4ToD5Spacing"
+  }
+}

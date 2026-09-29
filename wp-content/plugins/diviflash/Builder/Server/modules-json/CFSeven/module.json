@@ -1,0 +1,1036 @@
+{
+  "name": "difl/cfseven",
+  "d4Shortcode": "difl_cfseven",
+  "title": "Contact Form 7 Styler",
+  "category": "module",
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "main_content": {
+        "panel": "content",
+        "groupName": "main_content",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content"
+          }
+        }
+      },
+      "input_background": {
+        "panel": "content",
+        "groupName": "input_background",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Input & Textarea Background"
+          }
+        }
+      },
+      "select_background": {
+        "panel": "content",
+        "groupName": "select_background",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Dropdown Box Background"
+          }
+        }
+      },
+      "submit_background": {
+        "panel": "content",
+        "groupName": "submit_background",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Button Background"
+          }
+        }
+      },
+      "label": {
+        "panel": "design",
+        "groupName": "label",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Label"
+          }
+        }
+      },
+      "input": {
+        "panel": "design",
+        "groupName": "input",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Input & Textarea"
+          }
+        }
+      },
+      "dropdown": {
+        "panel": "design",
+        "groupName": "dropdown",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Dropdown"
+          }
+        }
+      },
+      "submit": {
+        "panel": "design",
+        "groupName": "submit",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Submit Button"
+          }
+        }
+      },
+      "design_size": {
+        "panel": "design",
+        "groupName": "design_size",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Input Field Width"
+          }
+        }
+      },
+      "margin_padding": {
+        "panel": "design",
+        "groupName": "margin_padding",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spacing"
+          }
+        }
+      }
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {},
+        "decoration": {
+          "attributes": {},
+          "animation": {},
+          "background": {},
+          "interactions": {},
+          "border": {},
+          "boxShadow": {},
+          "conditions": {},
+          "disabledOn": {},
+          "overflow": {},
+          "position": {},
+          "scroll": {},
+          "sticky": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Contact Form 7 Styler"
+            }
+          }
+        }
+      }
+    },
+    "cf7_forms": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "main_content",
+            "attrName": "cf7_forms.innerContent",
+            "label": "Contact Forms",
+            "render": true,
+            "description": "Select the contact form you want to use.",
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {},
+                "searchable": true
+              }
+            },
+            "features": {
+              "preset": "content"
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "default"
+          }
+        }
+      }
+    },
+    "input_text_width": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_size",
+            "attrName": "input_text_width.innerContent",
+            "label": "Input Text Width",
+            "render": true,
+            "description": "Set Day Width",
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "allowedUnits": [
+                  "px",
+                  "%"
+                ],
+                "defaultUnit": "px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0px"
+          }
+        }
+      }
+    },
+    "input_email_width": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_size",
+            "attrName": "input_email_width.innerContent",
+            "label": "Input Email Width",
+            "render": true,
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "allowedUnits": [
+                  "px",
+                  "%"
+                ],
+                "defaultUnit": "px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0px"
+          }
+        }
+      }
+    },
+    "label": {
+      "type": "object",
+      "selector": "{{selector}} label, {{selector}} .wpcf7-list-item-label",
+      "hover": "{{selector}} label:hover, {{selector}} .wpcf7-list-item-label:hover",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "label",
+              "attrName": "label.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Label",
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px",
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "input_textarea_width": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_size",
+            "attrName": "input_textarea_width.innerContent",
+            "label": "Input Textarea Width",
+            "render": true,
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "allowedUnits": [
+                  "px",
+                  "%"
+                ],
+                "defaultUnit": "px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0px"
+          }
+        }
+      }
+    },
+    "input_select_width": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "design_size",
+            "attrName": "input_select_width.innerContent",
+            "label": "Input Dropdown Width",
+            "render": true,
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "allowedUnits": [
+                  "px",
+                  "%"
+                ],
+                "defaultUnit": "px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0px"
+          }
+        }
+      }
+    },
+    "input_background": {
+      "type": "object",
+      "selector": "{{selector}} input[type='text'],{{selector}} input[type='email'],{{selector}} input[type='number'],{{selector}} input[type='tel'],{{selector}} input[type='password'],{{selector}} input[type='url'],{{selector}} input[type='date'],{{selector}} textarea",
+      "hover": "{{selector}} input[type='text']:hover,{{selector}} input[type='email']:hover,{{selector}} input[type='number']:hover,{{selector}} input[type='tel']:hover,{{selector}} input[type='password']:hover,{{selector}} input[type='url']:hover,{{selector}} input[type='date']:hover,{{selector}} textarea:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "input_background",
+              "attrName": "input_background.decoration.background",
+              "label": "Input & textarea Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "pattern",
+                    "mask"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        }
+      }
+    },
+    "select_background": {
+      "type": "object",
+      "selector": "{{selector}} .wpcf7-select",
+      "hover": "{{selector}} .wpcf7-select:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "select_background",
+              "attrName": "select_background.decoration.background",
+              "label": "Dropdown Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "pattern",
+                    "mask"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        }
+      }
+    },
+    "submit_background": {
+      "type": "object",
+      "selector": "{{selector}} [type='submit']",
+      "hover": "{{selector}} [type='submit']:hover",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "submit_background",
+              "attrName": "submit_background.decoration.background",
+              "label": "Submit Button Background",
+              "render": true,
+              "features": {
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "pattern",
+                    "mask"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        }
+      }
+    },
+    "submit_button_align": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "submit",
+            "attrName": "submit_button_align.innerContent",
+            "label": "Alignment",
+            "render": true,
+            "description": "Submit button",
+            "component": {
+              "type": "select",
+              "name": "divi/button-options",
+              "props": {
+                "options": {
+                  "left": {
+                    "icon": "divi/text-align-left"
+                  },
+                  "center": {
+                    "icon": "divi/text-align-center"
+                  },
+                  "right": {
+                    "icon": "divi/text-align-right"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "input_submit_width": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "submit",
+            "attrName": "input_submit_width.innerContent",
+            "label": "Submit Button Width",
+            "render": true,
+            "features": {
+              "responsive": true
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "allowedUnits": [
+                  "px",
+                  "%"
+                ],
+                "defaultUnit": "px"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": "0px"
+          }
+        }
+      }
+    },
+    "submit": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "submit",
+              "attrName": "submit.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Submit Button",
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px",
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "submit",
+              "attrName": "submit.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Submit"
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "submit",
+              "attrName": "submit.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "submit.decoration.spacing",
+              "label": "Submit Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Submit"
+                }
+              },
+              "priority": 30
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} [type='submit']",
+              "hover": "{{selector}} [type='submit']:hover"
+            }
+          }
+        },
+        "border": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} input[type='submit']",
+              "hover": "{{selector}} input[type='submit']:hover"
+            }
+          }
+        },
+        "boxShadow": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} input[type='submit']",
+              "hover": "{{selector}} input[type='submit']:hover"
+            }
+          }
+        },
+        "spacing": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} input[type='submit']",
+              "hover": "{{selector}} input[type='submit']:hover"
+            }
+          }
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "input",
+              "attrName": "input.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Input",
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px",
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "input",
+              "attrName": "input.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "input.decoration.spacing",
+              "label": "Input Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Input"
+                }
+              },
+              "priority": 10
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} input[type='text'],{{selector}} input[type='text']::placeholder,{{selector}} input[type='email'],{{selector}} input[type='email']::placeholder,{{selector}} input[type='number'],{{selector}} input[type='number']::placeholder,{{selector}} input[type='tel'],{{selector}} input[type='tel']::placeholder,{{selector}} input[type='password'],{{selector}} input[type='password']::placeholder,{{selector}} input[type='url'],{{selector}} input[type='url']::placeholder,{{selector}} textarea,{{selector}} textarea::placeholder,{{selector}} input[type='date']",
+              "hover": "{{selector}} input[type='text']:hover,{{selector}} input[type='email']:hover,{{selector}} input[type='number']:hover,{{selector}} input[type='tel']:hover,{{selector}} input[type='password']:hover,{{selector}} input[type='url']:hover,{{selector}} textarea:hover"
+            }
+          }
+        },
+        "border": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} input[type='text'],{{selector}} input[type='email'],{{selector}} input[type='number'],{{selector}} input[type='tel'],{{selector}} input[type='password'],{{selector}} input[type='url'],{{selector}} textarea",
+              "hover": "{{selector}} input[type='text']:hover,{{selector}} input[type='email']:hover,{{selector}} input[type='number']:hover,{{selector}} input[type='tel']:hover,{{selector}} input[type='password']:hover,{{selector}} input[type='url']:hover,{{selector}} textarea:hover"
+            }
+          }
+        },
+        "spacing": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} input[type='text'],{{selector}} input[type='email'],{{selector}} input[type='number'],{{selector}} input[type='tel'],{{selector}} input[type='password'],{{selector}} input[type='url'],{{selector}} input[type='date'],{{selector}} textarea",
+              "hover": "{{selector}} input[type='text']:hover,{{selector}} input[type='email']:hover,{{selector}} input[type='number']:hover,{{selector}} input[type='tel']:hover,{{selector}} input[type='password']:hover,{{selector}} input[type='date']:hover,{{selector}} input[type='url']:hover,{{selector}} textarea:hover"
+            }
+          }
+        }
+      }
+    },
+    "dropdown": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {},
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "dropdown",
+              "attrName": "dropdown.decoration.font",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Dropdown",
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "lineHeight": "1em"
+                        }
+                      }
+                    }
+                  },
+                  "fields": {
+                    "textShadowGroup": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "dropdown",
+              "attrName": "dropdown.decoration.border",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "dropdown.decoration.spacing",
+              "label": "Dropdown Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Dropdown"
+                }
+              },
+              "priority": 9
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .wpcf7-select",
+              "hover": "{{selector}} .wpcf7-select:hover"
+            }
+          }
+        },
+        "border": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .wpcf7-select",
+              "hover": "{{selector}} .wpcf7-select:hover"
+            }
+          }
+        },
+        "spacing": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .wpcf7-select",
+              "hover": "{{selector}} .wpcf7-select:hover"
+            }
+          }
+        }
+      }
+    },
+    "default": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "attrName": "default.decoration.spacing",
+              "label": "Margin",
+              "render": true,
+              "features": {
+                "responsive": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {}
+}

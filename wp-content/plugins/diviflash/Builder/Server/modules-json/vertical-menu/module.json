@@ -1,0 +1,3441 @@
+{
+  "name": "difl/vertical-menu",
+  "d4Shortcode": "difl_vertical_menu",
+  "title": "Vertical Menu",
+  "titles": "Vertical Menus",
+  "category": "module",
+  "moduleIcon": "difl/vertical-menu",
+  "customCssFields": {},
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "toggle_key__content": {
+        "panel": "content",
+        "groupName": "toggle_key__content",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Content"
+          }
+        },
+        "priority": 0
+      },
+      "toggle_key__builder_view": {
+        "panel": "content",
+        "groupName": "toggle_key__builder_view",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Builder View"
+          }
+        },
+        "priority": 1
+      },
+      "toggle_key__settings": {
+        "panel": "content",
+        "groupName": "toggle_key__settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Settings"
+          }
+        },
+        "priority": 2
+      },
+      "toggle_key__hamburger": {
+        "panel": "content",
+        "groupName": "toggle_key__hamburger",
+        "multiElements": true,
+        "displayCondition": {
+          "show_if": {
+            "settings__use_hamburger_for_mobile": "on"
+          }
+        },
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Hamburger"
+          }
+        },
+        "priority": 3
+      },
+      "toggle_key__menu_item_hover_animation": {
+        "panel": "content",
+        "groupName": "toggle_key__menu_item_hover_animation",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Menu Item Hover Animation"
+          }
+        },
+        "priority": 4
+      },
+      "toggle_key__alignment": {
+        "panel": "design",
+        "groupName": "toggle_key__alignment",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Alignment"
+          }
+        },
+        "priority": 5
+      },
+      "toggle_key__text_style": {
+        "panel": "design",
+        "groupName": "toggle_key__text_style",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Text Style"
+          }
+        },
+        "priority": 6
+      },
+      "toggle_key__menu_items": {
+        "panel": "design",
+        "groupName": "toggle_key__menu_items",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Menu Items"
+          }
+        },
+        "priority": 7
+      },
+      "toggle_key__sub_menu_items": {
+        "panel": "design",
+        "groupName": "toggle_key__sub_menu_items",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Submenu"
+          }
+        },
+        "priority": 8
+      },
+      "toggle_key__mega_menu": {
+        "panel": "design",
+        "groupName": "toggle_key__mega_menu",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Mega Menu"
+          }
+        },
+        "priority": 9
+      },
+      "toggle_key__mega_menu_parent": {
+        "panel": "design",
+        "groupName": "toggle_key__mega_menu_parent",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Mega Menu Parent"
+          }
+        },
+        "priority": 10
+      },
+      "toggle_key__menu__active_state": {
+        "panel": "design",
+        "groupName": "toggle_key__menu__active_state",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Active State"
+          }
+        },
+        "priority": 11
+      },
+      "toggle_key__badge": {
+        "panel": "design",
+        "groupName": "toggle_key__badge",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Badge"
+          }
+        },
+        "priority": 12
+      },
+      "toggle_key__tooltip": {
+        "panel": "design",
+        "groupName": "toggle_key__tooltip",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Tooltip"
+          }
+        },
+        "priority": 13
+      },
+      "toggle_key__hamburger_style": {
+        "panel": "design",
+        "groupName": "toggle_key__hamburger_style",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Hamburger"
+          }
+        },
+        "priority": 14
+      }
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {
+            "component": {
+              "type": "group",
+              "name": "divi/admin-label"
+            }
+          }
+        },
+        "advanced": {},
+        "decoration": {
+          "attributes": {},
+          "background": {
+            "component": {
+              "type": "group",
+              "name": "divi/background",
+              "props": {
+                "hidePanels": [
+                  "video",
+                  "pattern",
+                  "mask"
+                ]
+              }
+            }
+          },
+          "border": {},
+          "boxShadow": {},
+          "sizing": {},
+          "spacing": {},
+          "transition": {},
+          "sticky": {},
+          "scroll": {},
+          "interactions": {},
+          "conditions": {},
+          "zIndex": {},
+          "position": {},
+          "overflow": {},
+          "disabledOn": {},
+          "animation": {}
+        }
+      },
+      "styleProps": {
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container"
+            }
+          }
+        },
+        "sizing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container"
+            }
+          }
+        },
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container"
+            }
+          }
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Vertical Menu"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "submenu_active_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li[class*='current'] > .df_vertical_menu_item_elements_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__sub_menu__active__font_color": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "subName": "style_settings__sub_menu__active__font_color",
+              "label": "Font Color",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "sub_menu",
+              "description": "Here you can define a seperate color for submenu.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav.df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li[class*='current'] > .df_vertical_menu_item_elements_wrapper",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li[class*='current'] > .df_vertical_menu_item_elements_wrapper:hover"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "submenu_active_obj_settings.innerContent"
+            },
+            "style_settings__sub_menu__active__icon_color": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "subName": "style_settings__sub_menu__active__icon_color",
+              "label": "Icon Color",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "sub_menu",
+              "description": "Here you can define a custom color for active menu icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-col-added>ul):not(.df-vertical-inside-mega-menu)>li[class*='current']>.df_vertical_menu_item_elements_wrapper>.df-vertical-menu-icon",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-col-added>ul):not(.df-vertical-inside-mega-menu)>li[class*='current']>a:hover>.df-vertical-menu-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "submenu_active_obj_settings.innerContent"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "label": "Item",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "sub_menu",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "submenu_active_obj_settings.decoration.background"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "megamenu_active_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu.df-vertical-col-added  li[class*='current'] > .df_vertical_menu_item_elements_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__mega_menu__active__font_color": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "subName": "style_settings__mega_menu__active__font_color",
+              "label": "Font Color",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "mega_menu",
+              "description": "Here you can define a seperate color for submenu.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu.df-vertical-col-added  li[class*='current'] > .df_vertical_menu_item_elements_wrapper",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu.df-vertical-col-added  li[class*='current'] > .df_vertical_menu_item_elements_wrapper:hover"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "megamenu_active_obj_settings.innerContent"
+            },
+            "style_settings__mega_menu__active__icon_color": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "subName": "style_settings__mega_menu__active__icon_color",
+              "label": "Icon Color",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "mega_menu",
+              "description": "Here you can define a custom color for active menu icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu.df-vertical-col-added  li[class*='current'] > .df_vertical_menu_item_elements_wrapper .df-vertical-menu-icon",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu.df-vertical-col-added  li[class*='current'] > .df_vertical_menu_item_elements_wrapper:hover .df-vertical-menu-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "megamenu_active_obj_settings.innerContent"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "label": "Item",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "mega_menu",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu.df-vertical-col-added  li[class*='current'] > .df_vertical_menu_item_elements_wrapper",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu.df-vertical-col-added  li[class*='current'] > .df_vertical_menu_item_elements_wrapper:hover"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "megamenu_active_obj_settings.decoration.background"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "submenu_icon_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li > .df_vertical_menu_item_elements_wrapper .df-vertical-menu-icon,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li > .df_vertical_menu_item_elements_wrapper> img",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__sub_menu__icon_color": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "subName": "style_settings__sub_menu__icon_color",
+              "label": "Icon Color",
+              "priority": 2,
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "item",
+              "description": "Here you can define a custom color for icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-col-added> ul):not(.df-vertical-inside-mega-menu) > li > a>.df-vertical-menu-icon",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-col-added > ul):not(.df-vertical-inside-mega-menu) > li > a:hover>.df-vertical-menu-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "submenu_icon_obj_settings.innerContent"
+            }
+          }
+        },
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "label": "Icon/Image Margin",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "item",
+              "priority": 5,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon/Image ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "submenu_icon_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li > .df_vertical_menu_item_elements_wrapper .df-vertical-menu-icon,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li > .df_vertical_menu_item_elements_wrapper> img",
+              "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li > .df_vertical_menu_item_elements_wrapper:hover .df-vertical-menu-icon,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li > .df_vertical_menu_item_elements_wrapper:hover > img"
+            }
+          }
+        }
+      }
+    },
+    "submenu_item_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-custom-submenu) > li  .df_vertical_menu_item_elements_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__sub_menu__item_gap": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "subName": "style_settings__sub_menu__item_gap",
+              "label": "Item Gap",
+              "priority": 1,
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "item",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu) > li:not(:first-child)"
+                },
+                "css_type": "margin-top",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              },
+              "attrName": "submenu_item_obj_settings.innerContent"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "priority": 3,
+              "label": "",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "item",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "submenu_item_obj_settings.decoration.background"
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 6,
+              "groupSlug": "toggle_key__sub_menu_items",
+              "attrName": "submenu_item_obj_settings.decoration.font",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "item",
+              "label": "",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 10,
+              "groupSlug": "toggle_key__sub_menu_items",
+              "attrName": "submenu_item_obj_settings.decoration.border",
+              "label": "",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "item",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "attrName": "submenu_item_obj_settings.decoration.boxShadow",
+              "label": null,
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "item",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 5,
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "label": "Item Padding",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "item",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Item ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "submenu_item_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        },
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-custom-submenu) > li  .df_vertical_menu_item_elements_wrapper",
+              "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-custom-submenu) > li  .df_vertical_menu_item_elements_wrapper:hover"
+            }
+          }
+        },
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-custom-submenu) > li  .df_vertical_menu_item_elements_wrapper",
+              "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-custom-submenu) > li .df_vertical_menu_item_elements_wrapper:hover"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "submenu_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-mega-menu-item)",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "label": "",
+              "priority": 1,
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "container",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "submenu_wrapper_obj_settings.decoration.background"
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "priority": 2,
+              "label": "Wrapper Padding",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "container",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Wrapper ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "submenu_wrapper_obj_settings.decoration.spacing"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "attrName": "submenu_wrapper_obj_settings.decoration.border",
+              "label": "",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "container",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "submenu_tooltip_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu li>.df_vertical_menu_item_elements_wrapper .df-vertical-nav-item-tooltip",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__tooltip",
+              "attrName": "submenu_tooltip_obj_settings.decoration.font",
+              "tab_attribute": "toggle_key__tooltip_tab_obj_settings",
+              "tab_slug": "sub-menu",
+              "label": "",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__tooltip",
+              "render": false,
+              "label": "Tooltip Background",
+              "tab_attribute": "toggle_key__tooltip_tab_obj_settings",
+              "tab_slug": "sub-menu",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  .df-vertical-sub-menu li>.df_vertical_menu_item_elements_wrapper .df-vertical-nav-item-tooltip",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu li>a:hover .df-vertical-nav-item-tooltip"
+                },
+                "important": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "submenu_tooltip_obj_settings.decoration.background"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        },
+        "font": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "submenu_badge_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu li>.df_vertical_menu_item_elements_wrapper .df-vertical-nav-item-badge",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "tab_attribute": "toggle_key__badge_tab_obj_settings",
+              "tab_slug": "sub-menu",
+              "groupSlug": "toggle_key__badge",
+              "attrName": "submenu_badge_obj_settings.decoration.font",
+              "label": "",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "0.8em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__badge",
+              "render": false,
+              "label": "Background",
+              "tab_attribute": "toggle_key__badge_tab_obj_settings",
+              "tab_slug": "sub-menu",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu li>.df_vertical_menu_item_elements_wrapper .df-vertical-nav-item-badge",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu li>a:hover .df-vertical-nav-item-badge"
+                },
+                "important": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "submenu_badge_obj_settings.decoration.background"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        },
+        "font": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "submenu_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "settings__submenu_reveal_type": {
+              "groupSlug": "toggle_key__settings",
+              "render": true,
+              "priority": 0,
+              "subName": "settings__submenu_reveal_type",
+              "label": "Submenu Type",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__submenu_reveal_type": "df-vertical-sub-menu-reveal-flyout"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "df-vertical-sub-menu-reveal-stack": {
+                      "label": "Stack"
+                    },
+                    "df-vertical-sub-menu-reveal-flyout": {
+                      "label": "Flyout"
+                    }
+                  }
+                }
+              }
+            },
+            "settings__submenu_reveal_dir": {
+              "groupSlug": "toggle_key__settings",
+              "render": true,
+              "subName": "settings__submenu_reveal_dir",
+              "priority": 0,
+              "label": "Submenu Reveal Direction",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__submenu_reveal_dir": "df-vertical-sub-menu-reveal-right"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__submenu_reveal_type": "df-vertical-sub-menu-reveal-flyout"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "df-vertical-sub-menu-reveal-left": {
+                      "label": "Left"
+                    },
+                    "df-vertical-sub-menu-reveal-right": {
+                      "label": "Right"
+                    }
+                  }
+                }
+              }
+            },
+            "style_settings__sub_menu__tree_view": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "priority": 2,
+              "subName": "style_settings__sub_menu__tree_view",
+              "label": "Enable Submenu Tree View",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "container",
+              "description": "When enable that time wrapper padding left or right will apply in each submenu wrapper ",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "style_settings__sub_menu__tree_view": "on"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__submenu_reveal_type": "df-vertical-sub-menu-reveal-stack"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "attrName": "submenu_obj_settings.innerContent"
+            },
+            "style_settings__sub_menu__tree_view_spacing": {
+              "groupSlug": "toggle_key__sub_menu_items",
+              "render": false,
+              "priority": 3,
+              "subName": "style_settings__sub_menu__tree_view_spacing",
+              "label": "Tree Spacing",
+              "tab_attribute": "toggle_key__sub_menu_items_tab_obj_settings",
+              "tab_slug": "container",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "style_settings__sub_menu__tree_view_spacing": "10px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__submenu_reveal_type": "df-vertical-sub-menu-reveal-stack",
+                  "style_settings__sub_menu__tree_view": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container.df_enable_sub_menu__tree_view .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  .df-vertical-sub-menu:not(.df-vertical-col-added):not(.df-vertical-inside-mega-menu):not(.df-vertical-mega-menu-item):not(.df-vertical-menu-nav-level-1)"
+                },
+                "css_type": "padding-left",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              },
+              "attrName": "submenu_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "megamenu_parent_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav ul.df-vertical-sub-menu.df-vertical-col-added > div > li > .df_vertical_menu_item_elements_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__mega_menu_parent",
+              "attrName": "megamenu_parent_obj_settings.decoration.font",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true
+        }
+      }
+    },
+    "megamenu_item_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu.df-vertical-col-added li .df_vertical_menu_item_elements_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__mega_menu__item_gap": {
+              "groupSlug": "toggle_key__mega_menu",
+              "render": false,
+              "priority": 1,
+              "subName": "style_settings__mega_menu__item_gap",
+              "label": "item Gap",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "item",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li.df-vertical-menu-item .df-vertical-sub-menu.df-vertical-col-added  li"
+                },
+                "css_type": "margin-top",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              },
+              "attrName": "megamenu_item_obj_settings.innerContent"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__mega_menu",
+              "render": false,
+              "label": "",
+              "priority": 3,
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "item",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu.df-vertical-col-added li .df_vertical_menu_item_elements_wrapper",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu.df-vertical-col-added li .df_vertical_menu_item_elements_wrapper:hover"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "megamenu_item_obj_settings.decoration.background"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__mega_menu",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "item",
+              "attrName": "megamenu_item_obj_settings.decoration.border",
+              "label": "",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__mega_menu",
+              "attrName": "megamenu_item_obj_settings.decoration.boxShadow",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "item",
+              "label": null,
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 4,
+              "groupSlug": "toggle_key__mega_menu",
+              "render": false,
+              "label": "Item Padding",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "item",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Item  ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "megamenu_item_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "megamenu_icon_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap ul[class*=\"df-vertical-col-added\"] li.df-vertical-menu-item .df_vertical_menu_item_elements_wrapper .df-vertical-menu-icon,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap ul[class*=\"df-vertical-col-added\"] li.df-vertical-menu-item .df_vertical_menu_item_elements_wrapper > img",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__mega_menu__icon_color": {
+              "groupSlug": "toggle_key__mega_menu",
+              "render": false,
+              "subName": "style_settings__mega_menu__icon_color",
+              "label": "Icon Color",
+              "priority": 1,
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "item",
+              "description": "Here you can define a custom color for icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu.df-vertical-col-added li .df_vertical_menu_item_elements_wrapper > .df-vertical-menu-icon",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu.df-vertical-col-added li a:hover > .df-vertical-menu-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "megamenu_icon_obj_settings.innerContent"
+            }
+          }
+        },
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 5,
+              "groupSlug": "toggle_key__mega_menu",
+              "render": false,
+              "label": "Icon/Image Margin",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "item",
+              "features": {
+                "sticky": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  .df-vertical-sub-menu.df-vertical-col-added li .df_vertical_menu_item_elements_wrapper .df-vertical-menu-icon,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  .df-vertical-sub-menu.df-vertical-col-added li .df_vertical_menu_item_elements_wrapper > img",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  .df-vertical-sub-menu.df-vertical-col-added li .df_vertical_menu_item_elements_wrapper:hover .df-vertical-menu-icon,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  .df-vertical-sub-menu.df-vertical-col-added li .df_vertical_menu_item_elements_wrapper:hover > img"
+                },
+                "css_type": "margin"
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon/Image ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "megamenu_icon_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      }
+    },
+    "megamenu_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li.df-vertical-menu-item .df-vertical-sub-menu.df-vertical-col-added ",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__mega_menu__columns": {
+              "groupSlug": "toggle_key__mega_menu",
+              "render": false,
+              "subName": "style_settings__mega_menu__columns",
+              "label": "Column Gap",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "container",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "style_settings__mega_menu__columns": "0px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li.df-vertical-menu-item .df-vertical-sub-menu.df-vertical-col-added"
+                },
+                "css_type": "gap",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              },
+              "attrName": "megamenu_wrapper_obj_settings.innerContent"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__mega_menu",
+              "render": false,
+              "label": "",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "container",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu.df-vertical-col-added",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-sub-menu.df-vertical-col-added:hover"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "megamenu_wrapper_obj_settings.decoration.background"
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__mega_menu",
+              "render": false,
+              "label": " Padding",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "container",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": " ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "padding": {
+                          "top": "15px",
+                          "right": "15px",
+                          "bottom": "15px",
+                          "left": "15px",
+                          "syncHorizontal": "",
+                          "syncVertical": ""
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "megamenu_wrapper_obj_settings.decoration.spacing"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__mega_menu",
+              "attrName": "megamenu_wrapper_obj_settings.decoration.border",
+              "tab_attribute": "toggle_key__mega_menu_tab_obj_settings",
+              "tab_slug": "container",
+              "label": "",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "animation_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "settings__menu_item_hover_animation": {
+              "groupSlug": "toggle_key__menu_item_hover_animation",
+              "render": true,
+              "subName": "settings__menu_item_hover_animation",
+              "label": "Enable Item Animation ",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__menu_item_hover_animation": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "settings__select_animation_type": {
+              "groupSlug": "toggle_key__menu_item_hover_animation",
+              "render": true,
+              "subName": "settings__select_animation_type",
+              "label": "Select Animation",
+              "description": "Selected Animation Applied on menu hover",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__select_animation_type": "item-hover-1"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__menu_item_hover_animation": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "item-hover-1": {
+                      "label": "Animation 1"
+                    },
+                    "item-hover-2": {
+                      "label": "Animation 2"
+                    },
+                    "item-hover-3": {
+                      "label": "Animation 3"
+                    }
+                  }
+                }
+              }
+            },
+            "settings__select_animation_color": {
+              "groupSlug": "toggle_key__menu_item_hover_animation",
+              "render": true,
+              "subName": "settings__select_animation_color",
+              "label": "Line Color",
+              "description": "Here you can define a custom line color.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__select_animation_color": "#0038f0"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__menu_item_hover_animation": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li.df-vertical-menu-item > .df_vertical_menu_item_elements_wrapper .df_vertical_border_hover_effect:after,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li.df-vertical-menu-item > .df_vertical_menu_item_elements_wrapper .df_vertical_border_hover_effect:before ",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  > li.df-vertical-menu-item > .df_vertical_menu_item_elements_wrapper .df_vertical_border_hover_effect:after,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li.df-vertical-menu-item > .df_vertical_menu_item_elements_wrapper .df_vertical_border_hover_effect:before "
+                },
+                "css_type": "background-color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "settings__animation__line_weight": {
+              "groupSlug": "toggle_key__menu_item_hover_animation",
+              "render": true,
+              "subName": "settings__animation__line_weight",
+              "label": "Line Weight",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__animation__line_weight": "2px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__menu_item_hover_animation": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li.df-vertical-menu-item > .df_vertical_menu_item_elements_wrapper .df_vertical_border_hover_effect:after , {$this->main_css_element} li.df-vertical-menu-item > .df_vertical_menu_item_elements_wrapper .df_vertical_border_hover_effect:before"
+                },
+                "css_type": "height",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 10,
+                  "maxLimit": 10,
+                  "step": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "hamburger_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-humberger-container",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__hamburger_style",
+              "attrName": "hamburger_obj_settings.decoration.font",
+              "label": "",
+              "render": false,
+              "tab_attribute": "toggle_key__hamburger_style_tab_obj_settings",
+              "tab_slug": "text",
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "14px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__hamburger_style",
+              "render": false,
+              "label": "",
+              "tab_attribute": "toggle_key__hamburger_style_tab_obj_settings",
+              "tab_slug": "container",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "hamburger_obj_settings.decoration.background"
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__hamburger_style",
+              "render": false,
+              "label": "Wrapper Padding",
+              "tab_attribute": "toggle_key__hamburger_style_tab_obj_settings",
+              "tab_slug": "container",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Wrapper "
+                }
+              },
+              "attrName": "hamburger_obj_settings.decoration.spacing"
+            }
+          }
+        },
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "settings__use_hamburger_for_mobile": {
+              "groupSlug": "toggle_key__settings",
+              "render": true,
+              "subName": "settings__use_hamburger_for_mobile",
+              "label": "Hamburger ",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__use_hamburger_for_mobile": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "settings__hamburger_menu_reveal_type": {
+              "groupSlug": "toggle_key__hamburger",
+              "render": true,
+              "subName": "settings__hamburger_menu_reveal_type",
+              "label": "Menu Reveal On",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__hamburger_menu_reveal_type": "df_hamburger_reveal_on_click"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__use_hamburger_for_mobile": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "df_hamburger_reveal_on_click": {
+                      "label": "Click"
+                    },
+                    "df_hamburger_reveal_on_hover": {
+                      "label": "Hover"
+                    }
+                  }
+                }
+              }
+            },
+            "settings__hamburger_text": {
+              "groupSlug": "toggle_key__hamburger",
+              "render": true,
+              "subName": "settings__hamburger_text",
+              "label": "Text",
+              "description": "Text for Hamburger.",
+              "features": {
+                "sticky": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__use_hamburger_for_mobile": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "settings__hamburger_icon_preset": {
+              "groupSlug": "toggle_key__hamburger",
+              "render": true,
+              "subName": "settings__hamburger_icon_preset",
+              "label": "Hamburger Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__hamburger_icon_preset": "icon1"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__use_hamburger_for_mobile": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "icon1": {
+                      "label": "Hamburger 1"
+                    },
+                    "icon2": {
+                      "label": "Hamburger 2"
+                    },
+                    "icon3": {
+                      "label": "Hamburger 3"
+                    },
+                    "icon4": {
+                      "label": "Hamburger 4"
+                    },
+                    "icon5": {
+                      "label": "Hamburger 5"
+                    }
+                  }
+                }
+              }
+            },
+            "settings__hamburger_icon_color": {
+              "groupSlug": "toggle_key__hamburger_style",
+              "render": false,
+              "subName": "settings__hamburger_icon_color",
+              "label": "Icon Color",
+              "tab_attribute": "toggle_key__hamburger_style_tab_obj_settings",
+              "tab_slug": "icon",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__hamburger_icon_color": "#000"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-humberger-container span.df-vertical-menu-hamburger-icon svg ",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-humberger-container:hover span.df-vertical-menu-hamburger-icon svg"
+                },
+                "css_type": "fill"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "hamburger_obj_settings.innerContent"
+            },
+            "style_settings__hamburger_icon_font_size": {
+              "groupSlug": "toggle_key__hamburger_style",
+              "render": false,
+              "subName": "style_settings__hamburger_icon_font_size",
+              "label": "Icon Size",
+              "tab_attribute": "toggle_key__hamburger_style_tab_obj_settings",
+              "tab_slug": "icon",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "style_settings__hamburger_icon_font_size": "14px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-humberger-container span.df-vertical-menu-hamburger-icon .hamburger"
+                },
+                "css_type": "height",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              },
+              "attrName": "hamburger_obj_settings.innerContent"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container .df-vertical-humberger-container  .df-vertical-menu-hamburger-text",
+              "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-humberger-container:hover .df-vertical-menu-hamburger-text"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "builder_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "settings__builder_visiblity": {
+              "groupSlug": "toggle_key__builder_view",
+              "render": true,
+              "subName": "settings__builder_visiblity",
+              "label": "Show Submenu on Builder",
+              "description": "When this setting is enabled, you will be able to see a preview of the nested submenu in the builder.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__builder_visiblity": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            }
+          }
+        }
+      }
+    },
+    "menu_item_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li > a",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "settings__select_menu_slug": {
+              "groupSlug": "toggle_key__content",
+              "render": true,
+              "subName": "settings__select_menu_slug",
+              "label": "Select Menu",
+              "description": "<p class=\"description\">Select a menu that should be used in the module. <a href=\"http://d5-generator.local/wp-admin/nav-menus.php\" target=\"_blank\">Click here to create new menu</a>.</p>",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__select_menu_slug": "none"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select-menu",
+                "props": {
+                  "options": {
+                    "none": {
+                      "label": "Select a menu"
+                    }
+                  }
+                }
+              }
+            },
+            "settings__clicked_menu_element_style": {
+              "groupSlug": "toggle_key__settings",
+              "render": true,
+              "priority": 1,
+              "subName": "settings__clicked_menu_element_style",
+              "label": "Active State Style on Clicked",
+              "description": "If disable active state style work only for current page item",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__clicked_menu_element_style": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "settings__submenu_reveal_type": "df-vertical-sub-menu-reveal-stack"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "style_settings__menu__item_gap": {
+              "groupSlug": "toggle_key__menu_items",
+              "render": true,
+              "subName": "style_settings__menu__item_gap",
+              "label": "Item Gap",
+              "priority": 0,
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "style_settings__menu__item_gap": "0px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li:not(:first-child),{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df-vertical-inside-mega-menu li:first-child"
+                },
+                "css_type": "margin-top",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "px",
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__menu_items",
+              "render": true,
+              "label": "",
+              "priority": 3,
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "menu_item_obj_settings.decoration.background"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__menu_items",
+              "attrName": "menu_item_obj_settings.decoration.border",
+              "label": "",
+              "priority": 7,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__menu_items",
+              "attrName": "menu_item_obj_settings.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "priority": 7,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__menu_items",
+              "render": true,
+              "label": "Menu items Padding",
+              "priority": 5,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Menu items ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "desktop": {
+                      "value": {
+                        "padding": {
+                          "top": "10px",
+                          "right": "10px",
+                          "bottom": "10px",
+                          "left": "10px",
+                          "syncHorizontal": "",
+                          "syncVertical": ""
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "menu_item_obj_settings.decoration.spacing"
+            }
+          },
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__text_style",
+              "attrName": "menu_item_obj_settings.decoration.font",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li > .df_vertical_menu_item_elements_wrapper"
+            }
+          }
+        },
+        "font": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "menu_tooltip_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li>.df_vertical_menu_item_elements_wrapper .df-vertical-nav-item-tooltip",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__tooltip",
+              "attrName": "menu_tooltip_obj_settings.decoration.font",
+              "tab_attribute": "toggle_key__tooltip_tab_obj_settings",
+              "tab_slug": "general",
+              "label": "",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__tooltip",
+              "render": false,
+              "label": "Tooltip Background",
+              "tab_attribute": "toggle_key__tooltip_tab_obj_settings",
+              "tab_slug": "general",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "menu_tooltip_obj_settings.decoration.background"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        },
+        "font": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "menu_badge_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li>.df_vertical_menu_item_elements_wrapper .df-vertical-nav-item-badge",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__badge",
+              "attrName": "menu_badge_obj_settings.decoration.font",
+              "label": "",
+              "tab_attribute": "toggle_key__badge_tab_obj_settings",
+              "tab_slug": "general",
+              "render": false,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "0.8em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__badge",
+              "render": false,
+              "label": "Background",
+              "tab_attribute": "toggle_key__badge_tab_obj_settings",
+              "tab_slug": "general",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li>.df_vertical_menu_item_elements_wrapper .df-vertical-nav-item-badge",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li>.df_vertical_menu_item_elements_wrapper:hover .df-vertical-nav-item-badge"
+                },
+                "important": true
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "menu_badge_obj_settings.decoration.background"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "background": {
+          "important": true
+        },
+        "font": {
+          "important": true
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "menu_icon_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li > .df_vertical_menu_item_elements_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__menu__icon_color": {
+              "groupSlug": "toggle_key__menu_items",
+              "render": true,
+              "subName": "style_settings__menu__icon_color",
+              "label": " Icon Color",
+              "priority": 1,
+              "description": "Here you can define a custom color for menu icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li>a>.df-vertical-menu-icon ",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li>a:hover>.df-vertical-menu-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "style_settings__menu__icon_font_size": {
+              "groupSlug": "toggle_key__menu_items",
+              "render": true,
+              "priority": 2,
+              "subName": "style_settings__menu__icon_font_size",
+              "label": "Icon Size",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "style_settings__menu__icon_font_size": "14px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav > li .df_vertical_menu_item_elements_wrapper span.df-vertical-menu-icon"
+                },
+                "css_type": "font-size",
+                "important": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "minLimit": 1,
+                  "max": 120,
+                  "maxLimit": 120,
+                  "step": 1
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__menu_items",
+              "render": true,
+              "priority": 6,
+              "label": "Icon/Image Margin",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon/Image ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              },
+              "attrName": "menu_icon_obj_settings.decoration.spacing"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  li > .df_vertical_menu_item_elements_wrapper .df-vertical-menu-icon,{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  li > .df_vertical_menu_item_elements_wrapper > img",
+              "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  li > a:hover .df-vertical-menu-icon , {{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav  li > a:hover > img"
+            }
+          }
+        }
+      }
+    },
+    "menu_active_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li[class*='current'] .df_vertical_menu_item_elements_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__menu__active__font_color": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "subName": "style_settings__menu__active__font_color",
+              "label": "Font Color",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "main_menu",
+              "description": "Here you can define a custom color for active menu font.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li[class*='current'] .df_vertical_menu_item_elements_wrapper",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li[class*='current'] a:hover"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "menu_active_obj_settings.innerContent"
+            },
+            "style_settings__menu__active__icon_color": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "subName": "style_settings__menu__active__icon_color",
+              "label": "Icon Color",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "main_menu",
+              "description": "Here you can define a custom color for active menu icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li[class*='current'] .df_vertical_menu_item_elements_wrapper>.df-vertical-menu-icon",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li[class*='current']>.df_vertical_menu_item_elements_wrapper:hover>.df-vertical-menu-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              },
+              "attrName": "menu_active_obj_settings.innerContent"
+            }
+          }
+        },
+        "decoration": {
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "toggle_key__menu__active_state",
+              "render": false,
+              "label": "Item",
+              "tab_attribute": "toggle_key__menu__active_state_tab_obj_settings",
+              "tab_slug": "main_menu",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li[class*='current'] .df_vertical_menu_item_elements_wrapper",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li[class*='current'] a:hover"
+                }
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      },
+                      "blend": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "menu_active_obj_settings.decoration.background"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "alignment_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "style_settings__alignment": {
+              "groupSlug": "toggle_key__alignment",
+              "render": true,
+              "subName": "style_settings__alignment",
+              "label": "Alignment",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "style_settings__alignment": "left"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav .df_vertical_menu_main_container .df-vertical-menu-nav-wrap ul[class*=\"df-vertical-menu-nav-level-\"] li.df-vertical-menu-item .df_vertical_menu_item_elements_wrapper ",
+                  "hover": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav li[class*='current']>.df_vertical_menu_item_elements_wrapper:hover>.df-vertical-menu-icon"
+                },
+                "css_type": "justify-content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "options": {
+                    "flex-start": {
+                      "title": "divi/Left",
+                      "icon": "divi/align-left"
+                    },
+                    "center": {
+                      "title": "divi/Center",
+                      "icon": "divi/align-center"
+                    },
+                    "flex-end": {
+                      "title": "divi/Right",
+                      "icon": "divi/align-right"
+                    },
+                    "left": {
+                      "title": "divi/Justified",
+                      "icon": "divi/text-align-justify"
+                    }
+                  },
+                  "showLabel": true
+                }
+              },
+              "multipleChoices": false
+            },
+            "style_settings__badge__alignment": {
+              "groupSlug": "toggle_key__badge",
+              "render": false,
+              "subName": "style_settings__badge__alignment",
+              "label": "Badge Alignment",
+              "priority": 1,
+              "tab_attribute": "toggle_key__badge_tab_obj_settings",
+              "tab_slug": "general",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "multipleChoices": false,
+              "attrName": "alignment_obj_settings.innerContent"
+            }
+          }
+        }
+      }
+    },
+    "badge_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "settings__badge_visiblity": {
+              "groupSlug": "toggle_key__settings",
+              "priority": 2,
+              "render": true,
+              "subName": "settings__badge_visiblity",
+              "label": "Badge ",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__badge_visiblity": "on"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tooltip_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}} .df_vertical_menu_main_container .df-vertical-menu-nav-wrap  ul.df-vertical-menu-nav",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "settings__tooltip_visiblity": {
+              "groupSlug": "toggle_key__settings",
+              "render": true,
+              "priority": 3,
+              "subName": "settings__tooltip_visiblity",
+              "label": "Tooltip ",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "settings__tooltip_visiblity": "on"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            }
+          }
+        }
+      }
+    },
+    "toggle_key__tooltip_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "toggle_key__tooltip",
+            "tab_slug": "toggle_key__tooltip_tab_obj_settings",
+            "module_slug": "difl/vertical-menu",
+            "tabs": {
+              "general": {
+                "label": "General",
+                "components": []
+              },
+              "sub-menu": {
+                "label": "Sub menu",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "toggle_key__badge_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "toggle_key__badge",
+            "tab_slug": "toggle_key__badge_tab_obj_settings",
+            "module_slug": "difl/vertical-menu",
+            "tabs": {
+              "general": {
+                "label": "General",
+                "components": []
+              },
+              "sub-menu": {
+                "label": "Sub menu",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "toggle_key__hamburger_style_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "toggle_key__hamburger_style",
+            "tab_slug": "toggle_key__hamburger_style_tab_obj_settings",
+            "module_slug": "difl/vertical-menu",
+            "tabs": {
+              "container": {
+                "label": "Container",
+                "components": []
+              },
+              "text": {
+                "label": "Text",
+                "components": []
+              },
+              "icon": {
+                "label": "Icon",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "toggle_key__sub_menu_items_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "toggle_key__sub_menu_items",
+            "tab_slug": "toggle_key__sub_menu_items_tab_obj_settings",
+            "module_slug": "difl/vertical-menu",
+            "tabs": {
+              "container": {
+                "label": "Container",
+                "components": []
+              },
+              "item": {
+                "label": "Item",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "toggle_key__mega_menu_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "toggle_key__mega_menu",
+            "tab_slug": "toggle_key__mega_menu_tab_obj_settings",
+            "module_slug": "difl/vertical-menu",
+            "tabs": {
+              "container": {
+                "label": "Container",
+                "components": []
+              },
+              "item": {
+                "label": "Item",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    },
+    "toggle_key__menu__active_state_tab_obj_settings": {
+      "type": "object",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "toggle_key__menu__active_state",
+            "tab_slug": "toggle_key__menu__active_state_tab_obj_settings",
+            "module_slug": "difl/vertical-menu",
+            "tabs": {
+              "main_menu": {
+                "label": "Main menu",
+                "components": []
+              },
+              "sub_menu": {
+                "label": "Sub menu",
+                "components": []
+              },
+              "mega_menu": {
+                "label": "Mega menu",
+                "components": []
+              }
+            },
+            "render": true,
+            "component": {
+              "type": "field",
+              "name": "difl/custom-tab"
+            }
+          }
+        }
+      }
+    }
+  }
+}

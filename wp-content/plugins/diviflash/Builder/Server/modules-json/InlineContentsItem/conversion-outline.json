@@ -1,0 +1,69 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "disabled_on": "module.decoration.disabledOn",
+    "display_conditions": "module.decoration.conditions",
+    "background": "module.decoration.background",
+    "fonts": {
+      "content_text": "content_text.decoration.font"
+    },
+    "borders": {
+      "default": "module.decoration.border"
+    },
+    "box_shadow": {
+      "default": "module.decoration.boxShadow"
+    },
+    "height": "module.decoration.sizing",
+    "link_options": "module.advanced.link",
+    "margin_padding": "module.decoration.spacing",
+    "max_width": "module.decoration.sizing",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "filters": {
+      "default": "module.decoration.filters"
+    }
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after",
+    "free_form": "css.*.freeForm"
+  },
+  "module": {
+    "content_type": "content_type.innerContent.*",
+    "content_text": "content_text.innerContent.*",
+    "content_icon": "content_icon.innerContent.*",
+    "content_image": "content_image.innerContent.*",
+    "icon_color": "icon_color.innerContent.*",
+    "icon_size": "icon_size.innerContent.*",
+    "media_size": "media_size.innerContent.*",
+    "background_bgcolor": "module.decoration.background.*.color",
+    "background_bg_color": "module.decoration.background.*.color",
+    "background_use_gradient": "module.decoration.background.*.gradient.enabled",
+    "background_color_gradient_1": "module.decoration.background.*.gradient.stops[0].color",
+    "background_color_gradient_2": "module.decoration.background.*.gradient.stops[1].color",
+    "background_gradient_type": "module.decoration.background.*.gradient.type",
+    "background_radial_direction": "module.decoration.background.*.gradient.directionRadial",
+    "background_gradient_direction": "module.decoration.background.*.gradient.direction",
+    "background_start_position": "module.decoration.background.*.gradient.stops[0].position",
+    "background_end_position": "module.decoration.background.*.gradient.stops[1].position",
+    "background_above_image": "module.decoration.background.*.gradient.overlaysImage",
+    "background_background_image": "module.decoration.background.*.image.url",
+    "background_background_image_size": "module.decoration.background.*.image.size",
+    "background_size_width": "module.decoration.background.*.image.width",
+    "background_size_height": "module.decoration.background.*.image.height",
+    "background_background_image_position": "module.decoration.background.*.image.position",
+    "background_position_horizontal": "module.decoration.background.*.image.horizontalOffset",
+    "background_position_vertical": "module.decoration.background.*.image.verticalOffset",
+    "background_background_image_repeat": "module.decoration.background.*.image.repeat"
+  },
+  "valueExpansionFunctionMap": {
+    "content_icon": "D4ToD5Icon"
+  }
+}

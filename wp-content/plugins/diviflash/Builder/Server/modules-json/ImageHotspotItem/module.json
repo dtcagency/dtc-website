@@ -1,0 +1,951 @@
+{
+  "name": "difl/imagehotspotitem",
+  "d4Shortcode": "difl_imagehotspotitem",
+  "title": "Image Hotspot Item",
+  "titles": "Image Hotspot Items",
+  "category": "child-module",
+  "parentsName": [
+    "difl/imagehotspot"
+  ],
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "link": {
+            "item": {
+              "groupSlug": "contentLink",
+              "component": {
+                "props": {
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "attributes": {},
+          "border": {},
+          "boxShadow": {},
+          "transform": {},
+          "conditions": {},
+          "transition": {},
+          "disabledOn": {},
+          "overflow": {},
+          "position": {},
+          "interactions": {},
+          "scroll": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 10,
+              "render": true,
+              "groupSlug": "advancedScrollModule",
+              "component": {
+                "type": "group",
+                "name": "divi/scroll",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "sticky": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 10,
+              "render": true,
+              "groupSlug": "advancedScrollModule",
+              "component": {
+                "type": "group",
+                "name": "divi/sticky",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "zIndex": {}
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Image Hotspot Item"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_imagehotspot .difl_imagehotspotitem{{selector}}",
+              "hover": ".difl_imagehotspot .difl_imagehotspotitem{{selector}}:hover"
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_imagehotspot .difl_imagehotspotitem{{selector}}",
+              "hover": ".difl_imagehotspot .difl_imagehotspotitem{{selector}}:hover"
+            }
+          }
+        },
+        "transform": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": ".difl_imagehotspot .difl_imagehotspotitem{{selector}}",
+              "hover": ".difl_imagehotspot .difl_imagehotspotitem{{selector}}:hover"
+            }
+          }
+        }
+      }
+    },
+    "admin_label": {
+      "type": "object",
+      "selector": "",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "admin_label",
+            "render": true,
+            "attrName": "admin_label.innerContent",
+            "label": "Admin Label",
+            "features": {
+              "sticky": false,
+              "hover": false,
+              "responsive": false,
+              "preset": "content"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/text"
+            }
+          }
+        }
+      }
+    },
+    "spot_content": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "spot_type": {
+              "groupSlug": "spot",
+              "render": true,
+              "attrName": "spot_content.innerContent",
+              "subName": "spot_type",
+              "label": "Spot Type",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "icon": {
+                      "label": "Icon"
+                    },
+                    "text": {
+                      "label": "Text"
+                    },
+                    "empty": {
+                      "label": "Blank"
+                    }
+                  }
+                }
+              }
+            },
+            "use_image_as_icon": {
+              "groupSlug": "spot",
+              "render": true,
+              "attrName": "spot_content.innerContent",
+              "subName": "use_image_as_icon",
+              "label": "Use Image as Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              },
+              "show_if": {
+                "spot_type": "icon"
+              }
+            },
+            "font_icon": {
+              "groupSlug": "spot",
+              "render": true,
+              "attrName": "spot_content.innerContent",
+              "subName": "font_icon",
+              "label": "Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              },
+              "show_if": {
+                "use_image_as_icon": "off",
+                "spot_type": [
+                  "icon",
+                  "both_icon_and_text"
+                ]
+              }
+            },
+            "spot_text": {
+              "groupSlug": "spot",
+              "render": true,
+              "attrName": "spot_content.innerContent",
+              "subName": "spot_text",
+              "label": "Spot Text",
+              "description": "Spot Text. We can use Html tag also",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "preset": "content"
+              },
+              "component": {
+                "name": "divi/code",
+                "type": "field",
+                "props": {
+                  "mode": "html"
+                }
+              },
+              "show_if": {
+                "spot_type": [
+                  "text",
+                  "both_icon_and_text"
+                ]
+              }
+            },
+            "image_as_icon": {
+              "groupSlug": "spot",
+              "render": true,
+              "attrName": "spot_content.innerContent",
+              "subName": "image_as_icon",
+              "label": "Image",
+              "features": {
+                "dynamicContent": {
+                  "type": "image"
+                },
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "syncImageData": {
+                    "src": "image_as_icon",
+                    "id": true,
+                    "alt": true,
+                    "titleText": true
+                  }
+                }
+              },
+              "show_if": {
+                "use_image_as_icon": "on",
+                "spot_type": [
+                  "icon",
+                  "both_icon_and_text"
+                ]
+              }
+            },
+            "image_alt_text": {
+              "groupSlug": "spot",
+              "render": true,
+              "attrName": "spot_content.innerContent",
+              "subName": "image_alt_text",
+              "label": "Image Alt Text",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              },
+              "show_if": {
+                "use_image_as_icon": "on",
+                "spot_type": [
+                  "icon",
+                  "both_icon_and_text"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "spot_type": "icon",
+              "use_image_as_icon": "off"
+            }
+          }
+        }
+      }
+    },
+    "spot_settings": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "left_position": {
+              "groupSlug": "spot_settings",
+              "render": true,
+              "attrName": "spot_settings.innerContent",
+              "subName": "left_position",
+              "label": "Left Position",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "%",
+                  "min": 0,
+                  "max": 100,
+                  "step": 0.1,
+                  "defaultValue": "50%"
+                }
+              }
+            },
+            "top_position": {
+              "groupSlug": "spot_settings",
+              "render": true,
+              "attrName": "spot_settings.innerContent",
+              "subName": "top_position",
+              "label": "Top Position",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px",
+                    "%"
+                  ],
+                  "defaultUnit": "%",
+                  "min": 0,
+                  "max": 100,
+                  "step": 0.1,
+                  "defaultValue": "30%"
+                }
+              }
+            },
+            "variable_width": {
+              "groupSlug": "spot_settings",
+              "render": true,
+              "attrName": "spot_settings.innerContent",
+              "subName": "variable_width",
+              "label": "Variable Width",
+              "description": "Spot Variable Width.",
+              "defaultValue": "on",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle",
+                "props": {
+                  "defaultValue": "on"
+                }
+              }
+            },
+            "spot_width": {
+              "groupSlug": "spot_settings",
+              "render": true,
+              "attrName": "spot_settings.innerContent",
+              "subName": "spot_width",
+              "label": "Max Spot Width",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": true
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "max": 200,
+                  "step": 0,
+                  "defaultValue": 50
+                }
+              },
+              "show_if": {
+                "variable_width": "on"
+              }
+            },
+            "spot_animation": {
+              "groupSlug": "spot_settings",
+              "render": true,
+              "attrName": "spot_settings.innerContent",
+              "subName": "spot_animation",
+              "label": "Spot Animation",
+              "description": "Spot Animation.",
+              "defaultValue": "off",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "spot_animation_style": {
+              "groupSlug": "spot_settings",
+              "render": true,
+              "attrName": "spot_settings.innerContent",
+              "subName": "spot_animation_style",
+              "label": "Select Style",
+              "description": " style 1 and style 2 use background-color , style 3 use border-color, style 4 and style 5 use color. To use style 7 and Style 8 you should spot type Blank",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "style_1": {
+                      "label": "Style 1"
+                    },
+                    "style_2": {
+                      "label": "Style 2"
+                    },
+                    "style_3": {
+                      "label": "Style 3"
+                    },
+                    "style_4": {
+                      "label": "Style 4"
+                    },
+                    "style_5": {
+                      "label": "Style 5"
+                    },
+                    "style_6": {
+                      "label": "Style 6"
+                    },
+                    "style_7": {
+                      "label": "Style 7"
+                    },
+                    "style_8": {
+                      "label": "Style 8"
+                    }
+                  },
+                  "defaultValue": "style_1"
+                }
+              },
+              "show_if": {
+                "spot_animation": "on"
+              }
+            },
+            "animation_color": {
+              "groupSlug": "spot_settings",
+              "render": true,
+              "attrName": "spot_settings.innerContent",
+              "subName": "animation_color",
+              "label": "Animation Color",
+              "description": "Here you can define a custom color for your Animation.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker",
+                "props": {}
+              },
+              "show_if": {
+                "spot_animation": "on"
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "variable_width": "on"
+            }
+          }
+        }
+      },
+      "default": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "left_position": "50%",
+              "top_position": "30%",
+              "variable_width": "on",
+              "spot_width": "50px",
+              "spot_animation": "off",
+              "spot_animation_style": "style_1"
+            }
+          }
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "selector": "",
+      "inlineEditor": true,
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "tooltip_content",
+            "render": true,
+            "attrName": "content.innerContent",
+            "label": "Tooltip Content",
+            "description": "Note: Html tags, shortcode are supported and shortcode will be view only frontend ",
+            "features": {
+              "dynamicContent": {
+                "type": "text"
+              },
+              "sticky": false,
+              "hover": false,
+              "responsive": false,
+              "preset": "content"
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/richtext"
+            }
+          }
+        }
+      }
+    },
+    "spot_design": {
+      "type": "object",
+      "selector": "",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "image_as_icon_width": {
+              "groupSlug": "spot_icon_image",
+              "render": true,
+              "attrName": "spot_design.innerContent",
+              "subName": "image_as_icon_width",
+              "label": "Image as Icon Width(%)",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "max": 100,
+                  "step": 0
+                }
+              },
+              "show_if": {
+                "use_image_as_icon": "on",
+                "spot_type": [
+                  "icon",
+                  "both_icon_and_text"
+                ]
+              }
+            },
+            "icon_color": {
+              "groupSlug": "spot_icon_image",
+              "render": true,
+              "attrName": "spot_design.innerContent",
+              "subName": "icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "sticky": false,
+                "responsive": true,
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker",
+                "props": {}
+              },
+              "show_if": {
+                "use_image_as_icon": "off",
+                "spot_type": [
+                  "icon",
+                  "both_icon_and_text"
+                ]
+              }
+            },
+            "icon_size": {
+              "groupSlug": "spot_icon_image",
+              "render": true,
+              "attrName": "spot_design.innerContent",
+              "subName": "icon_size",
+              "label": "Icon Size",
+              "features": {
+                "sticky": false,
+                "responsive": true,
+                "hover": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "max": "120",
+                  "step": 0
+                }
+              },
+              "show_if": {
+                "use_image_as_icon": "off",
+                "spot_type": [
+                  "icon",
+                  "both_icon_and_text"
+                ]
+              }
+            }
+          }
+        },
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "spot_item_design",
+              "attrName": "spot_design.decoration.font",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "16px",
+                          "lineHeight": "0em"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "spot_icon_image",
+              "attrName": "spot_design.decoration.border",
+              "label": "Spot Image",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Spot Image"
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "spot_background",
+              "render": true,
+              "attrName": "spot_background.innerContent",
+              "label": "Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "render": true,
+              "label": "Spot Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Spot ",
+                  "fields": {
+                    "margin": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_imagehotspot .difl_imagehotspotitem{{selector}} .difl_marker_wrapper",
+              "hover": ".difl_imagehotspot .difl_imagehotspotitem{{selector}}:hover .difl_marker_wrapper"
+            }
+          },
+          "important": {
+            "font": {
+              "desktop": {
+                "value": {
+                  "color": true,
+                  "line-height": true
+                }
+              }
+            }
+          }
+        },
+        "border": {
+          "selectors": {
+            "desktop": {
+              "value": ".difl_imagehotspot {{selector}} .difl_image_marker img , .difl_imagehotspot {{selector}} .et-pb-icon.df-image-hotspot-icon",
+              "hover": ".difl_imagehotspot {{selector}}:hover .difl_image_marker img , .difl_imagehotspot {{selector}}:hover .et-pb-icon.df-image-hotspot-icon"
+            }
+          }
+        },
+        "background": {
+          "selector": ".difl_imagehotspot .difl_imagehotspot_wrapper {{selector}}.difl_imagehotspotitem, .difl_imagehotspot .difl_imagehotspot_wrapper {{selector}}.difl_imagehotspotitem:hover"
+        },
+        "spacing": {
+          "selector": ".difl_imagehotspot {{selector}}"
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "image_as_icon_width": "32px",
+              "icon_size": "36px"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {},
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "spot": {
+        "panel": "content",
+        "groupName": "spot",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spot Content"
+          }
+        }
+      },
+      "spot_settings": {
+        "panel": "content",
+        "groupName": "spot_settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spot Settings"
+          }
+        }
+      },
+      "tooltip_content": {
+        "panel": "content",
+        "groupName": "tooltip_content",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Tooltip content"
+          }
+        }
+      },
+      "spot_background": {
+        "panel": "content",
+        "groupName": "spot_background",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spot Background"
+          }
+        }
+      },
+      "contentLink": {
+        "panel": "content",
+        "groupName": "link",
+        "priority": 100,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Link",
+            "preset": "content"
+          }
+        }
+      },
+      "spot_item_design": {
+        "panel": "design",
+        "groupName": "spot_item_design",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spot Text"
+          }
+        }
+      },
+      "spot_icon_image": {
+        "panel": "design",
+        "groupName": "spot_icon_image",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spot Icon/Image"
+          }
+        }
+      },
+      "margin_padding": {
+        "panel": "design",
+        "groupName": "margin_padding",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spacing"
+          }
+        }
+      }
+    }
+  }
+}

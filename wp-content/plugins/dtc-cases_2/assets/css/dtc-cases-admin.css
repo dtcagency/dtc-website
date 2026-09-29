@@ -1,0 +1,400 @@
+/* =============================================================================
+   DTC Cases Module — Admin Styles
+   ============================================================================= */
+
+.dtc-cases-field {
+	margin: 0 0 20px;
+}
+
+.dtc-cases-field label,
+.dtc-cases-field > p {
+	display: block;
+	margin-bottom: 6px;
+}
+
+.dtc-cases-field .widefat {
+	width: 100%;
+}
+
+/* Multiple-image container */
+.dtc-cases-images-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	min-height: 48px;
+	padding: 10px;
+	background: #f6f7f7;
+	border: 1px dashed #c3c4c7;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.dtc-cases-img-item {
+	position: relative;
+	display: inline-flex;
+	flex-shrink: 0;
+}
+
+.dtc-cases-img-item img {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	display: block;
+	border-radius: 3px;
+	border: 1px solid #dcdcde;
+}
+
+/* ── Drag handle — subtle grip icon at bottom of thumbnail ── */
+.dtc-cases-drag-handle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 22px;
+	background: rgba(0, 0, 0, 0.30);
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0 0 3px 3px;
+	opacity: 0.5;          /* always visible so users know it's there */
+	transition: opacity 0.15s ease;
+	z-index: 2;
+	pointer-events: none;  /* whole card is the drag target */
+}
+
+.dtc-cases-img-item:hover .dtc-cases-drag-handle {
+	opacity: 1;
+}
+
+/* Blue dashed placeholder while dragging */
+.dtc-cases-img-placeholder {
+	width: 80px;
+	height: 80px;
+	background: #e5f0fb;
+	border: 2px dashed #2271b1;
+	border-radius: 3px;
+	flex-shrink: 0;
+	visibility: visible !important;
+}
+
+.dtc-cases-remove-image {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: none;
+	background: #d63638;
+	color: #fff;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	z-index: 3;
+	transition: background 0.15s ease;
+}
+
+.dtc-cases-remove-image:hover {
+	background: #b02a2c;
+}
+
+/* Single image uploader */
+.dtc-cases-single-image-wrap {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.dtc-cases-single-preview img {
+	width: auto;
+	max-width: 160px;
+	max-height: 120px;
+	display: block;
+	border-radius: 4px;
+	border: 1px solid #dcdcde;
+	object-fit: cover;
+}
+
+/* Drag-sort hint */
+.dtc-cases-images-container.dtc-cases-sortable-active {
+	background: #f0f6fc;
+	border-color: #2271b1;
+}
+
+/* Whole item has grab cursor — no hidden handle needed */
+.dtc-cases-img-item {
+	cursor: grab;
+}
+.dtc-cases-img-item:active,
+.ui-sortable-helper.dtc-cases-img-item {
+	cursor: grabbing;
+}
+
+
+/* =============================================================================
+   VISUAL LAYOUT PREVIEW  (per-section slot-based image picker)
+   ============================================================================= */
+
+/* ── Shared grid container ── */
+.dtc-cases-layout-preview {
+	display: grid;
+	gap: 10px;
+	margin-bottom: 6px;
+}
+
+/* ── Brand: portrait (top-right) + small (bottom-left) + landscape (bottom-right) ── */
+.dtc-layout-brand {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 70px;
+}
+.dtc-layout-brand .dtc-cases-slot[data-slot="0"] { /* portrait — top right */
+	grid-column: 2;
+	grid-row: 1;
+	aspect-ratio: 3 / 4;
+}
+.dtc-layout-brand .dtc-cases-slot[data-slot="1"] { /* small — bottom left */
+	grid-column: 1;
+	grid-row: 2;
+	aspect-ratio: 4 / 3;
+}
+.dtc-layout-brand .dtc-cases-slot[data-slot="2"] { /* large landscape — bottom right */
+	grid-column: 2;
+	grid-row: 2;
+	aspect-ratio: 16 / 7;
+}
+
+/* ── Strategy: single tall image right ──────────────────────────────────────── */
+.dtc-layout-strategy {
+	grid-template-columns: 1fr;
+}
+.dtc-layout-strategy .dtc-cases-slot[data-slot="0"] {
+	aspect-ratio: 2 / 3;
+}
+
+/* ── Creation: 4 slots — top row 2col · mid row right · bottom full-width ───── */
+.dtc-layout-creation {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 8px;
+}
+.dtc-layout-creation .dtc-cases-slot[data-slot="1"] { /* img-1: top-left */
+	grid-column: 1;
+	grid-row: 1;
+	aspect-ratio: 4 / 3;
+}
+.dtc-layout-creation .dtc-cases-slot[data-slot="2"] { /* img-2: top-right */
+	grid-column: 2;
+	grid-row: 1;
+	aspect-ratio: 4 / 3;
+}
+.dtc-layout-creation .dtc-cases-slot[data-slot="3"] { /* img-3: mid right */
+	grid-column: 2;
+	grid-row: 2;
+	aspect-ratio: 4 / 3;
+}
+.dtc-layout-creation .dtc-cases-slot[data-slot="0"] { /* img-4: full-width bottom */
+	grid-column: 1 / -1;
+	grid-row: 3;
+	aspect-ratio: 16 / 5;
+}
+
+/* ── Growth: large main (right) · small below text (left) ────────────────────── */
+.dtc-layout-growth {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 70px auto;
+}
+.dtc-layout-growth .dtc-cases-slot[data-slot="0"] { /* large main → right column, full height */
+	grid-column: 2;
+	grid-row: 1 / 3;
+	aspect-ratio: unset;
+	min-height: 200px;
+}
+.dtc-layout-growth .dtc-cases-slot[data-slot="1"] { /* small → left column, below text */
+	grid-column: 1;
+	grid-row: 2;
+	aspect-ratio: 16 / 9;
+}
+.dtc-layout-growth .dtc-cases-slot[data-slot="2"] {
+	display: none;
+}
+
+/* ── Individual slot ── */
+.dtc-cases-slot {
+	position: relative;
+	background: #f0f0f0;
+	border: 2px dashed #c3c4c7;
+	border-radius: 6px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: border-color 0.15s ease, background 0.15s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dtc-cases-slot:hover {
+	border-color: #2271b1;
+	background: #f0f6fc;
+}
+
+.dtc-cases-slot.has-image {
+	border-style: solid;
+	border-color: #dcdcde;
+}
+.dtc-cases-slot.has-image:hover {
+	border-color: #2271b1;
+}
+
+/* Actual image fills the slot */
+.dtc-cases-slot__img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	pointer-events: none;
+}
+
+/* Placeholder shown when empty; hidden behind image when filled */
+.dtc-cases-slot__placeholder {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	color: #9ca3af;
+	text-align: center;
+	padding: 16px;
+	pointer-events: none;
+	transition: opacity 0.15s ease;
+}
+
+.dtc-cases-slot.has-image .dtc-cases-slot__placeholder {
+	/* Keep visible as a faint "change" hint on hover */
+	opacity: 0;
+}
+
+.dtc-cases-slot.has-image:hover .dtc-cases-slot__placeholder {
+	opacity: 0; /* image speaks for itself; remove button is enough affordance */
+}
+
+.dtc-cases-slot__label {
+	font-size: 11px;
+	line-height: 1.4;
+	color: #6b7280;
+	max-width: 120px;
+}
+
+/* ×-button to remove an image */
+.dtc-cases-slot__remove {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: none;
+	background: rgba(0, 0, 0, 0.55);
+	color: #fff;
+	cursor: pointer;
+	font-size: 15px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	z-index: 10;
+	opacity: 0;
+	transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.dtc-cases-slot:hover .dtc-cases-slot__remove {
+	opacity: 1;
+}
+
+.dtc-cases-slot__remove:hover {
+	background: #d63638;
+}
+
+
+/* =============================================================================
+   Cases list table — drag-and-drop reordering
+   ============================================================================= */
+
+/* Drag handle in the dtc_order column */
+.dtc-drag-handle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: #b0b0b0;
+	cursor: grab;
+	padding: 4px;
+	border-radius: 3px;
+	transition: color 0.15s ease, background 0.15s ease;
+}
+
+.dtc-drag-handle:hover {
+	color: #555;
+	background: #f0f0f0;
+}
+
+.dtc-drag-handle:active,
+.ui-sortable-helper .dtc-drag-handle {
+	cursor: grabbing;
+	color: #2271b1;
+}
+
+/* Row while being dragged */
+.ui-sortable-helper {
+	display: table !important;
+	background: #fff !important;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14) !important;
+	outline: 2px solid #2271b1;
+}
+
+/* Placeholder row */
+.dtc-row-placeholder {
+	background: #f0f6fc !important;
+	outline: 2px dashed #2271b1;
+}
+
+.dtc-row-placeholder td {
+	visibility: hidden;
+}
+
+/* Status notice above the list table */
+.dtc-order-notice {
+	display: none;
+	padding: 8px 14px;
+	margin: 0 0 12px;
+	border-radius: 3px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.dtc-order-notice.is-saving {
+	background: #f0f6fc;
+	border-left: 4px solid #2271b1;
+	color: #2271b1;
+}
+
+.dtc-order-notice.is-saved {
+	background: #edfaef;
+	border-left: 4px solid #1d8348;
+	color: #1d8348;
+}
+
+.dtc-order-notice.is-error {
+	background: #fef6f6;
+	border-left: 4px solid #c0392b;
+	color: #c0392b;
+}

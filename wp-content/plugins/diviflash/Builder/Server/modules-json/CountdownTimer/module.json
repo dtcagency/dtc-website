@@ -1,0 +1,2059 @@
+{
+    "name": "difl/countdowntimer",
+    "d4Shortcode": "difl_countdowntimer",
+    "title": "Advanced Countdown Timer",
+    "titles": "Advanced Countdown Timers",
+    "category": "module",
+    "moduleIcon": "difl/countdowntimer",
+    "childrenName": [],
+    "allowAllElements": false,
+    "customCssFields": {
+        "timer_wrapper": {
+            "subName": "timer_wrapper",
+            "label": "Timer Wrapper",
+            "selectorSuffix": " .df_countdown_wrapper"
+        },
+        "unit_box": {
+            "subName": "unit_box",
+            "label": "Unit Box",
+            "selectorSuffix": " .df_countdown_unit"
+        },
+        "unit_number": {
+            "subName": "unit_number",
+            "label": "Unit Number",
+            "selectorSuffix": " .df_countdown_number"
+        },
+        "unit_label": {
+            "subName": "unit_label",
+            "label": "Unit Label",
+            "selectorSuffix": " .df_countdown_label"
+        },
+        "separator": {
+            "subName": "separator",
+            "label": "Separator",
+            "selectorSuffix": " .df_countdown_separator"
+        },
+        "flip_card": {
+            "subName": "flip_card",
+            "label": "Flip Card",
+            "selectorSuffix": " .df_flip_card"
+        },
+        "split_flip_card": {
+            "subName": "split_flip_card",
+            "label": "Split Flip Card",
+            "selectorSuffix": " .df_split_flip_card"
+        },
+        "circle_ring": {
+            "subName": "circle_ring",
+            "label": "Circle Ring",
+            "selectorSuffix": " .df_circle_ring"
+        },
+        "progress_track": {
+            "subName": "progress_track",
+            "label": "Progress Track",
+            "selectorSuffix": " .df_progress_track"
+        },
+        "progress_fill": {
+            "subName": "progress_fill",
+            "label": "Progress Fill",
+            "selectorSuffix": " .df_progress_fill"
+        },
+        "expired_message": {
+            "subName": "expired_message",
+            "label": "Expired Message",
+            "selectorSuffix": " .df_countdown_message"
+        }
+    },
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label",
+                            "props": { "groupLabel": "Meta" }
+                        }
+                    }
+                },
+                "advanced": {
+                    "link": {
+                        "item": {
+                            "groupSlug": "contentLink"
+                        }
+                    }
+                },
+                "decoration": {
+                    "attributes": {},
+                    "background": {},
+                    "spacing": {},
+                    "border": {},
+                    "boxShadow": {},
+                    "sizing": {},
+                    "scroll": {},
+                    "overflow": {},
+                    "filters": {},
+                    "transform": {},
+                    "animation": {},
+                    "position": {},
+                    "sticky": {},
+                    "zIndex": {},
+                    "conditions": {},
+                    "disabledOn": {},
+                    "transition": {},
+                    "interactions": {}
+                }
+            },
+            "styleProps": {
+                "spacing": {
+                    "important": true
+                }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "Advanced Countdown Timer"
+                        }
+                    }
+                }
+            }
+        },
+        "timer_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "countdown_type": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "countdown_type",
+                            "label": "Countdown Type",
+                            "description": "Fixed date, evergreen (per-visitor), recurring, or count-up timer.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "fixed": { "label": "Fixed Date" },
+                                        "evergreen": { "label": "Evergreen" },
+                                        "recurring": { "label": "Recurring" },
+                                        "count_up": { "label": "Count Up (Time Since)" }
+                                    }
+                                }
+                            }
+                        },
+                        "target_date": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "target_date",
+                            "label": "Target Date & Time",
+                            "description": "The date and time to count down to.",
+                            "render": true,
+                            "show_if": { "countdown_type": "fixed" },
+                            "features": {
+                                "sticky": false,
+                                "responsive": false,
+                                "hover": false
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/timepicker"
+                            }
+                        },
+                        "target_timezone": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "target_timezone",
+                            "label": "Timezone",
+                            "description": "Timezone for the target date and time.",
+                            "render": true,
+                            "show_if": { "countdown_type": "fixed" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "wp": { "label": "WordPress Settings" },
+                                        "visitor": { "label": "Visitor's Local Time" },
+                                        "UTC": { "label": "UTC (GMT+0)" },
+                                        "America/New_York": { "label": "Eastern Time (ET)" },
+                                        "America/Chicago": { "label": "Central Time (CT)" },
+                                        "America/Denver": { "label": "Mountain Time (MT)" },
+                                        "America/Los_Angeles": { "label": "Pacific Time (PT)" },
+                                        "Europe/London": { "label": "London (GMT/BST)" },
+                                        "Europe/Paris": { "label": "Central Europe (CET)" },
+                                        "Europe/Berlin": { "label": "Berlin (CET)" },
+                                        "Asia/Dubai": { "label": "Dubai (GST, GMT+4)" },
+                                        "Asia/Kolkata": { "label": "India (IST, GMT+5:30)" },
+                                        "Asia/Bangkok": { "label": "Bangkok (ICT, GMT+7)" },
+                                        "Asia/Shanghai": { "label": "China (CST, GMT+8)" },
+                                        "Asia/Tokyo": { "label": "Tokyo (JST, GMT+9)" },
+                                        "Australia/Sydney": { "label": "Sydney (AEST, GMT+10)" },
+                                        "Pacific/Auckland": { "label": "New Zealand (NZST, GMT+12)" }
+                                    }
+                                }
+                            }
+                        },
+                        "evergreen_days": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "evergreen_days",
+                            "label": "Days",
+                            "description": "Number of days for evergreen countdown.",
+                            "render": true,
+                            "show_if": { "countdown_type": "evergreen" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 0, "max": 365, "step": 1, "allowedUnits": [""], "defaultUnit": "" }
+                            }
+                        },
+                        "evergreen_hours": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "evergreen_hours",
+                            "label": "Hours",
+                            "description": "Number of hours for evergreen countdown.",
+                            "render": true,
+                            "show_if": { "countdown_type": "evergreen" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 0, "max": 23, "step": 1, "allowedUnits": [""], "defaultUnit": "" }
+                            }
+                        },
+                        "evergreen_minutes": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "evergreen_minutes",
+                            "label": "Minutes",
+                            "description": "Number of minutes for evergreen countdown.",
+                            "render": true,
+                            "show_if": { "countdown_type": "evergreen" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 0, "max": 59, "step": 1, "allowedUnits": [""], "defaultUnit": "" }
+                            }
+                        },
+                        "evergreen_cookie_id": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "evergreen_cookie_id",
+                            "label": "Cookie ID",
+                            "description": "Cookie name used to remember this evergreen timer's start time per visitor. Leave blank and a unique cookie is auto-generated per module so two timers on the same page tick independently. Set the same Cookie ID on multiple modules to share state (e.g. a sitewide sale countdown).",
+                            "render": true,
+                            "show_if": { "countdown_type": "evergreen" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": { "placeholder": "Auto-generated when empty" }
+                            }
+                        },
+                        "recurring_type": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "recurring_type",
+                            "label": "Recurring Interval",
+                            "description": "How often the countdown repeats. Daily resets every 24h, weekly on the chosen weekday, yearly on the chosen month/day.",
+                            "render": true,
+                            "show_if": { "countdown_type": "recurring" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "daily": { "label": "Daily" },
+                                        "weekly": { "label": "Weekly" },
+                                        "yearly": { "label": "Yearly" }
+                                    }
+                                }
+                            }
+                        },
+                        "recurring_time": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "recurring_time",
+                            "label": "Target Time (HH:MM)",
+                            "description": "Time of day the countdown reaches zero, in 24-hour format (e.g. 23:59).",
+                            "render": true,
+                            "show_if": { "countdown_type": "recurring" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": { "placeholder": "23:59" }
+                            }
+                        },
+                        "recurring_weekday": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "recurring_weekday",
+                            "label": "Weekday",
+                            "description": "Day of the week the countdown reaches zero each week.",
+                            "render": true,
+                            "show_if": { "countdown_type": "recurring", "recurring_type": "weekly" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "0": { "label": "Sunday" },
+                                        "1": { "label": "Monday" },
+                                        "2": { "label": "Tuesday" },
+                                        "3": { "label": "Wednesday" },
+                                        "4": { "label": "Thursday" },
+                                        "5": { "label": "Friday" },
+                                        "6": { "label": "Saturday" }
+                                    }
+                                }
+                            }
+                        },
+                        "recurring_month": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "recurring_month",
+                            "label": "Month",
+                            "description": "Month the countdown reaches zero each year.",
+                            "render": true,
+                            "show_if": { "countdown_type": "recurring", "recurring_type": "yearly" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "1": { "label": "January" }, "2": { "label": "February" },
+                                        "3": { "label": "March" }, "4": { "label": "April" },
+                                        "5": { "label": "May" }, "6": { "label": "June" },
+                                        "7": { "label": "July" }, "8": { "label": "August" },
+                                        "9": { "label": "September" }, "10": { "label": "October" },
+                                        "11": { "label": "November" }, "12": { "label": "December" }
+                                    }
+                                }
+                            }
+                        },
+                        "recurring_day": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "recurring_day",
+                            "label": "Day of Month",
+                            "description": "Day within the chosen month the countdown reaches zero each year (1–31).",
+                            "render": true,
+                            "show_if": { "countdown_type": "recurring", "recurring_type": "yearly" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": { "min": 1, "max": 31, "step": 1, "allowedUnits": [""], "defaultUnit": "" }
+                            }
+                        },
+                        "count_up_anchor_date": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "count_up_anchor_date",
+                            "label": "Anchor Date & Time",
+                            "description": "The past moment to count time elapsed from. If you set a future date, the timer counts down to it first and flips to count-up at zero.",
+                            "render": true,
+                            "show_if": { "countdown_type": "count_up" },
+                            "features": { "sticky": false, "responsive": false, "hover": false },
+                            "component": { "type": "field", "name": "divi/timepicker" }
+                        },
+                        "count_up_timezone": {
+                            "groupSlug": "general_settings",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "count_up_timezone",
+                            "label": "Timezone",
+                            "description": "Timezone used to interpret the anchor date & time.",
+                            "render": true,
+                            "show_if": { "countdown_type": "count_up" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "wp": { "label": "WordPress Settings" },
+                                        "visitor": { "label": "Visitor's Local Time" },
+                                        "UTC": { "label": "UTC (GMT+0)" },
+                                        "America/New_York": { "label": "Eastern Time (ET)" },
+                                        "America/Chicago": { "label": "Central Time (CT)" },
+                                        "America/Denver": { "label": "Mountain Time (MT)" },
+                                        "America/Los_Angeles": { "label": "Pacific Time (PT)" },
+                                        "Europe/London": { "label": "London (GMT/BST)" },
+                                        "Europe/Paris": { "label": "Central Europe (CET)" },
+                                        "Europe/Berlin": { "label": "Berlin (CET)" },
+                                        "Asia/Dubai": { "label": "Dubai (GST, GMT+4)" },
+                                        "Asia/Kolkata": { "label": "India (IST, GMT+5:30)" },
+                                        "Asia/Bangkok": { "label": "Bangkok (ICT, GMT+7)" },
+                                        "Asia/Shanghai": { "label": "China (CST, GMT+8)" },
+                                        "Asia/Tokyo": { "label": "Tokyo (JST, GMT+9)" },
+                                        "Australia/Sydney": { "label": "Sydney (AEST, GMT+10)" },
+                                        "Pacific/Auckland": { "label": "New Zealand (NZST, GMT+12)" }
+                                    }
+                                }
+                            }
+                        },
+                        "show_days": {
+                            "groupSlug": "units_display",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "show_days",
+                            "label": "Show Days",
+                            "description": "Display the days unit. When off, the days portion rolls into the hours unit so no remaining time is lost.",
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/toggle" }
+                        },
+                        "show_hours": {
+                            "groupSlug": "units_display",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "show_hours",
+                            "label": "Show Hours",
+                            "description": "Display the hours unit. When off, hidden hours roll into the next visible smaller unit (minutes, then seconds).",
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/toggle" }
+                        },
+                        "show_minutes": {
+                            "groupSlug": "units_display",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "show_minutes",
+                            "label": "Show Minutes",
+                            "description": "Display the minutes unit. When off, hidden minutes roll into the next visible smaller unit (seconds).",
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/toggle" }
+                        },
+                        "show_seconds": {
+                            "groupSlug": "units_display",
+                            "attrName": "timer_settings.innerContent",
+                            "subName": "show_seconds",
+                            "label": "Show Seconds",
+                            "description": "Display the seconds unit. Turn off if you want a coarser ticking countdown that updates only when minutes change.",
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/toggle" }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "countdown_type": "fixed",
+                            "target_date": "2026-12-31 23:59",
+                            "target_timezone": "wp",
+                            "evergreen_days": "0",
+                            "evergreen_hours": "1",
+                            "evergreen_minutes": "0",
+                            "recurring_type": "daily",
+                            "recurring_time": "23:59",
+                            "recurring_weekday": "1",
+                            "recurring_month": "1",
+                            "recurring_day": "1",
+                            "count_up_anchor_date": "2025-01-01 00:00",
+                            "count_up_timezone": "wp",
+                            "show_days": "on",
+                            "show_hours": "on",
+                            "show_minutes": "on",
+                            "show_seconds": "on"
+                        }
+                    }
+                }
+            }
+        },
+        "label_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "days_label": {
+                            "groupSlug": "labels_settings",
+                            "attrName": "label_settings.innerContent",
+                            "subName": "days_label",
+                            "label": "Days Label",
+                            "description": "Text shown beside the days number. Leave blank to hide the days label only.",
+                            "render": true,
+                            "show_if": { "show_days": "on" },
+                            "component": { "type": "field", "name": "divi/text", "props": { "placeholder": "Days" } }
+                        },
+                        "hours_label": {
+                            "groupSlug": "labels_settings",
+                            "attrName": "label_settings.innerContent",
+                            "subName": "hours_label",
+                            "label": "Hours Label",
+                            "description": "Text shown beside the hours number. Leave blank to hide the hours label only.",
+                            "render": true,
+                            "show_if": { "show_hours": "on" },
+                            "component": { "type": "field", "name": "divi/text", "props": { "placeholder": "Hours" } }
+                        },
+                        "minutes_label": {
+                            "groupSlug": "labels_settings",
+                            "attrName": "label_settings.innerContent",
+                            "subName": "minutes_label",
+                            "label": "Minutes Label",
+                            "description": "Text shown beside the minutes number. Leave blank to hide the minutes label only.",
+                            "render": true,
+                            "show_if": { "show_minutes": "on" },
+                            "component": { "type": "field", "name": "divi/text", "props": { "placeholder": "Minutes" } }
+                        },
+                        "seconds_label": {
+                            "groupSlug": "labels_settings",
+                            "attrName": "label_settings.innerContent",
+                            "subName": "seconds_label",
+                            "label": "Seconds Label",
+                            "description": "Text shown beside the seconds number. Leave blank to hide the seconds label only.",
+                            "render": true,
+                            "show_if": { "show_seconds": "on" },
+                            "component": { "type": "field", "name": "divi/text", "props": { "placeholder": "Seconds" } }
+                        },
+                        "label_position": {
+                            "groupSlug": "labels_settings",
+                            "attrName": "label_settings.innerContent",
+                            "subName": "label_position",
+                            "label": "Label Position",
+                            "description": "Place each unit's label above or below its number.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "below": { "label": "Below" },
+                                        "above": { "label": "Above" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "days_label": "Days",
+                            "hours_label": "Hours",
+                            "minutes_label": "Minutes",
+                            "seconds_label": "Seconds",
+                            "label_position": "below"
+                        }
+                    }
+                }
+            }
+        },
+        "expiration_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "expiration_action": {
+                            "groupSlug": "expiration_settings",
+                            "attrName": "expiration_settings.innerContent",
+                            "subName": "expiration_action",
+                            "label": "On Expiration",
+                            "description": "What happens when the countdown reaches zero — show a message in place of the timer, redirect the visitor, hide the module, or restart the count.",
+                            "render": true,
+                            "show_if": { "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "show_message": { "label": "Show Message" },
+                                        "redirect": { "label": "Redirect" },
+                                        "hide": { "label": "Hide Timer" },
+                                        "restart": { "label": "Restart" }
+                                    }
+                                }
+                            }
+                        },
+                        "expiration_message": {
+                            "groupSlug": "expiration_settings",
+                            "attrName": "expiration_settings.innerContent",
+                            "subName": "expiration_message",
+                            "label": "Expiration Message",
+                            "description": "Text shown in place of the timer once it reaches zero.",
+                            "render": true,
+                            "show_if": { "expiration_action": "show_message", "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": { "type": "field", "name": "divi/text", "props": { "placeholder": "Countdown finished!" } }
+                        },
+                        "redirect_url": {
+                            "groupSlug": "expiration_settings",
+                            "attrName": "expiration_settings.innerContent",
+                            "subName": "redirect_url",
+                            "label": "Redirect URL",
+                            "description": "Page to send the visitor to when the timer reaches zero.",
+                            "render": true,
+                            "show_if": { "expiration_action": "redirect", "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": { "type": "field", "name": "divi/text", "props": { "placeholder": "https://example.com" } }
+                        },
+                        "redirect_delay": {
+                            "groupSlug": "expiration_settings",
+                            "attrName": "expiration_settings.innerContent",
+                            "subName": "redirect_delay",
+                            "label": "Redirect Delay (s)",
+                            "description": "Seconds to wait after expiration before redirecting. 0 redirects immediately.",
+                            "render": true,
+                            "show_if": { "expiration_action": "redirect", "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 10, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "restart_delay": {
+                            "groupSlug": "expiration_settings",
+                            "attrName": "expiration_settings.innerContent",
+                            "subName": "restart_delay",
+                            "label": "Restart Delay (s)",
+                            "description": "Seconds to wait after the timer hits zero before restarting it.",
+                            "render": true,
+                            "show_if": { "expiration_action": "restart", "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 60, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "expiration_action": "show_message",
+                            "expiration_message": "Countdown finished!",
+                            "redirect_url": "",
+                            "redirect_delay": "0",
+                            "restart_delay": "3"
+                        }
+                    }
+                }
+            }
+        },
+        "style_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "display_style": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "display_style",
+                            "label": "Countdown Style",
+                            "description": "Visual style of each unit. Boxed shows numbers in plain boxes, Flip Clock animates a folding card on each tick, Circular Progress draws a ring that fills as time runs out, and Progress Bar uses horizontal bars.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "default": { "label": "Boxed" },
+                                        "flip": { "label": "Flip Clock" },
+                                        "split_flip": { "label": "Split Flip" },
+                                        "circle": { "label": "Circular Progress" },
+                                        "progress": { "label": "Progress Bar" }
+                                    }
+                                }
+                            }
+                        },
+                        "timer_layout": {
+                            "groupSlug": "layout_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "timer_layout",
+                            "label": "Layout",
+                            "description": "Arrange units side-by-side (Inline) or one per row (Stacked).",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "inline": { "label": "Inline (Horizontal)" },
+                                        "stacked": { "label": "Stacked (Vertical)" }
+                                    }
+                                }
+                            }
+                        },
+                        "unit_alignment": {
+                            "groupSlug": "layout_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "unit_alignment",
+                            "label": "Alignment",
+                            "description": "How units distribute within the available width — left, center, right, or evenly spaced.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "flex-start": { "label": "Left" },
+                                        "center": { "label": "Center" },
+                                        "flex-end": { "label": "Right" },
+                                        "space-between": { "label": "Space Between" },
+                                        "space-around": { "label": "Space Around" }
+                                    }
+                                }
+                            }
+                        },
+                        "unit_gap": {
+                            "groupSlug": "layout_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "unit_gap",
+                            "label": "Gap Between Units",
+                            "description": "Space between adjacent units (and the separator characters between them) in pixels.",
+                            "render": true,
+                            "features": { "responsive": true },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 100, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "unit_border_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "unit_border_color",
+                            "label": "Unit Border Color",
+                            "description": "Border color around each unit. Only applies to the Boxed style — Flip Clock, Split Flip, Circular Progress, and Progress Bar have their own visual frames.",
+                            "show_if": { "display_style": "default" },
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "unit_border_width": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "unit_border_width",
+                            "label": "Unit Border Width",
+                            "description": "Border thickness around each unit in pixels. Only applies to the Boxed style.",
+                            "show_if": { "display_style": "default" },
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 10, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "unit_border_radius": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "unit_border_radius",
+                            "label": "Unit Border Radius",
+                            "description": "Corner roundness for each unit in pixels. Only applies to the Boxed style.",
+                            "show_if": { "display_style": "default" },
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 100, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "unit_padding": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "unit_padding",
+                            "label": "Unit Padding",
+                            "description": "Inner spacing inside each unit box, in pixels. Only applies to the Boxed style.",
+                            "show_if": { "display_style": "default" },
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 100, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "unit_min_width": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "unit_min_width",
+                            "label": "Unit Min Width",
+                            "description": "Minimum width for each unit so widths stay aligned as digits change. Only applies to the Boxed style.",
+                            "show_if": { "display_style": "default" },
+                            "render": true,
+                            "features": { "responsive": true },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 300, "step": 5, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "enable_individual_colors": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "enable_individual_colors",
+                            "label": "Enable Individual Unit Colors",
+                            "description": "Override colors per unit (days, hours, minutes, seconds). The visible fields adapt to the active Countdown Style — Boxed shows Background + Number + Label, Flip Clock shows Card Background + Card Text + Label, Circular Progress shows Ring + Number + Label, Progress Bar shows Bar Fill + Number + Label.",
+                            "render": true,
+                            "component": { "type": "field", "name": "divi/toggle" }
+                        },
+                        "days_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_bg_color",
+                            "label": "Days Background",
+                            "description": "Background fill for the days number block. Only applies to the Boxed style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "default" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_flip_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_flip_bg_color",
+                            "label": "Days Card Background",
+                            "description": "Background fill for the days flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_ring_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_ring_color",
+                            "label": "Days Ring Color",
+                            "description": "Color of the days unit's progress arc. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_circle_fill_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_circle_fill_color",
+                            "label": "Days Background",
+                            "description": "Solid fill behind the days number inside the ring. Leave empty for a transparent center. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_progress_fill_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_progress_fill_color",
+                            "label": "Days Bar Fill Color",
+                            "description": "Fill color of the days progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_progress_track_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_progress_track_color",
+                            "label": "Days Bar Track Color",
+                            "description": "Color of the unfilled portion behind the days progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_flip_text_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_flip_text_color",
+                            "label": "Days Card Text Color",
+                            "description": "Color of the days digits inside the flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_split_flip_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_split_flip_bg_color",
+                            "label": "Days Card Background",
+                            "description": "Background fill for the days digit cards. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_split_flip_text_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_split_flip_text_color",
+                            "label": "Days Card Text Color",
+                            "description": "Color of the days digits inside the cards. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_number_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_number_color",
+                            "label": "Days Number Color",
+                            "description": "Text color for the days number. Applies to Boxed, Circular Progress, and Progress Bar styles. Flip Clock and Split Flip have their own Card Text Color.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": ["default", "circle", "progress"] },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "days_label_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "days_label_color",
+                            "label": "Days Label Color",
+                            "description": "Text color for the days label across every display style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_bg_color",
+                            "label": "Hours Background",
+                            "description": "Background fill for the hours number block. Only applies to the Boxed style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "default" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_flip_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_flip_bg_color",
+                            "label": "Hours Card Background",
+                            "description": "Background fill for the hours flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_ring_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_ring_color",
+                            "label": "Hours Ring Color",
+                            "description": "Color of the hours unit's progress arc. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_circle_fill_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_circle_fill_color",
+                            "label": "Hours Background",
+                            "description": "Solid fill behind the hours number inside the ring. Leave empty for a transparent center. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_progress_fill_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_progress_fill_color",
+                            "label": "Hours Bar Fill Color",
+                            "description": "Fill color of the hours progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_progress_track_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_progress_track_color",
+                            "label": "Hours Bar Track Color",
+                            "description": "Color of the unfilled portion behind the hours progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_flip_text_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_flip_text_color",
+                            "label": "Hours Card Text Color",
+                            "description": "Color of the hours digits inside the flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_split_flip_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_split_flip_bg_color",
+                            "label": "Hours Card Background",
+                            "description": "Background fill for the hours digit cards. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_split_flip_text_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_split_flip_text_color",
+                            "label": "Hours Card Text Color",
+                            "description": "Color of the hours digits inside the cards. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_number_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_number_color",
+                            "label": "Hours Number Color",
+                            "description": "Text color for the hours number. Applies to Boxed, Circular Progress, and Progress Bar styles. Flip Clock and Split Flip have their own Card Text Color.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": ["default", "circle", "progress"] },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "hours_label_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "hours_label_color",
+                            "label": "Hours Label Color",
+                            "description": "Text color for the hours label across every display style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_bg_color",
+                            "label": "Minutes Background",
+                            "description": "Background fill for the minutes number block. Only applies to the Boxed style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "default" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_flip_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_flip_bg_color",
+                            "label": "Minutes Card Background",
+                            "description": "Background fill for the minutes flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_ring_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_ring_color",
+                            "label": "Minutes Ring Color",
+                            "description": "Color of the minutes unit's progress arc. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_circle_fill_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_circle_fill_color",
+                            "label": "Minutes Background",
+                            "description": "Solid fill behind the minutes number inside the ring. Leave empty for a transparent center. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_progress_fill_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_progress_fill_color",
+                            "label": "Minutes Bar Fill Color",
+                            "description": "Fill color of the minutes progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_progress_track_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_progress_track_color",
+                            "label": "Minutes Bar Track Color",
+                            "description": "Color of the unfilled portion behind the minutes progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_flip_text_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_flip_text_color",
+                            "label": "Minutes Card Text Color",
+                            "description": "Color of the minutes digits inside the flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_split_flip_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_split_flip_bg_color",
+                            "label": "Minutes Card Background",
+                            "description": "Background fill for the minutes digit cards. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_split_flip_text_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_split_flip_text_color",
+                            "label": "Minutes Card Text Color",
+                            "description": "Color of the minutes digits inside the cards. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_number_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_number_color",
+                            "label": "Minutes Number Color",
+                            "description": "Text color for the minutes number. Applies to Boxed, Circular Progress, and Progress Bar styles. Flip Clock and Split Flip have their own Card Text Color.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": ["default", "circle", "progress"] },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "minutes_label_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "minutes_label_color",
+                            "label": "Minutes Label Color",
+                            "description": "Text color for the minutes label across every display style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_bg_color",
+                            "label": "Seconds Background",
+                            "description": "Background fill for the seconds number block. Only applies to the Boxed style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "default" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_flip_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_flip_bg_color",
+                            "label": "Seconds Card Background",
+                            "description": "Background fill for the seconds flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_ring_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_ring_color",
+                            "label": "Seconds Ring Color",
+                            "description": "Color of the seconds unit's progress arc. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_circle_fill_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_circle_fill_color",
+                            "label": "Seconds Background",
+                            "description": "Solid fill behind the seconds number inside the ring. Leave empty for a transparent center. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_progress_fill_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_progress_fill_color",
+                            "label": "Seconds Bar Fill Color",
+                            "description": "Fill color of the seconds progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_progress_track_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_progress_track_color",
+                            "label": "Seconds Bar Track Color",
+                            "description": "Color of the unfilled portion behind the seconds progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_flip_text_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_flip_text_color",
+                            "label": "Seconds Card Text Color",
+                            "description": "Color of the seconds digits inside the flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_split_flip_bg_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_split_flip_bg_color",
+                            "label": "Seconds Card Background",
+                            "description": "Background fill for the seconds digit cards. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_split_flip_text_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_split_flip_text_color",
+                            "label": "Seconds Card Text Color",
+                            "description": "Color of the seconds digits inside the cards. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_number_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_number_color",
+                            "label": "Seconds Number Color",
+                            "description": "Text color for the seconds number. Applies to Boxed, Circular Progress, and Progress Bar styles. Flip Clock and Split Flip have their own Card Text Color.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on", "display_style": ["default", "circle", "progress"] },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "seconds_label_color": {
+                            "groupSlug": "individual_unit_colors",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "seconds_label_color",
+                            "label": "Seconds Label Color",
+                            "description": "Text color for the seconds label across every display style.",
+                            "render": true,
+                            "show_if": { "enable_individual_colors": "on" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "enable_separator": {
+                            "groupSlug": "separator_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "enable_separator",
+                            "label": "Enable Separator",
+                            "description": "Show the separator character between units. Applies to Boxed, Flip Clock, Split Flip, and Circular Progress styles. Progress Bar stacks rows so it doesn't render a separator.",
+                            "render": true,
+                            "show_if": { "display_style": ["default", "flip", "split_flip", "circle"] },
+                            "component": { "type": "field", "name": "divi/toggle" }
+                        },
+                        "separator_character": {
+                            "groupSlug": "separator_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "separator_character",
+                            "label": "Separator Character",
+                            "description": "Character drawn between units. Shown for Boxed, Flip Clock, Split Flip, and Circular Progress styles. Progress Bar stacks rows so it doesn't render a separator.",
+                            "render": true,
+                            "show_if": { "display_style": ["default", "flip", "split_flip", "circle"] },
+                            "component": { "type": "field", "name": "divi/text", "props": { "placeholder": ":" } }
+                        },
+                        "separator_size": {
+                            "groupSlug": "separator_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "separator_size",
+                            "label": "Separator Size",
+                            "description": "Font size of the separator character in pixels. Applies to Boxed, Flip Clock, Split Flip, and Circular Progress styles.",
+                            "render": true,
+                            "show_if": { "display_style": ["default", "flip", "split_flip", "circle"] },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 10, "max": 100, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "flip_bg_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "flip_bg_color",
+                            "label": "Flip Card Background",
+                            "description": "Background color of the flipping card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "flip_divider_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "flip_divider_color",
+                            "label": "Flip Divider Color",
+                            "description": "Color of the horizontal seam between the upper and lower halves of the flip card. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "flip_duration": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "flip_duration",
+                            "label": "Flip Duration (ms)",
+                            "description": "How long the flip animation takes per tick, in milliseconds. Lower is snappier; higher is more dramatic. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 200, "max": 1500, "step": 50, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "flip_card_width": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "flip_card_width",
+                            "label": "Flip Card Width",
+                            "description": "Width of each flip card in pixels. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "display_style": "flip" },
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 40, "max": 240, "step": 5, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "flip_card_height": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "flip_card_height",
+                            "label": "Flip Card Height",
+                            "description": "Height of each flip card in pixels. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "display_style": "flip" },
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 50, "max": 300, "step": 5, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "flip_border_radius": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "flip_border_radius",
+                            "label": "Flip Border Radius",
+                            "description": "Corner roundness for the flip card in pixels. Only applies to the Flip Clock style.",
+                            "render": true,
+                            "show_if": { "display_style": "flip" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 30, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "split_flip_bg_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "split_flip_bg_color",
+                            "label": "Split Flip Background",
+                            "description": "Background color of each digit card. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "split_flip_divider_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "split_flip_divider_color",
+                            "label": "Split Flip Divider Color",
+                            "description": "Color of the horizontal seam between the upper and lower halves of each digit card. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "split_flip_duration": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "split_flip_duration",
+                            "label": "Split Flip Duration (ms)",
+                            "description": "How long the flip animation takes per tick, in milliseconds. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 200, "max": 1500, "step": 50, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "split_flip_card_width": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "split_flip_card_width",
+                            "label": "Split Flip Card Width",
+                            "description": "Width of each individual digit card in pixels. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "display_style": "split_flip" },
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 30, "max": 200, "step": 5, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "split_flip_card_height": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "split_flip_card_height",
+                            "label": "Split Flip Card Height",
+                            "description": "Height of each individual digit card in pixels. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "display_style": "split_flip" },
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 50, "max": 300, "step": 5, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "split_flip_border_radius": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "split_flip_border_radius",
+                            "label": "Split Flip Border Radius",
+                            "description": "Corner roundness for each digit card in pixels. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 30, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "split_flip_digit_gap": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "split_flip_digit_gap",
+                            "label": "Gap Between Digits",
+                            "description": "Horizontal space between digit cards within a single unit, in pixels. Only applies to the Split Flip style.",
+                            "render": true,
+                            "show_if": { "display_style": "split_flip" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 20, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "circle_size": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "circle_size",
+                            "label": "Circle Size",
+                            "description": "Diameter of the ring in pixels. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 60, "max": 300, "step": 5, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "circle_stroke_width": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "circle_stroke_width",
+                            "label": "Stroke Width",
+                            "description": "Thickness of the ring stroke in pixels. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 1, "max": 20, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "circle_track_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "circle_track_color",
+                            "label": "Track Color",
+                            "description": "Color of the unfilled portion of the ring (the track behind the progress arc). Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "circle_progress_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "circle_progress_color",
+                            "label": "Progress Color",
+                            "description": "Color of the filled progress arc on every unit's ring. Only applies to the Circular Progress style; per-unit overrides come from Individual Ring Colors.",
+                            "render": true,
+                            "show_if": { "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "circle_fill_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "circle_fill_color",
+                            "label": "Circle Fill Color",
+                            "description": "Solid fill behind the number inside the ring. Leave empty for a transparent center. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "circle_cap": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "circle_cap",
+                            "label": "Stroke Cap",
+                            "description": "Shape of the ends of the progress arc — Round for soft tips, Flat for square ends. Only applies to the Circular Progress style.",
+                            "render": true,
+                            "show_if": { "display_style": "circle" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "round": { "label": "Round" },
+                                        "butt": { "label": "Flat" }
+                                    }
+                                }
+                            }
+                        },
+                        "circle_label_inside": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "circle_label_inside",
+                            "label": "Show Label Inside Circle",
+                            "description": "Place the unit label inside the ring next to the number instead of outside the circle. Useful for compact layouts.",
+                            "render": true,
+                            "show_if": { "display_style": "circle" },
+                            "component": { "type": "field", "name": "divi/toggle" }
+                        },
+                        "progress_bar_height": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "progress_bar_height",
+                            "label": "Bar Height",
+                            "description": "Thickness of the progress bar in pixels. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 4, "max": 40, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "progress_track_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "progress_track_color",
+                            "label": "Track Color",
+                            "description": "Color of the unfilled portion behind the progress bar. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "progress_fill_color": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "progress_fill_color",
+                            "label": "Fill Color",
+                            "description": "Color of the filled portion of the progress bar. Only applies to the Progress Bar style; per-unit overrides come from Individual Unit Colors.",
+                            "render": true,
+                            "show_if": { "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/color-picker" }
+                        },
+                        "progress_bar_radius": {
+                            "groupSlug": "display_style",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "progress_bar_radius",
+                            "label": "Bar Corner Radius",
+                            "description": "Corner roundness for the bar in pixels. Only applies to the Progress Bar style.",
+                            "render": true,
+                            "show_if": { "display_style": "progress" },
+                            "component": { "type": "field", "name": "divi/range", "props": { "min": 0, "max": 20, "step": 1, "allowedUnits": [""], "defaultUnit": "" } }
+                        },
+                        "tick_animation": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "tick_animation",
+                            "label": "Tick Animation",
+                            "description": "Visual effect that plays each time a unit's value changes. Pulse fades briefly, Scale grows then settles, Bounce hops up and back.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "none": { "label": "None" },
+                                        "pulse": { "label": "Pulse" },
+                                        "scale": { "label": "Scale" },
+                                        "bounce": { "label": "Bounce" }
+                                    }
+                                }
+                            }
+                        },
+                        "tick_target": {
+                            "groupSlug": "animation_settings",
+                            "attrName": "style_settings.innerContent",
+                            "subName": "tick_target",
+                            "label": "Animate Which Unit",
+                            "description": "Apply the tick animation only to the seconds unit (less busy) or to every unit on each change.",
+                            "render": true,
+                            "show_if_not": { "tick_animation": "none" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "seconds": { "label": "Seconds Only" },
+                                        "all": { "label": "All Units" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "display_style": "flip",
+                            "timer_layout": "inline",
+                            "unit_alignment": "center",
+                            "unit_gap": "20",
+                            "unit_border_color": "",
+                            "unit_border_width": "0",
+                            "unit_border_radius": "8",
+                            "unit_padding": "20",
+                            "unit_min_width": "100",
+                            "enable_individual_colors": "off",
+                            "days_bg_color": "#4285F4",
+                            "days_flip_bg_color": "#4285F4",
+                            "days_flip_text_color": "#ffffff",
+                            "days_split_flip_bg_color": "#4285F4",
+                            "days_split_flip_text_color": "#ffffff",
+                            "days_ring_color": "#4285F4",
+                            "days_circle_fill_color": "",
+                            "days_progress_fill_color": "#4285F4",
+                            "days_progress_track_color": "#e0e0e0",
+                            "days_number_color": "",
+                            "days_label_color": "#4285F4",
+                            "hours_bg_color": "#34A853",
+                            "hours_flip_bg_color": "#34A853",
+                            "hours_flip_text_color": "#ffffff",
+                            "hours_split_flip_bg_color": "#34A853",
+                            "hours_split_flip_text_color": "#ffffff",
+                            "hours_ring_color": "#34A853",
+                            "hours_circle_fill_color": "",
+                            "hours_progress_fill_color": "#34A853",
+                            "hours_progress_track_color": "#e0e0e0",
+                            "hours_number_color": "",
+                            "hours_label_color": "#34A853",
+                            "minutes_bg_color": "#EA4335",
+                            "minutes_flip_bg_color": "#EA4335",
+                            "minutes_flip_text_color": "#ffffff",
+                            "minutes_split_flip_bg_color": "#EA4335",
+                            "minutes_split_flip_text_color": "#ffffff",
+                            "minutes_ring_color": "#EA4335",
+                            "minutes_circle_fill_color": "",
+                            "minutes_progress_fill_color": "#EA4335",
+                            "minutes_progress_track_color": "#e0e0e0",
+                            "minutes_number_color": "",
+                            "minutes_label_color": "#EA4335",
+                            "seconds_bg_color": "#FBBC05",
+                            "seconds_flip_bg_color": "#FBBC05",
+                            "seconds_flip_text_color": "#ffffff",
+                            "seconds_split_flip_bg_color": "#FBBC05",
+                            "seconds_split_flip_text_color": "#ffffff",
+                            "seconds_ring_color": "#FBBC05",
+                            "seconds_circle_fill_color": "",
+                            "seconds_progress_fill_color": "#FBBC05",
+                            "seconds_progress_track_color": "#e0e0e0",
+                            "seconds_number_color": "",
+                            "seconds_label_color": "#FBBC05",
+                            "separator_character": ":",
+                            "separator_size": "36",
+                            "enable_separator": "on",
+                            "flip_bg_color": "#6E31E8",
+                            "flip_divider_color": "#222222",
+                            "flip_duration": "600",
+                            "flip_card_width": "80",
+                            "flip_card_height": "100",
+                            "flip_border_radius": "6",
+                            "split_flip_bg_color": "#4285F4",
+                            "split_flip_divider_color": "rgba(0,0,0,0.3)",
+                            "split_flip_duration": "600",
+                            "split_flip_card_width": "60",
+                            "split_flip_card_height": "90",
+                            "split_flip_border_radius": "6",
+                            "split_flip_digit_gap": "4",
+                            "circle_size": "120",
+                            "circle_stroke_width": "4",
+                            "circle_track_color": "#e0e0e0",
+                            "circle_progress_color": "#4285F4",
+                            "circle_fill_color": "",
+                            "circle_cap": "round",
+                            "circle_label_inside": "off",
+                            "progress_bar_height": "12",
+                            "progress_track_color": "#e0e0e0",
+                            "progress_fill_color": "#4285F4",
+                            "progress_bar_radius": "6",
+                            "tick_animation": "none",
+                            "tick_target": "seconds"
+                        }
+                    }
+                }
+            }
+        },
+        "unit": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "display_style",
+                            "label": "Unit Background",
+                            "description": "Background applied to each unit number. Only available in the Boxed style — Flip Clock and Split Flip have their own card backgrounds, Circular Progress uses ring colors, and Progress Bar uses the bar fill.",
+                            "render": true,
+                            "show_if": { "display_style": "default" },
+                            "features": { "sticky": false, "responsive": false },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": false,
+                                    "hidePanels": ["mask", "pattern", "video"]
+                                }
+                            }
+                        }
+                    },
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "display_style",
+                            "label": "Unit Box Shadow",
+                            "description": "Drop shadow around each unit's visual frame — the Boxed number, the Flip Clock card, the Split Flip digit card, or the Circular Progress ring container. Hidden for the Progress Bar style which has no unit frame to shadow.",
+                            "show_if_not": { "display_style": "progress" },
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": false,
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "background": {
+                    "selector": "{{selector}} .df_countdown_style_default .df_countdown_number"
+                },
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_countdown_style_default .df_countdown_number, {{selector}} .df_countdown_style_flip .df_flip_card, {{selector}} .df_countdown_style_split_flip .df_split_flip_card, {{selector}} .df_countdown_style_circle .df_circle_container"
+                        }
+                    }
+                }
+            }
+        },
+        "number_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "countdown_typography",
+                            "priority": 10,
+                            "attrName": "number_font.decoration.font",
+                            "label": "Number",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Number",
+                                    "fieldLabel": "",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_countdown_number"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "label_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "countdown_typography",
+                            "priority": 20,
+                            "attrName": "label_font.decoration.font",
+                            "label": "Label",
+                            "render": true,
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Label",
+                                    "fieldLabel": "",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_countdown_label"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "separator_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "countdown_typography",
+                            "priority": 30,
+                            "attrName": "separator_font.decoration.font",
+                            "label": "Separator",
+                            "render": true,
+                            "show_if": { "display_style": ["default", "flip", "split_flip", "circle"] },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Separator",
+                                    "fieldLabel": "",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_countdown_separator"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "expired": {
+            "type": "object",
+            "selector": "{{selector}} .df_countdown_message",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "expired_design",
+                            "priority": 10,
+                            "attrName": "expired.decoration.font",
+                            "label": "Typography",
+                            "render": true,
+                            "show_if": { "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Typography",
+                                    "fieldLabel": "",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "style": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "background": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "expired_design",
+                            "priority": 20,
+                            "label": "Background",
+                            "render": true,
+                            "show_if": { "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "features": { "sticky": false, "responsive": false },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/background",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Background",
+                                    "fieldLabel": "",
+                                    "hidePanels": ["mask", "pattern", "video"]
+                                }
+                            }
+                        }
+                    },
+                    "spacing": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "expired_design",
+                            "priority": 25,
+                            "label": "Spacing",
+                            "render": true,
+                            "show_if": { "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/spacing",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Spacing",
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    },
+                    "border": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "expired_design",
+                            "priority": 30,
+                            "label": "Border",
+                            "render": true,
+                            "show_if": { "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/border",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Border",
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    },
+                    "boxShadow": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "expired_design",
+                            "priority": 40,
+                            "label": "Box Shadow",
+                            "render": true,
+                            "show_if": { "countdown_type": ["fixed", "evergreen", "recurring"] },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/box-shadow",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Box Shadow",
+                                    "fieldLabel": ""
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_countdown_message"
+                        }
+                    },
+                    "important": true
+                },
+                "background": {
+                    "selector": "{{selector}} .df_countdown_message"
+                },
+                "spacing": {
+                    "selector": "{{selector}} .df_countdown_message",
+                    "important": true
+                },
+                "border": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_countdown_message"
+                        }
+                    }
+                },
+                "boxShadow": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_countdown_message"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "general_settings": {
+                "panel": "content",
+                "priority": 5,
+                "groupName": "general_settings",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "General Settings" } }
+            },
+            "units_display": {
+                "panel": "content",
+                "priority": 10,
+                "groupName": "units_display",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Display Units" } }
+            },
+            "labels_settings": {
+                "panel": "content",
+                "priority": 15,
+                "groupName": "labels_settings",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Custom Labels" } }
+            },
+            "expiration_settings": {
+                "panel": "content",
+                "priority": 20,
+                "groupName": "expiration_settings",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Expiration" } }
+            },
+            "contentLink": {
+                "panel": "content",
+                "priority": 25,
+                "groupName": "link",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Link" } }
+            },
+            "display_style": {
+                "panel": "design",
+                "priority": 3,
+                "groupName": "display_style",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Countdown Style" } }
+            },
+            "layout_settings": {
+                "panel": "design",
+                "priority": 5,
+                "groupName": "layout_settings",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Layout" } }
+            },
+            "individual_unit_colors": {
+                "panel": "design",
+                "priority": 12,
+                "groupName": "individual_unit_colors",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Individual Unit Colors" } }
+            },
+            "separator_style": {
+                "panel": "design",
+                "priority": 15,
+                "groupName": "separator_style",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Separator" } }
+            },
+            "animation_settings": {
+                "panel": "design",
+                "priority": 19,
+                "groupName": "animation_settings",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Tick Animation" } }
+            },
+            "countdown_typography": {
+                "panel": "design",
+                "priority": 7,
+                "groupName": "countdown_typography",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Typography" } }
+            },
+            "expired_design": {
+                "panel": "design",
+                "priority": 22,
+                "groupName": "expired_design",
+                "multiElements": true,
+                "component": { "name": "divi/composite", "props": { "groupLabel": "Expiration" } }
+            }
+        }
+    },
+    "mousetrap": {
+        "inner": {
+            "edited": true
+        }
+    }
+}

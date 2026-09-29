@@ -1,0 +1,624 @@
+{
+    "name": "difl/facebookfeed",
+    "d4Shortcode": "difl_facebookfeed",
+    "title": "Facebook Feed",
+    "category": "module",
+    "moduleIcon": "difl/facebookfeed",
+    "allowAllElements": false,
+    "customCssFields": {
+        "fb_wrapper": {
+            "label": "Facebook Widget Wrapper",
+            "selectorSuffix": " .df_fb_feed_wrapper",
+            "subName": "fb_wrapper"
+        },
+        "fb_plugin": {
+            "label": "Facebook Plugin Container",
+            "selectorSuffix": " .df_fb_plugin",
+            "subName": "fb_plugin"
+        }
+    },
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "styleProps": {
+                "spacing": {
+                    "important": {
+                        "desktop": {
+                            "value": {
+                                "margin": true
+                            }
+                        }
+                    }
+                }
+            },
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label"
+                        }
+                    }
+                },
+                "decoration": {
+                    "background": {},
+                    "spacing": {},
+                    "border": {},
+                    "boxShadow": {},
+                    "sizing": {},
+                    "overflow": {},
+                    "filters": {},
+                    "transform": {},
+                    "animation": {},
+                    "position": {},
+                    "sticky": {},
+                    "zIndex": {},
+                    "conditions": {},
+                    "disabledOn": {},
+                    "transition": {},
+                    "interactions": {}
+                },
+                "advanced": {
+                    "htmlAttributes": {}
+                }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "Facebook Feed"
+                        }
+                    }
+                }
+            }
+        },
+        "fb_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "plugin_type": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "plugin_type",
+                            "label": "Plugin Type",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "page": {
+                                            "label": "Page Plugin"
+                                        },
+                                        "share": {
+                                            "label": "Share Button"
+                                        },
+                                        "post": {
+                                            "label": "Embedded Post"
+                                        },
+                                        "video": {
+                                            "label": "Embedded Video"
+                                        }
+                                    }
+                                }
+                            },
+                            "description": "Choose the type of Facebook plugin to display."
+                        },
+                        "language": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "language",
+                            "label": "Language",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "en_US": {
+                                            "label": "English (US)"
+                                        },
+                                        "en_GB": {
+                                            "label": "English (UK)"
+                                        },
+                                        "es_ES": {
+                                            "label": "Spanish"
+                                        },
+                                        "fr_FR": {
+                                            "label": "French"
+                                        },
+                                        "de_DE": {
+                                            "label": "German"
+                                        },
+                                        "it_IT": {
+                                            "label": "Italian"
+                                        },
+                                        "pt_BR": {
+                                            "label": "Portuguese (BR)"
+                                        },
+                                        "ar_AR": {
+                                            "label": "Arabic"
+                                        },
+                                        "hi_IN": {
+                                            "label": "Hindi"
+                                        },
+                                        "ja_JP": {
+                                            "label": "Japanese"
+                                        },
+                                        "ko_KR": {
+                                            "label": "Korean"
+                                        },
+                                        "zh_CN": {
+                                            "label": "Chinese (Simplified)"
+                                        },
+                                        "zh_TW": {
+                                            "label": "Chinese (Traditional)"
+                                        },
+                                        "nl_NL": {
+                                            "label": "Dutch"
+                                        },
+                                        "ru_RU": {
+                                            "label": "Russian"
+                                        },
+                                        "tr_TR": {
+                                            "label": "Turkish"
+                                        },
+                                        "pl_PL": {
+                                            "label": "Polish"
+                                        },
+                                        "sv_SE": {
+                                            "label": "Swedish"
+                                        },
+                                        "th_TH": {
+                                            "label": "Thai"
+                                        },
+                                        "vi_VN": {
+                                            "label": "Vietnamese"
+                                        },
+                                        "bn_IN": {
+                                            "label": "Bengali"
+                                        }
+                                    }
+                                }
+                            },
+                            "description": "Set the display language for the Facebook plugin. Applies to all Facebook Feed modules on the page."
+                        },
+                        "fb_align": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "fb_align",
+                            "label": "Alignment",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "left": {
+                                            "label": "Left"
+                                        },
+                                        "center": {
+                                            "label": "Center"
+                                        },
+                                        "right": {
+                                            "label": "Right"
+                                        }
+                                    }
+                                }
+                            },
+                            "description": "Align the plugin to the left, center, or right within the module."
+                        },
+                        "page_url": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "page_url",
+                            "label": "Facebook Page URL",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "page"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "https://www.facebook.com/facebook"
+                                }
+                            },
+                            "description": "Enter the full URL of the Facebook page to embed."
+                        },
+                        "page_tabs": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "page_tabs",
+                            "label": "Tabs",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "page"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/checkboxes",
+                                "props": {
+                                    "options": [
+                                        {
+                                            "label": "Timeline",
+                                            "value": "timeline"
+                                        },
+                                        {
+                                            "label": "Events",
+                                            "value": "events"
+                                        },
+                                        {
+                                            "label": "Messages",
+                                            "value": "messages"
+                                        }
+                                    ]
+                                }
+                            },
+                            "description": "Select which tabs to display in the page plugin."
+                        },
+                        "page_width": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "page_width",
+                            "label": "Width",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "page"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 180,
+                                    "max": 500,
+                                    "step": 1,
+                                    "defaultUnit": ""
+                                }
+                            },
+                            "description": "Set the width of the page plugin in pixels (180\u2013500)."
+                        },
+                        "page_height": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "page_height",
+                            "label": "Height",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "page"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 70,
+                                    "max": 1000,
+                                    "step": 1,
+                                    "defaultUnit": ""
+                                }
+                            },
+                            "description": "Set the height of the page plugin in pixels (70\u20131000)."
+                        },
+                        "page_small_header": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "page_small_header",
+                            "label": "Use Small Header",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "page"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            },
+                            "description": "Use a smaller header for the page plugin."
+                        },
+                        "page_lazy_load": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "page_lazy_load",
+                            "label": "Lazy Load",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "page"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            },
+                            "description": "Defer loading the plugin until it scrolls into view."
+                        },
+                        "share_url": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "share_url",
+                            "label": "URL to Share",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "share"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "https://example.com"
+                                }
+                            },
+                            "description": "Enter the URL you want visitors to share."
+                        },
+                        "share_layout": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "share_layout",
+                            "label": "Layout",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "share"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "box_count": {
+                                            "label": "Box Count"
+                                        },
+                                        "button_count": {
+                                            "label": "Button Count"
+                                        },
+                                        "button": {
+                                            "label": "Button"
+                                        }
+                                    }
+                                }
+                            },
+                            "description": "Choose the layout style of the share button."
+                        },
+                        "share_size": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "share_size",
+                            "label": "Size",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "share"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "small": {
+                                            "label": "Small"
+                                        },
+                                        "large": {
+                                            "label": "Large"
+                                        }
+                                    }
+                                }
+                            },
+                            "description": "Choose the size of the share button."
+                        },
+                        "post_url": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "post_url",
+                            "label": "Post URL",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "post"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "https://www.facebook.com/.../posts/..."
+                                }
+                            },
+                            "description": "Enter the full URL of the Facebook post to embed."
+                        },
+                        "post_width": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "post_width",
+                            "label": "Width",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "post"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 350,
+                                    "max": 750,
+                                    "step": 1,
+                                    "defaultUnit": ""
+                                }
+                            },
+                            "description": "Set the width of the embedded post in pixels (350\u2013750)."
+                        },
+                        "post_show_text": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "post_show_text",
+                            "label": "Show Full Text",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "post"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            },
+                            "description": "Show the full text of the embedded post."
+                        },
+                        "post_lazy_load": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "post_lazy_load",
+                            "label": "Lazy Load",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "post"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            },
+                            "description": "Defer loading the post until it scrolls into view."
+                        },
+                        "video_url": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "video_url",
+                            "label": "Video URL",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "video"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "https://www.facebook.com/.../videos/..."
+                                }
+                            },
+                            "description": "Enter the full URL of the Facebook video to embed."
+                        },
+                        "video_width": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "video_width",
+                            "label": "Width",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "video"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 220,
+                                    "max": 1200,
+                                    "step": 1,
+                                    "defaultUnit": ""
+                                }
+                            },
+                            "description": "Set the width of the embedded video in pixels (220\u20131200)."
+                        },
+                        "video_show_text": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "video_show_text",
+                            "label": "Show Text",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "video"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            },
+                            "description": "Show text description below the video."
+                        },
+                        "video_show_captions": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "video_show_captions",
+                            "label": "Show Captions",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "video"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            },
+                            "description": "Display captions on the video by default."
+                        },
+                        "video_allowfullscreen": {
+                            "groupSlug": "general_settings",
+                            "attrName": "fb_settings.innerContent",
+                            "subName": "video_allowfullscreen",
+                            "label": "Allow Fullscreen",
+                            "render": true,
+                            "show_if": {
+                                "plugin_type": "video"
+                            },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            },
+                            "description": "Allow the video to be played in fullscreen mode."
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "plugin_type": "page",
+                            "language": "en_US",
+                            "fb_align": "center",
+                            "page_url": "",
+                            "page_tabs": [
+                                "timeline"
+                            ],
+                            "page_width": "340",
+                            "page_height": "500",
+                            "page_small_header": "off",
+                            "page_lazy_load": "off",
+                            "share_url": "",
+                            "share_layout": "button_count",
+                            "share_size": "small",
+                            "post_url": "",
+                            "post_width": "500",
+                            "post_show_text": "on",
+                            "post_lazy_load": "off",
+                            "video_url": "",
+                            "video_width": "500",
+                            "video_show_text": "off",
+                            "video_show_captions": "off",
+                            "video_allowfullscreen": "on"
+                        }
+                    }
+                }
+            }
+        },
+        "css": {
+            "type": "object",
+            "settings": {
+                "advanced": {
+                    "customCss": {},
+                    "cssId": {},
+                    "cssClass": {}
+                }
+            }
+        }
+    },
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "general_settings": {
+                "panel": "content",
+                "groupName": "general_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "General Settings"
+                    }
+                }
+            }
+        }
+    }
+}

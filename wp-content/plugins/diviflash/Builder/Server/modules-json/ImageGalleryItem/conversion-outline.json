@@ -1,0 +1,29 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "background": "module.decoration.background",
+    "margin_padding": "module.decoration.spacing",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "link_options": "module.advanced.link",
+    "z_index": "module.decoration.zIndex",
+    "animation": "module.decoration.animation"
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after"
+  },
+  "module": {
+    "gallery_title": "gallery_title.innerContent.*",
+    "gallery_ids": "gallery_ids.innerContent.*"
+  },
+  "valueExpansionFunctionMap": {}
+}

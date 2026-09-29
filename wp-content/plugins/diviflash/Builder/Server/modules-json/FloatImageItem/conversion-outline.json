@@ -1,0 +1,51 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "disabled_on": "module.decoration.disabledOn",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "link_options": "module.advanced.link",
+    "display_conditions": "module.decoration.conditions",
+    "animation": "module.decoration.animation",
+    "borders": {
+      "default": "module.decoration.border",
+      "iamge": "image.decoration.border"
+    },
+    "box_shadow": {
+      "iamge": "image.decoration.boxShadow"
+    },
+    "background": "module.decoration.background",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "margin_padding": "module.decoration.spacing",
+    "filters": {
+      "default": "module.decoration.filters"
+    }
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after",
+    "free_form": "css.*.freeForm"
+  },
+  "module": {
+    "fii_max_width": "fii_max_width.innerContent.*",
+    "fii_max_height": "fii_max_height.innerContent.*",
+    "image": "image.innerContent.*",
+    "alt_text": "alt_text.innerContent.*",
+    "horizontal_position": "horizontal_position.innerContent.*",
+    "vertical_position": "vertical_position.innerContent.*",
+    "animation_type": "animation_type.innerContent.*",
+    "vertical_anime_distance": "vertical_anime_distance.innerContent.*",
+    "horizontal_anime_distance": "horizontal_anime_distance.innerContent.*",
+    "duration": "duration.innerContent.*",
+    "delay": "delay.innerContent.*",
+    "animation_function": "animation_function.innerContent.*"
+  }
+}

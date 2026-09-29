@@ -1,0 +1,218 @@
+# Translation of Plugins - HubSpot All-In-One Marketing &#8211; Forms, Popups, Live Chat - Stable (latest release) in Dutch
+# This file is distributed under the same license as the Plugins - HubSpot All-In-One Marketing &#8211; Forms, Popups, Live Chat - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-07-08 16:11:20+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: nl\n"
+"Project-Id-Version: Plugins - HubSpot All-In-One Marketing &#8211; Forms, Popups, Live Chat - Stable (latest release)\n"
+
+#: public/class-proxy-mappings.php:48
+msgid "Fetch Proxy Maps Schedule"
+msgstr "Schema proxy kaarten ophalen"
+
+#. translators: %1$s: Plugin current version %2$s: WordPress required version
+#: public/admin/class-leadinadmin.php:269
+msgid "HubSpot All-In-One Marketing %1$s requires WordPress %2$s or higher Please upgrade WordPress first"
+msgstr "HubSpot All-In-One Marketing %1$s vereist PHP %2$s of hoger. Upgrade eerst WordPress"
+
+#: public/admin/class-deactivationform.php:81
+msgid "Feedback"
+msgstr "Feedback"
+
+#: public/admin/class-leadinadmin.php:212
+msgid "Reporting"
+msgstr "Rapporteren"
+
+#. Author URI of the plugin
+#: leadin.php
+msgid "http://hubspot.com/products/wordpress"
+msgstr "http://hubspot.com/products/wordpress"
+
+#: public/admin/class-deactivationform.php:54
+msgid "I can't sign up or log in"
+msgstr "Ik kan me niet aanmelden of inloggen"
+
+#: public/admin/class-deactivationform.php:58
+msgid "Temporarily disabling or troubleshooting"
+msgstr "Tijdelijk uitschakelen of problemen oplossen"
+
+#: public/admin/class-leadinadmin.php:209
+msgid "Contacts"
+msgstr "Contacten"
+
+#: public/admin/class-leadinadmin.php:211
+msgid "Lists"
+msgstr "Lijsten"
+
+#: public/admin/class-deactivationform.php:29
+msgid "We're sorry to see you go"
+msgstr "Het spijt ons je te zien gaan"
+
+#: public/admin/class-deactivationform.php:56
+msgid "The plugin isn't working"
+msgstr "De plugin werkt niet"
+
+#: public/admin/class-deactivationform.php:57
+msgid "The plugin isn't useful"
+msgstr "De plugin is niet nuttig"
+
+#: public/admin/class-deactivationform.php:59
+msgid "Other"
+msgstr "Overige"
+
+#: public/admin/class-deactivationform.php:86
+msgid "Submit & deactivate"
+msgstr "Verzenden & deactiveren"
+
+#: public/admin/class-deactivationform.php:91
+msgid "Skip & deactivate"
+msgstr "Overslaan en deactiveren"
+
+#: public/admin/class-leadinadmin.php:216
+#: public/admin/class-pluginactionsmanager.php:50
+msgid "Upgrade"
+msgstr "Upgrade"
+
+#: public/admin/class-leadinadmin.php:85 build/gutenberg.js:1090
+#: build/gutenberg.js:485
+msgid "Blog Post"
+msgstr "Blogbericht"
+
+#: public/admin/widgets/class-elementormeeting.php:84
+msgid "Meetings Scheduler"
+msgstr "Vergaderingen planner"
+
+#: public/admin/widgets/class-elementorform.php:99
+msgid "Form"
+msgstr "Formulier"
+
+#: public/admin/class-reviewbanner.php:63
+msgid "Leave us a review | link opens in a new tab"
+msgstr "Laat een beoordeling achter | link opent in een nieuwe tab"
+
+#: public/admin/class-reviewbanner.php:39
+msgid "Thanks,"
+msgstr "Bedankt,"
+
+#: public/admin/class-leadinadmin.php:205
+msgid "User Guide"
+msgstr "Gebruiker handleiding"
+
+#: public/admin/class-leadinadmin.php:89 build/gutenberg.js:1102
+#: build/gutenberg.js:493
+msgid "Standard Page"
+msgstr "Standaard pagina"
+
+#: public/admin/class-leadinadmin.php:87 build/gutenberg.js:1096
+#: build/gutenberg.js:490
+msgid "Landing Page"
+msgstr "Landing pagina"
+
+#: public/admin/class-leadinadmin.php:86 build/gutenberg.js:1093
+#: build/gutenberg.js:487
+msgid "Knowledge Article"
+msgstr "Kennis artikel"
+
+#: public/admin/class-leadinadmin.php:84 build/gutenberg.js:1087
+#: build/gutenberg.js:484
+msgid "Detect Automatically"
+msgstr "Automatisch detecteren"
+
+#: public/admin/class-leadinadmin.php:72 public/class-leadin.php:45
+msgid "Hubspot"
+msgstr "Hubspot"
+
+#: public/admin/class-deactivationform.php:55
+msgid "The plugin is impacting website performance"
+msgstr "De plugin beïnvloedt de prestaties van de site"
+
+#: public/admin/class-leadinadmin.php:88 build/gutenberg.js:1099
+#: build/gutenberg.js:491
+msgid "Listing Page"
+msgstr "Vermeldingspagina"
+
+#. translators: %1$s: Current user name or nickname
+#: public/admin/class-reviewbanner.php:31
+msgid "Hey %1$s,"
+msgstr "Hallo %1$s,"
+
+#. translators: %1$s: HTML anchor opening tag %2$s: HTML anchor closing tag
+#: public/admin/class-reviewbanner.php:36
+msgid "Have you got 2 minutes to complete %1$sthis survey%2$s about the HubSpot for WordPress plugin?"
+msgstr "Heb je 2 minuten om %1$sdeze enquête%2$s over de HubSpot for WordPress plugin in te vullen?"
+
+#: public/admin/class-reviewbanner.php:38
+msgid "HubSpot for WordPress Team"
+msgstr "HubSpot for WordPress team"
+
+#: public/admin/class-reviewbanner.php:37
+msgid "We read every response Your feedback helps our team make the improvements that you need the most"
+msgstr "We lezen elke reactie. Je feedback helpt ons team de verbeteringen aan te brengen die je het meest nodig hebt"
+
+#: public/admin/class-leadinadmin.php:80 build/gutenberg.js:1053
+#: build/gutenberg.js:471
+msgid "Select the content type HubSpot Analytics uses to track this page"
+msgstr "Selecteer het inhoudstype dat HubSpot Analytics gebruikt om deze pagina te volgen"
+
+#: public/admin/class-reviewbanner.php:27
+msgid "Dismiss this notice"
+msgstr "Negeer dit bericht"
+
+#: public/admin/class-deactivationform.php:39
+msgid "If you have a moment, please let us know why you're deactivating the plugin"
+msgstr "Als je een moment hebt, laat ons dan weten waarom je de plugin uitschakelt"
+
+#. translators: %1$s: HTML anchor opening tag %2$s: HTML anchor closing tag
+#: public/admin/class-noticemanager.php:36 build/elementor.js:370
+#: build/elementor.js:180
+msgid "The HubSpot plugin is not connected right now To use HubSpot tools on your WordPress site, %1$sconnect the plugin now%2$s"
+msgstr "De HubSpot plugin is momenteel niet verbonden. Om HubSpot gereedschap op je WordPress site te gebruiken, verbind%1$s de plugin nu%2$s"
+
+#: public/admin/class-leadinadmin.php:207
+msgid "Live Chat"
+msgstr "Live Chat"
+
+#: public/admin/class-leadinadmin.php:210
+msgid "Email"
+msgstr "E-mail"
+
+#: public/admin/class-leadinadmin.php:214
+#: public/admin/class-pluginactionsmanager.php:35
+msgid "Settings"
+msgstr "Instellingen"
+
+#: public/admin/class-leadinadmin.php:206
+msgid "Forms"
+msgstr "Formulieren"
+
+#. Author of the plugin
+#: leadin.php public/admin/class-gutenberg.php:36
+#: public/admin/class-leadinadmin.php:203
+#: public/admin/class-leadinadmin.php:221
+msgid "HubSpot"
+msgstr "HubSpot"
+
+#. Plugin URI of the plugin
+#: leadin.php
+msgid "http://www.hubspot.com/integrations/wordpress"
+msgstr "http://www.hubspot.com/integrations/wordpress"
+
+#. Plugin Name of the plugin
+#: leadin.php
+msgid "HubSpot All-In-One Marketing - Forms, Popups, Live Chat"
+msgstr "HubSpot All-In-One Marketing - Forms, Popups, Live Chat"
+
+#. Description of the plugin
+#: leadin.php
+msgid "HubSpot’s official WordPress plugin allows you to add forms, popups, and live chat to your website and integrate with the best WordPress CRM."
+msgstr "HubSpot's officiële WordPress plugin staat je toe om formulieren, pop-ups, en live chats aan je site toe te voegen en te integreren met het beste WordPress CRM."
+
+#. translators: %1$s: Plugin current version %2$s: PHP required version
+#: public/admin/class-leadinadmin.php:262
+msgid "HubSpot All-In-One Marketing %1$s requires PHP %2$s or higher Please upgrade WordPress first"
+msgstr "HubSpot Alles-In-Een Marketing %1$s vereist PHP %2$s of hoger. Update WordPress eerst"

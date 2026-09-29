@@ -1,0 +1,48 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "animation": "module.decoration.animation",
+    "background": "module.decoration.background",
+    "disabled_on": "module.decoration.disabledOn",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "text": "module.advanced.text",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "margin_padding": "module.decoration.spacing",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "link_options": "module.advanced.link",
+    "box_shadow": {
+      "default": "module.decoration.boxShadow"
+    },
+    "borders": {
+      "default": "module.decoration.border"
+    },
+    "filters": {
+      "default": "module.decoration.filters",
+      "child": "image_obj_settings.decoration.filters"
+    }
+  },
+  "css": {
+    "after": "css.*.after",
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement"
+  },
+  "module": {
+    "image": "image.innerContent.*.src",
+    "alt_text": "image.innerContent.*.alt",
+    "mask_size": "mask.innerContent.*.size",
+    "mask_position": "mask.innerContent.*.position",
+    "mask_select": "mask.innerContent.*.select",
+    "image_full_width": "image.innerContent.*.full_width",
+    "mask_rotate": "mask.innerContent.*.rotate"
+  },
+  "valueExpansionFunctionMap": {
+    "mask_position": "dfConvertPosition"
+  }
+}

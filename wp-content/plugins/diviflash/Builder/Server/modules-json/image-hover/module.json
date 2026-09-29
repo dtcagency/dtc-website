@@ -1,0 +1,1454 @@
+{
+  "name": "difl/imagehover",
+  "d4Shortcode": "difl_imagehover",
+  "title": "Image Hover",
+  "titles": "Image Hovers",
+  "category": "module",
+  "moduleIcon": "difl/image-hover-box",
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "contentImage": {
+        "panel": "content",
+        "groupName": "image",
+        "priority": 0,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Image"
+          }
+        }
+      },
+      "image_design": {
+        "panel": "design",
+        "groupName": "image",
+        "priority": "0",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Image"
+          }
+        }
+      },
+      "icon_content": {
+        "panel": "content",
+        "groupName": "icon",
+        "priority": 1,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Icon"
+          }
+        }
+      },
+      "icon_design": {
+        "panel": "design",
+        "groupName": "icon",
+        "priority": "1",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Icon"
+          }
+        }
+      },
+      "hover": {
+        "panel": "content",
+        "groupName": "hover",
+        "priority": 2,
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Hover Settings"
+          }
+        }
+      },
+      "title": {
+        "panel": "design",
+        "groupName": "title",
+        "priority": "2",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Title"
+          }
+        }
+      },
+      "margin_padding": {
+        "panel": "design",
+        "groupName": "spacing",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spacing"
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {},
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {
+            "component": {
+              "type": "group",
+              "name": "divi/admin-label"
+            }
+          }
+        },
+        "advanced": {
+          "link": {}
+        },
+        "decoration": {
+          "attributes": {},
+          "background": {},
+          "interactions": {},
+          "sizing": {
+            "priority": "3"
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "priority": "5",
+            "item": {
+              "priority": "5",
+              "groupSlug": "margin_padding",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "filters": {},
+          "transform": {},
+          "animation": {},
+          "conditions": {},
+          "disabledOn": {},
+          "overflow": {},
+          "position": {},
+          "scroll": {},
+          "sticky": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Image Hover"
+            }
+          }
+        }
+      }
+    },
+    "title": {
+      "type": "object",
+      "selector": "{{selector}} .df_ihb_title",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "tag": {
+              "groupSlug": "title",
+              "render": true,
+              "subName": "tag",
+              "label": "Title Tag",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "tag": "h3"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "h1": {
+                      "label": "h1 tag"
+                    },
+                    "h2": {
+                      "label": "h2 tag"
+                    },
+                    "h3": {
+                      "label": "h3 tag"
+                    },
+                    "h4": {
+                      "label": "h4 tag"
+                    },
+                    "h5": {
+                      "label": "h5 tag"
+                    },
+                    "h6": {
+                      "label": "h6 tag"
+                    },
+                    "p": {
+                      "label": "p tag"
+                    },
+                    "span": {
+                      "label": "span tag"
+                    }
+                  }
+                }
+              }
+            },
+            "always_show_title": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 4,
+              "subName": "always_show_title",
+              "label": "Always Show Title",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "always_show_title": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "title_reveal": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 4,
+              "subName": "title_reveal",
+              "label": "Title Reveal",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "title_reveal": "c4-fade-up"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "c4-reveal-up": {
+                      "label": "Reveal Top"
+                    },
+                    "c4-reveal-down": {
+                      "label": "Reveal Down"
+                    },
+                    "c4-reveal-left": {
+                      "label": "Reveal Left"
+                    },
+                    "c4-reveal-right": {
+                      "label": "Reveal Right"
+                    },
+                    "c4-fade-up": {
+                      "label": "Fade Up"
+                    },
+                    "c4-fade-down": {
+                      "label": "Fade Down"
+                    },
+                    "c4-fade-left": {
+                      "label": "Fade Left"
+                    },
+                    "c4-fade-right": {
+                      "label": "Fade Right"
+                    },
+                    "c4-rotate-up-right": {
+                      "label": "Rotate Up Right"
+                    },
+                    "c4-rotate-up-left": {
+                      "label": "Rotate Up Left"
+                    },
+                    "c4-rotate-down-right": {
+                      "label": "Rotate Down Right"
+                    },
+                    "c4-rotate-down-left": {
+                      "label": "Rotate Down Left"
+                    }
+                  }
+                }
+              }
+            },
+            "title_anm_delay": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 4,
+              "subName": "title_anm_delay",
+              "label": "Title animation delay (ms)",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "title_anm_delay": "0"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    " "
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 2000,
+                  "step": 50
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "title",
+              "attrName": "title.decoration.font",
+              "label": "Title",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Title",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    },
+                    "textAlign": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "30px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "priority": "0",
+              "groupSlug": "margin_padding",
+              "render": true,
+              "attrName": "title_margin.innerContent",
+              "label": "Title Margin",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Title ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "font": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_ihb_title",
+              "hover": "{{selector}} .df_ihb_image_wrap:hover .df_ihb_title"
+            }
+          }
+        },
+        "spacing": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .df_ihb_title",
+              "hover": "{{selector}} .df_ihb_image_wrap:hover .df_ihb_title"
+            }
+          }
+        }
+      }
+    },
+    "icon": {
+      "type": "object",
+      "selector": "{{selector}} .ihb_icon_wrap",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable": {
+              "groupSlug": "icon_content",
+              "render": true,
+              "subName": "enable",
+              "label": "Use Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "icon": {
+              "groupSlug": "icon_content",
+              "render": true,
+              "subName": "icon",
+              "label": "Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "color": {
+              "groupSlug": "icon_design",
+              "render": true,
+              "subName": "color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "color": "#2ea3f2"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "size": {
+              "groupSlug": "icon_design",
+              "render": true,
+              "subName": "size",
+              "label": "Icon Size",
+              "features": {
+                "sticky": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "size": "96px"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 120,
+                  "step": 1
+                }
+              }
+            },
+            "always_show_icon": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 5,
+              "subName": "always_show_icon",
+              "label": "Always Show Icon",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "icon_anm_delay": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 5,
+              "subName": "icon_anm_delay",
+              "label": "Icon animation delay (ms)",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "icon_anm_delay": "0"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    " "
+                  ],
+                  "defaultUnit": "",
+                  "min": 0,
+                  "max": 2000,
+                  "step": 50
+                }
+              }
+            },
+            "icon_reveal": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 5,
+              "subName": "icon_reveal",
+              "label": "Icon Reveal",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "icon_reveal": "c4-fade-up"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "c4-reveal-up": {
+                      "label": "Reveal Top"
+                    },
+                    "c4-reveal-down": {
+                      "label": "Reveal Down"
+                    },
+                    "c4-reveal-left": {
+                      "label": "Reveal Left"
+                    },
+                    "c4-reveal-right": {
+                      "label": "Reveal Right"
+                    },
+                    "c4-fade-up": {
+                      "label": "Fade Up"
+                    },
+                    "c4-fade-down": {
+                      "label": "Fade Down"
+                    },
+                    "c4-fade-left": {
+                      "label": "Fade Left"
+                    },
+                    "c4-fade-right": {
+                      "label": "Fade Right"
+                    },
+                    "c4-rotate-up-right": {
+                      "label": "Rotate Up Right"
+                    },
+                    "c4-rotate-up-left": {
+                      "label": "Rotate Up Left"
+                    },
+                    "c4-rotate-down-right": {
+                      "label": "Rotate Down Right"
+                    },
+                    "c4-rotate-down-left": {
+                      "label": "Rotate Down Left"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "priority": "2",
+              "groupSlug": "margin_padding",
+              "render": true,
+              "attrName": "icon.decoration.spacing",
+              "label": "Icon Margin",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "icon_design",
+              "render": true,
+              "attrName": "icon.decoration.background",
+              "label": "Icon Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon",
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": " {{selector}} .ihb_icon_wrap .et-pb-icon",
+              "hover": " {{selector}} df_ihb_container:hover .ihb_icon_wrap .et-pb-icon"
+            }
+          }
+        },
+        "background": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .ihb_icon_wrap",
+              "hover": "{{selector}} .df_ihb_container:hover .ihb_icon_wrap"
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "image": {
+      "type": "object",
+      "selector": "{{selector}} img",
+      "elementType": "imageLink",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "src": {
+              "groupSlug": "contentImage",
+              "subName": "src",
+              "label": "Image",
+              "description": "Upload an image.",
+              "features": {
+                "dynamicContent": {
+                  "type": "image"
+                },
+                "sticky": false,
+                "responsive": true,
+                "hover": true,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 10,
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "syncImageData": true
+                }
+              }
+            },
+            "alt": {
+              "groupSlug": "contentImage",
+              "subName": "alt",
+              "label": "Image Alt Text",
+              "description": "This defines the HTML ALT text. A short description of your image can be placed here.",
+              "features": {
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "sticky": false,
+                "responsive": false,
+                "hover": false,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 30,
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "titleText": {
+              "groupSlug": "contentImage",
+              "subName": "titleText",
+              "label": "Image Title Text",
+              "description": "This defines the HTML Title text.",
+              "features": {
+                "dynamicContent": {
+                  "type": "text"
+                },
+                "sticky": false,
+                "responsive": false,
+                "hover": false,
+                "preset": "content"
+              },
+              "render": true,
+              "priority": 20,
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "scale_type": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 3,
+              "subName": "scale_type",
+              "label": "Image Scale Type",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "scale_type": "no-image-scale"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "no-image-scale": {
+                      "label": "None"
+                    },
+                    "c4-image-zoom-in": {
+                      "label": "Zoom In"
+                    },
+                    "c4-image-zoom-out": {
+                      "label": "Zoom Out"
+                    },
+                    "c4-image-pan-up": {
+                      "label": "Pan Up"
+                    },
+                    "c4-image-pan-down": {
+                      "label": "Pan Down"
+                    },
+                    "c4-image-pan-left": {
+                      "label": "Pan Left"
+                    },
+                    "c4-image-pan-right": {
+                      "label": "Pan Right"
+                    },
+                    "c4-image-rotate-left": {
+                      "label": "Rotate Left"
+                    },
+                    "c4-image-rotate-right": {
+                      "label": "Rotate Right"
+                    },
+                    "c4-image-blur": {
+                      "label": "Blur"
+                    }
+                  }
+                }
+              }
+            },
+            "scale_hover": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 3,
+              "subName": "scale_hover",
+              "label": "Scale",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "scale_hover": "1.3"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    " "
+                  ],
+                  "defaultUnit": "",
+                  "min": 1.3,
+                  "max": 3,
+                  "step": 0.1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "overlay": {
+      "type": "object",
+      "selector": "{{selector}}  .c4-izmir .df-overlay",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "useOverlay": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 0,
+              "subName": "useOverlay",
+              "label": "Overlay",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "useOverlay": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "primary_color": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 0,
+              "subName": "primary_color",
+              "label": "Overlay Primary color",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "primary_color": "#00B4DB"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "secondary_color": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 0,
+              "subName": "secondary_color",
+              "label": "Overlay Secondary color",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "secondary_color": "#0083B0"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "direction": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 0,
+              "subName": "direction",
+              "label": "Overlay Gradient Direction",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "direction": "180deg"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "deg"
+                  ],
+                  "defaultUnit": "deg",
+                  "min": 1,
+                  "max": 360,
+                  "step": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "border_anim": {
+      "type": "object",
+      "selector": "{{selector}} .c4-izmir",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "enable": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 1,
+              "subName": "enable",
+              "label": "Border Animation",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": "off"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "color": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 1,
+              "subName": "color",
+              "label": "Border Color",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "color": "#ffffff"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "width": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 1,
+              "subName": "width",
+              "label": "Border Width",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "width": "3px"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 20,
+                  "step": 1
+                }
+              }
+            },
+            "margin": {
+              "groupSlug": "hover",
+              "render": true,
+              "priority": 1,
+              "subName": "margin",
+              "label": "Border Space",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "margin": "15px"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "allowedUnits": [
+                    "px"
+                  ],
+                  "defaultUnit": "px",
+                  "min": 0,
+                  "max": 50,
+                  "step": 1
+                }
+              }
+            },
+            "anm_style": {
+              "groupSlug": "hover",
+              "render": true,
+              "subName": "anm_style",
+              "priority": 1,
+              "label": "Border Animation Style",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "anm_style": "c4-border-fade"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "c4-border-center": {
+                      "label": "Border Center"
+                    },
+                    "c4-border-top": {
+                      "label": "Border Top"
+                    },
+                    "c4-border-bottom": {
+                      "label": "Border Bottom"
+                    },
+                    "c4-border-right": {
+                      "label": "Border Right"
+                    },
+                    "c4-border-left": {
+                      "label": "Border Left"
+                    },
+                    "c4-border-vert": {
+                      "label": "Border Vertical"
+                    },
+                    "c4-border-horiz": {
+                      "label": "Border Horizontal"
+                    },
+                    "c4-border-top-left": {
+                      "label": "Border Top Left"
+                    },
+                    "c4-border-top-right": {
+                      "label": "Border Top Right"
+                    },
+                    "c4-border-bottom-left": {
+                      "label": "Border Bottom Left"
+                    },
+                    "c4-border-bottom-right": {
+                      "label": "Border Bottom Right"
+                    },
+                    "c4-border-corners-1": {
+                      "label": "Border Corner 1"
+                    },
+                    "c4-border-corners-2": {
+                      "label": "Border Corner 2"
+                    },
+                    "c4-border-cc-1": {
+                      "label": "Border CC 1"
+                    },
+                    "c4-border-cc-2": {
+                      "label": "Border CC 2"
+                    },
+                    "c4-border-cc-3": {
+                      "label": "Border CC 3"
+                    },
+                    "c4-border-ccc-1": {
+                      "label": "Border CCC 1"
+                    },
+                    "c4-border-ccc-2": {
+                      "label": "Border CCC 2"
+                    },
+                    "c4-border-ccc-3": {
+                      "label": "Border CCC 3"
+                    },
+                    "c4-border-fade": {
+                      "label": "Border Fade"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "icon_wrapper": {
+      "type": "object",
+      "selector": "{{selector}} .ihb_icon_wrap",
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "icon_design",
+              "attrName": "icon_wrapper.decoration.border",
+              "label": "Icon Wrapper",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon Wrapper"
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "icon_design",
+              "attrName": "icon_wrapper.decoration.boxShadow",
+              "label": "Icon Wrapper",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon Wrapper"
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "priority": "1",
+              "groupSlug": "margin_padding",
+              "render": true,
+              "attrName": "icon_wrapper.decoration.spacing",
+              "label": "Icon Wrapper Margin",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Icon Wrapper ",
+                  "fields": {
+                    "padding": {
+                      "render": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "border": {
+          "important": true,
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .ihb_icon_wrap",
+              "hover": "{{selector}} .df_ihb_container:hover .ihb_icon_wrap"
+            }
+          }
+        },
+        "boxShadow": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .ihb_icon_wrap",
+              "hover": "{{selector}} .df_ihb_container:hover .ihb_icon_wrap"
+            }
+          }
+        },
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} .ihb_icon_wrap",
+              "hover": "{{selector}} .df_ihb_container:hover .ihb_icon_wrap"
+            }
+          }
+        }
+      }
+    },
+    "child_filters_target": {
+      "type": "object",
+      "selector": "{{selector}} img",
+      "settings": {
+        "decoration": {
+          "filters": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "image_design",
+              "attrName": "child_filters_target.decoration.filters",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/filters",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "filters": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}} img",
+              "hover": "{{selector}}:hover img"
+            }
+          }
+        }
+      }
+    },
+    "anm_content_padding": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "hover",
+            "render": true,
+            "priority": 2,
+            "attrName": "anm_content_padding.innerContent",
+            "label": "Content Space",
+            "features": {
+              "sticky": false,
+              "hover": false
+            },
+            "defaultAttr": {
+              "desktop": {
+                "value": "1em"
+              }
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/range",
+              "props": {
+                "allowedUnits": [
+                  "em",
+                  "px"
+                ],
+                "defaultUnit": "em",
+                "min": 0.3,
+                "max": 3,
+                "step": 0.1
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_position": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "hover",
+            "render": true,
+            "priority": 2,
+            "attrName": "content_position.innerContent",
+            "label": "Content Position",
+            "features": {
+              "sticky": false,
+              "hover": false,
+              "responsive": false,
+              "preset": "content"
+            },
+            "defaultAttr": {
+              "desktop": {
+                "value": "c4-layout-top-left"
+              }
+            },
+            "component": {
+              "type": "field",
+              "name": "divi/select",
+              "props": {
+                "options": {
+                  "c4-layout-top-left": {
+                    "label": "Top Left"
+                  },
+                  "c4-layout-top-center": {
+                    "label": "Top Center"
+                  },
+                  "c4-layout-top-right": {
+                    "label": "Top Right"
+                  },
+                  "c4-layout-center-left": {
+                    "label": "Center Left"
+                  },
+                  "c4-layout-center": {
+                    "label": "Center"
+                  },
+                  "c4-layout-center-right": {
+                    "label": "Center Right"
+                  },
+                  "c4-layout-bottom-left": {
+                    "label": "Bottom Left"
+                  },
+                  "c4-layout-bottom-center": {
+                    "label": "Bottom Center"
+                  },
+                  "c4-layout-bottom-right": {
+                    "label": "Bottom Right"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

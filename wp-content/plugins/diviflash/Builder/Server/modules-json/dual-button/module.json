@@ -1,0 +1,1615 @@
+{
+  "name": "difl/dual-button",
+  "d4Shortcode": "difl_dual_button",
+  "title": "Dual Button",
+  "titles": "Dual Buttons",
+  "category": "module",
+  "moduleIcon": "difl/dual-button",
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "left_button": {
+        "panel": "content",
+        "groupName": "left_button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Left Button"
+          }
+        },
+        "priority": 0
+      },
+      "right_button": {
+        "panel": "content",
+        "groupName": "right_button",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Right Button"
+          }
+        },
+        "priority": 1
+      },
+      "separator": {
+        "panel": "content",
+        "groupName": "separator",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Button Separator"
+          }
+        },
+        "priority": 2
+      },
+      "button_styles": {
+        "panel": "design",
+        "groupName": "button_styles",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Button Styles"
+          }
+        },
+        "priority": 6
+      },
+      "left_button_text": {
+        "panel": "design",
+        "groupName": "left_button_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Left Button Text"
+          }
+        },
+        "priority": 7
+      },
+      "left_button_style": {
+        "panel": "design",
+        "groupName": "left_button_style",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Left Button Style"
+          }
+        },
+        "priority": 8
+      },
+      "right_button_text": {
+        "panel": "design",
+        "groupName": "right_button_text",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Right Button Text"
+          }
+        },
+        "priority": 9
+      },
+      "right_button_style": {
+        "panel": "design",
+        "groupName": "right_button_style",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Right Button Style"
+          }
+        },
+        "priority": 10
+      },
+      "separator_font": {
+        "panel": "design",
+        "groupName": "separator_font",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Separator Text"
+          }
+        },
+        "priority": 11
+      },
+      "separator_style": {
+        "panel": "design",
+        "groupName": "separator_style",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Separator Style"
+          }
+        },
+        "priority": 12
+      },
+      "border": {
+        "panel": "design",
+        "groupName": "border",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Border"
+          }
+        },
+        "priority": 13
+      },
+      "custom_sizing": {
+        "panel": "design",
+        "groupName": "custom_sizing",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Sizing"
+          }
+        },
+        "priority": 14
+      },
+      "margin_padding": {
+        "panel": "design",
+        "groupName": "margin_padding",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spacing"
+          }
+        },
+        "priority": 14
+      }
+    }
+  },
+  "customCssFields": {
+    "left_button": {
+      "subName": "left_button",
+      "label": "Left Button",
+      "selectorSuffix": " .df_button_left_wrapper .df_button_left"
+    },
+    "right_button": {
+      "subName": "right_button",
+      "label": "Right Button",
+      "selectorSuffix": " .df_button_right_wrapper .df_button_right"
+    },
+    "button_separator": {
+      "subName": "button_separator",
+      "label": "Button Separator",
+      "selectorSuffix": " .button-separator"
+    }
+  },
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {
+            "component": {
+              "type": "group",
+              "name": "divi/admin-label"
+            }
+          }
+        },
+        "advanced": {},
+        "decoration": {
+          "attributes": {},
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "sizing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "custom_sizing",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/sizing",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "transition": {},
+          "z_index": {},
+          "sticky": {},
+          "scroll": {},
+          "interactions": {},
+          "position": {},
+          "overflow": {},
+          "disabledOn": {},
+          "conditions": {}
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Dual Button"
+            }
+          }
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "selectors": {
+            "desktop": {
+              "value": "{{selector}}.et_pb_module"
+            }
+          }
+        }
+      }
+    },
+    "left_button_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "body #page-container {{selector}} .df_button_left_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "border",
+              "attrName": "left_button_wrapper.decoration.border",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Left Button Wrapper"
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "render": true,
+              "features": {
+                "sticky": false
+              },
+              "priority": 0,
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Left Button Wrapper "
+                }
+              },
+              "attrName": "left_button_wrapper_padding.decoration.spacing"
+            }
+          }
+        }
+      }
+    },
+    "right_button_wrapper_obj_settings": {
+      "type": "object",
+      "selector": "body #page-container {{selector}} .df_button_right_wrapper",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "border",
+              "attrName": "right_button_wrapper.decoration.border",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Right Button Wrapper"
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "render": true,
+              "priority": 1,
+              "label": "Right Button Wrapper Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Right Button Wrapper "
+                }
+              },
+              "attrName": "right_button_wrapper_padding.decoration.spacing"
+            }
+          }
+        }
+      }
+    },
+    "left_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}  .df_button_left",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "left_button_text",
+              "attrName": "left_button.decoration.font",
+              "label": "Left Button",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Left Button",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "20px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "left_button_style",
+              "render": true,
+              "priority": 0,
+              "label": "Left Button Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "btn_left_background.decoration.background"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "left_button_style",
+              "attrName": "left_button.decoration.border",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "left_button_style",
+              "attrName": "left_button.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "render": true,
+              "priority": 4,
+              "label": "Left Button Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Left Button "
+                }
+              }
+            }
+          }
+        },
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "use_left_button_icon": {
+              "groupSlug": "left_button_style",
+              "render": true,
+              "priority": 1,
+              "subName": "use_left_button_icon",
+              "label": "Use Icon",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_left_button_icon": "on"
+                  }
+                }
+              },
+              "description": "Here you can choose whether icon set below should be used.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "btn_left_font_icon": {
+              "groupSlug": "left_button_style",
+              "render": true,
+              "priority": 2,
+              "subName": "btn_left_font_icon",
+              "label": "Icon",
+              "description": "Choose an icon to display with your blurb.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "btn_left_font_icon": {
+                      "unicode": "&#x35;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_left_button_icon": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "btn_left_icon_color": {
+              "groupSlug": "left_button_style",
+              "render": true,
+              "priority": 2,
+              "displayCondition": {
+                "show_if": {
+                  "use_left_button_icon": "on"
+                }
+              },
+              "subName": "btn_left_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_button_left .et-pb-icon",
+                  "hover": "{{selector}} .df_button_left:hover .et-pb-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "btn_left_icon_font_size": {
+              "groupSlug": "left_button_style",
+              "render": true,
+              "subName": "btn_left_icon_font_size",
+              "label": "Icon Font Size",
+              "priority": 2,
+              "displayCondition": {
+                "show_if": {
+                  "use_left_button_icon": "on"
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_button_left .et-pb-icon"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 120,
+                  "step": 1
+                }
+              }
+            },
+            "btn_left_icon_placement": {
+              "groupSlug": "left_button_style",
+              "render": true,
+              "priority": 2,
+              "displayCondition": {
+                "show_if": {
+                  "use_left_button_icon": "on"
+                }
+              },
+              "subName": "btn_left_icon_placement",
+              "label": "Icon Placement",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "btn_left_icon_placement": "right"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "left": {
+                      "label": "Left"
+                    },
+                    "right": {
+                      "label": "Right"
+                    }
+                  }
+                }
+              }
+            },
+            "btn_left_icon_gap": {
+              "groupSlug": "left_button_style",
+              "render": true,
+              "priority": 2,
+              "displayCondition": {
+                "show_if": {
+                  "use_left_button_icon": "on"
+                }
+              },
+              "subName": "btn_left_icon_gap",
+              "label": "Gap Between Icon and Text",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "btn_left_icon_gap": "7px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_button_left"
+                },
+                "css_type": "gap"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 120,
+                  "step": 1
+                }
+              }
+            },
+            "left_button": {
+              "groupSlug": "left_button",
+              "render": true,
+              "subName": "left_button",
+              "label": "Text",
+              "description": "Text for button one.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content",
+                "dynamicContent": {
+                  "type": "text"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "left_button_url": {
+              "groupSlug": "left_button",
+              "render": true,
+              "subName": "left_button_url",
+              "label": "URL",
+              "description": "URL for button one.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content",
+                "dynamicContent": {
+                  "type": "url"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "left_button_target": {
+              "groupSlug": "left_button",
+              "render": true,
+              "subName": "left_button_target",
+              "label": "Link Target",
+              "description": "URL target button one.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "left_button_target": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "off": {
+                      "label": "In The Same Window"
+                    },
+                    "on": {
+                      "label": "In The New Tab"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}  .df_button_right",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "right_button_text",
+              "attrName": "right_button.decoration.font",
+              "label": "Right Button",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Right Button",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "20px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "right_button_style",
+              "render": true,
+              "priority": 0,
+              "label": "Right Button Background",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "btn_right_background.decoration.background"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "right_button_style",
+              "attrName": "right_button.decoration.border",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "right_button_style",
+              "attrName": "right_button.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "priority": 5,
+              "groupSlug": "margin_padding",
+              "render": true,
+              "label": "Right Button",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Right Button "
+                }
+              },
+              "attrName": "right_button_padding.decoration.spacing"
+            }
+          }
+        },
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "use_right_button_icon": {
+              "groupSlug": "right_button_style",
+              "render": true,
+              "priority": 1,
+              "subName": "use_right_button_icon",
+              "label": "Use Icon",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_right_button_icon": "on"
+                  }
+                }
+              },
+              "description": "Here you can choose whether icon set below should be used.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "btn_right_font_icon": {
+              "groupSlug": "right_button_style",
+              "render": true,
+              "priority": 1,
+              "displayCondition": {
+                "show_if": {
+                  "use_right_button_icon": "on"
+                }
+              },
+              "subName": "btn_right_font_icon",
+              "label": "Icon",
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "btn_right_font_icon": {
+                      "unicode": "&#x35;",
+                      "type": "divi",
+                      "weight": "400"
+                    }
+                  }
+                }
+              },
+              "description": "Choose an icon to display with your blurb.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "btn_right_icon_color": {
+              "groupSlug": "right_button_style",
+              "render": true,
+              "priority": 1,
+              "displayCondition": {
+                "show_if": {
+                  "use_right_button_icon": "on"
+                }
+              },
+              "subName": "btn_right_icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_button_right .et-pb-icon",
+                  "hover": "{{selector}} .df_button_right:hover .et-pb-icon"
+                },
+                "css_type": "color"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "btn_right_icon_font_size": {
+              "groupSlug": "right_button_style",
+              "render": true,
+              "subName": "btn_right_icon_font_size",
+              "priority": 1,
+              "displayCondition": {
+                "show_if": {
+                  "use_right_button_icon": "on"
+                }
+              },
+              "label": "Icon Font Size",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_button_right .et-pb-icon"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 120,
+                  "step": 1
+                }
+              }
+            },
+            "btn_right_icon_placement": {
+              "groupSlug": "right_button_style",
+              "render": true,
+              "priority": 1,
+              "displayCondition": {
+                "show_if": {
+                  "use_right_button_icon": "on"
+                }
+              },
+              "subName": "btn_right_icon_placement",
+              "label": "Icon Placement",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "btn_right_icon_placement": "right"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "left": {
+                      "label": "Left"
+                    },
+                    "right": {
+                      "label": "Right"
+                    }
+                  }
+                }
+              }
+            },
+            "btn_right_icon_gap": {
+              "groupSlug": "right_button_style",
+              "render": true,
+              "priority": 1,
+              "displayCondition": {
+                "show_if": {
+                  "use_right_button_icon": "on"
+                }
+              },
+              "subName": "btn_right_icon_gap",
+              "label": "Gap Between Icon and Text",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "btn_right_icon_gap": "7px"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_button_right"
+                },
+                "css_type": "gap"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 120,
+                  "step": 1
+                }
+              }
+            },
+            "right_button": {
+              "groupSlug": "right_button",
+              "render": true,
+              "subName": "right_button",
+              "label": "Text",
+              "description": "Text for button two.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content",
+                "dynamicContent": {
+                  "type": "text"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "right_button_url": {
+              "groupSlug": "right_button",
+              "render": true,
+              "subName": "right_button_url",
+              "label": "URL",
+              "description": "URL for button two.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content",
+                "dynamicContent": {
+                  "type": "url"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "right_button_target": {
+              "groupSlug": "right_button",
+              "render": true,
+              "subName": "right_button_target",
+              "label": "Link Target",
+              "description": "URL target button two.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "right_button_target": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "off": {
+                      "label": "In The Same Window"
+                    },
+                    "on": {
+                      "label": "In The New Tab"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "separator_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}  .button-separator",
+      "inlineEditor": true,
+      "settings": {
+        "decoration": {
+          "font": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "separator_font",
+              "attrName": "separator.decoration.font",
+              "label": "Separator",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/font",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Separator",
+                  "fields": {
+                    "headingLevel": {
+                      "render": false
+                    }
+                  },
+                  "defaultGroupAttr": {
+                    "font": {
+                      "desktop": {
+                        "value": {
+                          "size": "14px"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "background": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "separator_style",
+              "render": true,
+              "priority": 0,
+              "label": "Background color",
+              "features": {
+                "sticky": false,
+                "responsive": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/background",
+                "props": {
+                  "grouped": false,
+                  "hidePanels": [
+                    "video",
+                    "mask",
+                    "pattern"
+                  ],
+                  "fields": {
+                    "image": {
+                      "parallaxEnabled": {
+                        "render": false
+                      },
+                      "parallaxMethod": {
+                        "render": false
+                      }
+                    }
+                  }
+                }
+              },
+              "attrName": "separator_background.decoration.background"
+            }
+          },
+          "border": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "separator_style",
+              "attrName": "separator.decoration.border",
+              "label": "",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/border",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": null
+                }
+              }
+            }
+          },
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "separator_style",
+              "attrName": "separator.decoration.boxShadow",
+              "label": null,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": ""
+                }
+              }
+            }
+          },
+          "spacing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "margin_padding",
+              "render": true,
+              "priority": 6,
+              "label": "Button separator Padding",
+              "features": {
+                "sticky": false
+              },
+              "component": {
+                "type": "group",
+                "name": "divi/spacing",
+                "props": {
+                  "grouped": false,
+                  "fieldLabel": "Button separator "
+                }
+              },
+              "attrName": "button_separator_padding.decoration.spacing"
+            }
+          }
+        },
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "button_separator": {
+              "groupSlug": "separator",
+              "render": true,
+              "subName": "button_separator",
+              "label": "Use button separator",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "button_separator": "off"
+                  }
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "separator_text": {
+              "groupSlug": "separator",
+              "render": true,
+              "subName": "separator_text",
+              "label": "Separator text",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content",
+                "dynamicContent": {
+                  "type": "text"
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "button_separator": "on"
+                },
+                "show_if_not": {
+                  "use_icon": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text"
+              }
+            },
+            "use_icon": {
+              "groupSlug": "separator",
+              "render": true,
+              "subName": "use_icon",
+              "label": "Use Icon",
+              "description": "Here you can choose whether icon set below should be used.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "use_icon": "off"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "button_separator": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "font_icon": {
+              "groupSlug": "separator",
+              "render": true,
+              "subName": "font_icon",
+              "label": "Icon",
+              "description": "Choose an icon to display with your blurb.",
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_icon": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/icon-picker"
+              }
+            },
+            "icon_color": {
+              "groupSlug": "separator",
+              "render": true,
+              "subName": "icon_color",
+              "label": "Icon Color",
+              "description": "Here you can define a custom color for your icon.",
+              "features": {
+                "dynamicContent": {
+                  "type": "color"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .et-pb-icon.df-btn-separator-icon"
+                },
+                "css_type": "color"
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_icon": "on"
+                }
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/color-picker"
+              }
+            },
+            "use_icon_font_size": {
+              "groupSlug": "separator",
+              "render": true,
+              "subName": "use_icon_font_size",
+              "label": "Use Icon Font Size",
+              "displayCondition": {
+                "show_if": {
+                  "use_icon": "on"
+                }
+              },
+              "features": {
+                "sticky": false,
+                "hover": false,
+                "responsive": false,
+                "preset": "content"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/toggle"
+              }
+            },
+            "icon_font_size": {
+              "groupSlug": "separator",
+              "render": true,
+              "subName": "icon_font_size",
+              "label": "Icon Font Size",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "icon_font_size": "18px"
+                  }
+                }
+              },
+              "displayCondition": {
+                "show_if": {
+                  "use_icon_font_size": "on",
+                  "use_icon": "on"
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .button-separator .et-pb-icon"
+                },
+                "css_type": "font-size"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/range",
+                "props": {
+                  "defaultUnit": "px",
+                  "min": 1,
+                  "max": 120,
+                  "step": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "decoration": {
+          "background": {
+            "desktop": {
+              "value": {
+                "image": {
+                  "size": "cover",
+                  "position": "center"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "alignment_obj_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "button_style": {
+              "groupSlug": "button_styles",
+              "render": true,
+              "subName": "button_style",
+              "label": "Button Style",
+              "features": {
+                "sticky": false,
+                "hover": false
+              },
+              "defaultAttr": {
+                "desktop": {
+                  "value": {
+                    "button_style": "row"
+                  }
+                }
+              },
+              "customCssAttr": {
+                "selectors": {
+                  "selector": "{{selector}} .df_button_container"
+                },
+                "css_type": "flex-direction"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "row": {
+                      "label": "Horizontal"
+                    },
+                    "column": {
+                      "label": "Vertical"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "groupSlug": "button_styles",
+              "render": true,
+              "subName": "alignment",
+              "label": "Alignment",
+              "features": { 
+                "sticky": false,
+                "hover": false
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/button-options",
+                "props": {
+                  "showLabel": true,
+                  "options": {
+                    "left": {
+                      "icon": "divi/text-align-left"
+                    },
+                    "center": {
+                      "icon": "divi/text-align-center"
+                    },
+                    "right": {
+                      "icon": "divi/text-align-right"
+                    }
+                  }
+                }
+              },
+              "multipleChoices": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

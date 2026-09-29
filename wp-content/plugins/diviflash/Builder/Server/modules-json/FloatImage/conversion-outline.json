@@ -1,0 +1,36 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "disabled_on": "module.decoration.disabledOn",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "link_options": "module.advanced.link",
+    "display_conditions": "module.decoration.conditions",
+    "animation": "module.decoration.animation",
+    "borders": {
+      "iamge": "image.decoration.border"
+    },
+    "box_shadow": {
+      "iamge": "image.decoration.boxShadow"
+    },
+    "background": "module.decoration.background",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "margin_padding": "module.decoration.spacing"
+  },
+  "css": {
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "after": "css.*.after",
+    "free_form": "css.*.freeForm"
+  },
+  "module": {
+    "fi_min_height": "fi_min_height.innerContent.*"
+  }
+}

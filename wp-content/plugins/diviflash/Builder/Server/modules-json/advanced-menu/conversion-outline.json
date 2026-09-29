@@ -1,0 +1,90 @@
+{
+  "advanced": {
+    "admin_label": "module.meta.adminLabel",
+    "animation": "module.decoration.animation",
+    "background": {
+      "background": "module.decoration.background",
+      "top_row_bg": "top_row_obj_settings.decoration.background",
+      "center_row_bg": "center_row_obj_settings.decoration.background",
+      "bottom_row_bg": "bottom_row_obj_settings.decoration.background",
+      "mslide_bg": "mslide_obj_settings.decoration.background"
+    },
+    "disabled_on": "module.decoration.disabledOn",
+    "module": "module.advanced.htmlAttributes",
+    "overflow": "module.decoration.overflow",
+    "position_fields": "module.decoration.position",
+    "scroll": "module.decoration.scroll",
+    "sticky": "module.decoration.sticky",
+    "text": "module.advanced.text",
+    "transform": "module.decoration.transform",
+    "transition": "module.decoration.transition",
+    "z_index": "module.decoration.zIndex",
+    "display_conditions": "module.decoration.conditions",
+    "margin_padding": "module.decoration.spacing",
+    "max_width": "module.decoration.sizing",
+    "height": "module.decoration.sizing",
+    "link_options": "module.advanced.link",
+    "borders": {
+      "default": "module.decoration.border",
+      "top_row": "top_row_obj_settings.decoration.border",
+      "center_row": "center_row_obj_settings.decoration.border",
+      "bottom_row": "bottom_row_obj_settings.decoration.border"
+    },
+    "box_shadow": {
+      "default": "module.decoration.boxShadow"
+    },
+    "filters": {
+      "default": "module.decoration.filters"
+    }
+  },
+  "css": {
+    "after": "css.*.after",
+    "before": "css.*.before",
+    "main_element": "css.*.mainElement",
+    "free_form": "css.*.freeForm"
+  },
+  "module": {
+    "trow_hide_on_sticky": "top_row_obj_settings.innerContent.*.trow_hide_on_sticky",
+    "top_row_inner_width": "top_row_obj_settings.innerContent.*.top_row_inner_width",
+    "crow_hide_on_sticky": "center_row_obj_settings.innerContent.*.crow_hide_on_sticky",
+    "center_row_inner_width": "center_row_obj_settings.innerContent.*.center_row_inner_width",
+    "brow_hide_on_sticky": "bottom_row_obj_settings.innerContent.*.brow_hide_on_sticky",
+    "bottom_row_inner_width": "bottom_row_obj_settings.innerContent.*.bottom_row_inner_width",
+    "break_point": "mslide_obj_settings.innerContent.*.break_point",
+    "show_mobile_slide": "show_mobile_slide_obj_settings.innerContent.*.show_mobile_slide",
+    "top_row_bg_use_color_gradient": "top_row_obj_settings.decoration.background.*.gradient.enabled",
+    "center_row_bg_use_color_gradient": "center_row_obj_settings.decoration.background.*.gradient.enabled",
+    "bottom_row_bg_use_color_gradient": "bottom_row_obj_settings.decoration.background.*.gradient.enabled",
+    "mslide_bg_use_color_gradient": "mslide_obj_settings.decoration.background.*.gradient.enabled",
+    "top_row_margin": "top_row_obj_settings.decoration.spacing.*.margin",
+    "top_row_padding": "top_row_obj_settings.decoration.spacing.*.padding",
+    "center_row_margin": "center_row_obj_settings.decoration.spacing.*.margin",
+    "center_row_padding": "center_row_obj_settings.decoration.spacing.*.padding",
+    "bottom_row_margin": "bottom_row_obj_settings.decoration.spacing.*.margin",
+    "bottom_row_padding": "bottom_row_obj_settings.decoration.spacing.*.padding"
+  },
+  "valueExpansionFunctionMap": {
+    "top_row_bg_color_gradient_start_position": "D4ToD5HandleGradientColorPosition",
+    "top_row_bg_color_gradient_end_position": "D4ToD5HandleGradientColorPosition",
+    "top_row_bg_color_gradient_type": "D4ToD5HandleGradientType",
+    "top_row_bg_position": "D4ToD5HandleBGImagePosition",
+    "center_row_bg_color_gradient_start_position": "D4ToD5HandleGradientColorPosition",
+    "center_row_bg_color_gradient_end_position": "D4ToD5HandleGradientColorPosition",
+    "center_row_bg_color_gradient_type": "D4ToD5HandleGradientType",
+    "center_row_bg_position": "D4ToD5HandleBGImagePosition",
+    "bottom_row_bg_color_gradient_start_position": "D4ToD5HandleGradientColorPosition",
+    "bottom_row_bg_color_gradient_end_position": "D4ToD5HandleGradientColorPosition",
+    "bottom_row_bg_color_gradient_type": "D4ToD5HandleGradientType",
+    "bottom_row_bg_position": "D4ToD5HandleBGImagePosition",
+    "mslide_bg_color_gradient_start_position": "D4ToD5HandleGradientColorPosition",
+    "mslide_bg_color_gradient_end_position": "D4ToD5HandleGradientColorPosition",
+    "mslide_bg_color_gradient_type": "D4ToD5HandleGradientType",
+    "mslide_bg_position": "D4ToD5HandleBGImagePosition",
+    "top_row_margin": "D4ToD5Spacing",
+    "top_row_padding": "D4ToD5Spacing",
+    "center_row_margin": "D4ToD5Spacing",
+    "center_row_padding": "D4ToD5Spacing",
+    "bottom_row_margin": "D4ToD5Spacing",
+    "bottom_row_padding": "D4ToD5Spacing"
+  }
+}

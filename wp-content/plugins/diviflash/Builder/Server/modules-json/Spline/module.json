@@ -1,0 +1,421 @@
+{
+  "name": "difl/spline",
+  "title": "Spline",
+  "category": "module",
+  "settings": {
+    "content": "auto",
+    "design": "auto",
+    "advanced": "auto",
+    "groups": {
+      "source": {
+        "panel": "content",
+        "groupName": "source",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spline Source"
+          }
+        }
+      },
+      "settings": {
+        "panel": "content",
+        "groupName": "settings",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Spline Settings"
+          }
+        }
+      },
+      "contentLink": {
+        "panel": "content",
+        "groupName": "contentLink",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Link"
+          }
+        }
+      },
+      "contentElements": {
+        "panel": "content",
+        "groupName": "contentElements",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Elements"
+          }
+        }
+      },
+      "sizing": {
+        "panel": "design",
+        "groupName": "sizing",
+        "multiElements": true,
+        "component": {
+          "name": "divi/composite",
+          "props": {
+            "groupLabel": "Sizing"
+          }
+        }
+      }
+    }
+  },
+  "childrenName": [],
+  "allowAllElements": true,
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "meta": {
+          "adminLabel": {}
+        },
+        "advanced": {
+          "elements": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentElements",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/elements",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          },
+          "link": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "contentLink",
+              "priority": 20,
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/link",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        },
+        "decoration": {
+          "attributes": {},
+          "animation": {},
+          "background": {},
+          "border": {},
+          "boxShadow": {},
+          "conditions": {},
+          "disabledOn": {},
+          "filters": {},
+          "overflow": {},
+          "interactions": {},
+          "position": {},
+          "scroll": {},
+          "sizing": {
+            "groupType": "group-item",
+            "item": {
+              "groupSlug": "sizing",
+              "attrName": "module.decoration.sizing",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/sizing",
+                "props": {
+                  "grouped": false,
+                  "allowedUnits": ["px"],
+                  "defaultUnit": "px",
+                  "defaultValue": "400px",
+                  "fields": {
+                    "size": { "render": false },
+                    "alignment": {
+                      "render": true,
+                      "features": {
+                        "responsive": true,
+                        "hover": false
+                      }
+                    },
+                    "width": {
+                      "render": true,
+                      "features": {
+                        "responsive": true,
+                        "hover": false
+                      }
+                    },
+                    "height": {
+                      "render": true,
+                      "features": {
+                        "responsive": true,
+                        "hover": false
+                      }
+                    },
+                    "minWidth": {
+                      "render": true,
+                      "features": {
+                        "responsive": true,
+                        "hover": false
+                      }
+                    },
+                    "maxWidth": {
+                      "render": true,
+                      "features": {
+                        "responsive": true,
+                        "hover": false
+                      }
+                    },
+                    "minHeight": {
+                      "render": true,
+                      "features": {
+                        "responsive": true,
+                        "hover": false
+                      }
+                    },
+                    "maxHeight": {
+                      "render": true,
+                      "features": {
+                        "responsive": true,
+                        "hover": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spacing": {},
+          "sticky": {},
+          "transform": {},
+          "transition": {},
+          "zIndex": {}
+        }
+      },
+      "styleProps": {
+        "spacing": {
+          "important": true
+        }
+      },
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": {
+              "value": "Spline"
+            }
+          }
+        }
+      }
+    },
+    "spline_settings": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-items",
+          "items": {
+            "spline_source_type": {
+              "groupSlug": "source",
+              "attrName": "spline_settings.innerContent",
+              "subName": "spline_source_type",
+              "label": "Source Type",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "external": {
+                      "label": "External URL"
+                    },
+                    "from_media": {
+                      "label": "From Media"
+                    }
+                  }
+                }
+              }
+            },
+            "spline_url": {
+              "groupSlug": "source",
+              "attrName": "spline_settings.innerContent",
+              "subName": "spline_url",
+              "description": "Enter the URL of your exported Spline scene. The URL must end with .splinecode. Here <a target='_blank' href='https://diviflash.com/docs/spline/'>How to get your Spline file →</a>",
+              "label": "Spline Scene URL",
+              "render": true,
+              "show_if_not": {
+                "spline_source_type": "from_media"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/text",
+                "props": {
+                  "placeholder": "https://prod.spline.design/your-scene-url/scene.splinecode"
+                }
+              }
+            },
+            "spline_upload": {
+              "groupSlug": "source",
+              "attrName": "spline_settings.innerContent",
+              "subName": "spline_upload",
+              "label": "Upload .splinecode File",
+              "description": "Upload .Splinecode File > Upload .splinecode File\nUpload your exported Spline scene file. File type must be .splinecode. Here <a target='_blank' href='https://diviflash.com/docs/spline/'>How to get your Spline file →</a>",
+              "render": true,
+              "show_if": {
+                "spline_source_type": "from_media"
+              },
+              "component": {
+                "type": "field",
+                "name": "divi/upload",
+                "props": {
+                  "dataType": "spline"
+                }
+              }
+            },
+            "loading": {
+              "groupSlug": "settings",
+              "attrName": "spline_settings.innerContent",
+              "subName": "loading",
+              "label": "Loading Behavior",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "auto": { "label": "Auto" },
+                    "lazy": { "label": "Lazy" },
+                    "eager": { "label": "Eager" }
+                  }
+                }
+              }
+            },
+            "hint": {
+              "groupSlug": "settings",
+              "attrName": "spline_settings.innerContent",
+              "subName": "hint",
+              "label": "Show Interaction Hint",
+              "render": true,
+              "component": { "type": "field", "name": "divi/toggle" }
+            },
+            "loading_anim": {
+              "groupSlug": "settings",
+              "attrName": "spline_settings.innerContent",
+              "subName": "loading_anim",
+              "label": "Show Loading Animation",
+              "render": true,
+              "component": { "type": "field", "name": "divi/toggle" }
+            },
+            "loading_anim_type": {
+              "groupSlug": "settings",
+              "attrName": "spline_settings.innerContent",
+              "subName": "loading_anim_type",
+              "label": "Loading Animation Type",
+              "render": true,
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "spinner-small-dark": { "label": "Small Dark Spinner" },
+                    "spinner-small-light": { "label": "Small Light Spinner" },
+                    "spinner-big-dark": { "label": "Big Dark Spinner" },
+                    "spinner-big-light": { "label": "Big Light Spinner" }
+                  }
+                }
+              },
+              "show_if": {
+                "loading_anim": "on"
+              }
+            },
+            "events_target": {
+              "groupSlug": "settings",
+              "attrName": "spline_settings.innerContent",
+              "subName": "events_target",
+              "label": "Events Target",
+              "render": true,
+              "description": "The module responds to mouse movement either within it's own area (Local) or across the entire page (Global).",
+              "component": {
+                "type": "field",
+                "name": "divi/select",
+                "props": {
+                  "options": {
+                    "local": { "label": "Local" },
+                    "global": { "label": "Global" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "default_value": {
+        "innerContent": {
+          "desktop": {
+            "value": {
+              "spline_source_type": "external",
+              "width": "100%",
+              "height": "500",
+              "loading": "auto",
+              "loading_anim": "off",
+              "loading_anim_type": "spinner-small-dark",
+              "events_target": "local",
+              "hint": "off"
+            }
+          }
+        }
+      }
+    },
+    "notice": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "settings": {
+        "innerContent": {
+          "groupType": "group-item",
+          "item": {
+            "groupSlug": "source",
+            "attrName": "notice.innerContent",
+            "render": true,
+            "priority": 67,
+            "show_if": {
+              "spline_source_type": "from_media"
+            },
+            "component": {
+              "type": "field",
+              "name": "difl/json_ex_notice",
+              "props": {
+                "fieldDefinition": {
+                  "message": "Enable .splinecode file upload from option from  ",
+                  "url": "{{urls.homeUrl}}wp-admin/admin.php?page=diviflash&tab=settings"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "default": {
+      "settings": {
+        "decoration": {
+          "boxShadow": {
+            "groupType": "group-item",
+            "item": {
+              "attrName": "default.decoration.boxShadow",
+              "render": true,
+              "component": {
+                "type": "group",
+                "name": "divi/box-shadow",
+                "props": {
+                  "grouped": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customCssFields": {}
+}

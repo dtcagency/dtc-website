@@ -1,0 +1,1256 @@
+{
+    "name": "difl/barchart",
+    "d4Shortcode": "difl_barchart",
+    "title": "Bar Chart",
+    "titles": "Bar Charts",
+    "category": "module",
+    "moduleIcon": "difl/barchart",
+    "childModuleName": "difl/barchartdataset",
+    "childModuleTitle": "Bar Dataset",
+    "childModuleTitleAttribute": "dataset_name",
+    "childrenName": ["difl/barchartdataset"],
+    "allowAllElements": false,
+    "customCssFields": {
+        "chart_wrapper": {
+            "subName": "chart_wrapper",
+            "label": "Chart Wrapper",
+            "selectorSuffix": " .df_bar_chart_wrapper"
+        },
+        "chart_canvas": {
+            "subName": "chart_canvas",
+            "label": "Chart Canvas",
+            "selectorSuffix": " .df_bar_chart_canvas"
+        }
+    },
+    "attributes": {
+        "module": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "meta": {
+                    "adminLabel": {
+                        "component": {
+                            "type": "group",
+                            "name": "divi/admin-label",
+                            "props": { "groupLabel": "Meta" }
+                        }
+                    }
+                },
+                "advanced": {
+                    "link": {
+                        "item": {
+                            "groupSlug": "contentLink"
+                        }
+                    }
+                },
+                "decoration": {
+                    "attributes": {},
+                    "background": {},
+                    "spacing": {},
+                    "border": {},
+                    "boxShadow": {},
+                    "sizing": {},
+                    "scroll": {},
+                    "overflow": {},
+                    "filters": {},
+                    "transform": {},
+                    "animation": {},
+                    "position": {},
+                    "sticky": {},
+                    "zIndex": {},
+                    "conditions": {},
+                    "disabledOn": {},
+                    "transition": {},
+                    "interactions": {}
+                }
+            },
+            "styleProps": {
+                "spacing": { "important": true }
+            },
+            "default": {
+                "meta": {
+                    "adminLabel": {
+                        "desktop": {
+                            "value": "Bar Chart"
+                        }
+                    }
+                }
+            }
+        },
+        "data_source": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "data_source": {
+                            "groupSlug": "data_source",
+                            "attrName": "data_source.innerContent",
+                            "subName": "data_source",
+                            "label": "Data Source",
+                            "description": "Where chart data comes from. Manual uses the dataset children below; URL options fetch and parse a remote file.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "manual": { "label": "Manual" },
+                                        "google_sheets": { "label": "Google Sheets (CSV)" },
+                                        "csv_url": { "label": "CSV URL" },
+                                        "json_url": { "label": "JSON URL" }
+                                    }
+                                }
+                            }
+                        },
+                        "sheets_url": {
+                            "groupSlug": "data_source",
+                            "attrName": "data_source.innerContent",
+                            "subName": "sheets_url",
+                            "label": "Google Sheets URL",
+                            "description": "In Google Sheets: File → Share → Publish to web → Publish, then paste the URL here. Standard edit/share URLs also work if the sheet is set to \"Anyone with the link → Viewer\".",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "show_if": { "data_source": "google_sheets" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "https://docs.google.com/spreadsheets/d/.../edit?usp=sharing"
+                                }
+                            }
+                        },
+                        "csv_source_url": {
+                            "groupSlug": "data_source",
+                            "attrName": "data_source.innerContent",
+                            "subName": "csv_source_url",
+                            "label": "CSV URL",
+                            "description": "Public URL of a CSV file. First row is the header (label column + dataset names).",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "show_if": { "data_source": "csv_url" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "https://example.com/data.csv"
+                                }
+                            }
+                        },
+                        "json_source_url": {
+                            "groupSlug": "data_source",
+                            "attrName": "data_source.innerContent",
+                            "subName": "json_source_url",
+                            "label": "JSON URL",
+                            "description": "Public URL returning JSON in one of two shapes. Shape A: {\"labels\":[\"Jan\",\"Feb\"],\"datasets\":[{\"name\":\"Sales\",\"values\":[10,20]}]}. Shape B: array of row objects, first key in each row becomes the label column — [{\"Month\":\"Jan\",\"Sales\":10,\"Returns\":2}, {\"Month\":\"Feb\",\"Sales\":20,\"Returns\":3}].",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "show_if": { "data_source": "json_url" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "https://example.com/data.json"
+                                }
+                            }
+                        },
+                        "cache_ttl": {
+                            "groupSlug": "data_source",
+                            "attrName": "data_source.innerContent",
+                            "subName": "cache_ttl",
+                            "label": "Cache Duration",
+                            "description": "How long the fetched data is cached on the server before refetching.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "show_if_not": { "data_source": "manual" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "3600":  { "label": "1 hour" },
+                                        "21600": { "label": "6 hours" },
+                                        "86400": { "label": "1 day" },
+                                        "0":     { "label": "Never (fetch every page load)" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "data_source": "manual",
+                            "sheets_url": "",
+                            "csv_source_url": "",
+                            "json_source_url": "",
+                            "cache_ttl": "3600"
+                        }
+                    }
+                }
+            }
+        },
+        "chart_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "chart_variant": {
+                            "groupSlug": "general_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "chart_variant",
+                            "label": "Chart Variant",
+                            "description": "Select the chart layout variant.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "vertical": { "label": "Vertical Bar" },
+                                        "horizontal": { "label": "Horizontal Bar" },
+                                        "stacked": { "label": "Vertical Stacked Bar" },
+                                        "horizontal_stacked": { "label": "Horizontal Stacked Bar" }
+                                    }
+                                }
+                            }
+                        },
+                        "chart_title": {
+                            "groupSlug": "general_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "chart_title",
+                            "label": "Chart Title",
+                            "description": "Optional title displayed above the chart.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "My Chart"
+                                }
+                            }
+                        },
+                        "title_position": {
+                            "groupSlug": "general_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "title_position",
+                            "label": "Title Position",
+                            "description": "Position of the title relative to the chart area.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "top": { "label": "Top" },
+                                        "right": { "label": "Right" },
+                                        "bottom": { "label": "Bottom" },
+                                        "left": { "label": "Left" }
+                                    }
+                                }
+                            }
+                        },
+                        "show_legend": {
+                            "groupSlug": "legend_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "show_legend",
+                            "label": "Show Legend",
+                            "description": "Display the legend showing dataset names and colors.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "legend_position": {
+                            "groupSlug": "legend_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "legend_position",
+                            "label": "Legend Position",
+                            "description": "Position of the legend relative to the chart area.",
+                            "render": true,
+                            "show_if": { "show_legend": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "top": { "label": "Top" },
+                                        "right": { "label": "Right" },
+                                        "bottom": { "label": "Bottom" },
+                                        "left": { "label": "Left" }
+                                    }
+                                }
+                            }
+                        },
+                        "legend_align": {
+                            "groupSlug": "legend_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "legend_align",
+                            "label": "Legend Alignment",
+                            "description": "Horizontal alignment of the legend text within its position.",
+                            "render": true,
+                            "show_if": { "show_legend": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "start": { "label": "Start" },
+                                        "center": { "label": "Center" },
+                                        "end": { "label": "End" }
+                                    }
+                                }
+                            }
+                        },
+                        "show_tooltip": {
+                            "groupSlug": "tooltip_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "show_tooltip",
+                            "label": "Show Tooltip",
+                            "description": "Display a tooltip with values when hovering over a bar.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "value_prefix": {
+                            "groupSlug": "tooltip_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "value_prefix",
+                            "label": "Value Prefix",
+                            "description": "Prefix for values (e.g. $, €).",
+                            "render": true,
+                            "show_if": { "show_tooltip": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "$"
+                                }
+                            }
+                        },
+                        "value_suffix": {
+                            "groupSlug": "tooltip_settings",
+                            "attrName": "chart_settings.innerContent",
+                            "subName": "value_suffix",
+                            "label": "Value Suffix",
+                            "description": "Suffix for values (e.g. %, k).",
+                            "render": true,
+                            "show_if": { "show_tooltip": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": {
+                                    "placeholder": "%"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "chart_variant": "vertical",
+                            "chart_title": "",
+                            "title_position": "top",
+                            "show_legend": "on",
+                            "legend_position": "top",
+                            "legend_align": "center",
+                            "show_tooltip": "on",
+                            "value_prefix": "",
+                            "value_suffix": ""
+                        }
+                    }
+                }
+            }
+        },
+        "chart_labels": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-item",
+                    "item": {
+                        "groupSlug": "general_settings",
+                        "attrName": "chart_labels.innerContent",
+                        "label": "Chart Labels",
+                        "render": true,
+                        "features": {
+                            "responsive": false,
+                            "hover": false
+                        },
+                        "component": {
+                            "type": "field",
+                            "name": "divi/sortable-list"
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": [
+                            {"dragID": "df_bcl_1", "value": "Jan"},
+                            {"dragID": "df_bcl_2", "value": "Feb"},
+                            {"dragID": "df_bcl_3", "value": "Mar"}
+                        ]
+                    }
+                }
+            }
+        },
+        "axis_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "show_x_axis": {
+                            "groupSlug": "xaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "show_x_axis",
+                            "label": "Show X-Axis",
+                            "description": "Display the X-axis line and tick labels.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "x_axis_title": {
+                            "groupSlug": "xaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "x_axis_title",
+                            "label": "X-Axis Title",
+                            "description": "Label text displayed below the X-axis.",
+                            "render": true,
+                            "show_if": { "show_x_axis": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text"
+                            }
+                        },
+                        "show_x_grid": {
+                            "groupSlug": "xaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "show_x_grid",
+                            "label": "Show X Grid Lines",
+                            "description": "Display vertical grid lines on the chart.",
+                            "render": true,
+                            "show_if": { "show_x_axis": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "show_y_axis": {
+                            "groupSlug": "yaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "show_y_axis",
+                            "label": "Show Y-Axis",
+                            "description": "Display the Y-axis line and tick labels.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "y_axis_title": {
+                            "groupSlug": "yaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "y_axis_title",
+                            "label": "Y-Axis Title",
+                            "description": "Label text displayed beside the Y-axis.",
+                            "render": true,
+                            "show_if": { "show_y_axis": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text"
+                            }
+                        },
+                        "show_y_grid": {
+                            "groupSlug": "yaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "show_y_grid",
+                            "label": "Show Y Grid Lines",
+                            "description": "Display horizontal grid lines on the chart.",
+                            "render": true,
+                            "show_if": { "show_y_axis": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "y_begin_at_zero": {
+                            "groupSlug": "yaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "y_begin_at_zero",
+                            "label": "Begin at Zero",
+                            "description": "Force the Y-axis to start at zero instead of auto-scaling.",
+                            "render": true,
+                            "show_if": { "show_y_axis": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "y_min": {
+                            "groupSlug": "yaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "y_min",
+                            "label": "Y-Axis Min",
+                            "description": "Minimum value for Y-axis. Leave empty for auto.",
+                            "render": true,
+                            "show_if": { "show_y_axis": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": { "placeholder": "Auto" }
+                            }
+                        },
+                        "y_max": {
+                            "groupSlug": "yaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "y_max",
+                            "label": "Y-Axis Max",
+                            "description": "Maximum value for Y-axis. Leave empty for auto.",
+                            "render": true,
+                            "show_if": { "show_y_axis": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": { "placeholder": "Auto" }
+                            }
+                        },
+                        "y_step_size": {
+                            "groupSlug": "yaxis_settings",
+                            "attrName": "axis_settings.innerContent",
+                            "subName": "y_step_size",
+                            "label": "Y-Axis Step Size",
+                            "description": "Step size between ticks. Leave empty for auto.",
+                            "render": true,
+                            "show_if": { "show_y_axis": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/text",
+                                "props": { "placeholder": "Auto" }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "show_x_axis": "on",
+                            "x_axis_title": "",
+                            "show_x_grid": "on",
+                            "show_y_axis": "on",
+                            "y_axis_title": "",
+                            "show_y_grid": "on",
+                            "y_begin_at_zero": "on",
+                            "y_min": "",
+                            "y_max": "",
+                            "y_step_size": ""
+                        }
+                    }
+                }
+            }
+        },
+        "grid_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "grid_color": {
+                            "groupSlug": "grid_settings",
+                            "attrName": "grid_settings.innerContent",
+                            "subName": "grid_color",
+                            "label": "Grid Color",
+                            "description": "Color of the X and Y grid lines.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/color-picker",
+                                "props": {}
+                            }
+                        },
+                        "grid_width": {
+                            "groupSlug": "grid_settings",
+                            "attrName": "grid_settings.innerContent",
+                            "subName": "grid_width",
+                            "label": "Grid Line Width",
+                            "description": "Thickness of the X and Y grid lines in pixels.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 5,
+                                    "step": 1,
+                                    "unitless": true,
+                                    "allowedUnits": [""],
+                                    "defaultUnit": ""
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "grid_color": "rgba(0,0,0,0.1)",
+                            "grid_width": "1"
+                        }
+                    }
+                }
+            }
+        },
+        "bar_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "chart_height": {
+                            "groupSlug": "sizing_settings",
+                            "attrName": "bar_settings.innerContent",
+                            "subName": "chart_height",
+                            "label": "Chart Height",
+                            "description": "Height of the chart area in pixels.",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 200,
+                                    "max": 1000,
+                                    "step": 10,
+                                    "unitless": true,
+                                    "allowedUnits": [""],
+                                    "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "bar_border_radius": {
+                            "groupSlug": "bar_appearance",
+                            "attrName": "bar_settings.innerContent",
+                            "subName": "bar_border_radius",
+                            "label": "Bar Border Radius",
+                            "description": "Rounded corners for each bar in pixels.",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 50,
+                                    "step": 1,
+                                    "unitless": true
+                                }
+                            }
+                        },
+                        "bar_percentage": {
+                            "groupSlug": "bar_appearance",
+                            "attrName": "bar_settings.innerContent",
+                            "subName": "bar_percentage",
+                            "label": "Bar Width (%)",
+                            "description": "Width of each bar relative to category space (10% - 100%).",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 10,
+                                    "max": 100,
+                                    "step": 5,
+                                    "unitless": true,
+                                    "defaultUnit": "%"
+                                }
+                            }
+                        },
+                        "category_percentage": {
+                            "groupSlug": "bar_appearance",
+                            "attrName": "bar_settings.innerContent",
+                            "subName": "category_percentage",
+                            "label": "Category Width (%)",
+                            "description": "Width of each category space (10% - 100%).",
+                            "render": true,
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 10,
+                                    "max": 100,
+                                    "step": 5,
+                                    "unitless": true,
+                                    "defaultUnit": "%"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "chart_height": "400",
+                            "bar_border_radius": "0",
+                            "bar_percentage": "80",
+                            "category_percentage": "80"
+                        }
+                    }
+                }
+            }
+        },
+        "animation_settings": {
+            "type": "object",
+            "selector": "{{selector}}",
+            "settings": {
+                "innerContent": {
+                    "groupType": "group-items",
+                    "items": {
+                        "enable_animation": {
+                            "groupSlug": "animation_config",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "enable_animation",
+                            "label": "Enable Animation",
+                            "description": "Animate bars when the chart first renders.",
+                            "render": true,
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        },
+                        "animation_duration": {
+                            "groupSlug": "animation_config",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "animation_duration",
+                            "label": "Animation Duration (ms)",
+                            "description": "How long the bar animation takes in milliseconds.",
+                            "render": true,
+                            "show_if": { "enable_animation": "on" },
+                            "features": { "responsive": false, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/range",
+                                "props": {
+                                    "min": 0,
+                                    "max": 5000,
+                                    "step": 100,
+                                    "unitless": true,
+                                    "allowedUnits": [""],
+                                    "defaultUnit": ""
+                                }
+                            }
+                        },
+                        "animation_easing": {
+                            "groupSlug": "animation_config",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "animation_easing",
+                            "label": "Animation Easing",
+                            "description": "The easing curve for the bar animation.",
+                            "render": true,
+                            "show_if": { "enable_animation": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/select",
+                                "props": {
+                                    "options": {
+                                        "linear": { "label": "Linear" },
+                                        "easeInQuad": { "label": "Ease In Quad" },
+                                        "easeOutQuad": { "label": "Ease Out Quad" },
+                                        "easeInOutQuad": { "label": "Ease In Out Quad" },
+                                        "easeInCubic": { "label": "Ease In Cubic" },
+                                        "easeOutCubic": { "label": "Ease Out Cubic" },
+                                        "easeInOutCubic": { "label": "Ease In Out Cubic" },
+                                        "easeOutQuart": { "label": "Ease Out Quart" },
+                                        "easeOutBounce": { "label": "Ease Out Bounce" }
+                                    }
+                                }
+                            }
+                        },
+                        "animate_on_scroll": {
+                            "groupSlug": "animation_config",
+                            "attrName": "animation_settings.innerContent",
+                            "subName": "animate_on_scroll",
+                            "label": "Animate on Scroll",
+                            "description": "Trigger animation only when the chart scrolls into view.",
+                            "render": true,
+                            "show_if": { "enable_animation": "on" },
+                            "component": {
+                                "type": "field",
+                                "name": "divi/toggle"
+                            }
+                        }
+                    }
+                }
+            },
+            "default_value": {
+                "innerContent": {
+                    "desktop": {
+                        "value": {
+                            "enable_animation": "on",
+                            "animation_duration": "1000",
+                            "animation_easing": "easeOutQuart",
+                            "animate_on_scroll": "on"
+                        }
+                    }
+                }
+            }
+        },
+        "title_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "chart_typography",
+                            "priority": 10,
+                            "attrName": "title_font.decoration.font",
+                            "label": "Title",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Title",
+                                    "fieldLabel": "Title",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "family": { "features": { "hover": false } },
+                                        "weight": { "features": { "hover": false } },
+                                        "size": { "features": { "hover": false } },
+                                        "color": { "features": { "hover": false } },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "letterSpacing": { "render": false },
+                                        "lineHeight": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_bar_chart_wrapper canvas"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "legend_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "chart_typography",
+                            "priority": 20,
+                            "attrName": "legend_font.decoration.font",
+                            "label": "Legend",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Legend",
+                                    "fieldLabel": "Legend",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "family": { "features": { "hover": false } },
+                                        "weight": { "features": { "hover": false } },
+                                        "size": { "features": { "hover": false } },
+                                        "color": { "features": { "hover": false } },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "letterSpacing": { "render": false },
+                                        "lineHeight": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_bar_chart_wrapper canvas"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "tooltip_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "chart_typography",
+                            "priority": 30,
+                            "attrName": "tooltip_font.decoration.font",
+                            "label": "Tooltip",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Tooltip",
+                                    "fieldLabel": "Tooltip",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "family": { "features": { "hover": false } },
+                                        "weight": { "features": { "hover": false } },
+                                        "size": { "features": { "hover": false } },
+                                        "color": { "features": { "hover": false } },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "letterSpacing": { "render": false },
+                                        "lineHeight": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_bar_chart_wrapper canvas"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "axis_tick_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "chart_typography",
+                            "priority": 40,
+                            "attrName": "axis_tick_font.decoration.font",
+                            "label": "Axis Ticks",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Axis Ticks",
+                                    "fieldLabel": "Axis Ticks",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "family": { "features": { "hover": false } },
+                                        "weight": { "features": { "hover": false } },
+                                        "size": { "features": { "hover": false } },
+                                        "color": { "features": { "hover": false } },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "letterSpacing": { "render": false },
+                                        "lineHeight": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_bar_chart_wrapper canvas"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        },
+        "axis_title_font": {
+            "type": "object",
+            "selector": "",
+            "settings": {
+                "decoration": {
+                    "font": {
+                        "groupType": "group-item",
+                        "item": {
+                            "groupSlug": "chart_typography",
+                            "priority": 50,
+                            "attrName": "axis_title_font.decoration.font",
+                            "label": "Axis Title",
+                            "render": true,
+                            "features": { "responsive": true, "hover": false, "sticky": false },
+                            "component": {
+                                "type": "group",
+                                "name": "divi/font",
+                                "props": {
+                                    "grouped": true,
+                                    "groupLabel": "Axis Title",
+                                    "fieldLabel": "Axis Title",
+                                    "fields": {
+                                        "headingLevel": { "render": false },
+                                        "family": { "features": { "hover": false } },
+                                        "weight": { "features": { "hover": false } },
+                                        "size": { "features": { "hover": false } },
+                                        "color": { "features": { "hover": false } },
+                                        "style": { "render": false },
+                                        "textAlign": { "render": false },
+                                        "letterSpacing": { "render": false },
+                                        "lineHeight": { "render": false },
+                                        "lineColor": { "render": false },
+                                        "lineStyle": { "render": false },
+                                        "textShadowGroup": { "render": false }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "styleProps": {
+                "font": {
+                    "selectors": {
+                        "desktop": {
+                            "value": "{{selector}} .df_bar_chart_wrapper canvas"
+                        }
+                    },
+                    "important": true
+                }
+            }
+        }
+    },
+    "settings": {
+        "content": "auto",
+        "design": "auto",
+        "advanced": "auto",
+        "groups": {
+            "contentElements": {
+                "panel": "content",
+                "priority": 5,
+                "groupName": "contentElements",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Datasets"
+                    }
+                }
+            },
+            "data_source": {
+                "panel": "content",
+                "priority": 7,
+                "groupName": "data_source",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Data Source"
+                    }
+                }
+            },
+            "general_settings": {
+                "panel": "content",
+                "priority": 10,
+                "groupName": "general_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "General Settings"
+                    }
+                }
+            },
+            "legend_settings": {
+                "panel": "content",
+                "priority": 15,
+                "groupName": "legend_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Legend"
+                    }
+                }
+            },
+            "tooltip_settings": {
+                "panel": "content",
+                "priority": 20,
+                "groupName": "tooltip_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Tooltip & Values"
+                    }
+                }
+            },
+            "sizing_settings": {
+                "panel": "design",
+                "priority": 5,
+                "groupName": "sizing_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Chart Sizing"
+                    }
+                }
+            },
+            "bar_appearance": {
+                "panel": "design",
+                "priority": 10,
+                "groupName": "bar_appearance",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Bar Appearance"
+                    }
+                }
+            },
+            "grid_settings": {
+                "panel": "design",
+                "priority": 15,
+                "groupName": "grid_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Grid Lines"
+                    }
+                }
+            },
+            "xaxis_settings": {
+                "panel": "content",
+                "priority": 25,
+                "groupName": "xaxis_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "X-Axis"
+                    }
+                }
+            },
+            "yaxis_settings": {
+                "panel": "content",
+                "priority": 30,
+                "groupName": "yaxis_settings",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Y-Axis"
+                    }
+                }
+            },
+            "contentLink": {
+                "panel": "content",
+                "priority": 35,
+                "groupName": "link",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Link"
+                    }
+                }
+            },
+            "chart_typography": {
+                "panel": "design",
+                "priority": 25,
+                "groupName": "chart_typography",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Typography"
+                    }
+                }
+            },
+            "animation_config": {
+                "panel": "design",
+                "priority": 30,
+                "groupName": "animation_config",
+                "multiElements": true,
+                "component": {
+                    "name": "divi/composite",
+                    "props": {
+                        "groupLabel": "Chart Animation"
+                    }
+                }
+            }
+        }
+    },
+    "mousetrap": {
+        "inner": {
+            "edited": true
+        }
+    }
+}

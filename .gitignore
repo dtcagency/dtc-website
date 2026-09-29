@@ -1,0 +1,29 @@
+# --- media en back-ups: te groot voor git ---------------------------------
+# De media staan op het Railway-volume (~/Desktop/dtc-uploads is de kopie).
+/wp-content/uploads/
+/wp-content/ai1wm-backups/
+/wp-content/backups/
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+
+# --- caches: worden opnieuw opgebouwd -------------------------------------
+/wp-content/et-cache/
+/wp-content/cache/
+/wp-content/wp-fastest-cache/
+/wp-content/advanced-cache.php
+/wp-content/object-cache.php
+
+# --- geheimen: nooit in de repo -------------------------------------------
+# wp-config.php bevat de databasewachtwoorden en de WordPress-sleutels.
+# Gebruik wp-config.example.php als startpunt.
+/wp-config.php
+/deploy/wp-config.php
+
+# --- rommel ----------------------------------------------------------------
+.DS_Store
+*.log
+/server.log
+/wp-content/debug.log
+node_modules/
+.vscode/
+.idea/

@@ -17,7 +17,6 @@
 # wp-config.php bevat de databasewachtwoorden en de WordPress-sleutels.
 # Gebruik wp-config.example.php als startpunt.
 /wp-config.php
-/deploy/wp-config.php
 
 # --- rommel ----------------------------------------------------------------
 .DS_Store

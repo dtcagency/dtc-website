@@ -1,0 +1,16 @@
+.git
+.gitignore
+.github
+README.md
+*.log
+.DS_Store
+**/.DS_Store
+wp-config.php
+wp-config.example.php
+wp-config-sample.php
+start-dtc.command
+wp-content/uploads/
+wp-content/ai1wm-backups/
+wp-content/et-cache/
+wp-content/cache/
+wp-content/mu-plugins-uit/

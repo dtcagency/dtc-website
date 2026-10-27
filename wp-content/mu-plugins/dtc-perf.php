@@ -178,3 +178,26 @@ add_action( 'wp_head', function () {
 		. 'url(' . esc_url( $map . 'modules.woff' ) . ') format("woff");'
 		. 'font-weight:400;font-style:normal}</style>';
 }, 98 );
+
+/**
+ * Arboria, één keer voor de hele site. Dezelfde vier @font-face-blokken
+ * (300, 400, 500 en 700) stonden 125 keer in de pagina-inhoud: elke
+ * HubSpot-pagina declareerde ze zestien keer, andere pagina's drie tot
+ * zeven keer. Ze staan nu hier, en de twee gewichten die bovenaan elke
+ * pagina nodig zijn (Book voor de tekst, Medium voor de koppen) worden
+ * vooraf opgehaald, zodat de tekst niet eerst in een ander lettertype
+ * verschijnt en dan verspringt.
+ */
+add_action( 'wp_head', function () {
+	if ( is_admin() ) { return; }
+	$map = content_url( '/uploads/et-fonts/' );
+	foreach ( array( 'Arboria-Book', 'Arboria-Medium' ) as $f ) {
+		echo '<link rel="preload" href="' . esc_url( $map . $f . '.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
+	}
+	$gewichten = array( 300 => 'Light', 400 => 'Book', 500 => 'Medium', 700 => 'Bold' );
+	echo '<style id="dtc-arboria">';
+	foreach ( $gewichten as $gewicht => $naam ) {
+		echo "@font-face{font-family:'Arboria';src:url('" . esc_url( $map . 'Arboria-' . $naam . '.woff2' ) . "') format('woff2');font-weight:" . $gewicht . ';font-display:swap}';
+	}
+	echo '</style>' . "\n";
+}, 2 );

@@ -97,6 +97,25 @@ add_action( 'wp_head', function () {
 	justify-content: center;
 }
 
+/* De twee juridische knoppen in de footer hadden geen enkele hoverstand: wie
+   eroverheen ging, zag niets veranderen. De titel stond bovendien in puur
+   zwart (#000) in plaats van de huiskleur. Nu hetzelfde gedrag als de andere
+   knoppen: het pijlvlak wordt beige en de tekst kleurt mee. */
+.et-l--footer .difl_advanced_blurb .df_ab_blurb_title {
+	color: #2d2824 !important;
+	transition: color .2s ease;
+}
+.et-l--footer .difl_advanced_blurb .et-pb-icon {
+	transition: background-color .2s ease, color .2s ease;
+}
+.et-l--footer .difl_advanced_blurb:hover .df_ab_blurb_title {
+	color: #8a7257 !important;
+}
+.et-l--footer .difl_advanced_blurb:hover .et-pb-icon {
+	background-color: #c0ab94 !important;
+	color: #2d2824 !important;
+}
+
 /* De knop in de menubalk was het enige element met een halve ronding (20px);
    daardoor oogde hij als een ander soort knop dan de rest. */
 .et-l--header .df-menu-button {

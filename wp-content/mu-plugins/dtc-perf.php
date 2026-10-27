@@ -139,3 +139,42 @@ add_action( 'init', function () {
 	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 	remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 } );
+
+/**
+ * Divi laadt standaard Open Sans van Google mee: tien gewichten en cursieven,
+ * samen ruim honderd fontfaces. De site gebruikt uitsluitend Arboria, dus dat
+ * bestand doet niets behalve het eerste scherm vertragen — het is een
+ * render-blokkerend verzoek naar een andere server.
+ */
+add_action( 'wp_enqueue_scripts', function () {
+	wp_dequeue_style( 'et-divi-open-sans' );
+	wp_deregister_style( 'et-divi-open-sans' );
+}, 100 );
+
+/**
+ * De voorverbindingen naar Google Fonts hebben daarmee ook geen doel meer.
+ */
+add_filter( 'wp_resource_hints', function ( $hints, $relatie ) {
+	if ( 'dns-prefetch' !== $relatie && 'preconnect' !== $relatie ) { return $hints; }
+	return array_values( array_filter( $hints, function ( $h ) {
+		$url = is_array( $h ) ? ( $h['href'] ?? '' ) : $h;
+		return false === strpos( (string) $url, 'fonts.googleapis.com' )
+			&& false === strpos( (string) $url, 'fonts.gstatic.com' );
+	} ) );
+}, 10, 2 );
+
+/**
+ * Divi levert zijn icoonfont (de pijltjes in de knoppen) alleen als eot, woff,
+ * ttf en svg. Het woff-bestand is 90 kB en wordt op elke pagina opgehaald.
+ * Dezelfde font als woff2 is 29 kB. Het bestand staat naast de andere in de
+ * themamap; na een Divi-update moet het opnieuw gemaakt worden met:
+ *   python3 -c "from fontTools.ttLib import TTFont; f=TTFont('modules.ttf'); f.flavor='woff2'; f.save('modules.woff2')"
+ */
+add_action( 'wp_head', function () {
+	if ( is_admin() ) { return; }
+	$map = get_template_directory_uri() . '/core/admin/fonts/modules/all/';
+	echo '<style id="dtc-icoonfont">@font-face{font-family:ETmodules;font-display:block;'
+		. 'src:url(' . esc_url( $map . 'modules.woff2' ) . ') format("woff2"),'
+		. 'url(' . esc_url( $map . 'modules.woff' ) . ') format("woff");'
+		. 'font-weight:400;font-style:normal}</style>';
+}, 98 );

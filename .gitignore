@@ -26,3 +26,6 @@
 node_modules/
 .vscode/
 .idea/
+
+# de migratieplugin schrijft hier tijdelijke bestanden
+/wp-content/plugins/all-in-one-wp-migration/storage/

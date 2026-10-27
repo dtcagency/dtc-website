@@ -22,6 +22,33 @@ body { overflow-x: clip; }
    kaart in de waaier) gaf daardoor een horizontale schuifbalk. */
 #page-container { overflow-x: clip; }
 
+/* ---------- de menubalk zelf ----------------------------------------------
+   De balk is een vast gepositioneerde sectie met een hárde breedte: 1300px op
+   desktop en zelfs 1400px op tablet. Divi centreert hem met een vaste
+   verschuiving van de halve breedte (translateX(-650px)). Zodra het scherm
+   smaller is dan die maat steekt de balk er aan beide kanten uit: op 1024px
+   stond het logo op x=-100 (buiten beeld) en de knop op 1144 van de 1024.
+   Nu is de breedte begrensd door het scherm en centreert hij op -50%, wat bij
+   elke breedte klopt. Op 1440px komt het op precies 1300px uit, zoals het
+   ontwerp bedoelde. */
+.et-l--header .et_pb_section_0_tb_header {
+	width: min( 1300px, calc( 100% - 140px ) ) !important;
+	max-width: none !important;
+	left: 50% !important;
+	right: auto !important;
+	transform: translateX( -50% ) !important;
+}
+@media (max-width: 980px) {
+	.et-l--header .et_pb_section_0_tb_header {
+		width: calc( 100% - 80px ) !important;
+	}
+}
+@media (max-width: 767px) {
+	.et-l--header .et_pb_section_0_tb_header {
+		width: 100% !important;
+	}
+}
+
 @media (max-width: 767px) {
 	/* Alle tussenkoppen staan op de telefoon op 70px. Ze liepen van 24 tot
 	   70px door elkaar heen; nu is het overal dezelfde maat.
@@ -153,23 +180,26 @@ body { overflow-x: clip; }
 	}
 	.et-l--footer .et_pb_image_1_tb_footer { flex: 0 0 100%; margin-top: 20px !important; margin-bottom: 0 !important; }
 
-	/* De balk was: [logo + knop] links, menu-icoon rechts. De knop stond dus op
-	   een vaste afstand van het logo en liep op bredere telefoons naar links weg.
-	   Nu is de balk een raster van drie: logo links, knop in het midden,
-	   menu-icoon rechts — ongeacht hoe breed het logo of het icoon is. */
+}
+
+/* Op tablet en telefoon stond de knop los in het midden van de balk: een
+   oproep tot actie hoort niet tussen het logo en het menu in te zweven.
+   Nu staat hij waar je hem verwacht: logo links, knop en menu-icoon samen
+   rechts, met wat lucht ertussen. */
+@media (max-width: 980px) {
 	.et-l--header .df-am-row .row-inner {
 		display: grid;
-		grid-template-columns: 1fr auto 1fr;
+		grid-template-columns: 1fr auto auto;
 		align-items: center;
+		column-gap: 16px;
 	}
 	.et-l--header .df-am-row .row-inner > .df-am-col.left { display: contents; }
-	/* het logo is zelf ook een menu-item, vandaar de plaats in de rij:
-	   eerste item = logo (links), tweede item = de knop (midden) */
+	/* het logo is zelf ook een menu-item: eerste item = logo, tweede = de knop */
 	.et-l--header .df-am-row .row-inner > .df-am-col.left > .df-am-item:first-child {
 		justify-self: start;
 	}
 	.et-l--header .df-am-row .row-inner > .df-am-col.left > .df-am-item:nth-child(2) {
-		justify-self: center;
+		justify-self: end;
 		margin: 0 !important;
 	}
 	.et-l--header .df-am-row .row-inner > .df-am-col.right { justify-self: end; }

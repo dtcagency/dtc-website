@@ -20,6 +20,25 @@ add_action( 'wp_head', function () {
 .difl_contentcarousel .swiper-wrapper::-webkit-scrollbar { display: none; }
 .difl_contentcarousel .swiper-slide { scroll-snap-align: start; }
 
+/* (3) De trendsrij op insights. De kaarten stonden op een vaste 300px, ook op
+   een scherm van 1440 waar de rij 1267px breed is: vier smalle kaarten met
+   een rafelig randje. Ze groeien nu mee tot 380px, zodat er ruim drie in
+   beeld staan. De pijlen gaan grijs als je aan het begin of eind bent. */
+@media (min-width: 981px) {
+	#rail-blogs .c {
+		flex: 0 0 clamp( 280px, 25vw, 380px ) !important;
+		width: auto !important;
+	}
+	/* De campagnekaarten op de homepage stonden op 240px, bijna vijf naast
+	   elkaar: klein en druk. Uit de check: 'kunnen iets groter voor meer
+	   body'. Nu ruim vier in beeld. */
+	#rail-home .c {
+		flex: 0 0 clamp( 240px, 20vw, 300px ) !important;
+		width: auto !important;
+	}
+}
+.dtc-ins .pijl[disabled] { opacity: .35; cursor: default; pointer-events: none; }
+
 /* (2) Bediening bij de campagnerij. Op de telefoon veeg je; daar zijn de
    knoppen overbodig. */
 .dtc-cases__kop { position: relative; }

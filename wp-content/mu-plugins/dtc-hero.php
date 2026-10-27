@@ -269,6 +269,22 @@ add_action( 'wp_head', function () {
 		}
 	}
 
+	/* ---------- merken: meer contrast ----------
+	   Uit de check: 'mist wat contrast / pop'. Het logoveld was één grijze
+	   afbeelding op wit en viel weg naast de tekst. Het staat nu op een
+	   donker vlak in de huiskleur, met de logo's in wit: een duidelijk
+	   focuspunt dat aansluit bij de donkere blokken elders op de site. */
+	body.page-id-30 .et_pb_image:has(img[src*='Vector_Logos']) {
+		background: #2d2824;
+		border-radius: 24px;
+		padding: clamp( 28px, 4vw, 56px ) !important;
+		box-shadow: 0 2px 10px rgba(45,40,36,.08), 0 22px 50px rgba(45,40,36,.18);
+	}
+	body.page-id-30 img[src*='Vector_Logos'] {
+		filter: brightness( 0 ) invert( 1 );
+		opacity: .92;
+	}
+
 	/* ---------- strategie-blok: tekst op ooghoogte met het beeld ----------
 	   De tekstkolom stond bovenaan uitgelijnd terwijl het beeld ernaast veel
 	   hoger is; daardoor hing de tekst tegen de bovenrand. De rij is nu een

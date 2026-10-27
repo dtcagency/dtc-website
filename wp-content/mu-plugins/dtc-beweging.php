@@ -24,7 +24,11 @@ add_action( 'wp_head', function () {
 html.dtc-beweegt [data-dtc]{
 	opacity:0;
 	will-change:opacity,transform;
-	transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1);
+	/* De verplaatsing krijgt een lichte overshoot (easeOutBack): het blok
+	   schiet ongeveer anderhalve pixel door en veert terug. Dat leest als
+	   soepel in plaats van mechanisch. De doorzichtigheid houdt een rustige
+	   curve, want daar zou doorschieten alleen maar flikkeren geven. */
+	transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.34,1.56,.64,1);
 	transition-delay:var(--dtc-wacht,0ms);
 }
 html.dtc-beweegt [data-dtc="kop"]{transform:translateY(20px)}

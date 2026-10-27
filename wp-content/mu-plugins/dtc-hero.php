@@ -233,6 +233,42 @@ add_action( 'wp_head', function () {
 		body.page-id-30 .et_pb_row_2{padding-top:0!important}
 	}
 
+	/* ---------- hero: het beeldenveld links beweegt ----------
+	   Uit de websitecheck: 'element links nog niet goed benut, bijv.
+	   animeren'. De drie kolommen met casebeelden drijven nu langzaam tegen
+	   elkaar in, elk op een eigen tempo, zodat het nooit synchroon of
+	   mechanisch oogt. Er wordt met de losse eigenschap 'translate' gewerkt
+	   in plaats van 'transform': Divi zet op deze kolommen zelf al een
+	   transform voor het scroll-effect, en zo komen de twee bovenop elkaar
+	   in plaats van dat de ene de andere wegdrukt. */
+	@keyframes dtc-drijf-op   { 0%,100% { translate: 0 0 } 50% { translate: 0 -40px } }
+	@keyframes dtc-drijf-neer { 0%,100% { translate: 0 0 } 50% { translate: 0 40px } }
+	@media (min-width: 981px) and (prefers-reduced-motion: no-preference) {
+		body.page-id-30 .et_pb_row:has(> .et_pb_column_1_6) > .et_pb_column_1_6:nth-child(1) {
+			animation: dtc-drijf-op 15s ease-in-out infinite;
+		}
+		body.page-id-30 .et_pb_row:has(> .et_pb_column_1_6) > .et_pb_column_1_6:nth-child(2) {
+			animation: dtc-drijf-neer 18s ease-in-out infinite;
+		}
+		body.page-id-30 .et_pb_row:has(> .et_pb_column_1_6) > .et_pb_column_1_6:nth-child(3) {
+			animation: dtc-drijf-op 21s ease-in-out infinite;
+		}
+	}
+
+	/* ---------- hero: de boodschap moet scanbaar zijn ----------
+	   '360° marketing agency' is een categorie; de eigenlijke boodschap is
+	   'design for attention, build for action'. Die stond op 22px in een
+	   grijs (#333) dat nergens anders in de huisstijl voorkomt, en verdween
+	   daardoor tussen de grote titel en de lopende tekst. */
+	@media (min-width: 981px) {
+		body.page-id-30 .et_pb_row:has(> .et_pb_column_1_6) h3 {
+			font-size: 30px !important;
+			line-height: 1.15 !important;
+			color: #2d2824 !important;
+			margin-bottom: 18px !important;
+		}
+	}
+
 	/* ---------- strategie-blok: tekst op ooghoogte met het beeld ----------
 	   De tekstkolom stond bovenaan uitgelijnd terwijl het beeld ernaast veel
 	   hoger is; daardoor hing de tekst tegen de bovenrand. De rij is nu een
@@ -314,6 +350,14 @@ add_action( 'wp_head', function () {
 			padding-left:0!important;padding-right:0!important;
 		}
 	}
+	/* Op tablet hielden de cijferkaarten de telefoonmaat aan: 90% van de rij,
+	   oftewel 581px bij een scherm van 768. Daardoor paste er nog maar één
+	   kaart in beeld en viel de rij uit de toon met de rest van de pagina.
+	   Twee kaarten met een randje van de derde leest als een rij. */
+	@media(min-width:701px) and (max-width:980px){
+		body.page-id-30 .dtc-stat-card{flex:0 0 46%!important}
+	}
+
 	/* De kaartenrij hield 12vw aan, van voor de uitlijnronde hierboven. Nu
 	   dezelfde 8vw als de rest, anders staat hij op tablet ingesprongen. */
 	@media(min-width:701px) and (max-width:980px){

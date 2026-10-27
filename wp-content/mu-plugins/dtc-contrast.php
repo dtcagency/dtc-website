@@ -95,6 +95,14 @@ add_action( 'wp_head', function () {
 				continue;
 			}
 
+			/* De casepagina's zetten alle lopende tekst in #666666 — een grijs
+			   dat nergens anders op de site voorkomt en naast het donkerbruin
+			   van de koppen verwassen oogt. Terug naar de huiskleur. */
+			if ( cs.color === 'rgb(102, 102, 102)' && maat < 30 ) {
+				el.style.setProperty( 'color', '#2d2824', 'important' );
+				continue;
+			}
+
 			/* Op een crèmekleurig vlak haalt het diepe bruin net niet genoeg
 			   voor lopende tekst (4,03 tegen de vereiste 4,5); daar gaat de
 			   kleinere tekst een stap verder omlaag. */
@@ -122,6 +130,9 @@ add_action( 'wp_head', function () {
 		loop();
 	}
 	window.addEventListener( 'load', function () { setTimeout( loop, 300 ); } );
+	/* Blokken die pas bij het scrollen in beeld komen zijn bij het laden nog
+	   niet gemeten; daarom een ronde na het scrollen. */
+	window.addEventListener( 'scroll', function () { clearTimeout( window.__dtcKleur ); window.__dtcKleur = setTimeout( loop, 400 ); }, { passive: true } );
 } )();
 </script>
 	<?php

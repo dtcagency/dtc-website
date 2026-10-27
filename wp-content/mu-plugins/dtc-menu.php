@@ -33,7 +33,7 @@ function dtc_menu_opmaak() {
 		flex-direction: column;
 		background: #2d2824;
 		transform: translateY(-100%);
-		transition: transform .34s cubic-bezier(.4, 0, .2, 1);
+		transition: transform .42s cubic-bezier(.16, 1, .3, 1);
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		visibility: hidden;
@@ -174,7 +174,7 @@ function dtc_menu_opmaak() {
 	html.dtc-menu-open .dtc-menu__lijst > li,
 	html.dtc-menu-open .dtc-menu__voet,
 	html.dtc-menu-open .dtc-menu__social {
-		animation: dtc-menu-in .55s cubic-bezier(.22, .61, .36, 1) both;
+		animation: dtc-menu-in .55s cubic-bezier(.34, 1.56, .64, 1) both;
 		animation-delay: var(--dtc-stap, 0ms);
 	}
 
